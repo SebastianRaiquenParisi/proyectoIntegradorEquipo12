@@ -1,12 +1,30 @@
-# NOMBRE DEL PROYECTO:
+# Nombre del proyecto:
 
 ```nombre```
 
-- Acerca de:
+
+# Acerca de:
 
 ```Proyecto Integrador```
 
 ```Como por ejemplo: ```
+
+# Público Objetivo:
+
+```Estudiantes con afan de querer aprender y emprender en el mundo tecnológico y digital.```
+
+# Características Principales:
+
+- Descripción
+    
+# Integrantes:
+
+``` 1- ..........```
+``` 2- Ramiro Melero```
+``` 3-  .........```
+
+# Referentes:
+
 
 # **Wireframe**
 
