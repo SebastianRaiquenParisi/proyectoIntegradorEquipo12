@@ -1,12 +1,12 @@
 # NOMBRE DEL PROYECTO:
 
-'''nombre'''
+```nombre```
 
-*Acerca de:
+- Acerca de:
 
-'''Proyecto Integrador'''
+```Proyecto Integrador```
 
-'''Como por ejemplo: '''
+```Como por ejemplo: ```
 
 # **Wireframe**
 
