@@ -38,11 +38,11 @@
 
 cuerdos:
 
-![cuerdos](https://raw.githubusercontent.com/RodriNegron/pruebas/main/cuerdos.PNG?token=AC3EMFVA5IDZ3K5TWHVA55S7ZKYEE)
+![cuerdos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/cuerdos.PNG)
 
 pimpumpills:
 
-![pimpumpills](https://raw.githubusercontent.com/RodriNegron/pruebas/main/pimpumpills.PNG?token=AC3EMFWI3JHZ3FMMBJ6XMQK7ZKYI4)
+![pimpumpills](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
 
 ------------------
 
