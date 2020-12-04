@@ -26,7 +26,7 @@
     
 # Integrantes:
 
-``` 1- ..........```
+``` 1- Rodrigo Negron```
 
 ``` 2- Ramiro Melero```
 
@@ -36,6 +36,13 @@
 
 # Referentes:
 
+cuerdos:
+
+![cuerdos](https://raw.githubusercontent.com/RodriNegron/pruebas/main/cuerdos.PNG?token=AC3EMFVA5IDZ3K5TWHVA55S7ZKYEE)
+
+pimpumpills:
+
+![pimpumpills](https://raw.githubusercontent.com/RodriNegron/pruebas/main/pimpumpills.PNG?token=AC3EMFWI3JHZ3FMMBJ6XMQK7ZKYI4)
 
 ------------------
 
