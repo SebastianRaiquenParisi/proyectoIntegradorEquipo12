@@ -2,6 +2,7 @@
 
 ```nombre```
 
+-------------------
 
 # Acerca de:
 
@@ -9,22 +10,34 @@
 
 ```Como por ejemplo: ```
 
+------------------------
+
 # Público Objetivo:
 
 ```Estudiantes con afan de querer aprender y emprender en el mundo tecnológico y digital.```
 
+------------------------
+
 # Características Principales:
 
 - Descripción
+
+--------------------
     
 # Integrantes:
 
 ``` 1- ..........```
+
 ``` 2- Ramiro Melero```
+
 ``` 3-  .........```
+
+--------------
 
 # Referentes:
 
+
+------------------
 
 # **Wireframe**
 
@@ -51,3 +64,16 @@
 **registrarse:**
 
 ![registrarse](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registrase.jpg)
+
+---------------
+
+# Paleta de Colores:
+
+- 
+-
+-
+-
+-
+
+
+---------------
