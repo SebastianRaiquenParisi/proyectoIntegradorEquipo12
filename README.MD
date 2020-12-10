@@ -18,10 +18,9 @@
 
 # Características Principales:
 
-- i. Diseños de vanguardia
-  ii. Innovacion
-  iii. Originalidad
-  iiii. 
+``` i. Diseños de vanguardia ```
+```  ii. Innovacion ```
+```  iii. Originalidad ```
 
 --------------------
     
