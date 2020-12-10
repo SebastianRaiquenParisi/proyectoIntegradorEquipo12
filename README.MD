@@ -7,7 +7,7 @@
 # Acerca de:
 
 Proyecto Integrador con el objetivo de desarrollar un E-commerce aplicando todas las tecnologías aprendidas a lo largo del curso. Con el uso de metodologías ágiles, que nos permite mejorar el flujo de trabajo, y colaborando en el proceso de desarollo de forma remota.
-Nos proponemos como objetivo final crear un sitio con todas la funcionalidades que requiere una web de comercio electronico.
+Nos proponemos como meta final crear un sitio, con todas la funcionalidades que requiere una web de comercio electronico, orientado a la venta de indumentaria urbana y accesorios.
 
 ------------------------
 
