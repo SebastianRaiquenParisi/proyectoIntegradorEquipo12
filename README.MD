@@ -4,23 +4,31 @@
 
 -------------------
 
+# 
+
+
+-------------------
+
 # Acerca de:
 
-```Proyecto Integrador con el objetivo de desarrollar un E-commerce aplicando todas las tecnologias aprendidas a lo largo del curso. Con el uso de metodologfias agiles, que nos permite mejorar el flujo de trabajo, y colaborando en el prodceso de desarollo de forma remota, nos proponemos como objetivo final crear un sitio con todas la funcionalidades que requiere una web de comercio electronico.```
+```Proyecto Integrador con el objetivo de desarrollar un E-commerce aplicando todas las tecnologías aprendidas a lo largo del curso. Con el uso de metodologías ágiles, que nos permite mejorar el flujo de trabajo, y colaborando en el proceso de desarollo de forma remota.
+Nos proponemos como objetivo final crear un sitio con todas la funcionalidades que requiere una web de comercio electronico.```
 
 ------------------------
 
 # Público Objetivo:
 
-```Orientado particularmente a un publico que valora el sello de artista. A todo aquel que busca un estilo vanguardista y pueda encontrar soluciones de compra alternativas, donde el cliente pueda elegir distintos diseños aplicados a diversos productos.```
+```Orientado particularmente a un público que valora el sello de artista. 
+A todo aquel que busca un estilo vanguardista y pueda encontrar soluciones de compra alternativas.
+Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y pueda aplicarlos a los diversos productos que ofrece el sitio.```
 
 ------------------------
 
 # Características Principales:
 
 ``` i. Diseños de vanguardia ```
-```  ii. Innovacion ```
-```  iii. Originalidad ```
+``` ii. Innovacion ```
+``` iii. Originalidad ```
 
 --------------------
     
@@ -37,49 +45,52 @@
 # Referentes:
 
 cuerdos:
--tomamos como referencia la forma en la cual se organizan los productos y filtros.
+
+- Tomamos como referencia la forma en la cual se organizan los productos y filtros.
 
 ![cuerdos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/cuerdos.PNG)
 
 pimpumpills:
--tomamos como referencia la forma adaptativa del slider principal, la barra de navegacion fija y el contraste las imagenes de los productos con respecto a su fondo.
+
+- Tomamos como referencia la forma adaptativa del slider principal, la barra de navegación fija y el contraste de las imagenes de los productos con respecto a su fondo.
+
 ![pimpumpills](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
 
 ------------------
 
 # **Wireframe**
 
-**index:**
+**Index:**
 
 ![index](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20index.jpg)
 
 ----------------------
 
-**carrito de compras:**
+**Carrito de compras:**
 
 ![carrito de compras](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeCompras.jpg)
 
 -------------------
 
-**listado de productos:**
+**Listado de productos:**
 
 ![listado de productos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductos.jpg)
 
 -------------
 
-**login:**
+**Login:**
 
 ![login](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logIn.jpg)
 
 ----
 
-**productos:**
+**Productos:**
 
 ![productos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20producto.jpg)
 
 -----
 
-**registrarse:**
+**Registrarse:**
 
 ![registrarse](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registrase.jpg)
 
