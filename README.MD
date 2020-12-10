@@ -21,9 +21,9 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 
 # Características Principales:
 
-i. Diseños de vanguardia
-ii. Innovacion
-iii. Originalidad
+* Diseños de vanguardia
+* Innovacion
+* Originalidad
 
 --------------------
     
