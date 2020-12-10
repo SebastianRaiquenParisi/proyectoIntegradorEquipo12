@@ -15,7 +15,7 @@ Nos proponemos como meta final crear un sitio, con todas la funcionalidades que 
 
 Orientado particularmente a un público que valora el sello de artista. 
 A todo aquel que busca un estilo vanguardista y pueda encontrar soluciones de compra alternativas.
-Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y pueda aplicarlos a los diversos productos que ofrece el sitio.
+Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y pueda aplicarlos a los diversos productos que ofrece la tienda.
 
 ------------------------
 
@@ -24,6 +24,7 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 * Diseños de vanguardia
 * Innovacion
 * Originalidad
+* Tendencias
 
 --------------------
     
