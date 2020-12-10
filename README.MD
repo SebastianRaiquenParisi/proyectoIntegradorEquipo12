@@ -1,26 +1,27 @@
 # Nombre del proyecto:
 
-```nombre```
+```Madly Artsy```
 
 -------------------
 
 # Acerca de:
 
-```Proyecto Integrador```
-
-```Como por ejemplo: ```
+```Proyecto Integrador con el objetivo de desarrollar un E-commerce aplicando todas las tecnologias aprendidas a lo largo del curso. Con el uso de metodologfias agiles, que nos permite mejorar el flujo de trabajo, y colaborando en el prodceso de desarollo de forma remota, nos proponemos como objetivo final crear un sitio con todas la funcionalidades que requiere una web de comercio electronico.```
 
 ------------------------
 
 # Público Objetivo:
 
-```Estudiantes con afan de querer aprender y emprender en el mundo tecnológico y digital.```
+```Orientado particularmente a un publico que valora el sello de artista. A todo aquel que busca un estilo vanguardista y pueda encontrar soluciones de compra alternativas, donde el cliente pueda elegir distintos diseños aplicados a diversos productos.```
 
 ------------------------
 
 # Características Principales:
 
-- Descripción
+- i. Diseños de vanguardia
+  ii. Innovacion
+  iii. Originalidad
+  iiii. 
 
 --------------------
     
@@ -30,18 +31,19 @@
 
 ``` 2- Ramiro Melero```
 
-``` 3-  .........```
+``` 3- Sebastian Raiquen Parisi ```
 
 --------------
 
 # Referentes:
 
 cuerdos:
+-tomamos como referencia la forma en la cual se organizan los productos y filtros.
 
 ![cuerdos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/cuerdos.PNG)
 
 pimpumpills:
-
+-tomamos como referencia la forma adaptativa del slider principal, la barra de navegacion fija y el contraste las imagenes de los productos con respecto a su fondo.
 ![pimpumpills](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
 
 ------------------
