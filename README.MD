@@ -1,6 +1,6 @@
 # Nombre del proyecto:
 
-```Madly Artsy```
+## Madly Artsy
 
 -------------------
 
@@ -21,9 +21,9 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 
 # Características Principales:
 
-``` i. Diseños de vanguardia ```
-``` ii. Innovacion ```
-``` iii. Originalidad ```
+i. Diseños de vanguardia
+ii. Innovacion
+iii. Originalidad
 
 --------------------
     
