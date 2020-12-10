@@ -4,23 +4,18 @@
 
 -------------------
 
-# 
-
-
--------------------
-
 # Acerca de:
 
-```Proyecto Integrador con el objetivo de desarrollar un E-commerce aplicando todas las tecnologías aprendidas a lo largo del curso. Con el uso de metodologías ágiles, que nos permite mejorar el flujo de trabajo, y colaborando en el proceso de desarollo de forma remota.
-Nos proponemos como objetivo final crear un sitio con todas la funcionalidades que requiere una web de comercio electronico.```
+Proyecto Integrador con el objetivo de desarrollar un E-commerce aplicando todas las tecnologías aprendidas a lo largo del curso. Con el uso de metodologías ágiles, que nos permite mejorar el flujo de trabajo, y colaborando en el proceso de desarollo de forma remota.
+Nos proponemos como objetivo final crear un sitio con todas la funcionalidades que requiere una web de comercio electronico.
 
 ------------------------
 
 # Público Objetivo:
 
-```Orientado particularmente a un público que valora el sello de artista. 
+Orientado particularmente a un público que valora el sello de artista. 
 A todo aquel que busca un estilo vanguardista y pueda encontrar soluciones de compra alternativas.
-Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y pueda aplicarlos a los diversos productos que ofrece el sitio.```
+Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y pueda aplicarlos a los diversos productos que ofrece el sitio.
 
 ------------------------
 
