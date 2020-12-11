@@ -64,13 +64,13 @@ cuerdos:
 
 - Tomamos como referencia la forma en la cual se organizan los productos y filtros.
 
-![cuerdos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/cuerdos.PNG)
+[cuerdos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/cuerdos.PNG)
 
 pimpumpills:
 
 - Tomamos como referencia la forma adaptativa del slider principal, la barra de navegación fija y el contraste de las imagenes de los productos con respecto a su fondo.
 
-![pimpumpills](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
+[pimpumpills](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
 
 ------------------
 
@@ -90,25 +90,25 @@ pimpumpills:
 
 **Listado de productos:**
 
-![listado de productos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductos.jpg)
+[listado de productos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductos.jpg)
 
 -------------
 
 **Login:**
 
-![login](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logIn.jpg)
+[login](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logIn.jpg)
 
 ----
 
 **Productos:**
 
-![productos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20producto.jpg)
+[productos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20producto.jpg)
 
 -----
 
 **Registrarse:**
 
-![registrarse](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registrase.jpg)
+[registrarse](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registrase.jpg)
 
 ---------------
 
