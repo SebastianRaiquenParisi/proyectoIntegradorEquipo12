@@ -32,7 +32,6 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 - Se inicia el login
 - Se visualiza el carrito de compras y se muestran las opciones de envío y formas de pago
 
-
 ------------------------
 
 # Características Principales:
@@ -45,7 +44,6 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 * Innovacion
 * Originalidad
 * Tendencias
-
 
 --------------------
     
@@ -77,39 +75,7 @@ Sitio web PIMPUMPILLS
 
 # **Wireframe**
 
-**Index:**
-
-[Click aquí para ver el wireframe del INDEX](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20indexV3.jpg)
-
-----------------------
-
-**Carrito de compras:**
-
-[Click aquí para ver el wireframe del CARRITO DE COMPRAS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeComprasV3.jpg)
-
--------------------
-
-**Listado de productos:**
-
-[Click aquí para ver el wireframe del LISTADO DE PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductosV3.jpg)
-
--------------
-
-**Login:**
-
-[Click aquí para ver el wireframe del LOGIN](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logInV3.jpg)
-
-----
-
-**Productos:**
-
-[Click aquí para ver el wireframe de PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20productoV3.jpg)
-
------
-
-**Registrarse:**
-
-[Click aquí para ver el wireframe de REGISTRARSE](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registraseV3.jpg)
+LINK AL ARCHIVO WIREFRAME.MD
 
 ---------------
 
