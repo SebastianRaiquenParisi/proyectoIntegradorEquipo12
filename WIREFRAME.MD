@@ -32,7 +32,7 @@
 
 ## Listado de productos
 
-![Click aquí para ver el wireframe del LISTADO DE PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductosV3.jpg)
+![Click aquí para ver el wireframe del LISTADO DE PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductosV3.2.jpg)
 
 -------------
 
