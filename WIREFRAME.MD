@@ -11,32 +11,36 @@
 - Versión 2 corregida
 - Version 3 Actual
 
-## INDEX
------------------------
+**Index:**
 
+![Click aquí para ver el wireframe del INDEX](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20indexV3.jpg)
 
-## LISTADO DE PRODUCTOS POR CATEGORÍA
 ----------------------
 
+**Carrito de compras:**
 
+![Click aquí para ver el wireframe del CARRITO DE COMPRAS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeComprasV3.jpg)
 
-## PRODUCTO
---------------------------------
+-------------------
 
+**Listado de productos:**
 
+![Click aquí para ver el wireframe del LISTADO DE PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductosV3.jpg)
 
-## CARRITO DE COMPRAS
---------------------------
+-------------
 
+**Login:**
 
+![Click aquí para ver el wireframe del LOGIN](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logInV3.jpg)
 
-## REGISTRARSE
------------------------
+----
 
+**Productos:**
 
+![Click aquí para ver el wireframe de PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20productoV3.jpg)
 
-## LOGIN
-----------------------------
+-----
 
+**Registrarse:**
 
-
+![Click aquí para ver el wireframe de REGISTRARSE](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registraseV3.jpg)
