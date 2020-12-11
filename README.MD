@@ -75,7 +75,7 @@ Sitio web PIMPUMPILLS
 
 # **Wireframe**
 
-LINK AL ARCHIVO WIREFRAME.MD
+[Click aquí para ver los WIREFRAME](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/WIREFRAME.MD)
 
 ---------------
 
