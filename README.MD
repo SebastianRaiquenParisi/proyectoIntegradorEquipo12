@@ -22,7 +22,7 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 - El usuario ingresa al sitio y ve el slider principal con promos, novedades, etc
 - En el header encontrará un menú de búsqueda rápida, categorías con desplegable de subcategrías y el logotipo de marca
 - En el footer estarán accesibles mediante íconos los enlaces a las redes sociales, formas de pago, envío, devoluciones y contacto.
-- El usuario selecionará una de las categorías del home a visitar según su interés
+- El usuario seleccionará una de las categorías del home a visitar según su interés
 - Una vez dentro de la categoría podrá elegir subcategorías y filtrar resultados según sus preferencias
 - Los filtros disponibles serán: por precio, etc...
 - El usuario podrá elegir el diseño que más le guste y aplicarlo a cualquiera de los productos que se ofrecen en el sitio
@@ -60,13 +60,13 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 
 # Referentes:
 
-cuerdos:
+Sitio web ### cuerdos:
 
 - Tomamos como referencia la forma en la cual se organizan los productos y filtros.
 
 [cuerdos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/cuerdos.PNG)
 
-pimpumpills:
+Sitio web ### pimpumpills:
 
 - Tomamos como referencia la forma adaptativa del slider principal, la barra de navegación fija y el contraste de las imagenes de los productos con respecto a su fondo.
 
@@ -78,13 +78,13 @@ pimpumpills:
 
 **Index:**
 
-![index](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20index.jpg)
+[index](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20index.jpg)
 
 ----------------------
 
 **Carrito de compras:**
 
-![carrito de compras](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeCompras.jpg)
+[carrito de compras](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeCompras.jpg)
 
 -------------------
 
