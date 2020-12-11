@@ -60,13 +60,13 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 
 # Referentes:
 
-Sitio web ### cuerdos:
+Sitio web CUERDOS
 
 - Tomamos como referencia la forma en la cual se organizan los productos y filtros.
 
 [cuerdos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/cuerdos.PNG)
 
-Sitio web ### pimpumpills:
+Sitio web PIMPUMPILLS
 
 - Tomamos como referencia la forma adaptativa del slider principal, la barra de navegación fija y el contraste de las imagenes de los productos con respecto a su fondo.
 
@@ -78,37 +78,37 @@ Sitio web ### pimpumpills:
 
 **Index:**
 
-[index](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20index.jpg)
+[Click aquí para ver el wireframe del INDEX](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20index.jpg)
 
 ----------------------
 
 **Carrito de compras:**
 
-[carrito de compras](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeCompras.jpg)
+[Click aquí para ver el wireframe del CARRITO DE COMPRAS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeCompras.jpg)
 
 -------------------
 
 **Listado de productos:**
 
-[listado de productos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductos.jpg)
+[Click aquí para ver el wireframe del LISTADO DE PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductos.jpg)
 
 -------------
 
 **Login:**
 
-[login](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logIn.jpg)
+[Click aquí para ver el wireframe del LOGIN](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logIn.jpg)
 
 ----
 
 **Productos:**
 
-[productos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20producto.jpg)
+[Click aquí para ver el wireframe de PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20producto.jpg)
 
 -----
 
 **Registrarse:**
 
-[registrarse](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registrase.jpg)
+[Click aquí para ver el wireframe de REGISTRARSE](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registrase.jpg)
 
 ---------------
 
