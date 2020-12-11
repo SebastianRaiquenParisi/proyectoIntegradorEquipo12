@@ -22,7 +22,11 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 - El usuario ingresa al sitio y ve el slider principal con promos, novedades, etc
 - En el header encontrará un menú de búsqueda rápida, categorías con desplegable de subcategrías y el logotipo de marca
 - En el footer estarán accesibles mediante íconos los enlaces a las redes sociales, formas de pago, envío, devoluciones y contacto.
+<<<<<<< HEAD
 - El usuario selecionará una de las categorías del home a visitar según su interés
+=======
+- El usuario seleccionará una de las categorías del home a visitar según su interés
+>>>>>>> d1af86394c73b0189ebbc4007ef870ec5d8d0d34
 - Una vez dentro de la categoría podrá elegir subcategorías y filtrar resultados según sus preferencias
 - Los filtros disponibles serán: por precio, etc...
 - El usuario podrá elegir el diseño que más le guste y aplicarlo a cualquiera de los productos que se ofrecen en el sitio
@@ -60,17 +64,17 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 
 # Referentes:
 
-cuerdos:
+Sitio web CUERDOS
 
 - Tomamos como referencia la forma en la cual se organizan los productos y filtros.
 
-![cuerdos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/cuerdos.PNG)
+[Click aquí para ver imagen de referencia de CUERDOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/cuerdos.PNG)
 
-pimpumpills:
+Sitio web PIMPUMPILLS
 
 - Tomamos como referencia la forma adaptativa del slider principal, la barra de navegación fija y el contraste de las imagenes de los productos con respecto a su fondo.
 
-![pimpumpills](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
+[Click aquí para ver imagen de referencia de PIMPUMPILLS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
 
 ------------------
 
@@ -78,37 +82,37 @@ pimpumpills:
 
 **Index:**
 
-![index](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20index.jpg)
+[Click aquí para ver el wireframe del INDEX](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20index.jpg)
 
 ----------------------
 
 **Carrito de compras:**
 
-![carrito de compras](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeCompras.jpg)
+[Click aquí para ver el wireframe del CARRITO DE COMPRAS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeCompras.jpg)
 
 -------------------
 
 **Listado de productos:**
 
-![listado de productos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductos.jpg)
+[Click aquí para ver el wireframe del LISTADO DE PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductos.jpg)
 
 -------------
 
 **Login:**
 
-![login](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logIn.jpg)
+[Click aquí para ver el wireframe del LOGIN](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logIn.jpg)
 
 ----
 
 **Productos:**
 
-![productos](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20producto.jpg)
+[Click aquí para ver el wireframe de PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20producto.jpg)
 
 -----
 
 **Registrarse:**
 
-![registrarse](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registrase.jpg)
+[Click aquí para ver el wireframe de REGISTRARSE](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registrase.jpg)
 
 ---------------
 
