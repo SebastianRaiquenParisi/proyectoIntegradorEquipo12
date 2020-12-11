@@ -79,37 +79,37 @@ Sitio web PIMPUMPILLS
 
 **Index:**
 
-[Click aquí para ver el wireframe del INDEX](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20index.jpg)
+[Click aquí para ver el wireframe del INDEX](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20indexV2.jpg)
 
 ----------------------
 
 **Carrito de compras:**
 
-[Click aquí para ver el wireframe del CARRITO DE COMPRAS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeCompras.jpg)
+[Click aquí para ver el wireframe del CARRITO DE COMPRAS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20carritoDeComprasV2.jpg)
 
 -------------------
 
 **Listado de productos:**
 
-[Click aquí para ver el wireframe del LISTADO DE PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductos.jpg)
+[Click aquí para ver el wireframe del LISTADO DE PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20listadoProductosV2.jpg)
 
 -------------
 
 **Login:**
 
-[Click aquí para ver el wireframe del LOGIN](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logIn.jpg)
+[Click aquí para ver el wireframe del LOGIN](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20logInV2.jpg)
 
 ----
 
 **Productos:**
 
-[Click aquí para ver el wireframe de PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20producto.jpg)
+[Click aquí para ver el wireframe de PRODUCTOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20productoV2.jpg)
 
 -----
 
 **Registrarse:**
 
-[Click aquí para ver el wireframe de REGISTRARSE](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registrase.jpg)
+[Click aquí para ver el wireframe de REGISTRARSE](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registraseV2.jpg)
 
 ---------------
 
