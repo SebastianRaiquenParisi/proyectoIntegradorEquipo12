@@ -13,7 +13,7 @@ Nos proponemos como meta final crear un sitio, con todas la funcionalidades que 
 
 # Público Objetivo:
 
-Orientado particularmente a un público que busca un estilo de artistico. 
+Orientado particularmente a un público que busca un estilo artistico. 
 A todo aquel que busca un estilo moderno y pueda encontrar soluciones de compra alternativas que le permitan combinar el estilo artistico con la moda urbana.
 Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y pueda aplicarlos a los diversos productos que ofrece la tienda.
 
