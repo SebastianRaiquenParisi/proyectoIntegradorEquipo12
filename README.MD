@@ -13,8 +13,8 @@ Nos proponemos como meta final crear un sitio, con todas la funcionalidades que 
 
 # Público Objetivo:
 
-Orientado particularmente a un público que valora el sello de artista. 
-A todo aquel que busca un estilo vanguardista y pueda encontrar soluciones de compra alternativas.
+Orientado particularmente a un público que busca un estilo de artistico. 
+A todo aquel que busca un estilo moderno y pueda encontrar soluciones de compra alternativas que le permitan combinar el estilo artistico con la moda urbana.
 Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y pueda aplicarlos a los diversos productos que ofrece la tienda.
 
 #### El sitio funcionará de la siguiente manera:
@@ -40,20 +40,14 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 
 #### Los principios son:
 
-* Diseños de vanguardia
-* Innovacion
-* Originalidad
-* Tendencias
+* Diseños intervenidas con arte con un estilo urbano
+* Originalidad y diseños exclusivos
 
 --------------------
     
 # Integrantes:
 
-``` 1- Rodrigo Negron```
-
-``` 2- Ramiro Melero```
-
-``` 3- Sebastian Raiquen Parisi ```
+[Nuestro Staff](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/NUESTROSTAFF.MD)
 
 --------------
 
@@ -67,7 +61,7 @@ Sitio web CUERDOS
 
 Sitio web PIMPUMPILLS
 
-- Tomamos como referencia la forma adaptativa del slider principal, la barra de navegación fija y el contraste de las imagenes de los productos con respecto a su fondo.
+- Tomamos como referencia la forma adaptativa del slider principal y la barra de navegación fija.
 
 [Click aquí para ver imagen de referencia de PIMPUMPILLS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
 
