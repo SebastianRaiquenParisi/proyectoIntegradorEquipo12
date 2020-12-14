@@ -78,3 +78,9 @@ Sitio web PIMPUMPILLS
 [Click aquí para ver los colores seleccionados](design/Colores.md)
 
 ---------------
+
++ ##  __Tipografias:__
+
+[Click aquí para ver las tipografias seleccionadas](design/Tipografia.md)
+
+---------------
