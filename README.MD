@@ -2,18 +2,26 @@
 
 -------------------
 
-+ ##  __Acerca de__:
++ ##  __Acerca de:__
 
 Proyecto Integrador con el objetivo de desarrollar un E-commerce aplicando todas las tecnologías aprendidas a lo largo del curso. Con el uso de metodologías ágiles, que nos permite mejorar el flujo de trabajo, y colaborando en el proceso de desarollo de forma remota.
 Nos proponemos como meta final crear un sitio, con todas la funcionalidades que requiere una web de comercio electronico, orientado a la venta de indumentaria urbana y accesorios.
 
 ------------------------
 
-+ ##  __Público Objetivo__:
++ ##  __Público Objetivo:__
 
 Orientado particularmente a un público que busca un estilo artistico. 
 A todo aquel que busca un estilo moderno y pueda encontrar soluciones de compra alternativas que le permitan combinar el estilo artistico con la moda urbana.
 Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y pueda aplicarlos a los diversos productos que ofrece la tienda.
+
+
+
+------------------------
+
++ ##  __Características Principales:__
+
+* El sitio contará con una variedad de diseños que el usuario podrá elegir para poder aplicarlo al artículo que desee comprar.
 
 #### El sitio funcionará de la siguiente manera:
 
@@ -30,12 +38,6 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 - Se inicia el login
 - Se visualiza el carrito de compras y se muestran las opciones de envío y formas de pago
 
-------------------------
-
-# Características Principales:
-
-* El sitio contará con una variedad de diseños que el usuario podrá elegir para poder aplicarlo al artículo que desee comprar.
-
 #### Los principios son:
 
 * Diseños intervenidas con arte con un estilo urbano
@@ -43,13 +45,13 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 
 --------------------
     
-# Integrantes:
++ ##  __Integrantes:__
 
 [Nuestro Staff](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/NUESTROSTAFF.MD)
 
 --------------
 
-# Referentes:
++ ##  __Referentes:__
 
 Sitio web CUERDOS
 
@@ -65,18 +67,14 @@ Sitio web PIMPUMPILLS
 
 ------------------
 
-# **Wireframe**
++ ##  __Wireframe:__
 
-[Click aquí para ver los WIREFRAME](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/WIREFRAME.MD)
+[Click aquí para ver los WIREFRAMES](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/WIREFRAME.MD)
 
 ---------------
 
-# Paleta de Colores:
++ ##  __Paleta de Colores:__
 
-- 
--
--
--
--
+[Click aquí para ver los colores seleccionados](design/colores.md)
 
 ---------------
