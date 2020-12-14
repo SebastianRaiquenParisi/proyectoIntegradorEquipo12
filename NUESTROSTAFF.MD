@@ -1,5 +1,7 @@
 # Integrantes:
 ```Equipo #12 formado por 3 integranes: ```
+----------
+
 
 ``` 1- Rodrigo Negron: 29 años de edad, nacido en Mar del Plata. Estudiante de progrmación, actualmente cursando tecnicatura universitaria en progrmacion en la Universidad Tecnologica Nacional de Mar del Plata y FullStack developer en Digital House.```
 ```Con experiencia en el rubro de la tecnologia ya que por varios años estuve dedicado a la reparacion de  pc en un comercio de articulos electronicos. ```
@@ -17,7 +19,7 @@
 ```Actualmente cursando Desarrollo Web Full Stack en Digital House.```
 ```Buscando formar un perfil integral con conocimiento Back-End / Front-End con herramientas de vanguardia como Node, Express, React e implementarlas en nuevos desafíos y proyectos```
 
--[Perfil de linkedIn](www.linkedin.com/in/ramiro-m-5a035273)
+-[Perfil de linkedIn](https://www.linkedin.com/in/ramiro-m-5a035273)
 
 -[Repositorio GitHub](https://github.com/nuevo-rama)
 
