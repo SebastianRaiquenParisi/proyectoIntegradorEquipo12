@@ -25,4 +25,6 @@
 
 ------------
 
-``` 3- Sebastian Raiquen Parisi ```
+``` 3- Sebastian Raiquen Parisi: Tengo 20 años, estudié programación por primera vez en la orientación Informática de la escuela secundaria ORT y desde entonces siempre tuve ganas de trabajar haciendo desarrollo de software. Sin embargo, despues de varios intentos de encajar en el molde de estudiar academicamente en una universidad decidí dejar de lado la programación por un año, por suerte ahora volví a conectarme con esta hermosa práctica haciendo el curso de desarrollo Full Stack de Digital House y haciendo cursos gratuitos en internet de JavaScript. Busco poder generar código eficiente y aprender a trabajar en conjunto con otrxs desarrolladorxs.```
+
+-[Repositorio GitHub](https://github.com/SebastianRaiquenParisi)
