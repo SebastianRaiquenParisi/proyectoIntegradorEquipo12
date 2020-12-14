@@ -1,17 +1,15 @@
-# Nombre del proyecto:
-
 ## Madly Artsy
 
 -------------------
 
-# Acerca de:
++ ##  __Acerca de__:
 
 Proyecto Integrador con el objetivo de desarrollar un E-commerce aplicando todas las tecnologías aprendidas a lo largo del curso. Con el uso de metodologías ágiles, que nos permite mejorar el flujo de trabajo, y colaborando en el proceso de desarollo de forma remota.
 Nos proponemos como meta final crear un sitio, con todas la funcionalidades que requiere una web de comercio electronico, orientado a la venta de indumentaria urbana y accesorios.
 
 ------------------------
 
-# Público Objetivo:
++ ##  __Público Objetivo__:
 
 Orientado particularmente a un público que busca un estilo artistico. 
 A todo aquel que busca un estilo moderno y pueda encontrar soluciones de compra alternativas que le permitan combinar el estilo artistico con la moda urbana.
