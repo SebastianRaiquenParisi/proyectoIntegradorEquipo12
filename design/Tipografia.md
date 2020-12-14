@@ -1,6 +1,6 @@
 + ## ___Tipografia:___
     | Estilo TIpografico | Ejemplo | Implementacion | Representa |
     | ------------- | ------------- | ------------- | ------------- |
-    | Sans-Serif  | [Raleway](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/design/raleway-font.jpg)| Pedioricos - Documentos Formales  | Autoridad - Sobriedad - Formalidad |
-    | Sans Serif  | [Helvetica](https://upload.wikimedia.org/wikipedia/commons/2/28/HelveticaSpecimenCH.svg) [Verdana](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/VerdanaSpecimen.svg/1200px-VerdanaSpecimen.svg.png)  | Presentaciones Digitales - Revistas | Modernidad - Alegria - Seguridad |
+    | Sans-Serif  | [Raleway](https://i2.wp.com/www.freefonts.io/wp-content/uploads/2016/11/Raleway-font.png?resize=1386%2C1090)| Encabezados - Textos destacados -  | Modernidad - Dinamismo - Fuerza |
+    | Sans Serif  | [Open Sans](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Open_Sans_sample.svg/800px-Open_Sans_sample.svg.png)  | Descripciones - detalles | Robustez - Modernidad |
     
