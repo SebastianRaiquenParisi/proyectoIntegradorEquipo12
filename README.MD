@@ -75,6 +75,6 @@ Sitio web PIMPUMPILLS
 
 + ##  __Paleta de Colores:__
 
-[Click aquí para ver los colores seleccionados](design/colores.md)
+[Click aquí para ver los colores seleccionados](design/Colores.md)
 
 ---------------
