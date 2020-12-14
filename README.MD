@@ -61,7 +61,7 @@ Sitio web CUERDOS
 
 Sitio web PIMPUMPILLS
 
-- Tomamos como referencia el slider principal y la barra de navegación fija.
+- Tomamos como referencia el slider principal y la barra de navegación fija al scrollear
 
 [Click aquí para ver imagen de referencia de PIMPUMPILLS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
 
