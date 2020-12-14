@@ -61,15 +61,21 @@ Sitio web CUERDOS
 
 Sitio web PIMPUMPILLS
 
-- Tomamos como referencia la forma adaptativa del slider principal y la barra de navegación fija.
+- Tomamos como referencia el slider principal y la barra de navegación fija.
 
 [Click aquí para ver imagen de referencia de PIMPUMPILLS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
 
 Sitio web RUMKNUCKLES
 
-- Tomamos como referencia el efecto de las imagenes de las categorias
+- Tomamos como referencia el efecto de las imagenes de las categorias al posicionar el mouse por encima de las mismas.
 
 [Click aquí para ver imagen de referencia de RUMKNUCKLES](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/rumknuckles.png)
+
+Sitio web ENGWIND
+
+- Tomamos como referencia el efecto en el cual aparece la descripcion/precio de cada articulo al posicionar el mouse por encima de la imagen.
+
+[Click aquí para ver imagen de referencia de ENGWIND](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/engwind.png)
 
 ------------------
 
