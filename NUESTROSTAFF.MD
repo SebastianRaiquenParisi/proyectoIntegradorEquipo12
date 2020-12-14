@@ -9,8 +9,18 @@
 
 -[Repositorio GitHub](https://github.com/RodriNegron)
 
+------------
+
 ``` 2- Ramiro Melero: Apasionado por la tecnología informática.```
 ```Constantemente busco capacitarme en nuevas aplicaciones y herramientas informáticas.```
-```Sumergido en el desarrollo web, estudiando, haciendo y buscando nuevos desafíos.```
+```Desarrollo código en Javascript.```
+```Actualmente cursando Desarrollo Web Full Stack en Digital House.```
+```Buscando formar un perfil integral con conocimiento Back-End / Front-End con herramientas de vanguardia como Node, Express, React e implementarlas en nuevos desafíos y proyectos```
+
+-[Perfil de linkedIn](www.linkedin.com/in/ramiro-m-5a035273)
+
+-[Repositorio GitHub](https://github.com/nuevo-rama)
+
+------------
 
 ``` 3- Sebastian Raiquen Parisi ```
