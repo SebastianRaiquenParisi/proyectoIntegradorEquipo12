@@ -28,9 +28,7 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 - El usuario ingresa al sitio y ve el slider principal con promos, novedades, etc
 - En el header encontrará un menú de búsqueda rápida, categorías con desplegable de subcategrías y el logotipo de marca
 - En el footer estarán accesibles mediante íconos los enlaces a las redes sociales, formas de pago, envío, devoluciones y contacto.
-- El usuario selecionará una de las categorías del home a visitar según su interés
 - El usuario seleccionará una de las categorías del home a visitar según su interés
-- Una vez dentro de la categoría podrá elegir subcategorías y filtrar resultados según sus preferencias
 - Los filtros disponibles serán: por precio, etc...
 - El usuario podrá elegir el diseño que más le guste y aplicarlo a cualquiera de los productos que se ofrecen en el sitio
 - Una vez que elige lo que le gustaría comprar el usuario debe añadirlo al carrito de compras o ir a comprar ese artículo directamente
@@ -53,25 +51,25 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 
 + ##  __Referentes:__
 
-- __Sitio web CUERDOS__
+1. __Sitio web CUERDOS__
 
  Tomamos como referencia la forma en la cual se organizan los productos y filtros.
 
 [Click aquí para ver imagen de referencia de CUERDOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/cuerdos.PNG)
 
-- __Sitio web PIMPUMPILLS__
+2. __Sitio web PIMPUMPILLS__
 
  Tomamos como referencia el slider principal y la barra de navegación fija al scrollear
 
 [Click aquí para ver imagen de referencia de PIMPUMPILLS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/pimpumpills.PNG)
 
-- __Sitio web RUMKNUCKLES__
+3. __Sitio web RUMKNUCKLES__
 
  Tomamos como referencia el efecto de las imagenes de las categorias al posicionar el mouse por encima de las mismas.
 
 [Click aquí para ver imagen de referencia de RUMKNUCKLES](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/rumknuckles.png)
 
-- __Sitio web ENGWIND__
+4. __Sitio web ENGWIND__
 
  Tomamos como referencia el efecto en el cual aparece la descripcion/precio de cada articulo al posicionar el mouse por encima de la imagen.
 
