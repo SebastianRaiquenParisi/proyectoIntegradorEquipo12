@@ -65,6 +65,12 @@ Sitio web PIMPUMPILLS
 
 [Click aquí para ver imagen de referencia de PIMPUMPILLS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
 
+Sitio web RUMKNUCKLES
+
+- Tomamos como referencia el efecto de las imagenes de las categorias
+
+[Click aquí para ver imagen de referencia de RUMKNUCKLES](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/rumknuckles.png)
+
 ------------------
 
 + ##  __Wireframe:__
