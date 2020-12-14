@@ -57,42 +57,42 @@ Sitio web CUERDOS
 
 - Tomamos como referencia la forma en la cual se organizan los productos y filtros.
 
-[Click aquí para ver imagen de referencia de CUERDOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/cuerdos.PNG)
+[Click aquí para ver imagen de referencia de CUERDOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/cuerdos.PNG)
 
 Sitio web PIMPUMPILLS
 
 - Tomamos como referencia el slider principal y la barra de navegación fija al scrollear
 
-[Click aquí para ver imagen de referencia de PIMPUMPILLS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/pimpumpills.PNG)
+[Click aquí para ver imagen de referencia de PIMPUMPILLS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/pimpumpills.PNG)
 
 Sitio web RUMKNUCKLES
 
 - Tomamos como referencia el efecto de las imagenes de las categorias al posicionar el mouse por encima de las mismas.
 
-[Click aquí para ver imagen de referencia de RUMKNUCKLES](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/rumknuckles.png)
+[Click aquí para ver imagen de referencia de RUMKNUCKLES](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/rumknuckles.png)
 
 Sitio web ENGWIND
 
 - Tomamos como referencia el efecto en el cual aparece la descripcion/precio de cada articulo al posicionar el mouse por encima de la imagen.
 
-[Click aquí para ver imagen de referencia de ENGWIND](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/engwind.png)
+[Click aquí para ver imagen de referencia de ENGWIND](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/engwind.png)
 
 ------------------
 
 + ##  __Wireframe:__
 
-[Click aquí para ver los WIREFRAMES](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/WIREFRAME.MD)
+[Click aquí para ver los WIREFRAMES](Wireframe/WIREFRAME.MD)
 
 ---------------
 
 + ##  __Paleta de Colores:__
 
-[Click aquí para ver los colores seleccionados](design/Colores.md)
+[Click aquí para ver los colores seleccionados](Dise%C3%B1o/Colores.md)
 
 ---------------
 
 + ##  __Tipografias:__
 
-[Click aquí para ver las tipografias seleccionadas](design/Tipografia.md)
+[Click aquí para ver las tipografias seleccionadas](Dise%C3%B1o/Tipografia.md)
 
 ---------------
