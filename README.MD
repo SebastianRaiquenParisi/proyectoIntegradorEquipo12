@@ -53,27 +53,27 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 
 + ##  __Referentes:__
 
-Sitio web CUERDOS
+- __Sitio web CUERDOS__
 
-- Tomamos como referencia la forma en la cual se organizan los productos y filtros.
+ Tomamos como referencia la forma en la cual se organizan los productos y filtros.
 
 [Click aquí para ver imagen de referencia de CUERDOS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/cuerdos.PNG)
 
-Sitio web PIMPUMPILLS
+- __Sitio web PIMPUMPILLS__
 
-- Tomamos como referencia el slider principal y la barra de navegación fija al scrollear
+ Tomamos como referencia el slider principal y la barra de navegación fija al scrollear
 
 [Click aquí para ver imagen de referencia de PIMPUMPILLS](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/pimpumpills.PNG)
 
-Sitio web RUMKNUCKLES
+- __Sitio web RUMKNUCKLES__
 
-- Tomamos como referencia el efecto de las imagenes de las categorias al posicionar el mouse por encima de las mismas.
+ Tomamos como referencia el efecto de las imagenes de las categorias al posicionar el mouse por encima de las mismas.
 
 [Click aquí para ver imagen de referencia de RUMKNUCKLES](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/rumknuckles.png)
 
-Sitio web ENGWIND
+- __Sitio web ENGWIND__
 
-- Tomamos como referencia el efecto en el cual aparece la descripcion/precio de cada articulo al posicionar el mouse por encima de la imagen.
+ Tomamos como referencia el efecto en el cual aparece la descripcion/precio de cada articulo al posicionar el mouse por encima de la imagen.
 
 [Click aquí para ver imagen de referencia de ENGWIND](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/Dise%C3%B1o/imagenes/engwind.png)
 
