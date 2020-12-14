@@ -51,3 +51,8 @@
 ## Registrarse
 
 ![Click aquí para ver el wireframe de REGISTRARSE](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/wireframe_img/wireframe%20registraseV3.jpg)
+
+
+
+
+[Volver al Readme.md](README.md)
