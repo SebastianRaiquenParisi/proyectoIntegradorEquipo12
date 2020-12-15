@@ -9,6 +9,35 @@
         4. ![#4C5C68](https://via.placeholder.com/15/4C5C68/000000?text=+) `#4C5C68`
         5. ![#1985A1](https://via.placeholder.com/15/1985A1/000000?text=+) `#1985A1`
         
-        ---
+-----------------------
+        
++ ## _Estos colores representan:_
+        
+1. Color Gainsboro:
+- Neutralidad 
+- Sobriedad 
+- Practicidad
+
+2. Color Silver:
+- Autenticidad 
+- Compromiso 
+- Calidad
+
+3. Color Davys Grey:
+- Fuerza 
+- Sofisticación 
+- Elegancia
+
+4. Color Black Coral:
+- Energía
+- Fuerza
+- Deseo
+
+5. Color Blue Munsell:
+- Frescura 
+- Protección 
+- Infinidad
+     
+-----
 
 [***Volver***](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12)
