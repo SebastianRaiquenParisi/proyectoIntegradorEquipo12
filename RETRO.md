@@ -6,6 +6,11 @@
 -----
 La retrospectiva se centra en mejorar como equipo
 
+*Lo que hicimos bien fue:*
+
+
+Si bien tuvimos un buen desempeño general debemos tener en cuenta lo siguiente:
+
 - *Comenzar a hacer*
 
 - *Hacer más*
