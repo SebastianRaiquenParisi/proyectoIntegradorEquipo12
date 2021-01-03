@@ -190,21 +190,22 @@
 }
 
 .footer-secundario { /* AYUDA no estoy pudiendo centrar el texto de forma vertical*/
-    display: flex;
+    /*display: flex;*/
     margin: 1px 0px 0px 0px;
     background-color:black;
-    padding: 0px 16px 0px 16px;
+    padding: 1px 16px 5px 16px;
     width: auto;
-    height: 35px;
-    flex-direction:column;
+    height: 27px;
+    text-align: center;
+    /*flex-direction:column;
     flex-wrap: none;
-    align-items: center;
-    /*justify-content: space-between*/
+    align-items: center;*/
+    
     
     color: white;
     font-family: Raleway;
     
-    font-size: 15px;
+    font-size: 10px;
     
 }
 
