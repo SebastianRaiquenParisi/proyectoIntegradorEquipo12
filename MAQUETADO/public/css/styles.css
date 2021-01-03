@@ -83,7 +83,7 @@
 
 /*-------------------------------------------------*/
 
-/*BODY*/
+/*BODY INDEX*/
 
 .slider-principal {
     display: flex;
@@ -106,24 +106,24 @@
     background-color:black;
     padding: 0px 16px 0px 16px;
     width: auto;
-    height: 122px;
+    height: 173px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: normal; /*estaba en flex-end*/
+    align-items: flex-start;
     color: rgb(61, 61, 61);
-    font-size: 10px;
-    text-decoration: none;
+    list-style: none;
 }
 
 /*LOGO DEL FOOTER*/
 
 .logo-secundario {
     display: flex;
+    /*align-items: center;*/
     background-color:rgb(66, 65, 65);
+    margin: 5px 15px 15px 10px;
     padding: 0px 16px 0px 16px;
     color: black;
-    text-align: center;
     width: 200px;
     height: 50px;
     border-radius: 5px;
@@ -137,8 +137,7 @@
     font-family: Raleway;
     font-size: 14px;
     color: white;
-    margin: 5px;
-    padding: 5px;
+    
 }
 
 .links-footer-unite {
@@ -146,8 +145,7 @@
     font-family: Raleway;
     font-size: 14px;
     color: white;
-    margin: 5px;
-    padding: 5px;
+    
 }
 
 .links-footer-info {
@@ -155,8 +153,7 @@
     font-family: Raleway;
     font-size: 14px;
     color: white;
-    margin: 5px;
-    padding: 5px;
+    
 }
 
 
@@ -165,10 +162,10 @@
     display: flex;
     width: 50px;
     height: 50px;
-    padding: 2px 2px 2px 2px;
+    padding: 15px 15px 15px 15px;
     text-align: center; /*el icono es interpretado como texto*/
     font-size: 50px; /*el icono es interpretado como texto*/
-    margin: auto; /*puedo utilizar auto porque es un elemento de bloque*/
+    margin: 0px 0px 0px 300px; 
 
 }
 
@@ -179,7 +176,7 @@
     padding: 15px 15px 15px 15px;
     text-align: center; /*el icono es interpretado como texto*/
     font-size: 50px; /*el icono es interpretado como texto*/
-    margin: auto; /*puedo utilizar auto porque es un elemento de bloque*/
+    margin: 0px 0px 0px 0px; 
 }
 
 .tw-icon {
@@ -189,7 +186,7 @@
     padding: 15px 15px 15px 15px;
     text-align: center; /*el icono es interpretado como texto*/
     font-size: 50px; /*el icono es interpretado como texto*/
-    margin: auto; /*puedo utilizar auto porque es un elemento de bloque*/
+    margin: 0px 20px 0px 0px; 
 }
 
 .footer-secundario { /* AYUDA no estoy pudiendo centrar el texto de forma vertical*/
@@ -198,15 +195,17 @@
     background-color:black;
     padding: 0px 16px 0px 16px;
     width: auto;
-    height: 20px;
-    flex-direction: none;
+    height: 35px;
+    flex-direction:column;
     flex-wrap: none;
+    align-items: center;
     /*justify-content: space-between*/
-    align-items: flex-start; /*quizas este sea el que tengo que corregir*/
+    
     color: white;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: top;
+    font-family: Raleway;
+    
     font-size: 15px;
+    
 }
 
 /*-------------------------------------------------*/
