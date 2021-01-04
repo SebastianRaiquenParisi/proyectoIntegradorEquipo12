@@ -32,3 +32,7 @@ app.get ("/", (req, res) => {
 app.get ("/", (req, res) => {
     res.sendFile (path.resolve(__dirname, "./views/hoja4.html")); 
 });
+
+app.get ("/shoppingcart", (req, res) => {
+    res.sendFile (path.resolve(__dirname, "./views/ShoppingCart.html")); 
+});

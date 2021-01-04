@@ -16,15 +16,19 @@
 
 .logo {
     display: flex;
-    background-color:rgb(66, 65, 65);
     padding: 0px 16px 0px 16px;
     color: black;
     text-align: center;
     width: 200px;
-    height: 50px;
+    height: 100px;
     border-radius: 5px;
+    margin-bottom: 5px;
 }
 
+.logo img {
+    width:100%;
+    border-radius: 5px;
+}
 .barra-de-navegacion {
     display: flex;
     padding: 19px 15px 2px 250px;
@@ -96,6 +100,85 @@
     height: 380px;
 }
 
+.shopping-cart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    background: #FFFFFF;
+    border: solid 1px;
+  }
+
+.title {
+    color:black;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 20px;
+    
+  }
+   
+.item {
+    border-top:  1px solid black;
+    border-bottom:  1px solid black;
+    padding: 20px 30px;
+    height: 120px;
+    display: flex;
+  }
+   
+.buttons {
+    position: relative;
+    padding-top: 30px;
+    margin-right: 60px;
+  }
+.delete-btn {
+    display: inline-block;
+    Cursor: pointer;
+  }
+
+.image {
+    margin-right: 50px;
+  }
+   
+.description {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+  }
+   
+.description span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+.quantity {
+    padding-top: 20px;
+    margin-right: 60px;
+  }
+  
+  .quantity input {
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+  }
+   
+
+  .minus-btn img {
+    margin-bottom: 3px;
+  }
+  .plus-btn img {
+    margin-top: 2px;
+  }
+   
+  button:focus,
+  input:focus {
+    outline:0;
+  }
+
+
 /*-------------------------------------------------*/
 
 /*FOOTER*/
@@ -119,17 +202,20 @@
 
 .logo-secundario {
     display: flex;
-    /*align-items: center;*/
-    background-color:rgb(66, 65, 65);
-    margin: 5px 15px 15px 10px;
     padding: 0px 16px 0px 16px;
     color: black;
+    text-align: center;
     width: 200px;
-    height: 50px;
+    height: 100px;
     border-radius: 5px;
+    margin: 10px;
 
 }
 
+.logo-secundario img {
+    width:100%;
+    border-radius: 5px;
+}
 /*LISTAS DEL FOOTER*/
 
 .links-footer-shop {
