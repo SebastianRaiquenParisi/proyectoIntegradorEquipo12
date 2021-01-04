@@ -99,10 +99,12 @@ a {
 .shopping-cart {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 100%;
     background: #FFFFFF;
     border: solid 1px;
     padding: 20px;
+    margin:10px 0px 10px;
+    font-family: "Open Sans", sans-serif;
   }
 
 .title {
