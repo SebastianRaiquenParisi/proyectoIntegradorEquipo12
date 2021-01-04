@@ -24,10 +24,8 @@ a {
     display: flex;
     padding: 0px 16px 0px 16px;
     text-align: center;
-    width: 150px;
-    border-radius: 5px;
-    margin-bottom: 0px;
-    
+    width: 140px;
+    border-radius: 5px;    
 }
 
 .logo img {
@@ -38,10 +36,7 @@ a {
     display: flex;
     align-self: flex-end;
     margin-left: 10%;
-    flex-grow: 1;
-    /*padding: 0px 15px 0px 15px;*/
-    
-    
+    flex-grow: 1; 
 }
 
 /* Style the links inside the navigation bar */
@@ -237,7 +232,6 @@ a {
     width: 50px;
     text-align: center; /*el icono es interpretado como texto*/
     font-size: 50px; /*el icono es interpretado como texto*/
-    
 }
 
 
@@ -256,7 +250,11 @@ a {
     font-family: Raleway;
     font-size: 10px;
 }
+
+/*-------------------------------------------------*/
+
 /*LOGIN Y REGISTER*/
+
 .form-container{
     width:50vh;
     height:50vh;

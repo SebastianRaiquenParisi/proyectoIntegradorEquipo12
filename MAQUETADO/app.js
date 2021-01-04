@@ -26,11 +26,11 @@ app.get ("/", (req, res) => {
 });
 
 app.get ("/", (req, res) => {
-    res.sendFile (path.resolve(__dirname, "./views/carritoDeCompras.html")); 
+    res.sendFile (path.resolve(__dirname, "./views/ShoppingCart.html")); 
 });
 
 app.get ("/", (req, res) => {
-    res.sendFile (path.resolve(__dirname, "./views/logIn.html")); 
+    res.sendFile (path.resolve(__dirname, "./views/login.html")); 
 });
 
 app.get ("/", (req, res) => {
@@ -38,15 +38,5 @@ app.get ("/", (req, res) => {
 });
 
 app.get ("/", (req, res) => {
-    res.sendFile (path.resolve(__dirname, "./views/registrarse.html")); 
-});
-
-app.get ("/shoppingcart", (req, res) => {
-    res.sendFile (path.resolve(__dirname, "./views/ShoppingCart.html")); 
-});
-app.get ("/login", (req, res) => {
-    res.sendFile (path.resolve(__dirname, "./views/login.html")); 
-});
-app.get ("/register", (req, res) => {
     res.sendFile (path.resolve(__dirname, "./views/register.html")); 
 });
