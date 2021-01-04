@@ -10,6 +10,12 @@
     
 }
 
+a { 
+    color: inherit; /*le saco el color a los links*/
+    background-color: transparent;
+    text-decoration: none;
+  }
+
 /*-------------------------------------------------*/
 
 /*HEADER*/
@@ -68,7 +74,6 @@
     text-align: center; /*el icono es interpretado como texto*/
     font-size: 25px; /*el icono es interpretado como texto*/
     
-    
 }
 
 
@@ -86,6 +91,10 @@
     width: auto;
     height: 342px;
 }
+
+/*-------------------------------------------------*/
+
+/*BODY SHOPPING CART*/
 
 .shopping-cart {
     display: flex;
