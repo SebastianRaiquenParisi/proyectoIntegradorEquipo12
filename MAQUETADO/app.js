@@ -18,19 +18,27 @@ console.log ("Servidor corriendo")
 //enviando archivos con SendFile
 
 app.get ("/", (req, res) => {
-    res.sendFile (path.resolve(__dirname, "./views/index.html")); //resolvemos la ruta para enviar home.html como primer archivo
+   res.sendFile (path.resolve(__dirname, "./views/index.html")); //resolvemos la ruta para enviar home.html como primer archivo
 });
 
 app.get ("/", (req, res) => {
-    res.sendFile (path.resolve(__dirname, "./views/hoja2.html")); 
+    res.sendFile (path.resolve(__dirname, "./views/listadoProductos.html")); 
 });
 
 app.get ("/", (req, res) => {
-    res.sendFile (path.resolve(__dirname, "./views/hoja3.html")); 
+    res.sendFile (path.resolve(__dirname, "./views/carritoDeCompras.html")); 
 });
 
 app.get ("/", (req, res) => {
-    res.sendFile (path.resolve(__dirname, "./views/hoja4.html")); 
+    res.sendFile (path.resolve(__dirname, "./views/logIn.html")); 
+});
+
+app.get ("/", (req, res) => {
+    res.sendFile (path.resolve(__dirname, "./views/producto.html")); 
+});
+
+app.get ("/", (req, res) => {
+    res.sendFile (path.resolve(__dirname, "./views/registrarse.html")); 
 });
 
 app.get ("/shoppingcart", (req, res) => {
