@@ -130,33 +130,39 @@
 
 }
 
-/*LISTAS DEL FOOTER*/
+/*PRUEBA EN EL FOOTER*/
 
-.links-footer-shop {
+.endnav {
     display: flex;
-    font-family: Raleway;
-    font-size: 14px;
-    color: white;
-    
+    flex-direction: column;
+    padding: 0px 15px 2px 0px;
+    /*position: fixed;*/
 }
 
-.links-footer-unite {
+/* Style the links inside the navigation bar */
+.endnav a {
     display: flex;
-    font-family: Raleway;
-    font-size: 14px;
-    color: white;
     
+    /*float: left;*/
+    color: white;
+    text-align: center;
+    padding: 8px 15px 2px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Raleway;
+}
+/* Change the color of links on hover */
+.endnav a:hover {
+    background-color: rgb(66, 65, 65);
+    color: white;
+}
+/* Add a color to the active/current link */
+.endnav a.active {
+    background-color: #252525;
+    color: white;
 }
 
-.links-footer-info {
-    display: flex;
-    font-family: Raleway;
-    font-size: 14px;
-    color: white;
-    
-}
-
-
+/*------------------------------------*/
 
 .insta-icon {
     display: flex;
