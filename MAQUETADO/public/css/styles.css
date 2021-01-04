@@ -103,10 +103,10 @@
 .shopping-cart {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 400px;
+    width: 95%;
     background: #FFFFFF;
     border: solid 1px;
+    padding: 20px;
   }
 
 .title {
@@ -114,70 +114,61 @@
     font-weight: bold;
     font-size: 15px;
     padding: 10px 20px;
-    
-  }
+    border-bottom: 1px solid black;
+}
    
 .item {
-    border-top:  1px solid black;
+    display: flex;
     border-bottom:  1px solid black;
     padding: 20px 30px;
     height: 120px;
-    display: flex;
-  }
+}
    
 .buttons {
-    position: relative;
     padding-top: 30px;
     margin-right: 60px;
-  }
+}
+
 .delete-btn {
     display: inline-block;
-    Cursor: pointer;
-  }
+}
 
 .image {
     margin-right: 50px;
-  }
+}
    
 .description {
     padding-top: 10px;
-    margin-right: 60px;
+    margin: auto;
     width: 115px;
-  }
+}
    
 .description span {
     display: block;
     font-size: 14px;
     font-weight: 400;
-  }
+}
 
 .quantity {
     padding-top: 20px;
-    margin-right: 60px;
-  }
+    margin: auto;
+}
   
-  .quantity input {
+.quantity input{
     border: none;
     text-align: center;
-    width: 32px;
+    width: 20px;
     font-size: 16px;
     color: #43484D;
     font-weight: 300;
-  }
-   
+}
 
-  .minus-btn img {
-    margin-bottom: 3px;
-  }
-  .plus-btn img {
-    margin-top: 2px;
-  }
-   
-  button:focus,
-  input:focus {
-    outline:0;
-  }
-
+.total-price {
+    margin: auto;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 300;
+}
 
 /*-------------------------------------------------*/
 
