@@ -16,15 +16,19 @@
 
 .logo {
     display: flex;
-    background-color:rgb(66, 65, 65);
     padding: 0px 16px 0px 16px;
     color: black;
     text-align: center;
     width: 200px;
-    height: 50px;
+    height: 100px;
     border-radius: 5px;
+    margin-bottom: 5px;
 }
 
+.logo img {
+    width:100%;
+    border-radius: 5px;
+}
 .barra-de-navegacion {
     display: flex;
     padding: 19px 15px 2px 250px;
@@ -83,7 +87,7 @@
 
 /*-------------------------------------------------*/
 
-/*BODY*/
+/*BODY INDEX*/
 
 .slider-principal {
     display: flex;
@@ -96,6 +100,76 @@
     height: 380px;
 }
 
+.shopping-cart {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    background: #FFFFFF;
+    border: solid 1px;
+    padding: 20px;
+  }
+
+.title {
+    color:black;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-bottom: 1px solid black;
+}
+   
+.item {
+    display: flex;
+    border-bottom:  1px solid black;
+    padding: 20px 30px;
+    height: 120px;
+}
+   
+.buttons {
+    padding-top: 30px;
+    margin-right: 60px;
+}
+
+.delete-btn {
+    display: inline-block;
+}
+
+.image {
+    margin-right: 50px;
+}
+   
+.description {
+    padding-top: 10px;
+    margin: auto;
+    width: 115px;
+}
+   
+.description span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.quantity {
+    padding-top: 20px;
+    margin: auto;
+}
+  
+.quantity input{
+    border: none;
+    text-align: center;
+    width: 20px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
+
+.total-price {
+    margin: auto;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 300;
+}
+
 /*-------------------------------------------------*/
 
 /*FOOTER*/
@@ -106,69 +180,79 @@
     background-color:black;
     padding: 0px 16px 0px 16px;
     width: auto;
-    height: 122px;
+    height: 173px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: normal; /*estaba en flex-end*/
+    align-items: flex-start;
     color: rgb(61, 61, 61);
-    font-size: 10px;
-    text-decoration: none;
+    list-style: none;
 }
 
 /*LOGO DEL FOOTER*/
 
 .logo-secundario {
     display: flex;
-    background-color:rgb(66, 65, 65);
     padding: 0px 16px 0px 16px;
     color: black;
     text-align: center;
     width: 200px;
-    height: 50px;
+    height: 100px;
     border-radius: 5px;
+    margin: 10px;
 
 }
 
+<<<<<<< HEAD
+/*PRUEBA EN EL FOOTER*/
+=======
+.logo-secundario img {
+    width:100%;
+    border-radius: 5px;
+}
 /*LISTAS DEL FOOTER*/
+>>>>>>> ebde5fc398958ba4f711a8eb32bcb3e67c656c7a
 
-.links-footer-shop {
+.endnav {
     display: flex;
-    font-family: Raleway;
-    font-size: 14px;
-    color: white;
-    margin: 5px;
-    padding: 5px;
+    flex-direction: column;
+    padding: 0px 15px 2px 0px;
+    /*position: fixed;*/
 }
 
-.links-footer-unite {
+/* Style the links inside the navigation bar */
+.endnav a {
     display: flex;
-    font-family: Raleway;
-    font-size: 14px;
+    
+    /*float: left;*/
     color: white;
-    margin: 5px;
-    padding: 5px;
+    text-align: center;
+    padding: 8px 15px 2px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Raleway;
+}
+/* Change the color of links on hover */
+.endnav a:hover {
+    background-color: rgb(66, 65, 65);
+    color: white;
+}
+/* Add a color to the active/current link */
+.endnav a.active {
+    background-color: #252525;
+    color: white;
 }
 
-.links-footer-info {
-    display: flex;
-    font-family: Raleway;
-    font-size: 14px;
-    color: white;
-    margin: 5px;
-    padding: 5px;
-}
-
-
+/*------------------------------------*/
 
 .insta-icon {
     display: flex;
     width: 50px;
     height: 50px;
-    padding: 2px 2px 2px 2px;
+    padding: 15px 15px 15px 15px;
     text-align: center; /*el icono es interpretado como texto*/
     font-size: 50px; /*el icono es interpretado como texto*/
-    margin: auto; /*puedo utilizar auto porque es un elemento de bloque*/
+    margin: 0px 0px 0px 300px; 
 
 }
 
@@ -179,7 +263,7 @@
     padding: 15px 15px 15px 15px;
     text-align: center; /*el icono es interpretado como texto*/
     font-size: 50px; /*el icono es interpretado como texto*/
-    margin: auto; /*puedo utilizar auto porque es un elemento de bloque*/
+    margin: 0px 0px 0px 0px; 
 }
 
 .tw-icon {
@@ -189,24 +273,27 @@
     padding: 15px 15px 15px 15px;
     text-align: center; /*el icono es interpretado como texto*/
     font-size: 50px; /*el icono es interpretado como texto*/
-    margin: auto; /*puedo utilizar auto porque es un elemento de bloque*/
+    margin: 0px 20px 0px 0px; 
 }
 
 .footer-secundario { /* AYUDA no estoy pudiendo centrar el texto de forma vertical*/
-    display: flex;
+    /*display: flex;*/
     margin: 1px 0px 0px 0px;
     background-color:black;
-    padding: 0px 16px 0px 16px;
+    padding: 1px 16px 5px 16px;
     width: auto;
-    height: 20px;
-    flex-direction: none;
+    height: 27px;
+    text-align: center;
+    /*flex-direction:column;
     flex-wrap: none;
-    /*justify-content: space-between*/
-    align-items: flex-start; /*quizas este sea el que tengo que corregir*/
+    align-items: center;*/
+    
+    
     color: white;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: top;
-    font-size: 15px;
+    font-family: Raleway;
+    
+    font-size: 10px;
+    
 }
 /*LOGIN Y REGISTER*/
 .form-container{
