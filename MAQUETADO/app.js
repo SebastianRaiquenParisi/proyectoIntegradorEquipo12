@@ -40,3 +40,7 @@ app.get ("/", (req, res) => {
 app.get ("/", (req, res) => {
     res.sendFile (path.resolve(__dirname, "./views/registrarse.html")); 
 });
+
+app.get ("/shoppingcart", (req, res) => {
+    res.sendFile (path.resolve(__dirname, "./views/ShoppingCart.html")); 
+});
