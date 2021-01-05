@@ -376,7 +376,11 @@ a {
     display: inline-block;
     text-align: center;
     background-color: #DCDCDD;
-    box-shadow : 0px 0px 10px rgb(100, 100, 100);
+    box-shadow : 0px 0px 8px rgb(138, 137, 137);
+}
+
+.product-price{
+    color: #46494C;
 }
 
 .view-product{
@@ -388,13 +392,14 @@ a {
 .add-to-cart{
     display: flex;
     justify-content: center;
-    color: black;
-    font-size: 16px;
-    margin-bottom: 30px;
+    color: #DCDCDD;
+    padding: 15px;
+    background-color: #000;
+    font-size: 18px;
 }
 
 .add-to-cart:hover{
-    text-decoration: underline;
+    opacity: 0.5;
 }
 
 .input {
