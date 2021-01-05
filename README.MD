@@ -1,5 +1,7 @@
 ## Madly Artsy
 
+(https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/ramiro/MAQUETADO/public/images/logo-1.jpeg)
+
 -------------------
 
 + ##  __Acerca de:__
