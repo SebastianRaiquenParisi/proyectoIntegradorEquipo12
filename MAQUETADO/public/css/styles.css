@@ -354,7 +354,7 @@ a {
     flex-direction: column;
     width: 15%;
     border: solid 1px #4C5C68 ;
-    margin: 15px 5px
+    margin: 15px;
 }
 
 .grid-container{
@@ -383,7 +383,6 @@ a {
     width: 100%;
     display: block;
     margin-bottom: 20px;
-
 }
 
 .add-to-cart{
@@ -406,8 +405,14 @@ a {
     display: flex;
     justify-content: center;
 }
+
 .filter-type{
-    margin-left: 15px;
+    border-bottom: solid 1px black;
+    margin: 0px 15px 0px 15px;
+}
+
+.filter-type div{
+    margin-bottom: 10px;
 }
 
 /*-------------------------------------------------*/
