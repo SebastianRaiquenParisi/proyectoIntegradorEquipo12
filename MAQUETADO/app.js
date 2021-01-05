@@ -21,22 +21,26 @@ app.get ("/", (req, res) => {
    res.sendFile (path.resolve(__dirname, "./views/index.html")); //resolvemos la ruta para enviar home.html como primer archivo
 });
 
-app.get ("/", (req, res) => {
+app.get ("/index", (req, res) => {
+    res.sendFile (path.resolve(__dirname, "./views/index.html")); 
+});
+
+app.get ("/listadoProductos", (req, res) => {
     res.sendFile (path.resolve(__dirname, "./views/listadoProductos.html")); 
 });
 
-app.get ("/", (req, res) => {
+app.get ("/ShoppingCart", (req, res) => {
     res.sendFile (path.resolve(__dirname, "./views/ShoppingCart.html")); 
 });
 
-app.get ("/", (req, res) => {
+app.get ("/login", (req, res) => {
     res.sendFile (path.resolve(__dirname, "./views/login.html")); 
 });
 
-app.get ("/", (req, res) => {
+app.get ("/producto", (req, res) => {
     res.sendFile (path.resolve(__dirname, "./views/producto.html")); 
 });
 
-app.get ("/", (req, res) => {
+app.get ("/register", (req, res) => {
     res.sendFile (path.resolve(__dirname, "./views/register.html")); 
 });

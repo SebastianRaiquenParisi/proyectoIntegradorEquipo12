@@ -140,8 +140,7 @@ a {
     justify-content: flex-end;
     margin: 5px 0px 5px 0px;
     width: 50%;
-    height: 289px; /*289*/
-    border: solid 1px red;
+    height: 289px;
     padding: 10px 0px 10px 0px;
 }
 
@@ -162,7 +161,6 @@ a {
     margin: 5px 0px 5px 0px;
     width:10%;
     height: 289px;
-    border: solid 1px red;
     padding: 10px 0px 10px 0px;
 }
 
