@@ -103,3 +103,7 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 [Click aquí para ver las tipografias seleccionadas](Dise%C3%B1o/Tipografia.md)
 
 ---------------
+
+## Tablero de trabajo
+
+[Click aquí para ver tablero de trabajo](https://trello.com/b/vDJjFVHV/equipo-12-madly-artsy)
