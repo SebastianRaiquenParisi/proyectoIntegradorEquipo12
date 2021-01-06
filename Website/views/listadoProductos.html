@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+     <!--agregar iconos--> 
+     <script src="https://kit.fontawesome.com/42d391c3ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="flex-box">
+        <div class="logo">
+            <a href="index"><img src="images/logo-1.jpeg" alt="logo Madly"></a>
+        </div>
+        
+        <div class="barra-de-navegacion">
+            <div class="topnav">
+                <a class="active" href="index">INICIO</a>
+                <a href="#remeras">REMERAS</a>
+                <a href="#buzos">BUZOS</a>
+                <a href="#disenos">DISEÑOS</a>
+                <a href="#accesorios">ACCESORIOS</a>
+            </div>
+        </div>
+
+        <div class="nav-bar-icons">
+            <a href="ShoppingCart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        
+        <div class="nav-bar-icons">
+            <a href="#buscar" ><i class="fas fa-search"></i></a>
+        </div>
+
+        <div class="nav-bar-icons">
+            <a href="login" ><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <section class="product-list-main">
+
+        <div class="filter-list">
+            <h2>Filtrar</h2>
+        
+            <div class="filter-type">
+                <h3>Tipo</h3>
+                <div><input type="checkbox" name="tipo-producto" value="remera" id="remera"><label for="remera">Remera</label></div>
+                <div><input type="checkbox" name="tipo-producto" value="campera" id="campera"><label for="campera">Campera</label></div>
+                <div><input type="checkbox" name="tipo-producto" value="pant" id="pant"><label for="pant">Pantalon</label></div>
+                <div><input type="checkbox" name="tipo-producto" value="accesorios" id="accesorios"><label for="accesorios">Accesorios</label></div>
+                <div><input type="checkbox" name="tipo-producto" value="outlet" id="outlet"><label for="outlet">Outlet</label></div>
+            </div>
+            
+            <div class="filter-type">
+                <h3>Talle</h3>
+                <div><input type="checkbox" name="size" value="small" id="small"><label for="small">Small</label></div>
+                <div><input type="checkbox" name="size" value="medium" id="medium"><label for="medium">Medium</label></div>
+                <div><input type="checkbox" name="size" value="large" id="large"><label for="large">Large</label></div>
+                <div><input type="checkbox" name="size" value="xlarge" id="xlarge"><label for="xlarge">Extra Large</label></div>
+                <div><input type="checkbox" name="size" value="xxlarge" id="xxlarge"><label for="xxlarge">2X Large</label></div>
+            </div>
+            
+            <div class="filter-type">
+                <h3>Color</h3>
+                <div><input type="checkbox" name="color" value="blk" id="blk"><label for="blk">Negro</label></div>
+                <div><input type="checkbox" name="color" value="red" id="red"><label for="red">Rojo</label></div>
+                <div><input type="checkbox" name="color" value="blue" id="blue"><label for="blue">Azul</label></div>
+                <div><input type="checkbox" name="color" value="white" id="white"><label for="white">Blanco</label></div>
+                <div><input type="checkbox" name="color" value="green" id="green"><label for="green">Verde</label></div>
+                <div><input type="checkbox" name="color" value="pink" id="pink"><label for="pink">Rosa</label></div>
+                <div><input type="checkbox" name="color" value="salmon" id="salmon"><label for="salmon">Salmon</label></div>
+            </div>
+        </div>
+
+        <div class="grid-container"> 
+            
+            <div class="product-item">
+              <a href="#" class="view-product">
+                <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
+                <h2 class="product-name">Producto 1</h2>
+                <h3 class="product-price">$100</h3>
+                <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
+              </a>
+              <a href="#" class="add-to-cart">Añadir al carro</a>
+            </div>
+            
+            <div class="product-item">
+                <a href="#" class="view-product">
+                  <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
+                  <h2 class="product-name">Producto 2</h2>
+                  <h3 class="product-price">$100</h3>
+                  <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
+                </a>
+                <a href="#" class="add-to-cart">Añadir al carro</a>
+              </div>
+            
+              <div class="product-item">
+                <a href="#" class="view-product">
+                  <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
+                  <h2 class="product-name">Producto 3</h2>
+                  <h3 class="product-price">$100</h3>
+                  <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
+                </a>
+                <a href="#" class="add-to-cart">Añadir al carro</a>
+              </div>
+            
+              <div class="product-item">
+                <a href="#" class="view-product">
+                  <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
+                  <h2 class="product-name">Producto 4</h2>
+                  <h3 class="product-price">$100</h3>
+                  <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
+                </a>
+                <a href="#" class="add-to-cart">Añadir al carro</a>
+              </div>
+              <div class="product-item">
+                <a href="#" class="view-product">
+                  <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
+                  <h2 class="product-name">Producto 5</h2>
+                  <h3 class="product-price">$100</h3>
+                  <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
+                </a>
+                <a href="#" class="add-to-cart">Añadir al carro</a>
+              </div>
+              
+              <div class="product-item">
+                  <a href="#" class="view-product">
+                    <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
+                    <h2 class="product-name">Producto 6</h2>
+                    <h3 class="product-price">$100</h3>
+                    <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
+                  </a>
+                  <a href="#" class="add-to-cart">Añadir al carro</a>
+                </div>
+              
+                <div class="product-item">
+                  <a href="#" class="view-product">
+                    <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
+                    <h2 class="product-name">Producto 7</h2>
+                    <h3 class="product-price">$100</h3>
+                    <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
+                  </a>
+                  <a href="#" class="add-to-cart">Añadir al carro</a>
+                </div>
+              
+                <div class="product-item">
+                  <a href="#" class="view-product">
+                    <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
+                    <h2 class="product-name">Producto 8</h2>
+                    <h3 class="product-price">$100</h3>
+                    <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
+                  </a>
+                  <a href="#" class="add-to-cart">Añadir al carro</a>
+                </div>
+            
+          </div>
+          
+    </section>
+
+    <footer class="footer-principal">
+
+        <div class="logo-secundario">
+            <a href="index"><img src="images/logo-1.jpeg" alt="logo Madly"></a>
+
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#shop">SHOP</a>
+            <a href="#remeras">Remeras</a>
+            <a href="#buzos">Buzos</a>
+            <a href="#disenos">Diseños</a>
+            <a href="#accesorios">Accesorios</a>
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#unite">UNITE</a>
+            <a href="register">Registrate</a>
+            <a href="login">Login</a>
+            <a href="#promociones">Promociones</a>
+        
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#info">INFO</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#tu compra">Tu compra</a>
+            <a href="#formas de pago">Formas de Pago</a>
+            <a href="#envios">Envíos</a>
+            <a href="#devoluciones">Devoluciones</a>
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#ayuda">AYUDA</a>
+            <a href="#atencion al cliente">Atención al Cliente</a>
+            <a href="#compra segura">Compra Segura</a>
+            <a href="#preguntas frecuentes">Preguntas Frecuentes</a>
+            <a href="#reclamos">Reclamos</a>
+        </div>
+
+
+
+        <div class="footer-icon">
+            <a href="#instagram"><i class="fab fa-instagram-square"></i></a>
+        </div>
+
+        <div class="footer-icon">
+            <a href="#facebook"><i class="fab fa-facebook-square"></i></a>
+        </div>
+
+        <div class="footer-icon">
+            <a href="#twitter"><i class="fab fa-twitter-square"></i></a>
+        </div>
+
+    </footer>
+        <div class="footer-secundario">
+            <p>2020-2021</p>
+        </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "servidor-con-express",
+  "version": "1.0.0",
+  "description": "Levantar un servidor utilizando express",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuevo-rama/Servidor-con-Express.git"
+  },
+  "author": "nuevo-rama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nuevo-rama/Servidor-con-Express/issues"
+  },
+  "homepage": "https://github.com/nuevo-rama/Servidor-con-Express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
