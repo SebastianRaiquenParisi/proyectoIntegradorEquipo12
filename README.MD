@@ -104,6 +104,6 @@ Queremos lograr un sitio en donde el cliente pueda elegir distintos diseños y p
 
 ---------------
 
-## Tablero de trabajo
++ ## Tablero de trabajo
 
 [Click aquí para ver tablero de trabajo](https://trello.com/b/vDJjFVHV/equipo-12-madly-artsy)
