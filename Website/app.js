@@ -21,10 +21,13 @@ app.get ("/", (req, res) => {
    res.sendFile (path.resolve(__dirname, "./views/index.html")); //resolvemos la ruta para enviar home.html como primer archivo
 });
 
+<<<<<<< HEAD:MAQUETADO/app.js
 app.get ("/index", (req, res) => {
     res.sendFile (path.resolve(__dirname, "./views/index.html")); 
 });
 
+=======
+>>>>>>> 2ff49f1124a6b6c05a8f6e3cdef87b8d3ac16931:Website/app.js
 app.get ("/listadoProductos", (req, res) => {
     res.sendFile (path.resolve(__dirname, "./views/listadoProductos.html")); 
 });
