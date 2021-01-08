@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/42d391c3ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="flex-box">
+        <div class="logo">
+            <a href="index"><img src="images/logo-1.jpeg" alt="logo Madly"></a>
+        </div>
+        
+        <div class="barra-de-navegacion">
+            <div class="topnav">
+                <a class="active" href="index">INICIO</a>
+                <a href="listadoProductos">REMERAS</a>
+                <a href="listadoProductos">BUZOS</a>
+                <a href="listadoProductos">DISEÑOS</a>
+                <a href="listadoProductos">ACCESORIOS</a>
+                <a href="producto">PRODUCTO</a>
+            </div>
+        </div>
+
+        <div class="nav-bar-icons">
+            <a href="ShoppingCart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        
+        <div class="nav-bar-icons">
+            <a href="#buscar" ><i class="fas fa-search"></i></a>
+        </div>
+
+        <div class="nav-bar-icons">
+            <a href="login" ><i class="fas fa-user"></i></a>
+        </div>
+
+    
+    </header>
+
+    <section class="barraBusqueda">        
+        <form action="/procesoDeInformacion" method="POST">
+            <input id="searchInput" type="search" name="busqueda" placeholder="Buscar" size="40">
+        </form>
+    </section>
+
+    <section class="centroA">
+        <div class="imgProductoPrincipal"></div>
+        <div class="bloqueImgAlternativas">
+            <div id="imgAlt"></div>
+            <div id="imgAlt"></div>
+            <div id="imgAlt"></div>
+        </div>
+        <div class="productoColumnaA">
+            <div class="filasA">
+                <h1 id="Titulos1">Producto de ejemplo 2</h1>
+                <i id="iconos1"class="fas fa-tshirt"></i>
+            </div>
+            <div class="filasA">
+                <h4 id="Titulos2">Subtítulo del Producto</h4>
+            </div>
+            <div class="filasA">                
+                <p id="Titulos2">Producto con % de Descuento</p>
+                <i id="descIcon" class="fas fa-percentage"></i>                
+            </div>
+            <div class="filasA">
+                <h2 id="Titulos1">$ Precio</h2>
+            </div>
+            <div class="filasA">
+                <p id="Titulos3">Elegí tu talle</p>
+                <form id="talles" action="/action_page.php">
+                    <select id="talles" name="talles">
+                      <option value="XS">XS Extra Small</option>
+                      <option value="S ">S Small</option>
+                      <option value="M">M Medium</option>
+                      <option value="L">L Large</option>
+                      <option value="XL">XL Extra Large</option>
+                    </select>
+                </form>
+            </div>
+            <div class="filasA">
+                <button id="buttonSubmit">Añadir al Carrito</button>
+                <button id="heartIcon" class="far fa-heart"></button>
+            </div>
+            <div class="filasA">
+                <button id="verGuiaDeTalles">VER GUÍA DE TALLES</button>
+            </div>
+        </div>
+        <div class="productoColumnaB">
+            <div class="filasB">
+                <h6 id="Titulos3">VALORACIÓN</h6>
+                <button id="iconos2" class="far fa-star"></button>
+                <button id="iconos2" class="far fa-star"></button>
+                <button id="iconos2" class="far fa-star"></button>
+                <button id="iconos2" class="far fa-star"></button>
+                <button id="iconos2" class="far fa-star"></button>
+            </div>
+            <div class="filasB" id="formasEnvioPago">            
+            <p id="Titulos2">
+                Detalle del producto 1<br>
+                Detalle del producto 2<br>
+                Detalle del producto 2<br>
+            <i id="iconos2" class="fas fa-tags"></i>
+            </p>            
+            </div>
+            <div class="filasB" id="formasEnvioPago">
+                <h4 id="Titulos2">PRODUCTO DISPONIBLE</h4>
+                    <p id="Titulos2">
+                    Envío en 24/72 hs<br>
+                    Ver Condiciones<br>
+                <i id="iconos2" class="fas fa-truck"></i>
+                </p>
+            </div>
+            <div class="filasB" id="formasEnvioPago">            
+                <h4 id="Titulos2">FORMAS DE PAGO</h4>
+                <p id="Titulos2">Podés pagar hasta en 12 cuotas<br>
+                Medios de Pago:<br>
+                Efectivo<br>
+                Tarjeta de Débito<br>
+                Tarjeta de Crédito<br>               
+                <i id="iconos2" class="fas fa-credit-card"></i>
+                </p>
+            </div>
+    </section>
+    
+    <footer class="footer-principal">
+
+        <div class="logo-secundario">
+            <a href="index"><img src="images/logo-1.jpeg" alt="logo Madly"></a>
+
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#shop">SHOP</a>
+            <a href="listadoProductos">Remeras</a>
+            <a href="listadoProductos">Buzos</a>
+            <a href="listadoProductos">Diseños</a>
+            <a href="listadoProductos">Accesorios</a>
+            <a href="producto">Producto</a>
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#unite">UNITE</a>
+            <a href="register">Registrate</a>
+            <a href="login">Login</a>
+            <a href="#promociones">Promociones</a>
+        
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#info">INFO</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#tu compra">Tu compra</a>
+            <a href="#formas de pago">Formas de Pago</a>
+            <a href="#envios">Envíos</a>
+            <a href="#devoluciones">Devoluciones</a>
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#ayuda">AYUDA</a>
+            <a href="#atencion al cliente">Atención al Cliente</a>
+            <a href="#compra segura">Compra Segura</a>
+            <a href="#preguntas frecuentes">Preguntas Frecuentes</a>
+            <a href="#reclamos">Reclamos</a>
+        </div>
+
+
+
+        <div class="footer-icon">
+            <a href="#instagram"><i class="fab fa-instagram-square"></i></a>
+        </div>
+
+        <div class="footer-icon">
+            <a href="#facebook"><i class="fab fa-facebook-square"></i></a>
+        </div>
+
+        <div class="footer-icon">
+            <a href="#twitter"><i class="fab fa-twitter-square"></i></a>
+        </div>
+
+    </footer>
+        <div class="footer-secundario">
+            <p>2020-2021</p>
+        </div>
+
+    
+</body>
+</html>
+    
