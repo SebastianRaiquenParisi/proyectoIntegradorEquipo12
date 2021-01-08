@@ -42,52 +42,91 @@
     
     </header>
 
-    <section class="barraBusqueda">
-        <div class="campoBusqueda">
-            <p>Buscar</p>
-        </div>
+    <section class="barraBusqueda">        
+        <form action="/procesoDeInformacion" method="POST">
+            <input id="searchInput" type="search" name="busqueda" placeholder="Buscar" size="40">
+        </form>
     </section>
 
-    <section class="centroProducto">
-    
-        <div class="rowLeft">
-            <div class="imgProductoPrincipal"></div>
+    <section class="centroA">
+        <div class="imgProductoPrincipal"></div>
+        <div class="bloqueImgAlternativas">
+            <div id="imgAlt"></div>
+            <div id="imgAlt"></div>
+            <div id="imgAlt"></div>
         </div>
-
-        <div class="rowCenter">
-            <div id="subRowCenter"></div>
-            <div id="subRowCenter"></div>
-            <div id="subRowCenter"></div>
+        <div class="productoColumnaA">
+            <div class="filasA">
+                <h1 id="Titulos1">Producto de ejemplo 2</h1>
+                <i id="iconos1"class="fas fa-tshirt"></i>
+            </div>
+            <div class="filasA">
+                <h4 id="Titulos2">Subtítulo del Producto</h4>
+            </div>
+            <div class="filasA">                
+                <p id="Titulos2">Producto con % de Descuento</p>
+                <i id="descIcon" class="fas fa-percentage"></i>                
+            </div>
+            <div class="filasA">
+                <h2 id="Titulos1">$ Precio</h2>
+            </div>
+            <div class="filasA">
+                <p id="Titulos3">Elegí tu talle</p>
+                <form id="talles" action="/action_page.php">
+                    <select id="talles" name="talles">
+                      <option value="XS">XS Extra Small</option>
+                      <option value="S ">S Small</option>
+                      <option value="M">M Medium</option>
+                      <option value="L">L Large</option>
+                      <option value="XL">XL Extra Large</option>
+                    </select>
+                </form>
+            </div>
+            <div class="filasA">
+                <button id="buttonSubmit">Añadir al Carrito</button>
+                <button id="heartIcon" class="far fa-heart"></button>
+            </div>
+            <div class="filasA">
+                <button id="verGuiaDeTalles">VER GUÍA DE TALLES</button>
+            </div>
         </div>
-
-        <div class="rowRigth">
-            <div id="subRowRigth">
-                <h3 id="producto">Producto</h3>
+        <div class="productoColumnaB">
+            <div class="filasB">
+                <h6 id="Titulos3">VALORACIÓN</h6>
+                <button id="iconos2" class="far fa-star"></button>
+                <button id="iconos2" class="far fa-star"></button>
+                <button id="iconos2" class="far fa-star"></button>
+                <button id="iconos2" class="far fa-star"></button>
+                <button id="iconos2" class="far fa-star"></button>
             </div>
-            <div id="subRowRigth">
-                <p id="detalle">Detalle</p>
+            <div class="filasB" id="formasEnvioPago">            
+            <p id="Titulos2">
+                Detalle del producto 1<br>
+                Detalle del producto 2<br>
+                Detalle del producto 2<br>
+            <i id="iconos2" class="fas fa-tags"></i>
+            </p>            
             </div>
-            <div id="subRowRigth">
-                <p id="talles">Talles</p>
+            <div class="filasB" id="formasEnvioPago">
+                <h4 id="Titulos2">PRODUCTO DISPONIBLE</h4>
+                    <p id="Titulos2">
+                    Envío en 24/72 hs<br>
+                    Ver Condiciones<br>
+                <i id="iconos2" class="fas fa-truck"></i>
+                </p>
             </div>
-            <div id="subRowRigth">
-                <h3 id="cantidad">Cantidad</h3>
+            <div class="filasB" id="formasEnvioPago">            
+                <h4 id="Titulos2">FORMAS DE PAGO</h4>
+                <p id="Titulos2">Podés pagar hasta en 12 cuotas<br>
+                Medios de Pago:<br>
+                Efectivo<br>
+                Tarjeta de Débito<br>
+                Tarjeta de Crédito<br>               
+                <i id="iconos2" class="fas fa-credit-card"></i>
+                </p>
             </div>
-            <div id="subRowRigth">
-                <button id="anadirAlCarrito">Añadir al carrito</button>
-            </div>
-            <div id="subRowRigth">
-                <h4 id="verGuiaDeTalles">VER GUÍA DE TALLES</h4>
-            </div>
-            <div id="subRowRigth">
-                <p id="iconos">ICONOS</p>
-            </div>
-        </div>
-
     </section>
     
-    
-
     <footer class="footer-principal">
 
         <div class="logo-secundario">
@@ -151,5 +190,4 @@
     
 </body>
 </html>
-
     
