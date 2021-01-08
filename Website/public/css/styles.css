@@ -94,7 +94,6 @@ a {
 /*BODY PRODUCTO*/
 
 
-
 .barraBusqueda {
     margin: 5px 0px 0px 0px;
     padding: 0.5%;
@@ -108,8 +107,6 @@ a {
     border: solid 1px;
     border-color: #46494C;
     width: auto;
-    
-
 }
 
 .campoBusqueda {
@@ -131,9 +128,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
 
-
 }
-
 
 .rowLeft {
     display: flex;
@@ -152,8 +147,6 @@ a {
     height: 100%;
 
 }
-
-
 
 .rowCenter {
     display: flex;
@@ -266,90 +259,118 @@ a {
 
 /*BODY SHOPPING CART*/
 
-.shopping-cart {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background: #FFFFFF;
-    border: solid 1px;
-    
-    padding: 20px;
-    margin:10px 0px 10px;
-    font-family: "Open Sans", sans-serif;
-  }
-
-.title {
-    color:black;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 10px 20px;
-    border-bottom: 1px solid black;
-}
-   
-.item {
-    display: flex;
-    border-bottom:  1px solid black;
-    padding: 20px 30px;
-    height: 120px;
-}
-   
-.buttons {
+.cart .table tbody tr td{
     padding-top: 30px;
-    margin-right: 60px;
+    padding-bottom: 30px;
+    vertical-align: middle;
+    text-align: center;
+}
+.cart{
+    font-family: "Open Sans", sans-serif;
 }
 
-.delete-btn {
-    display: inline-block;
+.cart th {
+    text-align: center;
+
 }
 
-.image {
-    margin-right: 50px;
+.counter{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
 }
-   
-.description {
-    padding-top: 10px;
-    margin: auto;
-    width: 115px;
+
+.counter i{
+    padding: 5px;
+    position: relative;
+    margin-left: 2px;
+    margin-right: 2px;
 }
-   
-.description span {
+
+.counter .input-number{
+    padding: 5px;
+    position: relative;
+    width: 15%;
+    text-align: center;
+}
+
+.checkout ul{
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #DCDCDD;
+    background: #f3f3f3;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top:16px;
+    padding-bottom: 15px;
+}
+
+.checkout ul li{
+    list-style: none;
+    font-size:16px;
+    font-weight: bold;
+    color:#46494C;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.checkout ul li.subtotal, li.iva-price {
+    font-weight: bold;
+    text-transform: capitalize;
+    border-bottom:1px solid #fff;
+    padding-bottom: 14px;
+}
+
+.checkout ul li.subtotal span, li.iva-price{
+    font-weight: bold;
+}
+
+.checkout ul li.cart-total{
+    padding-top: 10px
+}
+
+.checkout ul li.cart-total span{
+    color:#1985A1;
+}
+
+.checkout ul li span{
+    float:right;
+}
+
+.checkout .checkout-btn{
+    font-family: "Open Sans";
+    font-size:15px;
+    font-weight: bold;
+    color:#fff;
+    background:#46494C;
+    text-transform: uppercase;
+    padding:15px 25px 14px 25px;
     display: block;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.quantity {
-    padding-top: 20px;
-    margin: auto;
-}
-  
-.quantity input{
-    border: none;
     text-align: center;
-    width: 20px;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
-}
-
-.total-price {
-    margin: auto;
-    font-size: 22px;
-    text-align: center;
-    font-weight: 300;
+    margin-bottom: 40px;
 }
 
 /*-------------------------------------------------*/
 
 /*PRODUCT LIST*/
 
-.product-list-main{
-    display: flex;
-    margin-top: 10px;
-    font-family: "Open Sans", sans-serif;
-    
-    flex-direction: column;
+
+.container-fluid{
+    margin-top: 15px;
+    font-family: "Open Sans";
+    margin-bottom: 10px;
 }
+.col-8 {
+    margin: auto;
+}
+
+.col-2 {
+    text-align: center
+}
+
+.filter-type div{
+    margin: 15px;
+}    
+
 
 .filter-list{
     display: flex;
@@ -359,63 +380,11 @@ a {
     margin: auto;
     font-size: 10px;
 }
-
+ 
 .grid-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.img-product-grid{
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.product-item{
-    width: 300px;
-    border: 1px solid #4C5C68;
-    margin: 5px;
-    display: inline-block;
-    text-align: center;
-    background-color: #DCDCDD;
-    box-shadow : 0px 0px 8px rgb(138, 137, 137);
-}
-
-.product-price{
-    color: #46494C;
-}
-
-.view-product{
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.add-to-cart{
-    display: flex;
-    justify-content: center;
-    color: #DCDCDD;
-    padding: 15px;
-    background-color: #000;
-    font-size: 18px;
-}
-
-.add-to-cart:hover{
-    opacity: 0.5;
-}
-
-.input {
-    margin-right: 7px;
-}
-
-.filter-list h2{
-    display: none;
-}
-
-.filter-type{
-    border-bottom: solid 1px black;
-    margin: 0px 15px 0px 15px;
 }
 
 .filter-type div{
