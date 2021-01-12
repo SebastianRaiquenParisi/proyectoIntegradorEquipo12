@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto</title>
+    <title>Title</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://kit.fontawesome.com/42d391c3ad.js" crossorigin="anonymous"></script>
+     <!--agregar iconos--> 
+     <script src="https://kit.fontawesome.com/42d391c3ad.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,15 +29,22 @@
         </div>
 
         <div class="nav-bar-icons">
-            <a href="ShoppingCart"><i class="fas fa-shopping-cart"></i></a>
+            <a href="ShoppingCart"><button id="iconosNav" class="fas fa-shopping-cart"></button></a>
         </div>
         
         <div class="nav-bar-icons">
-            <a href="#buscar" ><i class="fas fa-search"></i></a>
+            <div class="dropdown">
+            <a href=#buscar><button id="iconosNav" class="fas fa-search"></button></a>
+            
+                
+                <div class="dropdown-content">
+                <p>Qué estás buscando?</p>
+                </div>
+              </div>
         </div>
 
         <div class="nav-bar-icons">
-            <a href="login" ><i class="fas fa-user"></i></a>
+            <a href="login"><button id="iconosNav" class="fas fa-user"></button></a>
         </div>
 
     
@@ -83,21 +91,22 @@
                 </form>
             </div>
             <div class="filasA">
-                <button id="buttonSubmit">Añadir al Carrito</button>
-                <button id="heartIcon" class="far fa-heart"></button>
+                <button id="buttonSubmit" type="button"><h3 id="textoCentrado">Añadir al Carrito</h3></button>
+                <button id="heartIcon" type="button" onclick="alert('Gracias por tu like!')" class="far fa-heart"></button>
             </div>
             <div class="filasA">
-                <button id="verGuiaDeTalles">VER GUÍA DE TALLES</button>
+                <button id="verGuiaDeTalles">
+                    <p id="textoCentrado">VER GUÍA DE TALLES</p></button>
             </div>
         </div>
         <div class="productoColumnaB">
             <div class="filasB">
                 <h6 id="Titulos3">VALORACIÓN</h6>
-                <button id="iconos2" class="far fa-star"></button>
-                <button id="iconos2" class="far fa-star"></button>
-                <button id="iconos2" class="far fa-star"></button>
-                <button id="iconos2" class="far fa-star"></button>
-                <button id="iconos2" class="far fa-star"></button>
+                <button id="iconos2" type="button" onclick="alert('Gracias por valorar este producto!')" class="far fa-star"></button>
+                <button id="iconos2" type="button" onclick="alert('Gracias por valorar este producto!')" class="far fa-star"></button>
+                <button id="iconos2" type="button" onclick="alert('Gracias por valorar este producto!')" class="far fa-star"></button>
+                <button id="iconos2" type="button" onclick="alert('Gracias por valorar este producto!')" class="far fa-star"></button>
+                <button id="iconos2" type="button" onclick="alert('Gracias por valorar este producto!')" class="far fa-star"></button>
             </div>
             <div class="filasB" id="formasEnvioPago">            
             <p id="Titulos2">
@@ -168,8 +177,6 @@
             <a href="#reclamos">Reclamos</a>
         </div>
 
-
-
         <div class="footer-icon">
             <a href="#instagram"><i class="fab fa-instagram-square"></i></a>
         </div>
@@ -182,6 +189,10 @@
             <a href="#twitter"><i class="fab fa-twitter-square"></i></a>
         </div>
 
+        <div class="footer-icon-message">
+            <i class="far fa-comment-dots"></i>
+        </div>
+
     </footer>
         <div class="footer-secundario">
             <p>2020-2021</p>
@@ -190,4 +201,3 @@
     
 </body>
 </html>
-    

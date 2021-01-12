@@ -1,5 +1,6 @@
 * { /*SELECTOR UNIVERSAL, SE APLICA A TODOS LOS ELEMENTOS*/
     box-sizing: border-box; /*AYUDA A QUE NADA AUMENTE SU ANCHO PREVIAMENTE DEFINIDO*/
+    scrollbar-width: none;
 }
 
 .flex-box {
@@ -25,13 +26,34 @@ a {
     padding: 0px 16px 0px 16px;
     text-align: center;
     width: 140px;
+    height: 75px;
     border-radius: 5px;    
 }
+
+
 
 .logo img {
     width:100%;
     border-radius: 5px;
+    animation-name: animationLogo;
+    animation-duration: 10s;
+   
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    
+    
 }
+
+@keyframes animationLogo {
+    0% { width: 100%;}
+    40% {width: 100%;}
+    50% {width: 80%}
+    60% { width: 100%;}
+    100% { width: 100%;}
+
+}
+
 .barra-de-navegacion {
     display: flex;
     align-self: flex-end;
@@ -53,23 +75,66 @@ a {
 }
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: rgb(66, 65, 65);
+    background-color: #1985A1;
     color: white;
 }
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #252525;
+    background-color: #1985A1;
     color: white;
 }
 
 .nav-bar-icons {
     display: flex;
     align-items: flex-end;
-    padding: 0px 16px 0px 16px;
-    text-align: center; /*el icono es interpretado como texto*/
-    font-size: 25px; /*el icono es interpretado como texto*/
+    padding: 0px 8px 0px 8px;
     
 }
+
+#iconosNav {
+    text-decoration: none;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+    
+    border: none;
+    color: #1985A1;
+
+    
+    opacity: 0.6;
+    transition: 0.3s;
+    
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#iconosNav:hover {opacity: 1}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 2px 5px 2px 5px;
+    text-align: center;
+    font-family: "Open Sans";
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    right: 15px;
+    top: 35px;
+
+  }
 
 
 /*-------------------------------------------------*/
@@ -80,14 +145,16 @@ a {
     display: flex;
     margin: 5px 0px 0px 0px;
     background-color:rgb(66, 65, 65);
-    padding: 0px 16px 0px 16px;
     color: black;
     text-align: center;
     width: auto;
-    height: 342px;
+    height: 360px;
+    
+    
 }
 
-
+  
+  
 
 /*-------------------------------------------------*/
 
@@ -117,6 +184,7 @@ a {
 .centroA {
     display: flex;
     margin-top: 5px;
+    margin-bottom: 6px;
 }
 
 .imgProductoPrincipal {
@@ -280,12 +348,17 @@ a {
 #verGuiaDeTalles {
     display: flex;
     font-family: "Open Sans";
+    font-style: italic;
     font-size: 14px;
     padding: 5px;
     margin: 1px;
     flex-grow: 1;
-    border: solid 2px grey;
-    color: grey;
+    background-color:rgb(138, 137, 137);
+    color: rgb(41, 47, 51);
+}
+
+#textoCentrado {
+    margin: auto; 
 }
 
 #verGuiaDeTalles:hover {
@@ -621,6 +694,7 @@ a {
     flex-grow: 1;
     padding: 15px 30px 2px 30px;
     align-self: flex-start;
+    
 }
 
 /* Style the links inside the navigation bar */
@@ -638,11 +712,13 @@ a {
 .endnav a:hover {
     background-color: rgb(66, 65, 65);
     color: white;
+    border-radius: 3px;
 }
 /* Add a color to the active/current link */
 .endnav a.active {
     background-color: #252525;
     color: white;
+    border-radius: 3px;
 }
 
 /*-------------------------------------------------*/
@@ -654,6 +730,22 @@ a {
     width: 50px;
     text-align: center; /*el icono es interpretado como texto*/
     font-size: 50px; /*el icono es interpretado como texto*/
+}
+
+.footer-icon-message {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 35px 35px 40px 35px;
+    align-self: flex-end;
+    margin: auto;
+    font-size: 75px;
+    color: #1985A1;
+    opacity: 0.6;
+}
+
+.footer-icon-message:hover {
+    opacity: 1;
 }
 
 
