@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
      <!--agregar iconos--> 
+     <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" crossorigin="anonymous">
+     <link rel="stylesheet" href="/css/bootstrap/bootstrap-theme.min.css" crossorigin="anonymous">
      <script src="https://kit.fontawesome.com/42d391c3ad.js" crossorigin="anonymous"></script>
 </head>
 
@@ -50,12 +52,14 @@
     
     </header>
 
-    <section class="product-list-main">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2">
 
-        <div class="filter-list">
+      
             <h2>Filtrar</h2>
         
-            <div class="filter-type">
+            <div class="filter-type"> 
                 <h3>Tipo</h3>
                 <div><input type="checkbox" name="tipo-producto" value="remera" id="remera"><label for="remera">Remera</label></div>
                 <div><input type="checkbox" name="tipo-producto" value="campera" id="campera"><label for="campera">Campera</label></div>
@@ -83,92 +87,94 @@
                 <div><input type="checkbox" name="color" value="pink" id="pink"><label for="pink">Rosa</label></div>
                 <div><input type="checkbox" name="color" value="salmon" id="salmon"><label for="salmon">Salmon</label></div>
             </div>
-        </div>
-
-        <div class="grid-container"> 
-            
-            <div class="product-item">
-              <a href="#" class="view-product">
-                <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
-                <h2 class="product-name">Producto 1</h2>
-                <h3 class="product-price">$100</h3>
-                <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
-              </a>
-              <a href="#" class="add-to-cart">Añadir al carro</a>
-            </div>
-            
-            <div class="product-item">
-                <a href="#" class="view-product">
-                  <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
-                  <h2 class="product-name">Producto 2</h2>
-                  <h3 class="product-price">$100</h3>
-                  <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
-                </a>
-                <a href="#" class="add-to-cart">Añadir al carro</a>
-              </div>
-            
-              <div class="product-item">
-                <a href="#" class="view-product">
-                  <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
-                  <h2 class="product-name">Producto 3</h2>
-                  <h3 class="product-price">$100</h3>
-                  <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
-                </a>
-                <a href="#" class="add-to-cart">Añadir al carro</a>
-              </div>
-            
-              <div class="product-item">
-                <a href="#" class="view-product">
-                  <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
-                  <h2 class="product-name">Producto 4</h2>
-                  <h3 class="product-price">$100</h3>
-                  <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
-                </a>
-                <a href="#" class="add-to-cart">Añadir al carro</a>
-              </div>
-              <div class="product-item">
-                <a href="#" class="view-product">
-                  <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
-                  <h2 class="product-name">Producto 5</h2>
-                  <h3 class="product-price">$100</h3>
-                  <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
-                </a>
-                <a href="#" class="add-to-cart">Añadir al carro</a>
-              </div>
-              
-              <div class="product-item">
-                  <a href="#" class="view-product">
-                    <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
-                    <h2 class="product-name">Producto 6</h2>
-                    <h3 class="product-price">$100</h3>
-                    <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
-                  </a>
-                  <a href="#" class="add-to-cart">Añadir al carro</a>
-                </div>
-              
-                <div class="product-item">
-                  <a href="#" class="view-product">
-                    <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
-                    <h2 class="product-name">Producto 7</h2>
-                    <h3 class="product-price">$100</h3>
-                    <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
-                  </a>
-                  <a href="#" class="add-to-cart">Añadir al carro</a>
-                </div>
-              
-                <div class="product-item">
-                  <a href="#" class="view-product">
-                    <img src="http://placehold.it/200x150&text=Product-img" class="img-product-grid">
-                    <h2 class="product-name">Producto 8</h2>
-                    <h3 class="product-price">$100</h3>
-                    <p>Detalles del Producto Lorem ipsum dolor sit amet consectetur.</p>
-                  </a>
-                  <a href="#" class="add-to-cart">Añadir al carro</a>
-                </div>
             
           </div>
+
+          <div class="col-8">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              
+              <div class="col">
+                <div class="card h-100">
+                  <img src="http://placehold.it/200x150&text=Product-img" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title ">Card title</h5>
+                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-primary btn-dark btn-lg">Añadir al carro</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="card h-100">
+                  <img src="http://placehold.it/200x150&text=Product-img" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title ">Card title</h5>
+                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-primary btn-dark btn-lg">Añadir al carro</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100">
+                  <img src="http://placehold.it/200x150&text=Product-img" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title ">Card title</h5>
+                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-primary btn-dark btn-lg" >Añadir al carro</button>
+                    </div>                  
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="card h-100">
+                  <img src="http://placehold.it/200x150&text=Product-img" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title ">Card title</h5>
+                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-primary btn-dark btn-lg">Añadir al carro</button>
+                    </div>                  
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card h-100">
+                  <img src="http://placehold.it/200x150&text=Product-img" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title ">Card title</h5>
+                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-primary btn-dark btn-lg">Añadir al carro</button>
+                    </div>                  
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="card h-100">
+                  <img src="http://placehold.it/200x150&text=Product-img" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title ">Card title</h5>
+                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-primary btn-dark btn-lg">Añadir al carro</button>
+                    </div>                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
           
-    </section>
+      </div>
 
     <footer class="footer-principal">
 
