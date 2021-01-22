@@ -1,7 +1,3 @@
-# RETROSPECTIVA
------
------
-
 ## Retrospectiva *Sprint 1*
 -----
 La retrospectiva se centra en mejorar como equipo
@@ -45,3 +41,8 @@ Si bien tuvimos un buen desempeño general debemos tener en cuenta lo siguiente:
 
 1. Confiarnos del tiempo de entrega
 2. Subir directamente al main desde origin
+
+---------------------
+
+[***Volver***](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/RETRO.md)
+
