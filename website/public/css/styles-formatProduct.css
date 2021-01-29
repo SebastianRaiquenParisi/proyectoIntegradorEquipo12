@@ -1,0 +1,87 @@
+* { /*SELECTOR UNIVERSAL, SE APLICA A TODOS LOS ELEMENTOS*/
+    box-sizing: border-box; /*AYUDA A QUE NADA AUMENTE SU ANCHO PREVIAMENTE DEFINIDO*/
+    scrollbar-width: none;
+    font-family: "Open Sans";
+    font-Size: 16px;
+}
+
+.productForm {
+    display: block;
+    border: 1px solid red;
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    padding: 20px;
+}
+
+h4 {
+    width: 70%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+    margin:auto;
+     
+  }
+
+
+
+.anadirFoto {
+    display: block;
+    border: 1px solid red;
+}
+
+#Foto {
+    display: inline-block;
+    border: 1px solid red;
+}
+
+/*--------------------------------------*/
+
+img {
+    width: 20%
+}
+
+
+  /*--------------------------------------*/
+
+.input {
+    display: block;
+    margin: 5px;
+    text-align: center;
+}
+
+.input form input, .input form select, textarea {
+    width: 70%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;   
+  }
+
+  #talle {
+      
+    width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+  }
+
+  #seleccionTalle {
+    margin-top: 5px;
+    width: 60%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;   
+  }
+
+  
+
+  
+

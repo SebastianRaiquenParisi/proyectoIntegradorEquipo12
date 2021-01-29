@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-formatProduct.css">
+     <!--agregar iconos--> 
+     <script src="https://kit.fontawesome.com/42d391c3ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="flex-box">
+        <div class="logo">
+            <a href="#"><img src="images/logo-1.jpeg" alt="logo Madly"></a>
+        </div>
+        
+        <div class="barra-de-navegacion">
+            <div class="topnav">
+                <a class="active" href="index">INICIO</a>
+                <a href="listadoProductos">REMERAS</a>
+                <a href="listadoProductos">BUZOS</a>
+                <a href="listadoProductos">DISEÑOS</a>
+                <a href="listadoProductos">ACCESORIOS</a>
+                <a href="producto">PRODUCTO</a>
+            </div>
+        </div>
+
+        <div class="nav-bar-icons">
+            <a href="ShoppingCart"><button id="iconosNav" class="fas fa-shopping-cart"></button></a>
+        </div>
+        
+        <div class="nav-bar-icons">
+            <div class="dropdown">
+            <a href=#buscar><button id="iconosNav" class="fas fa-search"></button></a>
+            
+                
+                <div class="dropdown-content">
+                <p>Qué estás buscando?</p>
+                </div>
+              </div>
+        </div>
+
+        <div class="nav-bar-icons">
+            <a href="login"><button id="iconosNav" class="fas fa-user"></button></a>
+        </div>
+
+    
+    </header>
+
+    <section class="productForm">
+
+
+        
+            <div class="input">
+                <h4>Nuevo Artículo</h4>
+            </div>
+            <div>
+                <h4>Fotos 1/4 - Puedes agregar hasta 4 fotos</h4> <!--debería ir iterando cada foto 2/4 etc.-->
+            </div>
+            <div class="container">
+                <img src="images/logo-1.jpeg" alt="logo" >
+                
+              </div>
+        </div>
+            
+            
+            <div class="input">
+                <form>
+                    <input type="text" name="inputTitulo" placeholder="Título">
+                </form>
+            </div>
+            <div class="input">
+                <form>
+                    <input type="text" name="inputPrecio" placeholder="Precio">
+                </form>
+            </div>
+            <div class="input">
+                <form action="#categorias">
+                    <select id="categorias" name="categorias">
+                        <option value="null">Categoría</option>
+                        <option value="Remeras">Remeras</option>
+                        <option value="Buzos">Buzos</option>
+                        <option value="Accesorios">Accesorios</option>
+                    </select>
+                  </form>
+            </div>
+            <div class="input">
+                <form action="#Talle">
+                    <label id="talle" for="XS">XS</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="S">S</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="M">M</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="L">L</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="XL">XL</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                </form>
+            </div>
+       
+            <div class="input">
+                <form action="#descripcion">
+                    <textarea name="message" rows="10" cols="30" placeholder="Descripción del artículo"></textarea>
+                </form>
+            </div>
+            <div class="choiseDisponible"></div>
+            <div class="input">
+                
+                <form action="#Valoracion">
+                    <select id="Valoracion" name="Valoracion">
+                        <option value="0">Valoración del Producto</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                  </form>
+            </div>
+            <div class="input">
+                <form action="#Descuento">
+                    <input type="number" id="descuento" name="descuento" placeholder="Ingrese % de descuento"><br>
+                </form>
+            </div>
+            <div class="choisePromocion"></div> <!--radio-->
+        
+
+        <section class="botonesPie">
+            <div class="botonCargar"></div>
+        </section>
+
+    </section>
+
+    
+
+    <footer class="footer-principal">
+
+        <div class="logo-secundario">
+            <a href="index"><img src="images/logo-1.jpeg" alt="logo Madly"></a>
+
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#shop">SHOP</a>
+            <a href="listadoProductos">Remeras</a>
+            <a href="listadoProductos">Buzos</a>
+            <a href="listadoProductos">Diseños</a>
+            <a href="listadoProductos">Accesorios</a>
+            <a href="producto">Producto</a>
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#unite">UNITE</a>
+            <a href="register">Registrate</a>
+            <a href="login">Login</a>
+            <a href="#promociones">Promociones</a>
+        
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#info">INFO</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#tu compra">Tu compra</a>
+            <a href="#formas de pago">Formas de Pago</a>
+            <a href="#envios">Envíos</a>
+            <a href="#devoluciones">Devoluciones</a>
+        </div>
+
+        <div class="endnav">
+            <a class="active" href="#ayuda">AYUDA</a>
+            <a href="#atencion al cliente">Atención al Cliente</a>
+            <a href="#compra segura">Compra Segura</a>
+            <a href="#preguntas frecuentes">Preguntas Frecuentes</a>
+            <a href="#reclamos">Reclamos</a>
+        </div>
+
+        <div class="footer-icon">
+            <a href="#instagram"><i class="fab fa-instagram-square"></i></a>
+        </div>
+
+        <div class="footer-icon">
+            <a href="#facebook"><i class="fab fa-facebook-square"></i></a>
+        </div>
+
+        <div class="footer-icon">
+            <a href="#twitter"><i class="fab fa-twitter-square"></i></a>
+        </div>
+
+        <div class="footer-icon-message">
+            <i class="far fa-comment-dots"></i>
+        </div>
+
+    </footer>
+        <div class="footer-secundario">
+            <p>2020-2021</p>
+        </div>
+
+    
+</body>
+</html>
