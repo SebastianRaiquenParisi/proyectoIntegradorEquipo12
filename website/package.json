@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nuevo-rama/Servidor-con-Express#readme",
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "jquery": "^3.5.1"
   },
