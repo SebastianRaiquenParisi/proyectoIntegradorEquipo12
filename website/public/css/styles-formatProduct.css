@@ -1,8 +1,8 @@
 * { /*SELECTOR UNIVERSAL, SE APLICA A TODOS LOS ELEMENTOS*/
     box-sizing: border-box; /*AYUDA A QUE NADA AUMENTE SU ANCHO PREVIAMENTE DEFINIDO*/
     scrollbar-width: none;
-    font-family: "Open Sans";
-    font-Size: 16px;
+    /*font-family: "Open Sans";
+    font-Size: 16px;*/
 }
 
 .productForm {
@@ -63,7 +63,7 @@ img {
 
   #talle {
       
-    width: 200px;
+    width: 10%;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;

@@ -25,13 +25,6 @@ app.use("/", indexRouter);
 app.use("/", productsRouter);
 app.use("/", userRouter)
 
-/*solo para pruebas*/
-
-app.get ("/productForm", (req, res) => { /*tiene que ir por post?*/
-    res.sendFile (path.resolve(__dirname, "./views/products/productForm.html")); 
-});
-
-
 
 /*
 app.get ("/", (req, res) => {

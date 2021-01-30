@@ -10,6 +10,10 @@ const productosController = {
     
     shoppingCart: (req,res)=>{
         res.render("./products/ShoppingCart")
+    },
+
+    productForm: (req,res)=>{
+        res.render("./products/productForm")
     }
 }
 
