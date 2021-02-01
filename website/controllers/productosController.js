@@ -12,9 +12,13 @@ const productosController = {
         res.render("./products/ShoppingCart")
     },
 
-    productForm: (req,res)=>{
-        res.render("./products/productForm")
-    }
+    productFormNew: (req,res)=>{
+        res.render("./products/productFormNew")
+    },
+
+    productFormEdit: (req,res)=>{
+        res.render("./products/productFormEdit")
+    },
 }
 
 module.exports=productosController;

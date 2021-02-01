@@ -127,7 +127,7 @@
     border: none;
     background-color: white;
     padding: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 #stars:hover {
@@ -147,7 +147,7 @@
     width: 100%;
     border-radius: 4px;
     padding: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 #buttonSubmit {
@@ -189,7 +189,7 @@
 #buttonverGuiaDeTalles {
     display: inline-block;
     background-color:#C5C3C6;
-    color:  #4C5C68;
+    color: white;
     border: none;
     padding: 10px;
     width: 100%;
@@ -217,12 +217,14 @@
     display: block;
     text-align: center;
     margin: auto;
-    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .envioI i, .pagoD i {
     font-size: 22px;
-    padding: 5px;
+    padding-top: 5px;
 }
 
 .envioI h5, .pagoD h5 {

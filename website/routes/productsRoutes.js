@@ -6,6 +6,7 @@ const router = express.Router();
 router.get("/listadoProductos", productosController.index);
 router.get("/producto", productosController.product);
 router.get("/ShoppingCart", productosController.shoppingCart);
-router.get("/productForm", productosController.productForm);
+router.get("/productFormNew", productosController.productFormNew);
+router.get("/productFormEdit", productosController.productFormEdit);
 
 module.exports = router;

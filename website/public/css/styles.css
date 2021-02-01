@@ -22,10 +22,10 @@ a {
 
 .logo {
     display: flex;
-    padding: 0px 16px 0px 16px;
+    padding: 2px 16px 2px 16px;
     text-align: center;
     width: 140px;
-    height: 75px;
+    height: 80px;
     border-radius: 5px;    
 }
 
@@ -378,8 +378,6 @@ a {
     color: rgb(61, 61, 61);
 }
 
-/*LOGO DEL FOOTER*/
-
 .logo-secundario {
     display: flex;
     align-self: center;
@@ -432,7 +430,6 @@ a {
 .footer-icon {
     display: flex;
     align-self: flex-start;
-    margin-top: 12px;
     width: 50px;
     text-align: center; /*el icono es interpretado como texto*/
     font-size: 50px; /*el icono es interpretado como texto*/
