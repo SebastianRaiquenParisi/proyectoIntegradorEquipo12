@@ -156,11 +156,12 @@
     background-color: black;
     color: white;
     border: none;
-    padding: 5px;
-    width: 89%;
+    padding: 15px;
+    width: 87%;
     font-size: 18px;
     border-radius: 4px;
     margin-bottom: 25px;
+    text-align: center;
 }
       
 #buttonSubmit:hover {
@@ -171,13 +172,13 @@
 #heartIcon {
     display: inline-block;
     font-size: 22px;
-    border:black solid 2px;
-    padding: 5px;
-    width: 10%;
+    border-color: black;
+    width: 12%;
     border-radius: 4px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     margin-left: 2px;
+    padding: 15px 0px 15px 0px;
 }
 
 #heartIcon:hover {
