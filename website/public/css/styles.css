@@ -473,13 +473,14 @@ a {
 /*LOGIN Y REGISTER*/
 
 .form-container{
+    top:50%;
     width:50vh;
     height:50vh;
     background:white;
     padding:30px;
     border-radius:10px;
     box-shadow: 0px 0px 10px 0px #000;
-    position:absolute;
+    position:relative;
     top:15vh;
 }
 .bgLogin{
@@ -487,6 +488,20 @@ a {
     width:100%;
     height:100vh;
     background-size:100%;
+}
+@media(min-width:600px){
+    
+    .form-container{
+        right:15vh;
+        left:auto;
+    }
+}
+@media(min-width:1200px){
+    
+    .form-container{
+        right:auto;
+        left:auto;
+    }
 }
 /*-------------------------------------------------*/
 
