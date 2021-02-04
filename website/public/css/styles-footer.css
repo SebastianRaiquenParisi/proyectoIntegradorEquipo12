@@ -1,0 +1,123 @@
+/*FOOTER*/
+
+.footer-principal {
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    padding: 0px 16px 0px 16px;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap; /*caen de la fila cuando no entran*/
+    color: rgb(61, 61, 61);
+}
+
+.logo-secundario {
+    display: none;
+}
+
+.logo-secundario img {
+    width:100%;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+}
+
+.endnav {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 90%;
+    padding: 15px 30px 2px 30px;
+    align-self: flex-start;
+}
+
+/* Style the links inside the navigation bar */
+.endnav a {
+    display: flex;
+    float: left;
+    color: white;
+    text-align: left;
+    padding: 8px 15px 2px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Raleway;
+}
+/* Change the color of links on hover */
+.endnav a:hover {
+    background-color: rgb(66, 65, 65);
+    color: white;
+    border-radius: 3px;
+}
+/* Add a color to the active/current link */
+.endnav a.active {
+    background-color: #252525;
+    color: white;
+    border-radius: 3px;
+}
+
+.footer-icon {
+    display: block;
+    width: 100%;
+   text-align: center;
+}
+
+.footer-icon a {
+    display: inline-block;
+    text-align: center; /*el icono es interpretado como texto*/
+    font-size: 50px; /*el icono es interpretado como texto*/
+    margin: auto;
+    padding: 1vw;
+}
+
+.footer-icon-message {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 35px 35px 40px 35px;
+    align-self: flex-end;
+    margin: auto;
+    font-size: 75px;
+    color: #1985A1;
+    opacity: 0.6;
+}
+
+.footer-icon-message:hover {
+    opacity: 1;
+}
+
+.footer-secundario { 
+    margin: 1px 0px 0px 0px;
+    background-color:black;
+    padding: 1px 16px 5px 16px;
+    width: auto;
+    height: 27px;
+    text-align: center;
+    flex-wrap: none;
+    align-items: center;
+    color: white;
+    font-family: Raleway;
+    font-size: 10px;
+}
+
+
+/*-------------------------------------*/
+
+/*MEDIA QUERIES 0-766PX*/
+
+@media screen and (min-width: 766px) {
+    .endnav {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .logo-secundario {
+        display: inline-block;
+        width: 10%;
+        padding: 16px;
+    }
+
+    .endnav {
+        width: 20%;
+    }
+}

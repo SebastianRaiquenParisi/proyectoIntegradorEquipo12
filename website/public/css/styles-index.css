@@ -1,0 +1,11 @@
+/*BODY INDEX*/
+
+.slider-principal {
+    display: flex;
+    margin: 5px 0px 0px 0px;
+    background-color:rgb(66, 65, 65);
+    color: black;
+    text-align: center;
+    width: auto;
+    height: 360px;
+}

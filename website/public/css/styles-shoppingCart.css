@@ -1,0 +1,90 @@
+/*SHOPPING CART*/
+
+.cart .table tbody tr td{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    vertical-align: middle;
+    text-align: center;
+}
+.cart{
+    font-family: "Open Sans", sans-serif;
+}
+
+.cart th {
+    text-align: center;
+}
+
+.counter{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.counter i{
+    padding: 5px;
+    position: relative;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.counter .input-number{
+    padding: 5px;
+    position: relative;
+    width: 15%;
+    text-align: center;
+}
+
+.checkout ul{
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #DCDCDD;
+    background: #f3f3f3;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top:16px;
+    padding-bottom: 15px;
+}
+
+.checkout ul li{
+    list-style: none;
+    font-size:16px;
+    font-weight: bold;
+    color:#46494C;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.checkout ul li.subtotal, li.iva-price {
+    font-weight: bold;
+    text-transform: capitalize;
+    border-bottom:1px solid #fff;
+    padding-bottom: 14px;
+}
+
+.checkout ul li.subtotal span, li.iva-price{
+    font-weight: bold;
+}
+
+.checkout ul li.cart-total{
+    padding-top: 10px
+}
+
+.checkout ul li.cart-total span{
+    color:#1985A1;
+}
+
+.checkout ul li span{
+    float:right;
+}
+
+.checkout .checkout-btn{
+    font-family: "Open Sans";
+    font-size:15px;
+    font-weight: bold;
+    color:#fff;
+    background:#46494C;
+    text-transform: uppercase;
+    padding:15px 25px 14px 25px;
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
