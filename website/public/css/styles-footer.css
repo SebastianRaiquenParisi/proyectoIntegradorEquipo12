@@ -16,8 +16,7 @@
 }
 
 .logo-secundario img {
-    width:100%;
-    border-radius: 5px;
+    width: 95%;
     background-color: white;
     text-align: center;
 }
@@ -73,7 +72,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 35px 35px 40px 35px;
+    padding: 35px 16px 35px 35px;
     align-self: flex-end;
     margin: auto;
     font-size: 75px;
@@ -114,7 +113,11 @@
     .logo-secundario {
         display: inline-block;
         width: 10%;
+        height: 20%;
         padding: 16px;
+        background-color: white;
+        border-radius: 5px;
+        margin: auto;
     }
 
     .endnav {
