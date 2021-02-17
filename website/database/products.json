@@ -1,0 +1,81 @@
+[{
+    "id": 1,
+    "name": "Remera cuello redondo",
+    "price": 100,
+    "discount": 50,
+    "category": "",
+    "description": "Descripcion detallada del producto con algunas caracteristicas",
+    "image": "",
+    "size": ""
+  },
+  {
+    "id": 2,
+    "name": "Remera cuello redondo",
+    "price": 100,
+    "discount": 50,
+    "category": "",
+    "description": "Descripcion detallada del producto con algunas caracteristicas",
+    "image": "",
+    "size": ""
+  },
+  {
+    "id": 3,
+    "name": "Remera cuello redondo",
+    "price": 100,
+    "discount": 50,
+    "category": "",
+    "description": "Descripcion detallada del producto con algunas caracteristicas",
+    "image": "",
+    "size": ""
+  },
+  {
+    "id": 4,
+    "name": "Remera cuello redondo",
+    "price": 100,
+    "discount": 50,
+    "category": "",
+    "description": "Descripcion detallada del producto con algunas caracteristicas",
+    "image": "",
+    "size": ""
+  },
+  {
+    "id": 5,
+    "name": "Remera cuello redondo",
+    "price": 100,
+    "discount": 50,
+    "category": "",
+    "description": "Descripcion detallada del producto con algunas caracteristicas",
+    "image": "",
+    "size": ""
+  },
+  {
+    "id": 6,
+    "name": "Remera cuello redondo",
+    "price": 100,
+    "discount": 50,
+    "category": "",
+    "description": "Descripcion detallada del producto con algunas caracteristicas",
+    "image": "",
+    "size": ""
+  },
+  {
+    "id": 7,
+    "name": "Remera cuello redondo",
+    "price": 100,
+    "discount": 50,
+    "category": "",
+    "description": "Descripcion detallada del producto con algunas caracteristicas",
+    "image": "",
+    "size": ""
+  },
+  {
+    "id": 8,
+    "name": "Remera cuello redondo",
+    "price": 100,
+    "discount": 50,
+    "category": "",
+    "description": "Descripcion detallada del producto con algunas caracteristicas",
+    "image": "",
+    "size": ""
+  }
+]
