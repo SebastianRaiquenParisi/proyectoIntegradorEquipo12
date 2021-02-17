@@ -19,7 +19,6 @@ const Users = {
             return lastUser.id+1;
         }
         return 1;
-
     },
 
     findByPk: function(id){
