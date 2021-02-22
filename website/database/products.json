@@ -5,9 +5,9 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "",
+    "image": "logo-1.jpeg",
     "size": "",
-    "stock": "",    
+    "stock": ""    
   },
   {
     "id": 2,
@@ -16,9 +16,9 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "",
+    "image": "logo-1.jpeg",
     "size": "",
-    "stock": "",    
+    "stock": ""    
   },
  {
     "id": 3,
@@ -27,9 +27,9 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "",
+    "image": "logo-1.jpeg",
     "size": "",
-    "stock": "",    
+    "stock": ""    
   },
  {
     "id": 4,
@@ -38,9 +38,9 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "",
+    "image": "logo-1.jpeg",
     "size": "",
-    "stock": "",    
+    "stock": ""    
   },
  {
     "id": 5,
@@ -49,9 +49,9 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "",
+    "image": "logo-1.jpeg",
     "size": "",
-    "stock": "",    
+    "stock": ""    
   },
  {
     "id": 6,
@@ -60,9 +60,9 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "",
+    "image": "logo-1.jpeg",
     "size": "",
-    "stock": "",    
+    "stock": ""    
   },
  {
     "id": 7,
@@ -71,9 +71,9 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "",
+    "image": "logo-1.jpeg",
     "size": "",
-    "stock": "",    
+    "stock": ""    
   },
  {
     "id": 8,
@@ -82,8 +82,8 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "",
+    "image": "logo-1.jpeg",
     "size": "",
-    "stock": "",    
+    "stock": ""    
   }
 ]
