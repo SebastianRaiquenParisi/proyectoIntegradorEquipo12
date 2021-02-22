@@ -1,4 +1,9 @@
 /*HEADER*/
+* {
+    box-sizing: border-box;
+    scrollbar-width: none;
+    margin: 0;
+  }
 
 .flex-box {
     display: flex;
@@ -7,11 +12,12 @@
     justify-content: space-between;
     border-bottom: 2px solid rgb(43, 43, 43);
     padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .logo {
     display: flex;
-    padding: 2px 16px 2px 16px;
+    padding: 0px 16px 0px 16px;
     text-align: center;
     width: 140px;
     height: 80px;

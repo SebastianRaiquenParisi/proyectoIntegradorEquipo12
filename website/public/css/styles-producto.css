@@ -202,38 +202,3 @@
     color: white;
 }
 
-/*------*/
-
-.CentroB {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-top: 1px solid #ccc;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.envioI, .pagoD {
-    display: block;
-    text-align: center;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.envioI i, .pagoD i {
-    font-size: 22px;
-    padding-top: 5px;
-}
-
-.envioI h5, .pagoD h5 {
-    background-color: #1985A1;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 18px;
-}
-
-
-

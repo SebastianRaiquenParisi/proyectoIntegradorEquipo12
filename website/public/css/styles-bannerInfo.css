@@ -1,0 +1,37 @@
+.CentroB {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.envio, .pago, .compraSegura {
+    display: block;
+    width: 20vw;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.7vw;
+}
+
+.envio i, .pago i, .compraSegura i {
+    font-size: 22px;
+    padding-top: 5px;
+}
+
+.envio h5, .pago h5, .compraSegura h5 {
+    background-color: #1985A1;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 1vw;
+}
+
+.envio p, .pago p, .compraSegura p {
+    font-size: 14px;
+}

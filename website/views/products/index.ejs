@@ -23,14 +23,12 @@
     <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-angle-left"></i></a>
     <a class="next" onclick="plusSlides(1)"><i class="fas fa-angle-right"></i></a>
   </div>
-  <br>
   
   <div class="dotSelect">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
-    </section>
 
     <script>
         var slideIndex = 1;
@@ -60,6 +58,18 @@
           dots[slideIndex-1].className += " active";
         }
     </script>
+
+<%- include('../partials/bannerInfo'); %>
+
+    <section class="randomCategory">
+        <div class="category-1"></div>
+        <div class="category-2"></div>
+        <div class="category-3"></div>
+    </section>
+
+    <section class="randomProductsList">
+        
+    </section>
         
     
     <%- include('../partials/footer'); %>
