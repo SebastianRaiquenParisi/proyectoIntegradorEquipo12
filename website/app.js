@@ -21,7 +21,8 @@ const userRouter = require("./routes/userRoutes")
 
 app.use("/", indexRouter);
 app.use("/products", productsRouter);
-app.use("/users", userRouter)
+app.use("/users", userRouter);
+
 
 
 

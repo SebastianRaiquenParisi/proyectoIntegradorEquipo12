@@ -5,6 +5,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    border-bottom: 2px solid rgb(43, 43, 43);
+    padding-bottom: 5px;
 }
 
 .logo {
@@ -39,6 +41,7 @@
     flex-wrap: nowrap;
     align-self: flex-end;
     /*margin-left: 10%;*/
+    
 }
 
 /* Style the links inside the navigation bar */
