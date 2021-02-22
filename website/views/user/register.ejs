@@ -5,24 +5,34 @@
 
     <section class="container-fluid bgLogin">
         <section class="row justify-content-center">
-            <section class="col-12 col-sm-6 col-md-3">
-              <form action="/users/register" method="POST" autocomplete="off" class="form-container">
+            <section class="col-12 col-sm-6 col-md-4">
+              <form action="/users/register" method="POST" autocomplete="off" class="form-container" enctype="multipart/form-data">
                     <h4>Unite a Madly Artsy!</h4>
-                    <div class="form-group">
+                    <div class="form-group ">
                         <label for="name">Nombre de usuario</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Introduzca un nombre de usuario">
-                        
-                      </div>
+                    </div>
+                  
+
 
                     <div class="form-group">
                       <label for="email">Email</label>
                       <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduzca su e-mail">
-                      
                     </div>
+                    <br/>
+
                     
                     <div class="form-group">
                       <label for="password">Contraseña</label>
                       <input type="text" name="password" class="form-control" id="password" placeholder="Introduzca su contraseña">
+                    </div>
+                    <br/>
+
+                    
+                    <!-- prueba subir archivo multer -->
+                    <div class="form-group">
+                      <label for="image">Imagen</label>
+                      <input type="file" name="image" class="form-control" id="image">
                     </div>
 
                     <br/>

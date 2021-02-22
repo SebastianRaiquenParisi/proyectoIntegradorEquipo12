@@ -1,4 +1,5 @@
-const User = require("../models/Users")
+const User = require("../models/Users");
+
 const userController ={
 
     login: (req,res)=>{
@@ -10,8 +11,12 @@ const userController ={
     },
     
     processRegister:(req,res) =>{
-        User.create(req.body);
-        return res.send("ok, se guardo el usuario")
+        let newUser={
+            ...req.body,
+           image: req.file.filename
+        }
+        User.create(newUser);
+        return res.redirect("/")
     }
 }
 
