@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nuevo-rama/Servidor-con-Express#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-validator": "^6.9.2",

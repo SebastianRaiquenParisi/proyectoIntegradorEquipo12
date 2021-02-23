@@ -89,7 +89,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "",
+    "image": "logo-1.jpeg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -101,7 +101,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "",
+    "image": "logo-1.jpeg",
     "size": "",
     "stock": "",
     "novedad": "Si"

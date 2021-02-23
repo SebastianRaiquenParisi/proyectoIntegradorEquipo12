@@ -61,17 +61,19 @@
     text-decoration: none;
     font-size: 15px;
     font-family: Raleway;
+    font-weight: 600
 }
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #1985A1;
-    color: white;
+    color: #1985A1;
+    
 }
-/* Add a color to the active/current link */
+/* Add a color to the active/current link 
 .topnav a.active {
     background-color: #1985A1;
     color: white;
 }
+*/
 
 .burger-menu {
     display: none;

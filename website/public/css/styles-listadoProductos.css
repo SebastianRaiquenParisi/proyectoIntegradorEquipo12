@@ -1,43 +1,6 @@
 /*PRODUCT LIST*/
 
 
-.container-fluid{
-    margin-top: 15px;
-    font-family: "Open Sans";
-    margin-bottom: 10px;
-}
-.col-8 {
-    margin: auto;
-}
-
-.col-2 {
-    text-align: center
-}
-
-.filter-type div{
-    margin: 15px;
-}    
-
-
-.filter-list{
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    border: solid 1px #4C5C68 ;
-    margin: auto;
-    font-size: 10px;
-}
- 
-.grid-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.filter-type div{
-    margin-bottom: 10px;
-}
-
 /* nuevo listado de productos */
 .products-wrapper {
     margin-top: 30px;

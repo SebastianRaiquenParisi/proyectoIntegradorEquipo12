@@ -6,19 +6,21 @@
     <section class="container-fluid bgLogin">
         <section class="row justify-content-center">
             <section class="col-12 col-sm-6 col-md-4">
-                <form class="form-container">
+                <form class="form-container" autocomplete="false">
                     <h4>Bienvenid@ a Madly Artsy!</h4>
                     <br/>
                     <br/>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Email</label>
                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca su e-mail">
-                      
+                      <% if (locals.errors && errors.email) {%> 
+                        <div><%=errors.email.msg %> </div>
+                        <% } %>
                     </div>
                     <br/>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Contraseña</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Introduzca su contraseña">
+                      <label for="">Contraseña</label>
+                      <input type="text" class="form-control" id="password" name="password">
                     </div>
                     <br/>
                     <div class="form-check">
