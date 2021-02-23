@@ -7,83 +7,115 @@
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "",
     "size": "",
-    "stock": "",    
+    "stock": "",
+    "novedad": "No"
   },
   {
     "id": 2,
     "name": "Remera cuello redondo",
-    "price": 100,
+    "price": 120,
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "",
     "size": "",
-    "stock": "",    
+    "stock": "",
+    "novedad": "Si"
   },
- {
+  {
     "id": 3,
     "name": "Remera cuello redondo",
-    "price": 100,
+    "price": 130,
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "",
     "size": "",
-    "stock": "",    
+    "stock": "",
+    "novedad": "Si"
   },
- {
+  {
     "id": 4,
     "name": "Remera cuello redondo",
-    "price": 100,
+    "price": 140,
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "",
     "size": "",
-    "stock": "",    
+    "stock": "",
+    "novedad": "No"
   },
- {
+  {
     "id": 5,
     "name": "Remera cuello redondo",
-    "price": 100,
+    "price": 150,
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "",
     "size": "",
-    "stock": "",    
+    "stock": "",
+    "novedad": "Si"
   },
- {
+  {
     "id": 6,
     "name": "Remera cuello redondo",
-    "price": 100,
+    "price": 160,
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "",
     "size": "",
-    "stock": "",    
+    "stock": "",
+    "novedad": "No"
   },
- {
+  {
     "id": 7,
     "name": "Remera cuello redondo",
-    "price": 100,
+    "price": 170,
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "",
     "size": "",
-    "stock": "",    
+    "stock": "",
+    "novedad": "Si"
   },
- {
+  {
     "id": 8,
     "name": "Remera cuello redondo",
-    "price": 100,
+    "price": 180,
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "",
     "size": "",
-    "stock": "",    
-  }
+    "stock": "",
+    "novedad": "No"
+  },
+  {
+    "id": 9,
+    "name": "Remera cuello redondo",
+    "price": 190,
+    "discount": 50,
+    "category": "",
+    "description": "Descripcion detallada del producto con algunas caracteristicas",
+    "image": "",
+    "size": "",
+    "stock": "",
+    "novedad": "Si"
+  },
+  {
+    "id": 10,
+    "name": "Remera cuello redondo",
+    "price": 200,
+    "discount": 50,
+    "category": "",
+    "description": "Descripcion detallada del producto con algunas caracteristicas",
+    "image": "",
+    "size": "",
+    "stock": "",
+    "novedad": "Si"
+  }  
 ]

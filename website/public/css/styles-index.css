@@ -108,3 +108,149 @@ img {
     margin: 3vw;
     border-radius: 1vw;
 }
+
+
+
+/*--------------------------------------------------------------------------------*/
+
+/* nuevo listado de productos */
+.products-wrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.products-title {
+  font-size: 2.4em;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 300ms;
+  margin: 20px 0;
+  box-shadow: 0px 0px 5px rgb(100, 100, 100);
+}
+
+.product-card a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.product-card-img {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.product-card-content {
+  padding: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-card-content h2 {
+  text-decoration: none;
+  font-size: 2.4em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.product-card-content span {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--green);
+  margin: 0 0 0 10px;
+}
+
+.product-card-content p {
+  font-size: 1.5em;
+  width: 100%;
+  margin: auto;
+  height: auto;
+}
+
+.product-card:hover {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transition: 200;
+}
+
+
+@media (min-width:760px){
+  
+  .product-list-main{
+      flex-direction: row;
+  }
+
+  .filter-list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 25%;
+      font-size: 11px;
+      margin: 5px;
+  }
+
+  .filter-list h3{
+      text-align: center;
+  }
+
+  .filter-list h2{
+      display: flex;
+      justify-content: center;
+  }
+
+  .filter-type{
+      align-items: center;
+      border-bottom: solid 1px black;
+      margin: 0px 3px 0px 3px;
+  }    
+
+  .grid-container{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 1px;
+  }
+
+  .product-item{
+      width: 300px;
+      border: 1px solid #4C5C68;
+      margin: 1%;
+      display: inline-block;
+      text-align: center;
+      background-color: #DCDCDD;
+      box-shadow : 0px 0px 8px rgb(138, 137, 137);
+  }
+}
+
+@media (min-width:1200px){
+  .product-list-main{
+      flex-direction: row;
+      margin: auto    ;
+  }
+  .filter-list{
+      display: flex;
+      flex-direction: column;
+      width: 18%;
+      font-size: 15px;
+      margin: 10px;
+  }
+  .grid-container{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: auto;
+  }
+  .filter-type{
+      border-bottom: solid 1px black;
+      margin: 0px 15px 0px 15px;
+  }
+  .product-item{
+      width: 320px;
+  }
+
+}
