@@ -7,8 +7,8 @@ const userController ={
     login: (req,res)=>{
         res.render("./user/login")
     },
-    
-    processRegister:(req,res) =>{
+
+    processLogin:(req,res) =>{
 
     },
 
@@ -19,11 +19,22 @@ const userController ={
     processRegister:(req,res) =>{
         
         let errors = validationResult(req);
-        console.log(errors)
         
         if(!errors.isEmpty()){
             return res.render("./user/register", {
                 errors: errors.mapped(),
+                oldData: req.body
+            });
+        }
+
+        let createdUser = User.findByField("email", req.body.email);
+        if(createdUser){
+            return res.render("./user/register", {
+                errors: {
+                    email: {
+                        msg:"Este email ya esta registrado"
+                    }
+                },
                 oldData: req.body
             });
         }
