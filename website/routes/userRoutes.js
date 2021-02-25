@@ -17,5 +17,7 @@ router.post("/register", fileUpload.single("image"),userValidation, userControll
 
 router.get("/profile", invitedMiddleware ,userController.profile);
 
+router.get("/logout", userController.logout);
+
 
 module.exports=router;

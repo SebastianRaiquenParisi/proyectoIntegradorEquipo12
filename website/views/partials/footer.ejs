@@ -16,8 +16,12 @@
 
     <div class="endnav">
         <a class="active" href="#unite">UNITE</a>
+        <% if (!locals.userLogged) { %>
         <a href="/users/register">Registrate</a>
         <a href="/users/login">Login</a>
+        <% } else { %>
+        <a href="/users/profile">Perfil de usuario</a>
+        <% } %> 
         <a href="#promociones">Promociones</a>
     
     </div>
