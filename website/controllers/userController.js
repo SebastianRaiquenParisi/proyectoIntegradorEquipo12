@@ -9,7 +9,24 @@ const userController ={
     },
 
     processLogin:(req,res) =>{
+        let userToLogin = User.findByEmail(req.body.email);
+            if(userToLogin){
+                let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if(passwordCheck){
+                    res.send("puede entrar");
+                }else{
+                    res.send("contraseña incorrecta");
 
+                }
+                
+            }
+            return res.render("./user/login", {
+                errors:{
+                    email: {
+                        msg: "Usuario no registrado"
+                    }
+                }
+            })
     },
 
     register:(req,res)=>{
@@ -27,7 +44,7 @@ const userController ={
             });
         }
 
-        let createdUser = User.findByField("email", req.body.email);
+        let createdUser = User.findByEmail(req.body.email);
         if(createdUser){
             return res.render("./user/register", {
                 errors: {

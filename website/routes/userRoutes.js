@@ -7,7 +7,7 @@ const userValidation = require("../middlewares/validateMiddleware");
 
 router.get("/login", userController.login);
 
-router.post("/login", userValidation ,userController.processLogin);
+router.post("/login", userController.processLogin);
 
 router.get("/register", userController.register);
 
