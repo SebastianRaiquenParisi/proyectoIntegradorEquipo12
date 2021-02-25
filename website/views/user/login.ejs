@@ -21,6 +21,9 @@
                     <div class="form-group">
                       <label for="">Contraseña</label>
                       <input type="text" class="form-control" id="password" name="password">
+                      <% if (locals.errors && errors.password) {%> 
+                        <div><%=errors.password.msg %> </div>
+                        <% } %>
                     </div>
                     <br/>
                     <div class="form-check">

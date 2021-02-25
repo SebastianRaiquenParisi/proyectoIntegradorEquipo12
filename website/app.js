@@ -1,9 +1,11 @@
 const express = require ("express");
 const app = express ();
 const path = require ("path");
+const session= require ("express-session");
 const publicPath = path.resolve(__dirname, "./public"); //para que pueda resolver siempre la ruta a public
 
 app.use (express.static(publicPath)); //para poder usar los  recursos estaticos de la carpeta public
+app.use(session({secret:"secret", resave: false, saveUninitialized:false }))
 
 app.listen (3000, () =>
 console.log ("Servidor corriendo en puerto 3000")

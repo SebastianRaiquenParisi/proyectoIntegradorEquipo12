@@ -13,12 +13,17 @@ const userController ={
             if(userToLogin){
                 let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);
                 if(passwordCheck){
-                    res.send("puede entrar");
-                }else{
-                    res.send("contraseña incorrecta");
-
-                }
-                
+                    delete userToLogin.password;
+                    req.session.userLogged=userToLogin;
+                    res.redirect("./profile");
+                } 
+                return res.render("./user/login", {
+                    errors:{
+                        password: {
+                            msg: "la contraseña ingresada es incorrecta"
+                        }
+                    }
+                })
             }
             return res.render("./user/login", {
                 errors:{
@@ -33,7 +38,7 @@ const userController ={
         res.render("./user/register")
     },
     
-    processRegister:(req,res) =>{
+    processRegister:(req,res) =>{ //cuando cuando un usuario se registra de manera erronea la imagen se sube igual
         
         let errors = validationResult(req);
         
@@ -63,6 +68,12 @@ const userController ={
         }
         User.create(newUser);
         return res.redirect("/users/login")
+    },
+
+    profile: (req,res)=>{
+        res.render("./user/profile", {
+            user: req.session.userLogged
+        });
     }
 }
 
