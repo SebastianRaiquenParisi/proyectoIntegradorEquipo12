@@ -9,9 +9,13 @@
             <input id="searchInput" type="search" name="busqueda" placeholder="Buscar" size="40">
         </form>
     </section>
+
+    <% if (locals.userLogged && userLogged.category=="admin") { %>
     <span>
-        <button>Editar Producto</button>
+         
+        <a href="/products/edit/<%=productFound.id%>">Editar Producto</a>
     </span>
+    <% } %>
 
     <section class="centroA">
         <div class="imgProductoPrincipal"><img src="/images/<%=productFound.image%>" alt=""></div>

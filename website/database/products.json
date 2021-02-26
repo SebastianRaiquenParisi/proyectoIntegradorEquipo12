@@ -13,10 +13,9 @@
   },
   {
     "id": 2,
-    "name": "Remera cuello redondo",
-    "price": 120,
-    "discount": 50,
-    "category": "",
+    "name": "  Remera cuello redondo  ",
+    "price": "120",
+    "discount": "50",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
     "image": "productsImg/imagen_muestra_2.jpg",
