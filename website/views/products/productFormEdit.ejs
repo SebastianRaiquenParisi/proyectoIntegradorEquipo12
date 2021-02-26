@@ -3,10 +3,10 @@
 <body>
     <%- include('../partials/header'); %>
 
-    <form>
+    <form action="/products/edit/<%=productToEdit.id%>?_method=PUT" method="POST">
         <section class="productForm">
             <div class="input">
-                <h4 id="NuevoArticulo">Nuevo Artículo</h4>
+                <h4 id="NuevoArticulo">Editando producto: <%=productToEdit.name%></h4>
                 <h6 id="ModElimArticulo">Modificar un artículo</h6>
                 <h6 id="ModElimArticulo">Eliminar un artículo</h6>
             </div>
@@ -19,10 +19,12 @@
     
         
             <div class="input">
-                    <input type="text" name="inputTitulo" placeholder="Título">
+                <label for="name" class="form-label">Nombre: </label>
+                <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" value=" <%=productToEdit.name%> ">
             </div>
             <div class="input">
-                    <input type="text" name="inputPrecio" placeholder="Precio">
+                <label for="price" class="form-label">Precio:</label>
+                <input type="text" id="price" name="price" class="form-input" value="<%=productToEdit.price%> ">
             </div>
             <div class="input">
                     <select id="categorias" name="categorias">
@@ -45,7 +47,8 @@
                     <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
             </div>
             <div class="input">
-                    <textarea name="message" rows="10" cols="30" placeholder="Descripción del artículo"></textarea>
+                <label for="description" class="form-label">Descripción:</label>
+				<textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
             </div>
             <div class="choiseDisponible"></div>
             <div class="input">
@@ -59,25 +62,29 @@
                     </select>
             </div>
             <div class="input">
-                    <input type="number" id="descuento" name="descuento" placeholder="Ingrese % de descuento"><br>
+                <label for="discount" class="form-label">Descuento:</label>
+                <input type="text" id="discount" name="discount" class="form-input" value="<%=productToEdit.discount%>"><br>
             </div>
             <div class="choisePromo">
-                    <input type="checkbox" id="SALE" name="SALE" value="SALE">
-                    <label for="SALE"> SALE</label>
-                    <input type="checkbox" id="novedad" name="novedad" value="novedad">
+                    <input type="checkbox" id="category" name="category" value="sale" <%=productToEdit.category == "sale" ? "checked" : null %>>
+                    <label for="SALE"> Sale</label>
+                    <input type="checkbox" id="category" name="category" value="new-in" <%=productToEdit.category == "new-in" ? "checked" : null %>>
                     <label for="novedad"> Nuevo Lanzamiento</label>
-                    <input type="checkbox" id="promocionado" name="promocionado" value="promocionado">
-                    <label for="promocionado"> Promocionado</label>
+                    <input type="checkbox" id="category" name="category" value="important"<%=productToEdit.category == "important" ? "checked" : null %>>
+                    <label for="promocionado"> Destacado</label>
+                    
             </div>
         </section>
-        </form>
 
-    <section class="productFormPie">
-        <div class="botonesPie">
-            <button class="buttonEditar">Editar</button>
-            <button class="buttonBorrar">Borrar</button>
-        </div>
-    </section>
+        <section class="productFormPie">
+            <div class="botonesPie">
+                <button type="submit" class="buttonEditar">Editar</button>
+                <button class="buttonBorrar">Borrar</button>
+            </div>
+        </section>
+    </form>
+
+    
 
     <%- include('../partials/footer'); %>
     

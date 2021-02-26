@@ -1,9 +1,9 @@
-[{
+[
+  {
     "id": 1,
-    "name": "Remera cuello redondo",
-    "price": 100,
-    "discount": 50,
-    "category": "",
+    "name": " Remera cuello redondo prueba edit",
+    "price": "100 ",
+    "discount": "50",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "logo-1.jpeg",
     "size": "",
@@ -84,22 +84,22 @@
   },
   {
     "id": 8,
-    "name": "Remera cuello redondo",
-    "price": 180,
-    "discount": 50,
-    "category": "",
+    "name": "  Remera cuello redondo  ",
+    "price": "180  ",
+    "discount": "50",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "logo-1.jpeg",
     "size": "",
     "stock": "",
-    "novedad": "No"
+    "novedad": "No",
+    "category": "new-in"
   },
   {
     "id": 9,
-    "name": "Remera cuello redondo",
-    "price": 190,
-    "discount": 50,
-    "category": "",
+    "name": "  Remera cuello redondo  ",
+    "price": "190  ",
+    "discount": "50",
+    "category": "sale",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "logo-1.jpeg",
     "size": "",
@@ -108,14 +108,14 @@
   },
   {
     "id": 10,
-    "name": "Remera cuello redondo",
-    "price": 200,
-    "discount": 50,
-    "category": "",
+    "name": "   Remera cuello redondo   ",
+    "price": "200   ",
+    "discount": "10",
+    "category": "important",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "image": "logo-1.jpeg",
     "size": "",
     "stock": "",
     "novedad": "Si"
-  }  
+  }
 ]

@@ -4,12 +4,14 @@ const path = require ("path");
 const session= require ("express-session");
 const publicPath = path.resolve(__dirname, "./public"); //para que pueda resolver siempre la ruta a public
 const loggedUserMiddleware = require("./middlewares/loggedUserMiddleware");
+const methodOverride =  require('method-override');
 const cookies = require("cookie-parser")
 
 app.use (express.static(publicPath)); //para poder usar los  recursos estaticos de la carpeta public
 app.use(session({secret:"secret", resave: false, saveUninitialized:false }))
 app.use(cookies());
 app.use(loggedUserMiddleware);
+app.use(methodOverride('_method'));
 
 app.listen (3000, () =>
 console.log ("Servidor corriendo en puerto 3000")

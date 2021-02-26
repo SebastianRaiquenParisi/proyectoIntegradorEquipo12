@@ -17,6 +17,6 @@ router.get("/:id", productosController.detail);
 
 router.get("/edit/:id", productosController.edit);
 
-//router.put("/edit/:id", productosController.update);
+router.put("/edit/:id", productosController.update);
 
 module.exports = router;
