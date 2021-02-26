@@ -3,7 +3,74 @@
 <body>
     <%- include('../partials/header'); %>
 
-    <%- include('../partials/pForm'); %>
+    <form>
+        <section class="productForm">
+            <div class="input">
+                <h4 id="NuevoArticulo">Nuevo Artículo</h4>
+                <h6 id="ModElimArticulo">Modificar un artículo</h6>
+                <h6 id="ModElimArticulo">Eliminar un artículo</h6>
+            </div>
+            <div class="container2">
+                <img>
+                <img>
+                <img>
+                <img>
+            </div> 
+    
+        
+            <div class="input">
+                    <input type="text" name="inputTitulo" placeholder="Título">
+            </div>
+            <div class="input">
+                    <input type="text" name="inputPrecio" placeholder="Precio">
+            </div>
+            <div class="input">
+                    <select id="categorias" name="categorias">
+                        <option value="null">Categoría</option>
+                        <option value="Remeras">Remeras</option>
+                        <option value="Buzos">Buzos</option>
+                        <option value="Accesorios">Accesorios</option>
+                    </select>
+            </div>
+            <div class="input">
+                    <label id="talle" for="XS">XS</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="S">S</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="M">M</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="L">L</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="XL">XL</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+            </div>
+            <div class="input">
+                    <textarea name="message" rows="10" cols="30" placeholder="Descripción del artículo"></textarea>
+            </div>
+            <div class="choiseDisponible"></div>
+            <div class="input">
+                    <select id="Valoracion" name="Valoracion">
+                        <option value="0">Valoración del Producto</option>
+                        <option value="1">1 Estrella</option>
+                        <option value="2">2 Estrellas</option>
+                        <option value="3">3 Estrellas</option>
+                        <option value="4">4 Estrellas</option>
+                        <option value="5">5 Estrellas</option>
+                    </select>
+            </div>
+            <div class="input">
+                    <input type="number" id="descuento" name="descuento" placeholder="Ingrese % de descuento"><br>
+            </div>
+            <div class="choisePromo">
+                    <input type="checkbox" id="SALE" name="SALE" value="SALE">
+                    <label for="SALE"> SALE</label>
+                    <input type="checkbox" id="novedad" name="novedad" value="novedad">
+                    <label for="novedad"> Nuevo Lanzamiento</label>
+                    <input type="checkbox" id="promocionado" name="promocionado" value="promocionado">
+                    <label for="promocionado"> Promocionado</label>
+            </div>
+        </section>
+        </form>
 
     <section class="productFormPie">
         <div class="botonesPie">

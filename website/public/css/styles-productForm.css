@@ -10,7 +10,6 @@
     height: auto;
     margin-top: 5px;
     padding: 20px;
-    border-top: 2px solid #ccc;
 }
 
 #NuevoArticulo {
@@ -52,7 +51,7 @@
   text-align: center;
 }
 
-.input form input, .input form select, textarea {
+.input input, .input input, .input select, .input textarea {
   width: 70%;
   border: 2px solid #ccc;
   border-radius: 4px;
