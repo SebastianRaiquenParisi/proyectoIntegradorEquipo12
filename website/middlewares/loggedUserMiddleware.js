@@ -14,8 +14,8 @@ function userLoggedMiddleware(req, res, next) {
 
     if(req.session && req.session.userLogged){
         res.locals.userLogged= true;
+        res.locals.userLogged = req.session.userLogged;
     }
-
 
     next();
 }

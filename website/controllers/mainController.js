@@ -2,7 +2,7 @@ const Products = require("../models/Products")
 const mainController = {
     
     index: (req,res)=>{
-        let products=Products.findByField("novedad","Si");
+        let products=Products.findAll();
         res.render("./products/index", {products:products})
     }
 }
