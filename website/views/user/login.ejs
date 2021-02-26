@@ -9,21 +9,28 @@
                 <form class="form-container">
                     <h4>Bienvenid@ a Madly Artsy!</h4>
                     <br/>
+                    <% if(locals.errors){ 
+                      errors.forEach(error => {%>
+                      <p><% error.msg %></p>
+                    <% })
+                      }
+                    %>
                     <br/>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Email</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca su e-mail">
+                      <input type="text" name="user" class="form-control" id="user" aria-describedby="emailHelp" placeholder="Introduzca su usuario"
+                      value:"<%= locals.old && old.user ? old.user : '' %>">
                       
                     </div>
                     <br/>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Contraseña</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Introduzca su contraseña">
+                      <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Introduzca su contraseña">
                     </div>
                     <br/>
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Recordame</label>
+                      <input type="checkbox" class="form-check-input" id="recordarme">
+                      <label class="form-check-label" name="recordarme" for="exampleCheck1">Recordame</label>
                     </div>
                     <br/>
                     <br/>

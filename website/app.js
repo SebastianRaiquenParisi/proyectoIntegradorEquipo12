@@ -5,6 +5,7 @@ const path = require ("path"); //resuelve rutas
 const publicPath = path.resolve(__dirname, "./public"); //para que pueda resolver siempre la ruta a public
 
 app.use (express.static(publicPath)); //para poder usar los  recursos estaticos de la carpeta public
+app.use(express.urlencoded({extended:false}));
 
 app.listen (3000, () =>
 console.log ("Servidor corriendo")
