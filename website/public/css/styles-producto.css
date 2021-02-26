@@ -18,6 +18,24 @@
     border-radius: 4px;
 }
 
+span {
+    position: absolute;
+    top: 7.5vw;
+    right: 1vw;
+}
+
+span button {
+    width: 9vw;
+    height: 3vw;
+    background-color: #588cbd;
+    font-size: 1vw;
+    font-family: "Open Sans";
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 0.5vw;
+}
+
 /*-------*/
 
 .centroA {
