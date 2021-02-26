@@ -62,12 +62,14 @@
     display: inline-block;
     padding: 5px;
     font-size: 22px;
+    font-weight: bold;
     width: 75%;
 }
 
 #Precio {
     display: inline-block;
     font-size: 22px;
+    font-weight: bold;
     padding: 5px;
 }
 
