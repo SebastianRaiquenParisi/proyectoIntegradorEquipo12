@@ -1,13 +1,14 @@
 const Products = require("../models/Products")
 const productosController = {
 
-    index: (req,res)=>{
+    index: (req,res)=>{ /*productList*/
         let products=Products.findAll();
         res.render("./products/productsList", {products:products})
     },
 
     product: (req,res)=>{
-        res.render("./products/producto")
+        let products=Products.findByPk(id); /*revisar*/
+        res.render("./products/producto", {products:products})
     },
     
     shoppingCart: (req,res)=>{
