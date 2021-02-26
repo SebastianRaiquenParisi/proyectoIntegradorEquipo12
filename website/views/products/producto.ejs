@@ -1,4 +1,4 @@
-<%- include('../partials/head'); %>
+<%- include('../partials/head', {title: productFound.name}); %>
 
 <body>
     <%- include('../partials/header'); %>
@@ -11,22 +11,22 @@
     </section>
 
     <section class="centroA">
-        <div class="imgProductoPrincipal"></div>
+        <div class="imgProductoPrincipal"><img src="/images/<%=productFound.image%>" alt=""></div>
         <div class="bloqueImgAlternativas">
-            <div id="imgAlt"></div>
-            <div id="imgAlt"></div>
-            <div id="imgAlt"></div>
+            <div id="imgAlt"><img src="/images/<%=productFound.image%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/<%=productFound.image%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/<%=productFound.image%>" alt=""></div>
         </div>
         <div class="Columna">
             <div>
-                <h4 id="Titulo">Producto de ejemplo 2</h4>
-                <h4 id="Precio">$ Precio</h4>
+                <h4 id="Titulo"><%=productFound.name%></h4>
+                <h4 id="Precio">$ <%=productFound.price%></h4>
             </div>
             <div>
                 <h4 id="Subtitulo">Subtítulo del Producto</h4>
             </div>
             <div class="t1">
-                <h4 id="Destacado">Producto con % de Descuento</h4>
+                <h4 id="Destacado">Producto con  <%=productFound.discount%>% de Descuento</h4>
                 <i id="iconoEtiqueta" class="fas fa-tags"></i>
             </div>
             <div class="valoracion">
@@ -38,14 +38,7 @@
             </div>
             <div>
                 <p id="Detalle">
-                    Detalle del producto 1<br>
-                    Detalle del producto 2<br>
-                    Detalle del producto 3<br>
-                    Detalle del producto 4<br>
-                    Detalle del producto 5<br>
-                    Detalle del producto 6<br>
-                    Detalle del producto 7<br>
-                    Detalle del producto 8
+                    <%=productFound.description%>
                 </p>
             </div>
             <div>

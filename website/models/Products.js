@@ -50,6 +50,11 @@ const Products = {
         allProducts=allProducts.filter(user => user.id!=id)
         fs.writeFileSync(this.fileName, JSON.stringify(allUsallProductsers,null,2));
         return true;
+    },
+
+    write: function (array) {
+		fs.writeFileSync(this.fileName, JSON.stringify(array, null, 2));
+        return true;
     }
 }
 
