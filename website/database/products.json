@@ -5,7 +5,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "logo-1.jpeg",
+    "image": "productsImg/imagen_muestra_1.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -17,7 +17,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "logo-1.jpeg",
+    "image": "productsImg/imagen_muestra_2.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -29,7 +29,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "logo-1.jpeg",
+    "image": "productsImg/imagen_muestra_3.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -41,7 +41,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "logo-1.jpeg",
+    "image": "productsImg/imagen_muestra_4.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -53,7 +53,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "logo-1.jpeg",
+    "image": "productsImg/imagen_muestra_5.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -65,7 +65,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "logo-1.jpeg",
+    "image": "productsImg/imagen_muestra_1.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -77,7 +77,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "logo-1.jpeg",
+    "image": "productsImg/imagen_muestra_2.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -89,7 +89,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "logo-1.jpeg",
+    "image": "productsImg/imagen_muestra_3.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -101,7 +101,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "logo-1.jpeg",
+    "image": "productsImg/imagen_muestra_4.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -113,7 +113,7 @@
     "discount": 50,
     "category": "",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
-    "image": "logo-1.jpeg",
+    "image": "productsImg/imagen_muestra_5.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
