@@ -31,7 +31,7 @@ const productosController = {
 		
 		let productToEdit=Products.findByPk((req.params.id));
 
-		res.render("productFormEdit", {productToEdit:productToEdit})
+		res.render("./products/productFormEdit", {productToEdit:productToEdit})
 	},
 
 	update: (req, res) => { 
