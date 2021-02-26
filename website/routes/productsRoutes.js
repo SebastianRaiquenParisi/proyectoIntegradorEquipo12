@@ -13,7 +13,7 @@ router.get("/productFormNew", productosController.productFormNew);
 
 //router.post("/productFormNew", productosController.productFormNew);
 
-router.get("/detail/:id", productosController.detail);
+router.get("/:id", productosController.detail);
 
 router.get("/edit/:id", productosController.edit);
 
