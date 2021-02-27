@@ -12,8 +12,9 @@
 
     <% if (locals.userLogged && userLogged.category=="admin") { %>
     <span>
-         
-        <a href="/products/edit/<%=productFound.id%>">Editar Producto</a>
+        <form action="/products/edit/<%=productFound.id%>">
+            <button type="submit" value="">Editar Producto</button>
+        </form>
     </span>
     <% } %>
 
