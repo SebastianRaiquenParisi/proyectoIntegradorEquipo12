@@ -1,6 +1,6 @@
 const express = require("express");
 const productosController = require("../controllers/productosController");
-
+const {body} = require('express-validator');
 const router = express.Router();
 
 router.get("/", productosController.index);

@@ -8,6 +8,12 @@
             <section class="col-12 col-sm-6 col-md-3">
               <form action="/users/register" method="POST" autocomplete="off" class="form-container">
                     <h4>Unite a Madly Artsy!</h4>
+                    <% if(locals.errors){ 
+                      errors.forEach(error => { %>
+                      <p><% error.msg %></p>
+                    <% });
+                      }
+                    %>
                     <div class="form-group">
                         <label for="name">Nombre de usuario</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Introduzca un nombre de usuario">
