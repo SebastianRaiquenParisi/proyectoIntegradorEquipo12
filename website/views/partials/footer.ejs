@@ -1,23 +1,27 @@
 <footer class="footer-principal">
 
     <div class="logo-secundario">
-        <a href="index"><img src="images/logo-1.jpeg" alt="logo Madly"></a>
+        <a href="index"><img src="/images/logo-1.jpeg" alt="logo Madly"></a>
 
     </div>
 
     <div class="endnav">
         <a class="active" href="#shop">SHOP</a>
-        <a href="listadoProductos">Remeras</a>
-        <a href="listadoProductos">Buzos</a>
-        <a href="listadoProductos">Diseños</a>
-        <a href="listadoProductos">Accesorios</a>
+        <a href="/products">Remeras</a>
+        <a href="/products">Buzos</a>
+        <a href="/products">Diseños</a>
+        <a href="/products">Accesorios</a>
         <a href="producto">Producto</a>
     </div>
 
     <div class="endnav">
         <a class="active" href="#unite">UNITE</a>
-        <a href="register">Registrate</a>
-        <a href="login">Login</a>
+        <% if (!locals.userLogged) { %>
+        <a href="/users/register">Registrate</a>
+        <a href="/users/login">Login</a>
+        <% } else { %>
+        <a href="/users/profile">Perfil de usuario</a>
+        <% } %> 
         <a href="#promociones">Promociones</a>
     
     </div>

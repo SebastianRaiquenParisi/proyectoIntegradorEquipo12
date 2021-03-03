@@ -1,0 +1,21 @@
+<%- include('../partials/head'); %>
+
+<body>
+    <%- include('../partials/header'); %>
+
+    <section class="container-fluid">
+        <section class="row justify-content-center">
+            <section class="col-12 col-sm-6 col-md-4">
+                    <h4>Bienvenid@ <%=user.name %>  </h4>
+                    <br/>
+                    <br/>
+                    <img src="/images/avatars/<%=user.image %>"  alt="Imagen de perfil">
+                    <article><%=user.email %> </article>
+                    <a href="/users/logout">Logout</a>
+            </section>
+        </section>
+    </section>
+    
+    <%- include('../partials/footer'); %>
+</body>
+</html>

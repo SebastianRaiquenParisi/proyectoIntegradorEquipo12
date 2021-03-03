@@ -1,20 +1,18 @@
 [
   {
     "id": 1,
-    "name": "admin",
-    "email": "admin@admin",
-    "password": "123456",
-    "category": "",
-    "adress": "",
-    "dni":""
+    "name": "test",
+    "email": "test@test",
+    "password": "$2a$10$oXQt8ZVRQzH027Rvt01dSOJBqeRiY3.zDFWFkwbk5ym4HPp3Qd36i",
+    "image": "1614287296035.jpg",
+    "category": "admin"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "admin",
     "email": "admin@admin",
-    "password": "123456",
-    "category": "",
-    "adress": "",
-    "dni":""
+    "password": "$2a$10$4/7F389bSqSyQq9NfGxVautUwbaMjmZOfYkpyFpN4zcPFt1RnZrDa",
+    "image": "1614290077805.jpg",
+    "category": "user"
   }
 ]

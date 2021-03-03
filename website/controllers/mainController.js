@@ -1,7 +1,9 @@
+const Products = require("../models/Products")
 const mainController = {
     
     index: (req,res)=>{
-        res.render("./products/index")
+        let products=Products.findAll();
+        res.render("./products/index", {products:products})
     }
 }
 

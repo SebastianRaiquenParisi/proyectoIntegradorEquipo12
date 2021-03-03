@@ -5,8 +5,8 @@
 
     <section class="container-fluid bgLogin">
         <section class="row justify-content-center">
-            <section class="col-12 col-sm-6 col-md-3">
-                <form class="form-container">
+            <section class="col-12 col-sm-6 col-md-4">
+                <form class="form-container" autocomplete="false" action="/users/login" method="POST">
                     <h4>Bienvenid@ a Madly Artsy!</h4>
                     <br/>
                     <% if(locals.errors){ 
@@ -17,20 +17,24 @@
                     %>
                     <br/>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Email</label>
-                      <input type="text" name="user" class="form-control" id="user" aria-describedby="emailHelp" placeholder="Introduzca su usuario"
-                      value:"<%= locals.old && old.user ? old.user : '' %>">
-                      
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su e-mail">
+                      <% if (locals.errors && errors.email) {%> 
+                        <div><%=errors.email.msg %> </div>
+                        <% } %>
                     </div>
                     <br/>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Contraseña</label>
-                      <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Introduzca su contraseña">
+                      <label for="">Contraseña</label>
+                      <input type="text" class="form-control" id="password" name="password">
+                      <% if (locals.errors && errors.password) {%> 
+                        <div><%=errors.password.msg %> </div>
+                        <% } %>
                     </div>
                     <br/>
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="recordarme">
-                      <label class="form-check-label" name="recordarme" for="exampleCheck1">Recordame</label>
+                      <input type="checkbox" class="form-check-input" name="user_remember">
+                      <label class="form-check-label">Recordame</label>
                     </div>
                     <br/>
                     <br/>

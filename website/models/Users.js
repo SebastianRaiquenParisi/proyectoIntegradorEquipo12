@@ -35,6 +35,12 @@ const Users = {
 
     },
 
+    findByEmail: function(email){ 
+        let allUsers = this.findAll();
+        let userFoundByEmail = allUsers.find(user => user.email==email);
+        return userFoundByEmail;
+    },
+
     create: function(users){
         let allUsers = this.findAll();
         let newUser ={
@@ -51,7 +57,6 @@ const Users = {
         allUsers=allUsers.filter(user => user.id!=id)
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers,null,2));
         return true;
-
     }
 }
 

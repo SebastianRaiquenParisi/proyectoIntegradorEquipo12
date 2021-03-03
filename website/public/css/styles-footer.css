@@ -1,4 +1,9 @@
 /*FOOTER*/
+* {
+    box-sizing: border-box;
+    scrollbar-width: none;
+    margin: 0;
+  }
 
 .footer-principal {
     display: flex;
@@ -58,6 +63,7 @@
     display: block;
     width: 100%;
    text-align: center;
+   
 }
 
 .footer-icon a {

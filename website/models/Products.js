@@ -28,7 +28,7 @@ const Products = {
 
     },
 
-    findByField: function(field,text){
+    findByField: function(field,text){ 
         let allProducts = this.findAll();
         let productFoundByField = allProducts.map(product => product[field]==text);
         return productFoundByField;
@@ -49,6 +49,11 @@ const Products = {
         let allProducts = this.findAll();
         allProducts=allProducts.filter(user => user.id!=id)
         fs.writeFileSync(this.fileName, JSON.stringify(allUsallProductsers,null,2));
+        return true;
+    },
+
+    write: function (array) {
+		fs.writeFileSync(this.fileName, JSON.stringify(array, null, 2));
         return true;
     }
 }

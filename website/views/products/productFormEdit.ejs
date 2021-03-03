@@ -3,14 +3,88 @@
 <body>
     <%- include('../partials/header'); %>
 
-    <%- include('../partials/pForm'); %>
+    <form action="/products/edit/<%=productToEdit.id%>?_method=PUT" method="POST">
+        <section class="productForm">
+            <div class="input">
+                <h4 id="NuevoArticulo">Editando producto: <%=productToEdit.name%></h4>
+                <h6 id="ModElimArticulo">Modificar un artículo</h6>
+                <h6 id="ModElimArticulo">Eliminar un artículo</h6>
+            </div>
+            <div class="container2">
+                <img>
+                <img>
+                <img>
+                <img>
+            </div> 
+    
+        
+            <div class="input">
+                <label for="name" class="form-label">Nombre: </label>
+                <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" value=" <%=productToEdit.name%> ">
+            </div>
+            <div class="input">
+                <label for="price" class="form-label">Precio:</label>
+                <input type="text" id="price" name="price" class="form-input" value="<%=productToEdit.price%> ">
+            </div>
+            <div class="input">
+                    <select id="categorias" name="categorias">
+                        <option value="null">Categoría</option>
+                        <option value="Remeras">Remeras</option>
+                        <option value="Buzos">Buzos</option>
+                        <option value="Accesorios">Accesorios</option>
+                    </select>
+            </div>
+            <div class="input">
+                    <label id="talle" for="XS">XS</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="S">S</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="M">M</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="L">L</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                    <label id="talle" for="XL">XL</label>
+                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+            </div>
+            <div class="input">
+                <label for="description" class="form-label">Descripción:</label>
+				<textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
+            </div>
+            <div class="choiseDisponible"></div>
+            <div class="input">
+                    <select id="Valoracion" name="Valoracion">
+                        <option value="0">Valoración del Producto</option>
+                        <option value="1">1 Estrella</option>
+                        <option value="2">2 Estrellas</option>
+                        <option value="3">3 Estrellas</option>
+                        <option value="4">4 Estrellas</option>
+                        <option value="5">5 Estrellas</option>
+                    </select>
+            </div>
+            <div class="input">
+                <label for="discount" class="form-label">Descuento:</label>
+                <input type="text" id="discount" name="discount" class="form-input" value="<%=productToEdit.discount%>"><br>
+            </div>
+            <div class="choisePromo">
+                    <input type="checkbox" id="category" name="category" value="sale" <%=productToEdit.category == "sale" ? "checked" : null %>>
+                    <label for="SALE"> Sale</label>
+                    <input type="checkbox" id="category" name="category" value="new-in" <%=productToEdit.category == "new-in" ? "checked" : null %>>
+                    <label for="novedad"> Nuevo Lanzamiento</label>
+                    <input type="checkbox" id="category" name="category" value="important"<%=productToEdit.category == "important" ? "checked" : null %>>
+                    <label for="promocionado"> Destacado</label>
+                    
+            </div>
+        </section>
 
-    <section class="productFormPie">
-        <div class="botonesPie">
-            <button class="buttonEditar">Editar</button>
-            <button class="buttonBorrar">Borrar</button>
-        </div>
-    </section>
+        <section class="productFormPie">
+            <div class="botonesPie">
+                <button type="submit" class="buttonEditar">Editar</button>
+                <button class="buttonBorrar">Borrar</button>
+            </div>
+        </section>
+    </form>
+
+    
 
     <%- include('../partials/footer'); %>
     

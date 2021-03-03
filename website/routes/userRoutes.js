@@ -2,33 +2,23 @@ const express =require ("express");
 const router = express.Router();
 const {body} = require('express-validator');
 const userController = require("../controllers/userController");
+const guestMiddleware = require("../middlewares/guestMiddleware");
+const invitedMiddleware = require("../middlewares/invitedMiddleware");
+const fileUpload = require("../middlewares/multerMiddleware");
+const userValidation = require("../middlewares/validateMiddleware");
 
-//validaciones
-const validateRegister = [
-    body('user')
-        .notEmpty().withMessage('Debes completar el campo de usuario')
-        .isLength({min:5}).withMessage("El nombre debe tener al menos 5 caracteres"),
-    body('email')
-        .notEmpty().withMessage('Debes completar el campo de email')
-        .isEmail().withMessage('Debes completar un email valido'),
-    body('pwd')
-        .notEmpty().withMessage('Debes completar la contraseña')
-        .isLength({min:8}).withMessage("La contraseña debe tener al menos 8 caracteres"),
-    
-];
 
-const validateLogin = [
-    body('user')
-        .notEmpty().withMessage('Debes completar el campo de usuario'),
-    body('pwd')
-        .notEmpty().withMessage('Debes completar la contraseña')
+router.get("/login", guestMiddleware ,userController.login);
 
-];
+router.post("/login", userController.processLogin);
 
-router.get("/login", userController.login);
-router.get("/register", userController.register);
-router.post("/register",validateRegister, userController.procesarRegistro);
+router.get("/register",guestMiddleware ,userController.register);
 
-router.post("/register", userController.processRegister);
+router.post("/register", fileUpload.single("image"),userValidation, userController.processRegister); 
+
+router.get("/profile", invitedMiddleware ,userController.profile);
+
+router.get("/logout", userController.logout);
+
 
 module.exports=router;
