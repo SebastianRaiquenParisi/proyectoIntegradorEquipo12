@@ -1,7 +1,4 @@
-const { findByEmail } = require("../models/Users");
-const Users = require("../models/Users");
 const User = require("../models/Users");
-
 
 function userLoggedMiddleware(req, res, next) {
     res.locals.userLogged= false;
