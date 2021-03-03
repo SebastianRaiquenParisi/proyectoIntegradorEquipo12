@@ -91,21 +91,24 @@ img {
   background-color: rgba(124, 124, 124, 0.8);
 }
 
-.randomCategory {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-    margin: auto;
+.category-wrapper {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin: auto;
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row; 
 }
 
-.category-1, .category-2, .category-3 {
-    display: inline-block;
-    background-color: rgb(146, 146, 146);
-    width: 25vw;
-    height: 25vw;
-    text-align: center;
-    margin: 3vw;
-    border-radius: 1vw;
+.randomCategory {
+    display: flex;
+    width: 30%;
+    height: auto;
+    margin: 3.5vw auto;
+}
+
+.randomCategory img {
+  width: 100%;
 }
