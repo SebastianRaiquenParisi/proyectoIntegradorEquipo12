@@ -24,14 +24,14 @@ const productosController = {
 
     detail: (req, res) => {
 		let productFound=Products.findByPk(req.params.id);
-		res.render("./products/producto", {productFound:productFound})
+		res.render("./products/producto", {productFound:productFound});
 	},
 
 	edit: (req, res) => {
 		
 		let productToEdit=Products.findByPk((req.params.id));
 
-		res.render("./products/productFormEdit", {productToEdit:productToEdit})
+		res.render("./products/productFormEdit", {productToEdit:productToEdit});
 	},
 
 	update: (req, res) => { 
