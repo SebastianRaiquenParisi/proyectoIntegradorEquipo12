@@ -3,29 +3,28 @@
 <body>
     <%- include('../partials/header'); %>
 
-    <form>
+    <form action="/products/create" method="POST" autocomplete="off" enctype="multipart/form-data">
     <section class="productForm">
         <div class="input">
             <h4 id="NuevoArticulo">Nuevo Artículo</h4>
-            <h6 id="ModElimArticulo">Modificar un artículo</h6>
-            <h6 id="ModElimArticulo">Eliminar un artículo</h6>
         </div>
-        <div class="container2">
-            <img>
-            <img>
-            <img>
-            <img>
-        </div> 
 
+        
+            <div class="input">
+                <label for="image">Seleccionar Imagen</label>
+            <input type="file" name="image" class="form-control" id="image">
+        </div>
+        
+        
     
         <div class="input">
-                <input type="text" name="inputTitulo" placeholder="Título">
+                <input type="text" name="name" placeholder="Título">
         </div>
         <div class="input">
-                <input type="text" name="inputPrecio" placeholder="Precio">
+                <input type="text" name="price" placeholder="Precio">
         </div>
         <div class="input">
-                <select id="categorias" name="categorias">
+                <select id="category" name="category">
                     <option value="null">Categoría</option>
                     <option value="Remeras">Remeras</option>
                     <option value="Buzos">Buzos</option>
@@ -45,7 +44,7 @@
                 <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
         </div>
         <div class="input">
-                <textarea name="message" rows="10" cols="30" placeholder="Descripción del artículo"></textarea>
+                <textarea name="description" rows="10" cols="30" placeholder="Descripción del artículo"></textarea>
         </div>
         <div class="choiseDisponible"></div>
         <div class="input">
@@ -59,7 +58,7 @@
                 </select>
         </div>
         <div class="input">
-                <input type="number" id="descuento" name="descuento" placeholder="Ingrese % de descuento"><br>
+                <input type="number" id="discount" name="discount" placeholder="Ingrese % de descuento"><br>
         </div>
         <div class="choisePromo">
                 <input type="checkbox" id="SALE" name="SALE" value="SALE">
@@ -70,14 +69,15 @@
                 <label for="promocionado"> Promocionado</label>
         </div>
     </section>
-    </form>
+    
 
     <section class="productFormPie">
         <div class="botonesPie">
-            <button class="buttonCargar">Cargar</button>
-            <button class="buttonBorrar">Borrar</button>
+            <button class="buttonCargar" type="submit">Cargar</button>
+            <button class="buttonBorrar" type="reset">Borrar</button>
         </div>
     </section>
+    </form>
 
     <%- include('../partials/footer'); %>
     

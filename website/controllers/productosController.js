@@ -3,35 +3,36 @@ const productosController = {
 
     index: (req,res)=>{ /*productList*/
         let products=Products.findAll();
-        res.render("./products/productsList", {products:products})
+        return res.render("./products/productsList", {products:products})
     },
-
-    /* product: (req,res)=>{
-        res.render("./products/producto")
-    }, */
     
     shoppingCart: (req,res)=>{
-        res.render("./products/ShoppingCart")
+        return res.render("./products/ShoppingCart")
     },
 
-    productFormNew: (req,res)=>{
-        res.render("./products/productFormNew")
+    create: (req,res)=>{
+		return res.render("./products/productCreateForm")
     },
 
-   /*  productFormEdit: (req,res)=>{
-        res.render("./products/productFormEdit")
-    }, */
+    storage: (req,res)=>{
+		let newProduct={
+			...req.body,
+			image: req.file.filename,
+		}
+		Products.create(newProduct);
+        return res.redirect("/")
+    },
 
     detail: (req, res) => {
 		let productFound=Products.findByPk(req.params.id);
-		res.render("./products/producto", {productFound:productFound});
+		return res.render("./products/producto", {productFound:productFound});
 	},
 
 	edit: (req, res) => {
 		
 		let productToEdit=Products.findByPk((req.params.id));
 
-		res.render("./products/productFormEdit", {productToEdit:productToEdit});
+		return res.render("./products/productEditForm", {productToEdit:productToEdit});
 	},
 
 	update: (req, res) => { 
