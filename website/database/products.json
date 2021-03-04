@@ -7,7 +7,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_1.jpg",
+    "image": "imagen_muestra_1.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -20,7 +20,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_2.jpg",
+    "image": "imagen_muestra_2.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -33,7 +33,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_3.jpg",
+    "image": "imagen_muestra_3.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -46,7 +46,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_4.jpg",
+    "image": "imagen_muestra_4.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -59,7 +59,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_5.jpg",
+    "image": "imagen_muestra_5.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -72,7 +72,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_1.jpg",
+    "image": "imagen_muestra_1.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -85,7 +85,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_2.jpg",
+    "image": "imagen_muestra_2.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -98,11 +98,10 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_3.jpg",
+    "image": "imagen_muestra_3.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
-    
   },
   {
     "id": 9,
@@ -112,7 +111,7 @@
     "category": "sale",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_4.jpg",
+    "image": "imagen_muestra_4.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -125,7 +124,7 @@
     "category": "important",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_5.jpg",
+    "image": "imagen_muestra_5.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -138,7 +137,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_1.jpg",
+    "image": "imagen_muestra_1.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -151,7 +150,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_2.jpg",
+    "image": "imagen_muestra_2.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -164,7 +163,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_3.jpg",
+    "image": "imagen_muestra_3.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -177,7 +176,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_4.jpg",
+    "image": "imagen_muestra_4.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -190,7 +189,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_5.jpg",
+    "image": "imagen_muestra_5.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -203,7 +202,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_1.jpg",
+    "image": "imagen_muestra_1.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
@@ -216,7 +215,7 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_2.jpg",
+    "image": "imagen_muestra_2.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -229,11 +228,10 @@
     "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_3.jpg",
+    "image": "imagen_muestra_3.jpg",
     "size": "",
     "stock": "",
     "novedad": "No"
-    
   },
   {
     "id": 9,
@@ -243,7 +241,7 @@
     "category": "sale",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_4.jpg",
+    "image": "imagen_muestra_4.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"
@@ -256,7 +254,7 @@
     "category": "important",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
-    "image": "productsImg/imagen_muestra_5.jpg",
+    "image": "imagen_muestra_5.jpg",
     "size": "",
     "stock": "",
     "novedad": "Si"

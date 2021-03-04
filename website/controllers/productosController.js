@@ -3,7 +3,7 @@ const productosController = {
 
     index: (req,res)=>{ /*productList*/
         let products=Products.findAll();
-        res.render("./products/productsList", {products:products})
+        return res.render("./products/productsList", {products:products})
     },
 
 	bannerProduct: (req, res)=> { /*banner de productos*/
@@ -12,27 +12,32 @@ const productosController = {
 	},
     
     shoppingCart: (req,res)=>{
-        res.render("./products/ShoppingCart")
+        return res.render("./products/ShoppingCart")
     },
 
-    productFormNew: (req,res)=>{
-        res.render("./products/productFormNew")
+    create: (req,res)=>{
+		return res.render("./products/productCreateForm")
     },
 
-   /*  productFormEdit: (req,res)=>{
-        res.render("./products/productFormEdit")
-    }, */
+    storage: (req,res)=>{
+		let newProduct={
+			...req.body,
+			image: req.file.filename,
+		}
+		Products.create(newProduct);
+        return res.redirect("/")
+    },
 
     detail: (req, res) => { /*producto*/
 		let productFound=Products.findByPk(req.params.id);
-		res.render("./products/producto", {productFound:productFound});
+		return res.render("./products/producto", {productFound:productFound});
 	},
 
 	edit: (req, res) => {
 		
 		let productToEdit=Products.findByPk((req.params.id));
 
-		res.render("./products/productFormEdit", {productToEdit:productToEdit});
+		return res.render("./products/productEditForm", {productToEdit:productToEdit});
 	},
 
 	update: (req, res) => { 
