@@ -7,6 +7,8 @@ router.get("/", productosController.index);
 
 //router.get("/producto", productosController.product);
 
+router.get("/bannerProduct", productosController.bannerProduct); //ver esta ruta si está bien
+
 router.get("/ShoppingCart", productosController.shoppingCart);
 
 router.get("/productFormNew", productosController.productFormNew);

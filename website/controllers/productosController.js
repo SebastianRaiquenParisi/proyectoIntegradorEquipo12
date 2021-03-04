@@ -6,9 +6,10 @@ const productosController = {
         res.render("./products/productsList", {products:products})
     },
 
-    /* product: (req,res)=>{
-        res.render("./products/producto")
-    }, */
+	bannerProduct: (req, res)=> { /*banner de productos*/
+		let products=Products.findAll();
+		res.render("./products/bannerProduct", {products:products})
+	},
     
     shoppingCart: (req,res)=>{
         res.render("./products/ShoppingCart")
@@ -22,7 +23,7 @@ const productosController = {
         res.render("./products/productFormEdit")
     }, */
 
-    detail: (req, res) => {
+    detail: (req, res) => { /*producto*/
 		let productFound=Products.findByPk(req.params.id);
 		res.render("./products/producto", {productFound:productFound});
 	},
