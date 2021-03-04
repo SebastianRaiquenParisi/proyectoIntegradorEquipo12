@@ -1,7 +1,12 @@
 * { /*SELECTOR UNIVERSAL, SE APLICA A TODOS LOS ELEMENTOS*/
-    box-sizing: border-box; /*AYUDA A QUE NADA AUMENTE SU ANCHO PREVIAMENTE DEFINIDO*/
-    scrollbar-width: none;
-    font-family: "Open Sans";
+  box-sizing: border-box; /*AYUDA A QUE NADA AUMENTE SU ANCHO PREVIAMENTE DEFINIDO*/
+  scrollbar-width: none;
+}
+
+a { 
+  color: inherit; /*le saco el color a los links*/
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .productForm {

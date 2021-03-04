@@ -3,13 +3,8 @@ const productosController = {
 
     index: (req,res)=>{ /*productList*/
         let products=Products.findAll();
-        return res.render("./products/productsList", {products:products})
+        return res.render("./products/productsList", {products:products, stylesheet: "/css/styles-index.css"})
     },
-
-	bannerProduct: (req, res)=> { /*banner de productos*/
-		let products=Products.findAll();
-		res.render("./products/bannerProduct", {products:products})
-	},
     
     shoppingCart: (req,res)=>{
         return res.render("./products/ShoppingCart")
@@ -30,7 +25,8 @@ const productosController = {
 
     detail: (req, res) => { /*producto*/
 		let productFound=Products.findByPk(req.params.id);
-		return res.render("./products/producto", {productFound:productFound});
+		let products=Products.findAll();
+		return res.render("./products/producto", {productFound:productFound, products:products});
 	},
 
 	edit: (req, res) => {
