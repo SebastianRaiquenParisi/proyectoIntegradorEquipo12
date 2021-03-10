@@ -56,6 +56,11 @@ const productosController = {
 		Products.write(newArray);
         
 		return res.redirect("/");
+	},
+
+	destroy: (req,res)=>{
+		Products.delete(req.params.id);
+		return res.redirect("/");
 	}
 }
 

@@ -48,7 +48,7 @@ const Products = {
     delete: function(id){
         let allProducts = this.findAll();
         allProducts=allProducts.filter(user => user.id!=id)
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsallProductsers,null,2));
+        fs.writeFileSync(this.fileName, JSON.stringify(allProducts,null,2));
         return true;
     },
 

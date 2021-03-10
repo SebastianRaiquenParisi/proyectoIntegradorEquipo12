@@ -10,14 +10,6 @@
         </form>
     </section>
 
-    <% if (locals.userLogged && userLogged.category=="admin") { %>
-    <span>
-        <form action="/products/edit/<%=productFound.id%>">
-            <button type="submit" value="">Editar Producto</button>
-        </form>
-    </span>
-    <% } %>
-
     <section class="centroA">
         <div class="imgProductoPrincipal"><img src="/images/productsImg/<%=productFound.image%>" alt=""></div>
         <div class="bloqueImgAlternativas">
@@ -71,8 +63,21 @@
             <div>
                 <button id="buttonverGuiaDeTalles">VER GUÍA DE TALLES</button>
             </div>
+            
+            <% if (locals.userLogged && userLogged.category=="admin") { %>
+            <div class="d-flex align-self-center mt-2">
+                <form action="/products/edit/<%=productFound.id%>">
+                    <button id="buttonSubmit" type="submit">Editar Producto</button>
+                </form>
+            
+                <form action="/products/<%=productFound.id%>?_method=DELETE" method="POST">
+                    <button id="buttonSubmit" type="submit">Eliminar Producto</button>
+                </form>
+            </div>
+            <% } %>
         </div>
     </section>
+        
     
     <%- include('../partials/bannerInfo'); %>
 

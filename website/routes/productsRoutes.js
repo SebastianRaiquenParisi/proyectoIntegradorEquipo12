@@ -6,9 +6,7 @@ const router = express.Router();
 
 router.get("/", productosController.index);
 
-//router.get("/producto", productosController.product);
-
-router.get("/bannerProduct", productosController.bannerProduct); //ver esta ruta si está bien
+//router.get("/bannerProduct", productosController.bannerProduct); //ver esta ruta si está bien
 
 router.get("/ShoppingCart", productosController.shoppingCart);
 
@@ -21,5 +19,7 @@ router.get("/:id", productosController.detail);
 router.get("/edit/:id", productosController.edit);
 
 router.put("/edit/:id", productosController.update);
+
+router.delete("/:id", productosController.destroy); 
 
 module.exports = router;
