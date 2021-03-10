@@ -7,6 +7,7 @@ La retrospectiva se centra en mejorar como equipo
 1. Completar con el sprint a tiempo
 2. Dividirnos las tareas
 3. Colaborar como equipo en la resolución de dificultades
+4. Tener más reuniones y estar siempre en contacto
 
 
 Si bien tuvimos un buen desempeño general debemos tener en cuenta lo siguiente:
@@ -31,7 +32,7 @@ Si bien tuvimos un buen desempeño general debemos tener en cuenta lo siguiente:
 
 - *Hacer menos*
 
-1. 
+1.
 2. 
 3.
 
