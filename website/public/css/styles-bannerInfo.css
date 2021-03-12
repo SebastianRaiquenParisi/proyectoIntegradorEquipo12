@@ -16,21 +16,21 @@ a {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .envio, .pago, .compraSegura {
     display: block;
-    width: 20vw;
+    width: 30%;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 0.7vw;
 }
 
 .envio i, .pago i, .compraSegura i {
-    font-size: 22px;
+    font-size: 5vw;
     padding-top: 5px;
 }
 
@@ -39,10 +39,56 @@ a {
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
-    font-size: 15px;
+    font-size: 2vw;
     margin: 1vw;
 }
 
 .envio p, .pago p, .compraSegura p {
-    font-size: 14px;
+    font-size: 2vw;
+}
+
+/*------------------------------*/
+
+
+@media screen and (min-width: 767px) {
+    
+    .envio, .pago, .compraSegura {
+        width: 25%;
+    }
+
+    .envio i, .pago i, .compraSegura i {
+        font-size: 3.5vw;
+    }
+    
+    .envio h5, .pago h5, .compraSegura h5 {
+        font-size: 1.8vw;
+    }
+
+    .envio p, .pago p, .compraSegura p {
+        font-size: 1.8vw;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .envio, .pago, .compraSegura {
+        
+        width: 18%;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .envio i, .pago i, .compraSegura i {
+        font-size: 2.2vw;
+    }
+    
+    .envio h5, .pago h5, .compraSegura h5 {
+        font-size: 1vw;
+    }
+
+    .envio p, .pago p, .compraSegura p {
+        font-size: 1vw;
+    }
+    
 }
