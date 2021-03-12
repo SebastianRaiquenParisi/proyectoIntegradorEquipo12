@@ -150,17 +150,40 @@ a {
         align-items: flex-end;
     }
 
-    #iconoBurger {
-        font-size: 35px;
-    }
+    .burger-btn {
+        background-color: white;
+        color: rgb(22, 80, 114);
+        padding: 1vw;
+        font-size: 7vw;
+        border: none;
+        cursor: pointer;
+      }
 
-    .topnav a {
-        font-size: 1.3vw;
-    }
+      .topnav {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+        z-index: 1;
+      }
 
-    #iconosNav {
-        font-size: 20px;
-    }
+      .topnav a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .topnav a:hover {background-color: white}
+
+      .burger-menu:hover .topnav {
+        display: block;
+      }
+
+      .burger-menu:hover .burger-btn {
+        background-color: #045757;
+      }
 
 }
 

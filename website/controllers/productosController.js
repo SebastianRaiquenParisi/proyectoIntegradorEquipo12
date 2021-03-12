@@ -7,7 +7,8 @@ const productosController = {
     },
     
     shoppingCart: (req,res)=>{
-        return res.render("./products/ShoppingCart")
+		let products=Products.findAll();
+        return res.render("./products/ShoppingCart", {products:products})
     },
 
     create: (req,res)=>{
