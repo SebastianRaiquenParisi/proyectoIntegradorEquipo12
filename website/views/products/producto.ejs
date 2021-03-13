@@ -85,31 +85,30 @@
     <h2 class="products-title">Si buscabas <%=productFound.name%> también podrían interesarte estos productos</h2>
     <div class="products-wrapper">
       
-          <!-- Show the "visited" products -->
-			<% for( let index = 0; index < products.length; index++ ) { %>
-			<% if (products[index].novedad=="Si") { %>
-        
-          <section class="product-card">
-            <a href="/products/<%=products[index].id%>">
-              <figure class="product-card-img">
-                <img src="/images/productsImg/<%=products[index].image%> " alt="imagen de producto">
-              </figure>
-              <article class="product-card-content">
-                <h4><%=products[index].category%></h4>
-                <h2><%=products[index].name%></h2>
-                
-                  <h3 id="price">$<%=products[index].price%></h3>
-                  <h3 id="discount">%<%=products[index].discount%> OFF</h3>
+        <!-- Show the "visited" products -->
+          <% for( let index = 0; index < products.length; index++ ) { %>
+          <% if (products[index].status=="available") { %>
+      
+        <section class="product-card">
+          <a href="/products/<%=products[index].id%>">
+            <figure class="product-card-img">
+              <img src="/images/productsImg/<%=products[index].image%> " alt="imagen de producto">
+            </figure>
+            <article class="product-card-content">
+              <h4><%=products[index].category%></h4>
+              <h2><%=products[index].name%></h2>
               
-                <p><%=products[index].description%></p>
-              </article>
-            </a>
-          </section>
-       
-    
-        <% } %>
-    <% } %>
-  </div>
+                <h3 id="price">$<%=products[index].price%></h3>
+                <h3 id="discount">%<%=products[index].discount%> OFF</h3>
+            
+              <p><%=products[index].subTitle%></p>
+            </article>
+          </a>
+        </section>
+     
+  
+      <% } %>
+  <% } %>
 </div>
 
 
