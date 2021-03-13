@@ -1,4 +1,5 @@
-const Products = require("../models/Products")
+const Products = require("../models/Products");
+const { search } = require("../routes/productsRoutes");
 const productosController = {
 
     index: (req,res)=>{ /*productList*/
@@ -10,6 +11,15 @@ const productosController = {
         return res.render("./products/ShoppingCart")
     },
 
+	search: (req, res) => {
+		
+		let products=Products.findAll();
+		
+		let searchResults =products.filter(product=>product.name.includes(req.query.keywords));
+		
+		return res.render("./products/searchResults", {searchResults, keywords:req.query.keywords})
+	},
+
     create: (req,res)=>{
 		return res.render("./products/productCreateForm")
     },
@@ -17,8 +27,10 @@ const productosController = {
     storage: (req,res)=>{
 		let newProduct={
 			...req.body,
-			image: req.file.filename,
+			image:  req.files.filename
 		}
+		console.log(req.files);
+		
 		Products.create(newProduct);
         return res.redirect("/")
     },

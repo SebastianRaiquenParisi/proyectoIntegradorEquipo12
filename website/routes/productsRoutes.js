@@ -8,11 +8,13 @@ router.get("/", productosController.index);
 
 //router.get("/bannerProduct", productosController.bannerProduct); //ver esta ruta si está bien
 
+router.get("/search", productosController.search);
+
 router.get("/ShoppingCart", productosController.shoppingCart);
 
 router.get("/create", productosController.create);
 
-router.post("/create", productFileUpload.single("image"), productosController.storage);
+router.post("/create", productFileUpload.array("image",4), productosController.storage);
 
 router.get("/:id", productosController.detail);
 

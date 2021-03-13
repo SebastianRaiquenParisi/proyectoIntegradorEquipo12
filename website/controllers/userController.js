@@ -5,7 +5,7 @@ const bcryptjs = require("bcryptjs");
 const userController ={
 
     login: (req,res)=>{
-        res.render("./user/login")
+        return res.render("./user/login")
     },
 
     processLogin:(req,res) =>{
@@ -18,7 +18,7 @@ const userController ={
                     if(req.body.user_remember){
                         res.cookie("userEmail", req.body.email, {maxAge: (1000* 60)*2})
                     }
-                    res.redirect("./profile");
+                   return res.redirect("./profile");
                 } 
                 return res.render("./user/login", {
                     errors:{
@@ -39,7 +39,7 @@ const userController ={
 
     register:(req,res)=>{
         res.cookie("test", "gholas", {maxAge:1000 * 30})
-        res.render("./user/register")
+        return res.render("./user/register")
     },
     
     processRegister:(req,res) =>{ //cuando cuando un usuario se registra de manera erronea la imagen se sube igual
@@ -83,7 +83,7 @@ const userController ={
     logout: (req,res)=>{
         res.clearCookie("userEmail")
         req.session.destroy();
-        res.redirect("/")
+        return res.redirect("/")
     }
 }
 

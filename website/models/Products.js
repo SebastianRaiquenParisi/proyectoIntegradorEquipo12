@@ -30,7 +30,7 @@ const Products = {
 
     findByField: function(field,text){ 
         let allProducts = this.findAll();
-        let productFoundByField = allProducts.map(product => product[field]==text);
+        let productFoundByField = allProducts.find(product => product[field]==text);
         return productFoundByField;
     },
 

@@ -1,10 +1,9 @@
 [
   {
     "id": 1,
-    "name": "  Remera cuello redondo prueba edit ",
-    "price": "100",
+    "name": "   Remera cuello redondo prueba edit  ",
+    "price": "77 ",
     "discount": "50",
-    "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
     "image": "imagen_muestra_1.jpg",
@@ -14,8 +13,8 @@
   },
   {
     "id": 2,
-    "name": "     Remera cuello redondo     ",
-    "price": "1210 ",
+    "name": "      Remera cuello redondo      ",
+    "price": "120  ",
     "discount": "50",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
@@ -130,10 +129,9 @@
   },
   {
     "id": 1,
-    "name": "  Remera cuello redondo prueba edit ",
-    "price": "100",
+    "name": "   Remera cuello redondo prueba edit  ",
+    "price": "77 ",
     "discount": "50",
-    "category": "new",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
     "image": "imagen_muestra_1.jpg",
@@ -143,8 +141,8 @@
   },
   {
     "id": 2,
-    "name": "     Remera cuello redondo     ",
-    "price": "1210 ",
+    "name": "      Remera cuello redondo      ",
+    "price": "120  ",
     "discount": "50",
     "description": "Descripcion detallada del producto con algunas caracteristicas",
     "fullDescription": "Descripción completa",
