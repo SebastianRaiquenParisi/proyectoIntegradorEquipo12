@@ -7,65 +7,123 @@ a {
     color: inherit; /*le saco el color a los links*/
     background-color: transparent;
     text-decoration: none;
-  }
-
-/*.form-container{
-    width:50vh;
-    height:50vh;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow: 0px 0px 10px 0px #000;
-    position:absolute;
-    top:15vh;
 }
-.bgLogin{
-    background:black;
-    width:100%;
-    height:100vh;
-    background-size:100%;
-}*/
 
-/*LOGIN Y REGISTER*/
+.center {
+    display: block;
+    padding: 5vh 0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(82, 101, 140);
+}
 
 .form-container{
-    top:50%;
-    width:50vh;
-    height:50vh;
+    margin: auto;
+    width:80%;
+    height:auto;
     background:white;
     padding:30px;
     border-radius:10px;
     box-shadow: 0px 0px 10px 0px #000;
-    position:absolute;
-    position:relative;
-    top:15vh;
+    opacity: 0.8;
 }
 
-.bgLogin{
-    background:black;
-    width:100%;
-    height:100vh;
-    background-size:100%;
+
+
+.form-container #img-user {
+    display: block;
+    width: 100%;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+
 }
 
-/*.bgLogin {
-@@ -488,6 +489,20 @@ a {
-    height:100vh;
-    background-size:100%;
-}*/
+.form-container #img-user img {
+    display: block;
+    width: 20vw;
+    height: 20vw;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 0px rgb(68, 68, 68);
+}
 
+.form-container h4 {
+    font-size: 4.5vw;
+    font-family: Raleway;
+    font-weight: 800;
+    text-align: center;
+    color: rgb(104, 104, 104);
+}
 
-@media(min-width:600px){
+.form-container label, .form-container input {
+    font-size: 3.5vw;
+    font-family: Raleway;
+    font-weight: 600
+}
+
+.form-container button {
+    font-size: 3.5vw;
+    font-family: Raleway;
+    font-weight: 800;
+    background-color: #1985A1;
+    border-radius: 0.5vw;
+}
+
+@media screen and (min-width: 767px) {
+    .form-container h4 {
+        font-size: 2.5vw;
+    }
+
+    .form-container button {
+        font-size: 1.5vw;
+    }
+
+    .form-container label, .form-container input {
+        font-size: 1.5vw;
+    }
 
     .form-container{
-        right:15vh;
-        left:auto;
+        width:40%;
+    }
+
+    .form-container #img-user img {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .form-container #img-user {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
     }
 }
-@media(min-width:1200px){
+
+@media screen and (min-width:1024px) {
+    .form-container h4 {
+        font-size: 2vw;
+    }
+
+    .form-container button {
+        font-size: 1vw;
+    }
+
+    .form-container label, .form-container input {
+        font-size: 1vw;
+    }
 
     .form-container{
-        right:auto;
-        left:auto;
+        width:40%;
+    }
+
+    .form-container #img-user img {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .form-container #img-user {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
     }
 }
+
+    
+
