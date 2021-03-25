@@ -208,6 +208,38 @@
     "quantity": "1",
     "status": "available",
     "promo": ""
+  },
+  {
+    "id": 16,
+    "name": "Prueba multer carga de 2 img",
+    "price": "10",
+    "category": "Remeras",
+    "cantidad": [
+      "1",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "description": "rrrr",
+    "Valoracion": "0",
+    "discount": "40",
+    "novedad": "novedad"
+  },
+  {
+    "id": 17,
+    "name": "",
+    "price": "",
+    "category": "null",
+    "cantidad": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "description": "",
+    "Valoracion": "0",
+    "discount": ""
   }
-  
 ]

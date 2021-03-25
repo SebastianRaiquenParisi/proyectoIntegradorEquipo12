@@ -9,7 +9,7 @@
           <h4>Bienvenid@ a Madly Artsy!</h4>
           
           <div id="img-user">
-          <img src="/images/imagen-user-1.jpg" alt="login_user">
+          <img src="/images/avatars/imagen-user-1.jpg" alt="login_user">
         </div>
         
             
@@ -22,7 +22,7 @@
                           
                     
                       <label for="email">Email</label>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su e-mail">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su e-mail" required>
                       <% if (locals.errors && errors.email) {%> 
                         <div><%=errors.email.msg %> </div>
                         <% } %>
@@ -30,7 +30,7 @@
                     <br/>
                     
                       <label for="">Contraseña</label>
-                      <input type="password" class="form-control" id="password" name="password">
+                      <input type="password" class="form-control" id="password" name="password" required>
                       <% if (locals.errors && errors.password) {%> 
                         <div><%=errors.password.msg %> </div>
                       <% } %>

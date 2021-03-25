@@ -33,7 +33,13 @@ const productosController = {
 		console.log(req.files);
 		
 		Products.create(newProduct);
-        return res.redirect("/")
+		/*let lastProduct = allProducts.pop();
+        if(lastProduct){
+            return lastProduct.id+1;
+        }
+        return 1;*/
+        return res.redirect("/") /*redireccionar al producto creado*/
+		/*return res.redirect("./products/producto", {lastProduct:lastProduct, products:products});*/
     },
 
     detail: (req, res) => { /*producto*/
