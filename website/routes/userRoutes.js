@@ -7,16 +7,20 @@ const invitedMiddleware = require("../middlewares/invitedMiddleware");
 const userFileUpload = require("../middlewares/multerMiddleware");
 const userValidation = require("../middlewares/validateMiddleware");
 
+//revisar middlewares
 
-router.get("/login", guestMiddleware ,userController.login);
+//router.get("/login", guestMiddleware ,userController.login);
+router.get("/login", userController.login);
 
 router.post("/login", userController.processLogin);
 
-router.get("/register",guestMiddleware ,userController.register);
+//router.get("/register",guestMiddleware ,userController.register);
+router.get("/register",userController.register);
 
-router.post("/register", userFileUpload.single("image"),userValidation, userController.processRegister); 
+router.post("/register", userFileUpload.single("avatar"),userValidation, userController.processRegister); 
 
-router.get("/profile", invitedMiddleware ,userController.profile);
+//router.get("/profile", invitedMiddleware ,userController.profile);
+router.get("/profile", userController.profile);
 
 router.get("/logout", userController.logout);
 

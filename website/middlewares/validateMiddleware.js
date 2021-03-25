@@ -2,9 +2,9 @@ const {check} = require("express-validator");
 const path = require("path");
 
 module.exports=[
-    check("name").notEmpty().withMessage("Debes completar el nombre"),
+    check("first_name").notEmpty().withMessage("Debes completar el nombre"),
     check("email").notEmpty().withMessage("tienes que escribir un email valido"),
-    check("image").custom((value, {req})=> {
+    check("avatar").custom((value, {req})=> {
         let file=req.file;
         let acceptedExtensions = [".jpg", ".png", ".jpeg", ".gif"];
 

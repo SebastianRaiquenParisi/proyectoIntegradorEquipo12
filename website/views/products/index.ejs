@@ -66,7 +66,7 @@
 <%- include('../partials/bannerInfo'); %>
 <% for( let index = 0; index <= 2; index++ ) { %>
     <section class="randomCategory">
-        <img src="/images/productsImg/<%=products[index].image%> " alt="imagen de producto">
+        <img src="/images/productsImg/<%=products[index].main_image%>" alt="imagen de producto">
     </section>
     <% } %>
   </div>
@@ -76,12 +76,12 @@
       
           <!-- Show the "visited" products -->
 			<% for( let index = 0; index < products.length; index++ ) { %>
-			<% if (products[index].status=="available") { %>
+			<% if (products[index].status=="active") { %>
         
           <section class="product-card">
             <a href="/products/<%=products[index].id%>">
               <figure class="product-card-img">
-                <img src="/images/productsImg/<%=products[index].image%> " alt="imagen de producto">
+                <img src="/images/productsImg/<%=products[index].main_image%> " alt="imagen de producto">
               </figure>
               <article class="product-card-content">
                 <h4><%=products[index].category%></h4>
@@ -90,7 +90,7 @@
                   <h3 id="price">$<%=products[index].price%></h3>
                   <h3 id="discount">%<%=products[index].discount%> OFF</h3>
               
-                <p><%=products[index].subTitle%></p>
+                <p><%=products[index].description%></p>
               </article>
             </a>
           </section>
@@ -108,7 +108,7 @@
   <div class="category-wrapper">
 <% for( let index = 0; index <= 2; index++ ) { %>
     <section class="randomCategory">
-        <img src="/images/productsImg/<%=products[index].image%> " alt="imagen de producto">
+        <img src="/images/productsImg/<%=products[index].main_image%>" alt="imagen de producto">
     </section>
     <% } %>
   </div>

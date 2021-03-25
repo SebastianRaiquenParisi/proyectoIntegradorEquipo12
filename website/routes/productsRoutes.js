@@ -1,27 +1,24 @@
 const express = require("express");
-const productosController = require("../controllers/productosController");
-const {body} = require('express-validator');
+const productsController = require("../controllers/productsController");
 const productFileUpload = require("../middlewares/productsMulterMiddleware");
 const router = express.Router();
 
-router.get("/", productosController.index);
+router.get("/", productsController.list);
 
-//router.get("/bannerProduct", productosController.bannerProduct); //ver esta ruta si está bien
+router.get("/search", productsController.search);
 
-router.get("/search", productosController.search);
+router.get("/ShoppingCart", productsController.shoppingCart);
 
-router.get("/ShoppingCart", productosController.shoppingCart);
+router.get("/create", productsController.create);
 
-router.get("/create", productosController.create);
+router.post("/create", productFileUpload.array("image",4), productsController.storage);
 
-router.post("/create", productFileUpload.array("image",4), productosController.storage);
+router.get("/:id", productsController.detail);
 
-router.get("/:id", productosController.detail);
+router.get("/edit/:id", productsController.edit);
 
-router.get("/edit/:id", productosController.edit);
+router.put("/edit/:id", productsController.update);
 
-router.put("/edit/:id", productosController.update);
-
-router.delete("/:id", productosController.destroy); 
+router.delete("/:id", productsController.destroy); 
 
 module.exports = router;

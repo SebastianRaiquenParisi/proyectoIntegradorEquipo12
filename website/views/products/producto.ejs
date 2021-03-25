@@ -12,11 +12,11 @@
     </section>
 
     <section class="centroA">
-        <div class="imgProductoPrincipal"><img src="/images/productsImg/<%=productFound.image%>" alt=""></div>
+        <div class="imgProductoPrincipal"><img src="/images/productsImg/<%=productFound.main_image%>" alt=""></div>
         <div class="bloqueImgAlternativas">
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.image%>" alt=""></div>
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.image%>" alt=""></div>
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.image%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.main_image%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.main_image%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.main_image%>" alt=""></div>
         </div>
         <div class="Columna">
             <div>
@@ -24,7 +24,7 @@
                 <h4 id="Precio">$ <%=productFound.price%></h4>
             </div>
             <div>
-                <h4 id="Subtitulo">Subtítulo del Producto</h4>
+                <h4 id="Subtitulo"><%=productFound.description%></h4>
             </div>
             <div class="t1">
                 <h4 id="Destacado">Producto con  <%=productFound.discount%>% de Descuento</h4>
@@ -39,10 +39,7 @@
             </div>
             <div>
                 <p id="Detalle">
-                    <%=productFound.description%>
-                </p>
-                <p id="Detalle">
-                    <%=productFound.fullDescription%>
+                    <%=productFound.full_description%>
                 </p>
             </div>
             <div>
@@ -86,13 +83,13 @@
     <div class="products-wrapper">
       
         <!-- Show the "visited" products -->
-          <% for( let index = 0; index < products.length; index++ ) { %>
-          <% if (products[index].status=="available") { %>
+          <% for( let index = 0; index < products.length; index++ ) { %> <!-- preguntar si es la misma categoria para mostrar productos relacionados -->
+          <% if (products[index].status=="active") { %>
       
         <section class="product-card">
           <a href="/products/<%=products[index].id%>">
             <figure class="product-card-img">
-              <img src="/images/productsImg/<%=products[index].image%> " alt="imagen de producto">
+              <img src="/images/productsImg/<%=products[index].main_image%> " alt="imagen de producto">
             </figure>
             <article class="product-card-content">
               <h4><%=products[index].category%></h4>
@@ -101,7 +98,7 @@
                 <h3 id="price">$<%=products[index].price%></h3>
                 <h3 id="discount">%<%=products[index].discount%> OFF</h3>
             
-              <p><%=products[index].subTitle%></p>
+              <p><%=products[index].description%></p>
             </article>
           </a>
         </section>

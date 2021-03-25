@@ -11,38 +11,31 @@
                       <img src="/images/imagen-user-1.jpg" alt="login_user">
                     </div>
             
-                    
-                        <label for="name">Nombre de usuario</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Introduzca un nombre de usuario" value="<%=locals.oldData && oldData.name %>">
+                        <label for="first_name">Nombre de usuario</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Introduzca un nombre de usuario" value="<%=locals.oldData && oldData.first_name %>">
                    
-                    <% if (locals.errors && errors.name) {%> 
+                    <% if (locals.errors && errors.first_name) {%> 
                       <div><%=errors.name.msg %> </div>
                       <% } %>
                     <br/>               
 
-                   
                       <label for="email">Email</label>
                       <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduzca su e-mail" value="<%=locals.oldData && oldData.email %>">
                    
                     <% if (locals.errors && errors.email) {%> 
                       <div><%=errors.email.msg %> </div>
                       <% } %>
+
                     <br/>
-                    
-                    
                       <label for="">Contraseña</label>
                       <input type="password" id="password" name="password" class="form-control">
-                    
                     <br/>
-                    <!-- autocomplete off no funciona (revisar)-->
-                    
-                    <!-- prueba subir archivo multer -->
+
+                      <label for="avatar">Imagen</label>
+                      <input type="file" name="avatar" class="form-control" id="avatar">
                    
-                      <label for="image">Imagen</label>
-                      <input type="file" name="image" class="form-control" id="image">
-                   
-                    <% if (locals.errors && errors.image) {%> 
-                      <div><%=errors.image.msg %> </div>
+                    <% if (locals.errors && errors.avatar) {%> 
+                      <div><%=errors.avatar.msg %> </div>
                       <% } %>
 
                     <br/>
