@@ -42,7 +42,7 @@ const userController ={
         return res.render("./user/register")
     },
     
-    processRegister:(req,res) =>{ //cuando cuando un usuario se registra de manera erronea la imagen se sube igual
+    processRegister:(req,res) =>{ //cuando un usuario se registra de manera erronea la imagen se sube igual
         
         let errors = validationResult(req);
         

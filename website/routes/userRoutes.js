@@ -12,6 +12,8 @@ router.get("/login", guestMiddleware ,userController.login);
 
 router.post("/login", userController.processLogin);
 
+//rutas para el recoverLogin recuperación de contraseña
+
 router.get("/register",guestMiddleware ,userController.register);
 
 router.post("/register", userFileUpload.single("image"),userValidation, userController.processRegister); 

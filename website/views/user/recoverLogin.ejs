@@ -5,16 +5,13 @@
     
       <div class="center">
       
-        <form class="form-container" autocomplete="false" action="/users/login" method="POST">
-          <h4>Bienvenid@ a Madly Artsy!</h4>
+        <form class="form-container" autocomplete="false" action="" method="POST">
+          <h4>Olvidaste tu contraseña?</h4>
+          <h6>Ingresá tu email para poder resetear tu contraseña</h6>
           
           <div id="img-user">
           <img src="/images/avatars/imagen-user-1.jpg" alt="login_user">
         </div>
-
-       
-          <h6>No estás registrado? <a href="/users/register">Hacelo ahora!</a></h6>
-        
         
             
               <% if(locals.errors){ 
@@ -33,23 +30,10 @@
                     
                     <br/>
                     
-                      <label for="">Contraseña</label>
-                      <input type="password" class="form-control" id="password" name="password" required>
-                      <% if (locals.errors && errors.password) {%> 
-                        <div><%=errors.password.msg %> </div>
-                      <% } %>
-                  
-                    <br/>
-                      <input type="checkbox" class="form-check-input" name="user_remember">
-                      <label class="form-check-label">Recordame</label>
-                <br/>
+                      
             <br/>
-
-           
-          <button type="submit" class="btn btn-primary btn-block">Login</button>
-          
-          <h6><a href="/users/recoverLogin" >No recuerdo mi contraseña</a></h6>
-         
+          <button type="submit" class="btn btn-primary btn-block">Resetear mi contraseña</button>
+          <h6>Recibirás en tu casilla de email el link para poder resetear tu contraseña</h6>
         </form>
       </div> 
     
