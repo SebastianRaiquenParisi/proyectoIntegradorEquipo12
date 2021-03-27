@@ -26,17 +26,8 @@ module.exports = {
       full_description: {
         type: Sequelize.TEXT
       },
-      size: {
-        type: Sequelize.STRING
-      },
-      main_image: {
-        type: Sequelize.STRING
-      },
       status: {
         type: Sequelize.STRING
-      },
-      stock: {
-        type: Sequelize.INTEGER
       },
       condition: {
         type: Sequelize.STRING

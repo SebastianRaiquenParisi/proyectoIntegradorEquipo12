@@ -11,10 +11,7 @@ module.exports = {
        category: 't-shirt',
        description: 'short description',
        full_description: 'full descripcion',
-       size: 'L',
-       main_image: 'imagen_muestra_1.jpg',
        status: 'active',
-       stock: 10,
        condition:"new in",
        createdAt: new Date,
        updatedAt: new Date
@@ -26,10 +23,7 @@ module.exports = {
        category: 'hoodie',
        description: 'short description',
        full_description: 'full descripcion',
-       size: 'M',
-       main_image: 'imagen_muestra_2.jpg',
        status: 'active',
-       stock: 7,
        condition:"sale",
        createdAt: new Date,
        updatedAt: new Date
@@ -41,10 +35,7 @@ module.exports = {
        category: 't-shirt',
        description: 'short description',
        full_description: 'full descripcion',
-       size: 'S',
-       main_image: 'imagen_muestra_3.jpg',
        status: 'active',
-       stock: 13,
        condition:"new in",
        createdAt: new Date,
        updatedAt: new Date
@@ -56,10 +47,7 @@ module.exports = {
        category: 'hoodie',
        description: 'short description',
        full_description: 'full descripcion',
-       size: 'M',
-       main_image: 'imagen_muestra_4.jpg',
        status: 'active',
-       stock: 17,
        condition:"avilable",
        createdAt: new Date,
        updatedAt: new Date
@@ -68,11 +56,8 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+
+    await queryInterface.bulkDelete('Products', null, {});
+
   }
 };

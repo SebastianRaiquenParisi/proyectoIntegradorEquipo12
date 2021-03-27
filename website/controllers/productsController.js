@@ -1,5 +1,7 @@
 let db = require("../database/models")
 let Products=db.Product;
+let Images=db.Image;
+let mages=db.image_product;
 
 const productosController = {
 	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS
@@ -61,7 +63,7 @@ const productosController = {
 	//METODO QUE MUESTA EL FORMULARIO DE EDICION DE PRODUCTO, CON EL PRODUCTO CORRESPONDIENTE A LA QUERY, LA CUAL RE RECIBE POR REQ.PARAMS.ID
 	edit: async function (req, res){
 		try{
-			let productToEdit=Products.findByPk(req.params.id);
+			let productToEdit=await Products.findByPk(req.params.id);
 			return res.render("./products/productEditForm", {productToEdit:productToEdit});
 		}catch(error){
 			console.log(error);

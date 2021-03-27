@@ -14,18 +14,20 @@ module.exports = (sequelize, DataTypes) => {
        through: "order_product",
        as:"products",
        foreignKey:"order_id"
-    }), */
+    }), 
     
       Order.belongsToMany(models.User, {
        through: "order_user",
        as:"user",
        foreignKey:"order_id"
-      })
+      })*/
     }
   };
   Order.init({
-    date: DataTypes.DATE,
-    status: DataTypes.STRING
+    order_date: DataTypes.DATE,
+    status: DataTypes.STRING,
+    cart_id: DataTypes.INTEGER,
+    shipment_date: DataTypes.DATE,
   }, {
     sequelize,
     modelName: 'Order',

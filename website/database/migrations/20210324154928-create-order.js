@@ -8,11 +8,24 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      date: {
+      order_date: {
         type: Sequelize.DATE
       },
       status: {
         type: Sequelize.STRING
+      },
+      cart_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: 'Carts'
+          },
+          key: 'id'
+        },
+        allowNull: false
+      },
+      shipment_date: {
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,

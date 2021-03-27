@@ -11,38 +11,41 @@ const userController ={
 
     //METODO QUE PROCESA EL FORMULARIO DE LOGIN
     //TERMINAR DE IMPLEMENTAR ERRORES EN EL CATCH !!-CHECKEAR-
-    processLogin: async function (req,res) {
+    processLogin:  async function (req,res) {
+        
+            let userToLogin =  await User.findOne({  //BUSCA EN BD SI EL EMAIL ENVIADO EN EL FORMULARIO DE LOGIN EXISTE EN LA BD
+                where: { 
+                    email: req.body.email
+                }
+            });
 
-        let userToLogin = await User.findOne({  //BUSCA EN BD SI EL EMAIL ENVIADO EN EL FORMULARIO DE LOGIN EXISTE EN LA BD
-            where: { 
-                email: req.body.email
-            }
-        });
-            if(userToLogin){                                                        
-                let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);      //CHECKEA CON EL COMPARESYNC SI LA CONTRASEÑA ES CORRECTA
-                if(passwordCheck){
-                    delete userToLogin.password;                        //SI ES CORRECTA SE LLAMA AL METODO DELETE PARA NO GUARDAR DATOS SENSIBLES EN SESSION
-                    req.session.userLogged=userToLogin;                //SE GUARDA EN SESSION EL USUARIO LOGEADO
-                    if(req.body.user_remember){                       
-                        res.cookie("userEmail", req.body.email, {maxAge: (1000* 60)*2})
-                    }
-                   return res.redirect("./profile",);
-                } 
+                if(userToLogin){                                                        
+                    let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);      //CHECKEA CON EL COMPARESYNC SI LA CONTRASEÑA ES CORRECTA
+                    if(passwordCheck){
+                        delete userToLogin.password;                        //SI ES CORRECTA SE LLAMA AL METODO DELETE PARA NO GUARDAR DATOS SENSIBLES EN SESSION
+                        req.session.userLogged= userToLogin;                //SE GUARDA EN SESSION EL USUARIO LOGEADO
+                        if(req.body.user_remember){                       
+                            res.cookie("userEmail", req.body.email, {maxAge: (1000* 60)*2})
+                        }
+                        
+                       return res.redirect("/users/profile");
+                    } 
+                    return res.render("./user/login", {
+                        errors:{
+                            password: {
+                                msg: "la contraseña ingresada es incorrecta"
+                            }
+                        }
+                    })
+                }
                 return res.render("./user/login", {
                     errors:{
-                        password: {
-                            msg: "la contraseña ingresada es incorrecta"
+                        email: {
+                            msg: "Usuario no registrado"
                         }
                     }
                 })
-            }
-            return res.render("./user/login", {
-                errors:{
-                    email: {
-                        msg: "Usuario no registrado"
-                    }
-                }
-            })
+
     },
 
     register:(req,res)=>{
@@ -94,12 +97,13 @@ const userController ={
         }
     },
 
-    profile: async function (req,res){
-        //console.log(req.session);
-        //let user = await req.session.userLogged
-        return res.render("./user/profile", {
-            user: req.session.userLogged            //ENVIO A LA VISTA LOS DATOS GUARDADOS EN SESSION A TRAVES DE LA VARIABLE "user"
-        });
+    profile:  function (req,res){
+
+         let user =   req.session.userLogged
+            console.log(user);
+            return res.render("./user/profile", {
+                user:req.session.userLogged           //ENVIO A LA VISTA LOS DATOS GUARDADOS EN SESSION A TRAVES DE LA VARIABLE "user"
+            });   
     },
 
     logout: (req,res)=>{

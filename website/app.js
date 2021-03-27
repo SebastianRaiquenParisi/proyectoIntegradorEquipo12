@@ -24,12 +24,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 const indexRouter = require("./routes/mainRoutes")
-const productsRouter = require("./routes/productsRoutes")
 const userRouter = require("./routes/userRoutes")
+const productsRouter = require("./routes/productsRoutes")
 
 app.use("/", indexRouter);
-app.use("/products", productsRouter);
 app.use("/users", userRouter);
+app.use("/products", productsRouter);
 
 
 

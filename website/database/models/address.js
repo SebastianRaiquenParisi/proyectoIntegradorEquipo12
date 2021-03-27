@@ -19,7 +19,6 @@ module.exports = (sequelize, DataTypes) => {
     province: DataTypes.STRING,
     country: DataTypes.STRING,
     postal_code: DataTypes.INTEGER,
-    user_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Address',

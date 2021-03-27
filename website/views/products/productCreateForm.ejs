@@ -3,35 +3,34 @@
 <body>
     <%- include('../partials/header'); %>
 
-    <form action="/products/create" method="POST" autocomplete="off" enctype="multipart/form-data">
-    <section class="productForm">
-        <div class="input">
-            <h4 id="NuevoArticulo">Nuevo Artículo</h4>
-        </div>
+    <form action="/products/create" method="POST" autocomplete="off" enctype="multipart/form-data" class="m-auto col-md-7">
+        <section class="productForm">
 
-        
             <div class="input">
-                <label for="image">Seleccionar Imagen</label>
-            <input type="file" name="image" class="form-control" id="image" multiple>
-        </div>
-        
-        
-    
-        <div class="input">
+                <h4 id="NuevoArticulo">Nuevo Artículo</h4>
+            </div>
+
+            <div class="input">
+                <input class="m-auto" type="file" name="main_image" class="form-control" id="main_image" >
+            </div>
+            
+            <div class="input">
                 <input type="text" name="name" placeholder="Título">
-        </div>
-        <div class="input">
+            </div>
+
+            <div class="input">
                 <input type="text" name="price" placeholder="Precio">
-        </div>
-        <div class="input">
+            </div>
+
+            <div class="input">
                 <select id="category" name="category">
-                    <option value="null">Categoría</option>
-                    <option value="Remeras">Remeras</option>
-                    <option value="Buzos">Buzos</option>
-                    <option value="Accesorios">Accesorios</option>
+                    <option value="t-shirt">Remeras</option>
+                    <option value="hoodie">Buzos</option>
+                    <option value="accessory">Accesorios</option>
                 </select>
-        </div>
-        <div class="input">
+            </div>
+
+            <div class="input">
                 <label id="talle" for="XS">XS</label>
                 <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
                 <label id="talle" for="S">S</label>
@@ -42,41 +41,36 @@
                 <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
                 <label id="talle" for="XL">XL</label>
                 <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
-        </div>
-        <div class="input">
-                <textarea name="description" rows="10" cols="30" placeholder="Descripción del artículo"></textarea>
-        </div>
-        <div class="choiseDisponible"></div>
-        <div class="input">
-                <select id="Valoracion" name="Valoracion">
-                    <option value="0">Valoración del Producto</option>
-                    <option value="1">1 Estrella</option>
-                    <option value="2">2 Estrellas</option>
-                    <option value="3">3 Estrellas</option>
-                    <option value="4">4 Estrellas</option>
-                    <option value="5">5 Estrellas</option>
-                </select>
-        </div>
-        <div class="input">
-                <input type="number" id="discount" name="discount" placeholder="Ingrese % de descuento"><br>
-        </div>
-        <div class="choisePromo">
-                <input type="checkbox" id="SALE" name="SALE" value="SALE">
-                <label for="SALE"> SALE</label>
-                <input type="checkbox" id="novedad" name="novedad" value="novedad">
-                <label for="novedad"> Nuevo Lanzamiento</label>
-                <input type="checkbox" id="promocionado" name="promocionado" value="promocionado">
-                <label for="promocionado"> Promocionado</label>
-        </div>
-    </section>
-    
+            </div>
 
-    <section class="productFormPie">
-        <div class="botonesPie">
-            <button class="buttonCargar" type="submit">Cargar</button>
-            <button class="buttonBorrar" type="reset">Borrar</button>
-        </div>
-    </section>
+            <div class="input">
+                <textarea name="description" rows="2" cols="10" placeholder="Descripción breve"></textarea>
+            </div>
+
+            <div class="input">
+                <textarea name="full_description" rows="5" cols="10" placeholder="Descripción detalla / caracteristicas"></textarea>
+            </div>
+
+            <div class="input">
+                <input type="number" id="discount" name="discount" placeholder="Ingrese % de descuento"><br>
+            </div>
+
+            <div class="input">
+                <select id="condition" name="condition">
+                    <option value="sale">Sale</option>
+                    <option value="new in">Nuevo lanzamiento</option>
+                    <option value="available" selected >Disponible</option>
+                </select>
+            </div>
+            
+        </section>
+    
+        <section class="productFormPie">
+            <div class="botonesPie">
+                <button class="buttonCargar" type="submit">Cargar</button>
+                <button class="buttonBorrar" type="reset">Borrar</button>
+            </div>
+        </section>
     </form>
 
     <%- include('../partials/footer'); %>
