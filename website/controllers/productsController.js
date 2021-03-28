@@ -1,13 +1,12 @@
 let db = require("../database/models")
 let Products=db.Product;
-let Images=db.Image;
-let mages=db.image_product;
+
 
 const productosController = {
 	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS
     list: async function (req,res){
 		try {
-			let products= await Products.findAll(); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
+			let products= await Products.findAll({include:"images"}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
 			return res.render("./products/productsList", {products:products, stylesheet: "/css/styles-index.css"})
 		}catch (error){
 			console.log(error);
@@ -27,7 +26,7 @@ const productosController = {
 	//METODO PARA BUSCAR POR EL CAMPO "NOMBRE" DE LOS PRODUCTOS EN LA BD
 	search: async function (req,res){
 		try{
-			let products= await Products.findAll(); 
+			let products= await Products.findAll({include:"images"}); 
 			let searchResults = await products.filter(product=>product.name.includes(req.query.keywords));//UTILIZA EL METODO FILTER PARA GUARDAR EN LA VARIABLE
 			return res.render("./products/searchResults", {searchResults, keywords:req.query.keywords})  //"searchResults" LOS PRODUCTOS QUE EN SU CAMPO NOMBRE
 		}catch (error){																					//INCLUYAN LO QUE FUE ENVIADO EN LA QUERY
@@ -52,8 +51,8 @@ const productosController = {
 	//METODO QUE BUSCA UN PRODUCTO EN LA BD POR SU ID, EL CUAL SE RECIBE EN LA QUERY A TRAVES DE LA RUTA PARAMETRIZADA CON LA VARIBLE REQ.PARAMS.ID
     detail: async function (req, res){ 
 		try{
-			let productFound = await Products.findByPk(req.params.id);
-			let products= await Products.findAll();
+			let productFound = await Products.findByPk(req.params.id,{include:"images"});
+			let products= await Products.findAll({include:"images"});
 			return res.render("./products/producto", {productFound:productFound, products:products});
 		}catch (error){
 			console.log(error);

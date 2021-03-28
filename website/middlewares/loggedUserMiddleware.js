@@ -14,7 +14,7 @@ async function userLoggedMiddleware(req, res, next) {
             if(userCookie){
                 req.session.userLogged=userCookie;
             }
-    }
+        }
 
     if(req.session.userLogged){
         res.locals.userLogged = req.session.userLogged;

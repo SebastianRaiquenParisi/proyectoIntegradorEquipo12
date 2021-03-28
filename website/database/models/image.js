@@ -10,13 +10,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
      static associate(models) {
-      
-     /*  Image.belongsToMany(models.Products, {
-        through: "image_product",
-        as:"product",
-        foreignKey:"image_id"
-      })  */     
-    }
+        Image.belongsToMany(models.Product, {
+          through: "image_product",
+          as:"products_images",
+          foreignKey:"image_id"
+      })
+  }
   };
   Image.init({
     image_url: DataTypes.STRING
