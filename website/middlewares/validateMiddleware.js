@@ -2,39 +2,22 @@ const {check} = require("express-validator");
 const path = require("path");
 
 //revisar
+const validation= [
+    check("name").notEmpty().isLength({min:1, max: 100}).withMessage("Tiene que completar el nombre"),
+    check("email").notEmpty().isEmail().withMessage("Tienes que escribir un email válido"), 
+    check("password").notEmpty().isLength({ min: 5 }).withMessage("Tienes que escribir una contraseña con más de 5 caracteres"),
 
-/*const validateLogin= [
-    //.isEmail()
-    check("email").notEmpty().withMessage("Tienes que escribir un email válido"), 
-    check("password").notEmpty().isLength({ min: 5 }).withMessage
-    ("Tienes que escribir una contraseña con más de 5 caracteres"),
+    //check("image").withMessage("La imagen debe ser .jpg o .png"),
+    check("price").notEmpty().isLength({ min: 1, max: 20}).withMessage("Tienes que escribir una cifra válida"),
+    check("category").notEmpty().withMessage("Tienes que elegir una categoría"),
+    check("cantidad").notEmpty().isLength({min:1, max: 1000}).withMessage("Tienes que elegir una categoría"), //este nombre puede ser que haya cambiado en la DB
+    check("description").isAlphanumeric().withMessage("Hay caracteres que no están disponibles en este campo"),
+    check("discount").isLength({ min: 1, max: 2}).withMessage("El descuento no es válido"),
 ]
 
-const validateRegister= [
-    check("name").notEmpty().isLength({min:1, max: 100}).withMessage("Debes completar el nombre"),
-    //.isEmail()
-    // validar si el email está en uso
-    check("email").notEmpty().withMessage("Tienes que escribir un email válido"), 
-    check("password").notEmpty().isLength({ min: 5 }).withMessage
-    ("Tienes que escribir una contraseña con más de 5 caracteres"),
-    check("image").withMessage("La imagen debe ser .jpg o .png"),
-]
-
-const validateRecoverLogin= [
-    //.isEmail()
-    check("email").notEmpty().withMessage("Tienes que escribir un email válido"),
-]
-
-//exportar el módulo de validaciones
-//las implementamos en la ruta que procesa el formulario por POST
-
-//implementar validaciones para los formularios de creación y edición de productos
-*/
 
 
-//en funcionamiento?
-
-module.exports=[
+/*module.exports=[
     check("name").notEmpty().withMessage("Debes completar el nombre"),
     check("email").notEmpty().withMessage("Tienes que escribir un email válido"),
     check("image").custom((value, {req})=> {
@@ -43,12 +26,13 @@ module.exports=[
 
         if(!file){
             throw new Error("Debes agregar una imagen"); //El formato no corresponde a una imágen válida
-        }/* else{
+        } else{
             let fileExtension = path.extname(path.originalname);
             if(!acceptedExtensions.includes(fileExtension)){
                 throw new Error ("las extensiones permitidas son ${acceptedExtensions.join}");
             }
-        } */
-        return true; //por qué retorna en true??
-    }) 
-]
+        }
+        return true; 
+    }) */
+
+module.exports= validation;

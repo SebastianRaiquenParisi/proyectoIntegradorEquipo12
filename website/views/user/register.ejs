@@ -13,7 +13,7 @@
             
                     
                         <label for="name">Nombre de usuario</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Introduzca un nombre de usuario" value="<%=locals.oldData && oldData.name %>" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Introduzca un nombre de usuario" value="<%=locals.oldData && oldData.name %>">
                    
                     <% if (locals.errors && errors.name) {%> 
                       <div><%=errors.name.msg %> </div>
@@ -22,7 +22,7 @@
 
                    
                       <label for="email">Email</label>
-                      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduzca su e-mail" value="<%=locals.oldData && oldData.email %>" required>
+                      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduzca su e-mail" value="<%=locals.oldData && oldData.email %>">
                    
                     <% if (locals.errors && errors.email) {%> 
                       <div><%=errors.email.msg %> </div>
@@ -31,8 +31,10 @@
                     
                     
                       <label for="">Contraseña</label>
-                      <input type="password" id="password" name="password" class="form-control" required>
-                    
+                      <input type="password" id="password" name="password" class="form-control">
+                      <% if (locals.errors && errors.password) {%> 
+                        <div><%=errors.password.msg %> </div>
+                        <% } %>
                     <br/>
                     <!-- autocomplete off no funciona (revisar)-->
                     

@@ -17,16 +17,11 @@
         
         
             
-              <% if(locals.errors){ 
-                errors.forEach(error => {%>
-                  <p><% error.msg %></p>
-                    <% })
-                      }
-                        %>
+             
                           
                     
                       <label for="email">Email</label>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su e-mail" required>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su e-mail">
                       <% if (locals.errors && errors.email) {%> 
                         <div><%=errors.email.msg %> </div>
                         <% } %>
@@ -34,7 +29,7 @@
                     <br/>
                     
                       <label for="">Contraseña</label>
-                      <input type="password" class="form-control" id="password" name="password" required>
+                      <input type="password" class="form-control" id="password" name="password">
                       <% if (locals.errors && errors.password) {%> 
                         <div><%=errors.password.msg %> </div>
                       <% } %>
