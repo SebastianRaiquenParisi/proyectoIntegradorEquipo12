@@ -16,7 +16,7 @@
                         <input type="text" class="form-control" id="name" name="name" placeholder="Introduzca un nombre de usuario" value="<%=locals.oldData && oldData.name %>">
                    
                     <% if (locals.errors && errors.name) {%> 
-                      <div><%=errors.name.msg %> </div>
+                      <div class= "errorsStyles"><%=errors.name.msg %> </div>
                       <% } %>
                     <br/>               
 
@@ -25,7 +25,7 @@
                       <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduzca su e-mail" value="<%=locals.oldData && oldData.email %>">
                    
                     <% if (locals.errors && errors.email) {%> 
-                      <div><%=errors.email.msg %> </div>
+                      <div class= "errorsStyles"><%=errors.email.msg %> </div>
                       <% } %>
                     <br/>
                     
@@ -33,7 +33,7 @@
                       <label for="">Contraseña</label>
                       <input type="password" id="password" name="password" class="form-control">
                       <% if (locals.errors && errors.password) {%> 
-                        <div><%=errors.password.msg %> </div>
+                        <div class= "errorsStyles"><%=errors.password.msg %> </div>
                         <% } %>
                     <br/>
                     <!-- autocomplete off no funciona (revisar)-->
@@ -44,7 +44,7 @@
                       <input type="file" name="image" class="form-control" id="image" accept="image/*">
                    
                     <% if (locals.errors && errors.image) {%> 
-                      <div><%=errors.image.msg %> </div>
+                      <div class= "errorsStyles"><%=errors.image.msg %> </div>
                       <% } %>
 
                     <br/>

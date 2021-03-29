@@ -7,7 +7,7 @@ const path = require("path");
 
 
 module.exports=[
-    check("name").notEmpty().withMessage("Tiene que completar el nombre"),
+    check("name").notEmpty().withMessage("Tienes que completar el nombre"),
     check("name").isAlpha().withMessage("El nombre sólo puede contener caracteres válidos"),
     check("name").isLength({ min: 1, max: 100}).withMessage("El no puede tener más de 100 caracteres"),
 

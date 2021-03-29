@@ -10,11 +10,10 @@ a {
 }
 
 .errorsStyles {
-    font-size: 4.5vw;
+    font-size: 1vw;
     font-family: Raleway;
-    font-weight: 800;
-    text-align: center;
-    color: rgb(180, 0, 0);
+    font-weight: 400;
+    color: rgb(255, 0, 0);
 }
 
 .center {
