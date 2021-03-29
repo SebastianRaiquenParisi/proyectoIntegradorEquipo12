@@ -9,6 +9,14 @@ a {
     text-decoration: none;
 }
 
+.errorsStyles {
+    font-size: 4.5vw;
+    font-family: Raleway;
+    font-weight: 800;
+    text-align: center;
+    color: rgb(180, 0, 0);
+}
+
 .center {
     display: block;
     padding: 5vh 0;
