@@ -1,7 +1,6 @@
 let db = require("../database/models")
 let User=db.User;
-
-//REVISAR MIDDLEWARE
+//MIDDLEWARE (LLAMADO EN EL ENTRY POINT) QUE VALIDA SI HAY UN USUARIO EN LA COOKIE Y LO GUARDA EN SESION
 async function userLoggedMiddleware(req, res, next) {
     res.locals.userLogged= false;
     if (req.cookies.userEmail){
@@ -15,7 +14,6 @@ async function userLoggedMiddleware(req, res, next) {
                 req.session.userLogged=userCookie;
             }
         }
-
     if(req.session.userLogged){
         res.locals.userLogged = req.session.userLogged;
     }

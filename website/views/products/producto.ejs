@@ -14,9 +14,9 @@
     <section class="centroA">
         <div class="imgProductoPrincipal"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
         <div class="bloqueImgAlternativas">
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.main_image%>" alt=""></div>
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.main_image%>" alt=""></div>
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.main_image%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
         </div>
         <div class="Columna">
             <div>
@@ -62,7 +62,7 @@
                 <button id="buttonverGuiaDeTalles">VER GUÍA DE TALLES</button>
             </div>
             
-            <% if (locals.userLogged && userLogged.category=="admin") { %>
+            <% if (locals.userLogged && userLogged.is_admin) { %>
             <div class="d-flex align-self-center mt-2">
                 <form action="/products/edit/<%=productFound.id%>">
                     <button id="buttonSubmit" type="submit">Editar Producto</button>
@@ -82,14 +82,14 @@
     <h2 class="products-title">Si buscabas <%=productFound.name%> también podrían interesarte estos productos</h2>
     <div class="products-wrapper">
       
-        <!-- Show the "visited" products -->
-          <% for( let index = 0; index < products.length; index++ ) { %> <!-- preguntar si es la misma categoria para mostrar productos relacionados -->
-          <% if (products[index].status=="active") { %>
+        <!-- MUESTRA SEGERENCIA DE PRODUCTOS DE LA MISMA CATEGORIA -->
+          <% for( let index = 0; index < products.length; index++ ) { %>
+          <% if (products[index].category==productFound.category) { %>
       
         <section class="product-card">
           <a href="/products/<%=products[index].id%>">
             <figure class="product-card-img">
-              <img src="/images/productsImg/<%=products[index].main_image%> " alt="imagen de producto">
+              <img src="/images/productsImg/<%=products[index].images[0].image_url%> " alt="imagen de producto">
             </figure>
             <article class="product-card-content">
               <h4><%=products[index].category%></h4>
@@ -107,7 +107,6 @@
       <% } %>
   <% } %>
 </div>
-
 
     <%- include('../partials/footer'); %>
 </body>

@@ -1,7 +1,6 @@
 const db = require("../database/models");
 let Products=db.Product;
 
-
 const mainController = {
     
     index: async function(req,res){
@@ -11,7 +10,7 @@ const mainController = {
 
         }catch(error){
             console.log(error);
-			return res.send("404 error");
+			return res.send("error");
         }
     }
 }

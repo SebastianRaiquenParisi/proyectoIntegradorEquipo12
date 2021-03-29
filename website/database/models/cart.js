@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       })
     }
   };
+  
   Cart.init({
     product_id: DataTypes.INTEGER,
     user_id: DataTypes.INTEGER,

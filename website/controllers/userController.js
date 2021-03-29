@@ -5,6 +5,7 @@ let User=db.User;
 
 const userController ={
 
+    //METODO QUE MUESTRA EL FORMULARIO DE LOGIN
     login: (req,res)=>{
         return res.render("./user/login")
     },
@@ -13,41 +14,43 @@ const userController ={
     //TERMINAR DE IMPLEMENTAR ERRORES EN EL CATCH !!-CHECKEAR-
     processLogin:  async function (req,res) {
         
-            let userToLogin =  await User.findOne({  //BUSCA EN BD SI EL EMAIL ENVIADO EN EL FORMULARIO DE LOGIN EXISTE EN LA BD
-                where: { 
+        let userToLogin =  await User.findOne({  //BUSCA EN BD SI EL EMAIL ENVIADO EN EL FORMULARIO DE LOGIN EXISTE EN LA BD
+            where: { 
                     email: req.body.email
                 }
             });
 
-                if(userToLogin){                                                        
-                    let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);      //CHECKEA CON EL COMPARESYNC SI LA CONTRASEÑA ES CORRECTA
-                    if(passwordCheck){
-                        delete userToLogin.password;                        //SI ES CORRECTA SE LLAMA AL METODO DELETE PARA NO GUARDAR DATOS SENSIBLES EN SESSION
-                        req.session.userLogged= userToLogin;                //SE GUARDA EN SESSION EL USUARIO LOGEADO
-                        if(req.body.user_remember){                       
-                            res.cookie("userEmail", req.body.email, {maxAge: (1000* 60)*2})
-                        }
-                        
-                       return res.redirect("/users/profile");
-                    } 
-                    return res.render("./user/login", {
-                        errors:{
-                            password: {
-                                msg: "la contraseña ingresada es incorrecta"
-                            }
-                        }
-                    })
+        if(userToLogin){                                                        
+            let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);      //CHECKEA CON EL COMPARESYNC SI LA CONTRASEÑA ES CORRECTA
+           
+            if(passwordCheck){
+                delete userToLogin.password;                        //SI ES CORRECTA SE LLAMA AL METODO DELETE PARA NO GUARDAR DATOS SENSIBLES EN SESSION
+                req.session.userLogged= userToLogin;                //SE GUARDA EN SESSION EL USUARIO LOGEADO
+                if(req.body.user_remember){                       
+                    res.cookie("userEmail", req.body.email, {maxAge: (1000* 60)*2})
                 }
-                return res.render("./user/login", {
-                    errors:{
-                        email: {
-                            msg: "Usuario no registrado"
-                        }
+                return res.redirect("/users/profile");
+            }
+            
+            return res.render("./user/login", {
+                errors:{
+                    password: {
+                        msg: "la contraseña ingresada es incorrecta"
                     }
-                })
+                }
+            })
+        }
 
+        return res.render("./user/login", {
+            errors:{
+                email: {
+                     msg: "Usuario no registrado"
+                }
+            }
+        })
     },
 
+    //METODO QUE MUESTRA EL FORMULARIO DE REGISTRO
     register:(req,res)=>{
         res.cookie("test", {maxAge:1000 * 30})
         return res.render("./user/register")
@@ -92,20 +95,20 @@ const userController ={
            await User.create(newUser);                                //CREA EL NUEVO USUARIO EN LA BD
            return res.redirect("/users/login")
 
-        }catch(error){
+        }catch(errors){
 
         }
     },
 
+    //METODO QUE MUESTRA EL PERFIL DE USUARIO
     profile:  function (req,res){
-
-         let user =   req.session.userLogged
-            console.log(user);
+         let user =  req.session.userLogged
             return res.render("./user/profile", {
                 user:req.session.userLogged           //ENVIO A LA VISTA LOS DATOS GUARDADOS EN SESSION A TRAVES DE LA VARIABLE "user"
             });   
     },
-
+    
+    //METODO QUE DESLOGEA AL USUARIO
     logout: (req,res)=>{
         res.clearCookie("userEmail")
         req.session.destroy();              //DESTRUYE LOS DATOS EN SESSION

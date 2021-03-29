@@ -15,7 +15,7 @@
                         <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Introduzca un nombre de usuario" value="<%=locals.oldData && oldData.first_name %>">
                    
                     <% if (locals.errors && errors.first_name) {%> 
-                      <div><%=errors.name.msg %> </div>
+                      <div><%=errors.first_name.msg %> </div>
                       <% } %>
                     <br/>               
 

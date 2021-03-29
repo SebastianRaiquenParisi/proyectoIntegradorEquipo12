@@ -1,5 +1,7 @@
 let db = require("../database/models")
 let Products=db.Product;
+let Images=db.Image;
+let Image_products=db.image_product;
 
 
 const productosController = {
@@ -40,9 +42,16 @@ const productosController = {
     },
 	//METODO QUE ALMACENA EN LA BD EL PRODUCTO CREADO EN EL FORMULARIO, LOS DATOS SE RECIBEN A TRAVES DEL REQ.BODY
     storage: async function (req,res){
-		try{
-			await Products.create(req.body);
-			return res.redirect("./products/productsList");
+		try{                             
+			Products.create({
+				...req.body,
+				images: [
+				   {image_url:req.file.filename}
+				]
+			 },{
+				include: ["images"]
+			 }); 
+			return res.redirect("/");
 		}catch (error){
 			console.log(error);
 			return res.send("404 error");

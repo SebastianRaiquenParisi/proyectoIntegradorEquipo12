@@ -11,7 +11,7 @@
             </div>
 
             <div class="input">
-                <input class="m-auto" type="file" name="main_image" class="form-control" id="main_image" >
+                <input type="file" name="image_url" class="form-control m-auto" id="image_url" >
             </div>
             
             <div class="input">
@@ -31,8 +31,8 @@
             </div>
 
             <div class="input">
-                <label id="talle" for="XS">XS</label>
-                <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+                <label id="size_name" name="size_name" for="size_name" value="xs">XS</label>
+                <input id="quantity" type="number" name="quantity" placeholder="Cantidad"><br>
                 <label id="talle" for="S">S</label>
                 <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
                 <label id="talle" for="M">M</label>
@@ -42,6 +42,7 @@
                 <label id="talle" for="XL">XL</label>
                 <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
             </div>
+            
 
             <div class="input">
                 <textarea name="description" rows="2" cols="10" placeholder="Descripción breve"></textarea>
@@ -60,6 +61,13 @@
                     <option value="sale">Sale</option>
                     <option value="new in">Nuevo lanzamiento</option>
                     <option value="available" selected >Disponible</option>
+                </select>
+            </div>
+
+            <div class="input">
+                <select id="status" name="status">
+                    <option value="active" selected>Activo</option>
+                    <option value="inactive">Inactivo</option>
                 </select>
             </div>
             
