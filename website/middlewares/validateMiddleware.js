@@ -1,12 +1,8 @@
 const {check} = require("express-validator");
 const path = require("path");
 
-//revisar
-
-
-
-
 module.exports=[
+    //cada check va por separado para que se muestra la info correcta para cada tipo de error
     check("name").notEmpty().withMessage("Tienes que completar el nombre"),
     check("name").isAlpha().withMessage("El nombre sólo puede contener caracteres válidos"),
     check("name").isLength({ min: 1, max: 100}).withMessage("El no puede tener más de 100 caracteres"),
@@ -36,7 +32,7 @@ module.exports=[
 
         if(!file){
             throw new Error("Debes agregar una imagen"); //El formato no corresponde a una imágen válida
-        } else{
+        } else{ //revisar
             let fileExtension = path.extname(path.originalname);
             if(!acceptedExtensions.includes(fileExtension)){
                 throw new Error ("las extensiones permitidas son ${acceptedExtensions.join}");

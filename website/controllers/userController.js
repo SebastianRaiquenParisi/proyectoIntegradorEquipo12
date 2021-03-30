@@ -5,10 +5,21 @@ const bcryptjs = require("bcryptjs");
 const userController ={
 
     login: (req,res)=>{
+
         return res.render("./user/login")
     },
 
     processLogin:(req,res) =>{
+        //validaciones para el proceso de login
+        let errors = validationResult(req);
+
+        if(!errors.isEmpty()){
+            return res.render("./user/login", {
+                errors: errors.mapped(),
+                oldData: req.body
+            });
+        }
+
         let userToLogin = User.findByEmail(req.body.email);
             if(userToLogin){
                 let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -43,7 +54,7 @@ const userController ={
     },
     
     processRegister:(req,res) =>{ //cuando un usuario se registra de manera erronea la imagen se sube igual
-        
+        //validaciones para el proceso de login
         let errors = validationResult(req);
 
         if(!errors.isEmpty()){

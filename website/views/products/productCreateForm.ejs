@@ -13,15 +13,28 @@
             <div class="input">
                 <label for="image">Seleccionar Imagen</label>
             <input type="file" name="image" class="form-control" id="image" accept="image/*" multiple>
+            <% if (locals.errors && errors.image) {%> 
+                <div class= "errorsStyles"><%=errors.image.msg %> </div>
+                <% } %>
+            
+            <br/>
         </div>
         
         
     
         <div class="input">
                 <input type="text" name="name" placeholder="Título" required>
+                <% if (locals.errors && errors.name) {%> 
+                    <div class= "errorsStyles"><%=errors.name.msg %> </div>
+                    <% } %>
+                
+                <br/>
         </div>
         <div class="input">
                 <input type="text" name="price" placeholder="Precio" required>
+                <% if (locals.errors && errors.price) {%> 
+                    <div class= "errorsStyles"><%=errors.price.msg %> </div>
+                    <% } %>
         </div>
         <div class="input">
                 <select id="category" name="category" required>

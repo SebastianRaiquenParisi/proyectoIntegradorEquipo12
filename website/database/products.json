@@ -211,25 +211,40 @@
   },
   {
     "id": 16,
-    "name": "Prueba multer carga de 2 img",
-    "price": "10",
-    "category": "Remeras",
+    "name": "8",
+    "price": "y",
+    "category": "Buzos",
     "cantidad": [
-      "1",
+      "",
       "",
       "",
       "",
       ""
     ],
-    "description": "rrrr",
+    "description": "",
     "Valoracion": "0",
-    "discount": "40",
-    "novedad": "novedad"
+    "discount": ""
   },
   {
     "id": 17,
-    "name": "",
-    "price": "",
+    "name": "4",
+    "price": "4",
+    "category": "null",
+    "cantidad": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "description": "",
+    "Valoracion": "0",
+    "discount": ""
+  },
+  {
+    "id": 18,
+    "name": "333",
+    "price": "hola",
     "category": "null",
     "cantidad": [
       "",

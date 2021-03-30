@@ -9,6 +9,13 @@ a {
   text-decoration: none;
 }
 
+.errorsStyles {
+  font-size: 1vw;
+  font-family: Raleway;
+  font-weight: 400;
+  color: rgb(255, 0, 0);
+}
+
 .productForm {
     display: block;
     width: 100%;

@@ -1,8 +1,9 @@
 const express = require("express");
 const productosController = require("../controllers/productosController");
-const {body} = require('express-validator');
 const productFileUpload = require("../middlewares/productsMulterMiddleware");
 const router = express.Router();
+const validation = require("../middlewares/validateMiddleware");
+const {body} = require('express-validator'); //hace falta este?
 
 router.get("/", productosController.index);
 
@@ -14,13 +15,13 @@ router.get("/ShoppingCart", productosController.shoppingCart);
 
 router.get("/create", productosController.create);
 
-router.post("/create", productFileUpload.array("image",4), productosController.storage);
+router.post("/create", productFileUpload.array("image",4), validation, productosController.storage); //agrego validaciones
 
 router.get("/:id", productosController.detail);
 
 router.get("/edit/:id", productosController.edit);
 
-router.put("/edit/:id", productosController.update);
+router.put("/edit/:id", validation, productosController.update); //agrego validaciones
 
 router.delete("/:id", productosController.destroy); 
 

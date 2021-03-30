@@ -1,5 +1,7 @@
 const Products = require("../models/Products");
 const { search } = require("../routes/productsRoutes");
+const {validationResult} = require ("express-validator");
+
 const productosController = {
 
     index: (req,res)=>{ /*productList*/
@@ -22,8 +24,20 @@ const productosController = {
 	},
 
     create: (req,res)=>{
+
+		/*let errors = validationResult(req);
+
+        if(!errors.isEmpty()){
+            return res.render("./products/productCreateForm", {
+                errors: errors.mapped(),
+                oldData: req.body
+            });
+		}*/
+
 		return res.render("./products/productCreateForm")
     },
+
+
 
     storage: (req,res)=>{
 		let newProduct={
@@ -33,6 +47,15 @@ const productosController = {
 		console.log(req.files);
 		
 		Products.create(newProduct);
+		//incluí las validaciones acá
+		let errors = validationResult(req);
+
+        if(!errors.isEmpty()){
+            return res.render("./products/productCreateForm", {
+                errors: errors.mapped(),
+                oldData: req.body
+            });
+		}
 		/*let lastProduct = allProducts.pop();
         if(lastProduct){
             return lastProduct.id+1;
