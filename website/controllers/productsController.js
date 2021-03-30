@@ -47,9 +47,12 @@ const productosController = {
 				...req.body,
 				images: [
 				   {image_url:req.file.filename}
+				],
+				sizes: [
+					{size_name:req.body.size}
 				]
 			 },{
-				include: ["images"]
+				include: ["images", "sizes"]
 			 }); 
 			return res.redirect("/");
 		}catch (error){

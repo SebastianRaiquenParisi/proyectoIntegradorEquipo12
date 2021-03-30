@@ -13,6 +13,7 @@ module.exports = {
       },
       size_id: {
         type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
         references: {
           model: {
             tableName: 'Sizes'
@@ -23,6 +24,7 @@ module.exports = {
       },
       product_id: {
         type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
         references: {
           model: {
             tableName: 'Products'

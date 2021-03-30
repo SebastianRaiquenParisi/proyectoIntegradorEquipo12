@@ -16,6 +16,7 @@ module.exports = {
       },
       cart_id: {
         type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
         references: {
           model: {
             tableName: 'Carts'
