@@ -208,53 +208,5 @@
     "quantity": "1",
     "status": "available",
     "promo": ""
-  },
-  {
-    "id": 16,
-    "name": "8",
-    "price": "y",
-    "category": "Buzos",
-    "cantidad": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "description": "",
-    "Valoracion": "0",
-    "discount": ""
-  },
-  {
-    "id": 17,
-    "name": "4",
-    "price": "4",
-    "category": "null",
-    "cantidad": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "description": "",
-    "Valoracion": "0",
-    "discount": ""
-  },
-  {
-    "id": 18,
-    "name": "333",
-    "price": "hola",
-    "category": "null",
-    "cantidad": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "description": "",
-    "Valoracion": "0",
-    "discount": ""
   }
 ]

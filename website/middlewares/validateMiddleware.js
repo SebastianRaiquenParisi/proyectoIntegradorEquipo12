@@ -18,8 +18,8 @@ module.exports=[
 
     check("category").notEmpty().withMessage("Tienes que elegir una categoría"),
 
-    check("cantidad").notEmpty().withMessage("Tienes que ingresar una cantidad"), //este nombre puede ser que haya cambiado en la DB
-    check("cantidad").isNumeric().withMessage("Tienes que ingresar una cantidad numérica"), //este nombre puede ser que haya cambiado en la DB
+    check("quantity").notEmpty().withMessage("Tienes que ingresar una cantidad"), //este nombre puede ser que haya cambiado en la DB
+    check("quantity").isNumeric().withMessage("Tienes que ingresar una cantidad numérica"), //este nombre puede ser que haya cambiado en la DB
     
     check("description").isAlphanumeric().withMessage("Hay caracteres que no están disponibles en este campo"),
 
