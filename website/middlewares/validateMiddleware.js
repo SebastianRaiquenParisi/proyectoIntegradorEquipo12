@@ -25,19 +25,21 @@ module.exports=[
 
     check("discount").isLength({ min: 1, max: 2}).withMessage("El descuento debe tener como máximo 2 cifras"),
     check("discount").isFloat().withMessage("El descuento debe ser una cifra numérica"), //utilizar , o . para los decimales?
+    
+    check("image").isEmpty().withMessage("Tienes que seleccionar una imagen de perfil")
 
-    check("image").custom((value, {req})=> {
+    /*check("image").custom((value, {req})=> {
         let file=req.file;
         let acceptedExtensions = [".jpg", ".png", ".jpeg", ".gif"];
 
         if(!file){
             throw new Error("Debes agregar una imagen"); //El formato no corresponde a una imágen válida
-        } else{ //revisar
+        } else{
             let fileExtension = path.extname(path.originalname);
             if(!acceptedExtensions.includes(fileExtension)){
                 throw new Error ("las extensiones permitidas son ${acceptedExtensions.join}");
             }
         }
         return true; 
-    })
+    })*/
 ]
