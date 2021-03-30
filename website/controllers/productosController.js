@@ -48,12 +48,12 @@ const productosController = {
 		
 		Products.create(newProduct);
 		//incluí las validaciones acá
-		let errors = validationResult(req);
+		let errors = validationResult(req);		
 
         if(!errors.isEmpty()){
             return res.render("./products/productCreateForm", {
                 errors: errors.mapped(),
-                oldData: req.body
+                oldData: req.body //el formulario no está mostrando esto
             });
 		}
 		/*let lastProduct = allProducts.pop();
