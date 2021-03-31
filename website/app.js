@@ -25,7 +25,7 @@ app.use(express.json());
 
 const indexRouter = require("./routes/mainRoutes")
 const userRouter = require("./routes/userRoutes")
-const productsRouter = require("./routes/productsRoutes")
+const productsRouter = require("./routes/productRoutes")
 
 app.use("/", indexRouter);
 app.use("/users", userRouter);

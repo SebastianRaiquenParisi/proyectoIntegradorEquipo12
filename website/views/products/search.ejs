@@ -12,14 +12,16 @@
           <section class="product-card">
             <a href="/products/<%=result.id%>">
               <figure class="product-card-img">
-                <img src="/images/productsImg/<%=result.image%> " alt="imagen de producto">
+                <img src="/images/productsImg/<%=result.images[0].image_url%> " alt="imagen de producto">
               </figure>
               <article class="product-card-content">
                 <h4><%=result.category%></h4>
                 <h2><%=result.name%></h2>
                 
-                  <h3 id="price">$<%=result.price%></h3>
-                  <h3 id="discount">%<%=result.discount%> OFF</h3>
+                <h3 id="price">$<%=result.price%></h3>
+                <% if(result.discount>0){ %> 
+                <h3 id="discount"><%=result.discount%>% OFF</h3>
+                <% } %> 
               
                 <p><%=result.description%></p>
               </article>

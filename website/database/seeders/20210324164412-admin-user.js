@@ -8,9 +8,9 @@ module.exports = {
       {
        first_name: 'Admin',
        last_name: 'AdminLastName',
-       email: 'admin@admin',
+       email: 'admin@admin.com',
        password: '$2a$10$Q65Uga2onFssqaOymnZMduhJ3Oyrl08xoMK7D9lZaI8M1dnSELsFm',
-       is_admin: 1,
+       is_admin: true,
        address_id: 1,
        avatar:"1614287296035.jpg",
        createdAt: new Date,
@@ -19,9 +19,9 @@ module.exports = {
       {
       first_name: 'User',
        last_name: 'UserLastName',
-       email: 'user@user',
+       email: 'user@user.com',
        password: '$2a$10$lUXloBssGjCyYfRZSXhhze19dT.mpAnJS9EzRBDBhAN59nWc6gnSu',
-       is_admin: 0,
+       is_admin: false,
        address_id: 2,
        avatar:"1614287296035.jpg",
        createdAt: new Date,

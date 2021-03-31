@@ -1,5 +1,5 @@
 const express = require("express");
-const productsController = require("../controllers/productsController");
+const productsController = require("../controllers/productController");
 const productImageUpload = require("../middlewares/productImageMiddleware");
 const adminMiddleware = require("../middlewares/adminMiddleware");
 const router = express.Router();
@@ -8,9 +8,9 @@ router.get("/", productsController.list);
 
 router.get("/search", productsController.search);
 
-router.get("/ShoppingCart", productsController.shoppingCart);
+router.get("/cart", productsController.shoppingCart);
 
-router.get("/create", adminMiddleware, productsController.create);
+router.get("/create", /* adminMiddleware, */ productsController.create);
 
 router.post("/create", productImageUpload.single("image_url"), productsController.storage);
 

@@ -63,7 +63,6 @@
 
   <!-- Mostrar las categorías destacadas -->
   <div class="category-wrapper">
-<%- include('../partials/bannerInfo'); %>
 <% for( let index = 0; index <= 2; index++ ) { %>
     <section class="randomCategory">
         <img src="/images/productsImg/<%=products[index].images[0].image_url%>" alt="imagen de producto">
@@ -76,7 +75,7 @@
       
           <!-- Show the "visited" products -->
 			<% for( let index = 0; index < products.length; index++ ) { %>
-			<% if (products[index].status=="active") { %>
+			<% if (products[index].condition=="new in") { %>
         
           <section class="product-card">
             <a href="/products/<%=products[index].id%>">
@@ -84,11 +83,25 @@
                 <img src="/images/productsImg/<%=products[index].images[0].image_url%> " alt="imagen de producto">
               </figure>
               <article class="product-card-content">
-                <h4><%=products[index].category%></h4>
+                <% switch (products[index].category) { 
+                   case 't-shirt':%> 
+                    <h4>Remera</h4> 
+                    <% break;
+                  case 'hoodie':%> 
+                    <h4>Buzo</h4>
+                    <% break;
+                  case 'accessory':%> 
+                    <h4>Accesorio</h4>
+                    <% break;
+                    default:%> 
+                  <h4>producto madly</h4>
+                  <% } %> 
                 <h2><%=products[index].name%></h2>
                 
                   <h3 id="price">$<%=products[index].price%></h3>
-                  <h3 id="discount">%<%=products[index].discount%> OFF</h3>
+                  <% if(products[index].discount>0){ %> 
+                  <h3 id="discount"><%=products[index].discount%>% OFF</h3>
+                  <% } %>
               
                 <p><%=products[index].description%></p>
               </article>
@@ -105,13 +118,7 @@
   <%- include('../partials/bannerInfo'); %>
 
 <!-- Mostrar las categorías en oferta -->
-  <div class="category-wrapper">
-<% for( let index = 0; index <= 2; index++ ) { %>
-    <section class="randomCategory">
-        <img src="/images/productsImg/<%=products[index].main_image%>" alt="imagen de producto">
-    </section>
-    <% } %>
-  </div>
+
 
 <!-- FOOTER -->
     

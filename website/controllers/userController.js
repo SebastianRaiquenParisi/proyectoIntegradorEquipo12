@@ -57,7 +57,7 @@ const userController ={
     },
 
     //METODO QUE PROCESA EL FORMULARIO DE REGISTRO DE USUARIO
-    //TERMINAR DE IMPLEMENTAR ERRORES EN EL CATCH !! -CHECKEAR-
+    //TERMINAR DE IMPLEMENTAR ERRORES EN EL CATCH Y VALIDACIONES MIGRARLA A MIDDLEWARES !! -CHECKEAR-
     //cuando cuando un usuario se registra de manera erronea la imagen se sube igual -CHECKEAR-
     processRegister:async function(req,res) {        
         try{
@@ -104,7 +104,7 @@ const userController ={
     profile:  function (req,res){
          let user =  req.session.userLogged
             return res.render("./user/profile", {
-                user:req.session.userLogged           //ENVIO A LA VISTA LOS DATOS GUARDADOS EN SESSION A TRAVES DE LA VARIABLE "user"
+                user:req.session.userLogged,           //ENVIO A LA VISTA LOS DATOS GUARDADOS EN SESSION A TRAVES DE LA VARIABLE "user"
             });   
     },
     
