@@ -1,0 +1,86 @@
+<%- include('../partials/head'); %>
+
+<body>
+    <%- include('../partials/header'); %>
+
+    <form action="/products/create" method="POST" autocomplete="off" enctype="multipart/form-data" class="m-auto col-md-7">
+        <section class="productForm">
+
+            <div class="input">
+                <h4 id="NuevoArticulo">Nuevo Artículo</h4>
+            </div>
+
+            <div class="input">
+                <input type="file" name="image_url" class="form-control m-auto" id="image_url" multiple>
+            </div>
+            
+            <div class="input">
+                <input type="text" name="name" placeholder="Título">
+            </div>
+
+            <div class="input">
+                <input type="text" name="price" placeholder="Precio">
+            </div>
+
+            <div class="input">
+                <select id="category" name="category">
+                    <option value="t-shirt">Remeras</option>
+                    <option value="hoodie">Buzos</option>
+                    <option value="accessory">Accesorios</option>
+                </select>
+            </div>
+
+            <div class="input">
+                <select name="size" id="" multiple>
+                    <% talles.forEach(talle => { %>
+                        <option value="<%=talle.id %> "><%=talle.size_name %> </option>
+                       <!-- // <input id="quantity" type="number" name="quantity" placeholder="Cantidad"> -->
+                    <% }) %>
+                </select>
+            </div>
+            
+
+            <div class="input">
+                <textarea name="description" rows="2" cols="10" placeholder="Descripción breve"></textarea>
+            </div>
+
+            <div class="input">
+                <textarea name="full_description" rows="5" cols="10" placeholder="Descripción detalla / caracteristicas"></textarea>
+            </div>
+
+            <div class="input">
+                <input type="number" id="discount" name="discount" placeholder="Ingrese % de descuento"><br>
+            </div>
+
+            <div class="input">
+                <select id="condition" name="condition">
+                    <option value="sale">Sale</option>
+                    <option value="new in">Nuevo lanzamiento</option>
+                    <option value="available" selected >Disponible</option>
+                </select>
+            </div>
+
+            <div class="input">
+                <select id="status" name="status">
+                    <option value="active" selected>Activo</option>
+                    <option value="inactive">Inactivo</option>
+                </select>
+            </div>
+            
+        </section>
+    
+        <section class="productFormPie">
+            <div class="botonesPie">
+                <button class="buttonCargar" type="submit">Cargar</button>
+                <button class="buttonBorrar" type="reset">Borrar</button>
+            </div>
+        </section>
+    </form>
+
+    <%- include('../partials/footer'); %>
+    
+</body>
+</html>
+    
+
+    

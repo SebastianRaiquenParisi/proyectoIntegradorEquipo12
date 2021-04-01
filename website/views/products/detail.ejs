@@ -12,11 +12,11 @@
     </section>
 
     <section class="centroA">
-        <div class="imgProductoPrincipal"><img src="/images/productsImg/<%=productFound.image%>" alt=""></div>
+        <div class="imgProductoPrincipal"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
         <div class="bloqueImgAlternativas">
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.image%>" alt=""></div>
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.image%>" alt=""></div>
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.image%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
+            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
         </div>
         <div class="Columna">
             <div>
@@ -24,7 +24,7 @@
                 <h4 id="Precio">$ <%=productFound.price%></h4>
             </div>
             <div>
-                <h4 id="Subtitulo">Subtítulo del Producto</h4>
+                <h4 id="Subtitulo"><%=productFound.description%></h4>
             </div>
             <div class="t1">
                 <h4 id="Destacado">Producto con  <%=productFound.discount%>% de Descuento</h4>
@@ -39,10 +39,7 @@
             </div>
             <div>
                 <p id="Detalle">
-                    <%=productFound.description%>
-                </p>
-                <p id="Detalle">
-                    <%=productFound.fullDescription%>
+                    <%=productFound.full_description%>
                 </p>
             </div>
             <div>
@@ -65,7 +62,7 @@
                 <button id="buttonverGuiaDeTalles">VER GUÍA DE TALLES</button>
             </div>
             
-            <% if (locals.userLogged && userLogged.category=="admin") { %>
+            <% if (locals.userLogged && userLogged.is_admin) { %>
             <div class="d-flex align-self-center mt-2">
                 <form action="/products/edit/<%=productFound.id%>">
                     <button id="buttonSubmit" type="submit">Editar Producto</button>
@@ -85,14 +82,14 @@
     <h2 class="products-title">Si buscabas <%=productFound.name%> también podrían interesarte estos productos</h2>
     <div class="products-wrapper">
       
-        <!-- Show the "visited" products -->
+        <!-- MUESTRA SEGERENCIA DE PRODUCTOS DE LA MISMA CATEGORIA -->
           <% for( let index = 0; index < products.length; index++ ) { %>
-          <% if (products[index].status=="available") { %>
+          <% if (products[index].category==productFound.category) { %>
       
         <section class="product-card">
           <a href="/products/<%=products[index].id%>">
             <figure class="product-card-img">
-              <img src="/images/productsImg/<%=products[index].image%> " alt="imagen de producto">
+              <img src="/images/productsImg/<%=products[index].images[0].image_url%> " alt="imagen de producto">
             </figure>
             <article class="product-card-content">
               <h4><%=products[index].category%></h4>
@@ -101,7 +98,7 @@
                 <h3 id="price">$<%=products[index].price%></h3>
                 <h3 id="discount">%<%=products[index].discount%> OFF</h3>
             
-              <p><%=products[index].subTitle%></p>
+              <p><%=products[index].description%></p>
             </article>
           </a>
         </section>
@@ -110,7 +107,6 @@
       <% } %>
   <% } %>
 </div>
-
 
     <%- include('../partials/footer'); %>
 </body>

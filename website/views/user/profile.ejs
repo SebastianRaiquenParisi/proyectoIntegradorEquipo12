@@ -6,10 +6,10 @@
     <section class="container-fluid">
         <section class="row justify-content-center">
             <section class="col-12 col-sm-6 col-md-4">
-                    <h4>Bienvenid@ <%=userLogged.name %>  </h4>
+                    <h4>Bienvenid@ <%=user.first_name %>  </h4>
                     <br/>
                     <br/>
-                    <img src="/images/avatars/<%=userLogged.image %>"  alt="Imagen de perfil">
+                    <img src="/images/avatars/<%=userLogged.avatar %>"  alt="Imagen de perfil">
                     <article><%=userLogged.email %> </article>
                     <a href="/users/logout">Logout</a>
             </section>

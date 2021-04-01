@@ -77,6 +77,8 @@ a {
     font-size: 50px; /*el icono es interpretado como texto*/
     margin: auto;
     padding: 1vw;
+    color:#1985A1;
+    opacity: 70%;
 }
 
 .footer-icon-message {

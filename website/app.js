@@ -24,12 +24,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 const indexRouter = require("./routes/mainRoutes")
-const productsRouter = require("./routes/productsRoutes")
 const userRouter = require("./routes/userRoutes")
+const productsRouter = require("./routes/productRoutes")
 
 app.use("/", indexRouter);
-app.use("/products", productsRouter);
 app.use("/users", userRouter);
+app.use("/products", productsRouter);
 
 app.use("/products", function(req, res, next) { //Error 404, se muestra cuando no se encuentra un recurso que se solicita
     res.status(404).render("error404");
