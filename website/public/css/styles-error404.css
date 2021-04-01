@@ -16,7 +16,9 @@ body {
     /*font-size: 1vw;
     font-family: Raleway;
     font-weight: 400;*/
-   
+.mainError {
+    margin-top: 5vh;
+} 
 
 .firstMsg h1 {
     font-size: 25vw;
@@ -36,5 +38,82 @@ body {
 }
 
 .fourthMsg h6 {
-    font-family: Raleway;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.buttonsError {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.button {
+    color: rgb(124, 124, 124);
+    font-size: 3vw;
+    margin: auto;
+    background-color: transparent;
+    text-decoration: none;
+    border: 1px rgb(124, 124, 124) solid;
+    padding: 1vw;
+    margin: 1vw;
+}
+
+.button:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+/*----------------------------------*/
+
+@media screen and (min-width: 767px) {
+    
+}
+
+@media screen and (min-width:1024px) {
+    .firstMsg h1 {
+        font-size: 15vw;
+        text-align: center;
+        font-weight: 800;
+        line-height: 0.7;
+    }
+    
+    .secondMsg h2 {
+        text-align: center;
+        font-size: 4vw;
+    }
+    
+    .thirdMsg h4 {
+        text-align: center;
+        font-size: 1.5vw;
+    }
+    
+    .fourthMsg h6 {
+        text-align: center;
+        font-size: 1.5vw;
+    }
+    
+    .buttonsError {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    
+    
+    .button {
+        color: rgb(124, 124, 124);
+        font-size: 1.5vw;
+        margin: auto;
+        background-color: transparent;
+        text-decoration: none;
+        border: 1px rgb(124, 124, 124) solid;
+        padding: 1vw;
+        margin: 1vw;
+    }
+    
+    .button:hover {
+        background-color: rgb(224, 224, 224);
+    }
 }
