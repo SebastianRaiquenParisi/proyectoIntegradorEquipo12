@@ -4,7 +4,7 @@ const {body} = require('express-validator');
 const userController = require("../controllers/userController");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const invitedMiddleware = require("../middlewares/invitedMiddleware");
-const userFileUpload = require("../middlewares/multerMiddleware");
+const userFileUpload = require("../middlewares/avatarMiddleware");
 const validation = require("../middlewares/validateMiddleware");
 
 
