@@ -62,13 +62,13 @@
     </script>
 
   <!-- Mostrar las categorías destacadas -->
-  <div class="category-wrapper">
+<!--   <div class="category-wrapper">
 <% for( let index = 0; index <= 2; index++ ) { %>
     <section class="randomCategory">
         <img src="/images/productsImg/<%=products[index].images[0].image_url%>" alt="imagen de producto">
     </section>
     <% } %>
-  </div>
+  </div> -->
 
     <h2 class="products-title">Nuevos Productos</h2>
     <div class="products-wrapper">
@@ -77,37 +77,39 @@
 			<% for( let index = 0; index < products.length; index++ ) { %>
 			<% if (products[index].condition=="new in") { %>
         
-          <section class="product-card">
-            <a href="/products/<%=products[index].id%>">
-              <figure class="product-card-img">
-                <img src="/images/productsImg/<%=products[index].images[0].image_url%> " alt="imagen de producto">
-              </figure>
-              <article class="product-card-content">
-                <% switch (products[index].category) { 
-                   case 't-shirt':%> 
-                    <h4>Remera</h4> 
-                    <% break;
-                  case 'hoodie':%> 
-                    <h4>Buzo</h4>
-                    <% break;
-                  case 'accessory':%> 
-                    <h4>Accesorio</h4>
-                    <% break;
-                    default:%> 
-                  <h4>producto madly</h4>
-                  <% } %> 
-                <h2><%=products[index].name%></h2>
-                
-                  <h3 id="price">$<%=products[index].price%></h3>
-                  <% if(products[index].discount>0){ %> 
-                  <h3 id="discount"><%=products[index].discount%>% OFF</h3>
-                  <% } %>
+        <section class="product-card">
+          <a href="/products/<%=products[index].id%>">
+            <figure class="product-card-img">
+              <img src="/images/productsImg/<%=products[index].images[0].image_url%> " alt="imagen de producto">
+            </figure>
+            <article class="product-card-content">
+              <% switch (products[index].category) { 
+                case 't-shirt':%> 
+                  <h4>Remera</h4> 
+                  <% break;
+                case 'hoodie':%> 
+                  <h4>Buzo</h4>
+                  <% break;
+                case 'accessory':%> 
+                  <h4>Accesorio</h4>
+                  <% break;
+                  default:%> 
+                <h4>producto madly</h4>
+                <% } %> 
+              <h2 class="text-center"><%=products[index].name%></h2>
               
-                <p><%=products[index].description%></p>
-              </article>
-            </a>
-          </section>
-       
+                <h3 id="price">$<%=products[index].price%></h3>
+                <% if(products[index].discount>0){ %> 
+                <h3 id="discount"><%=products[index].discount%>% OFF</h3>
+                <% } %> 
+            
+              <p class="text-center"><%=products[index].description%></p>
+              </a>
+              <div class="btn-container d-flex justify-content-center">
+                <button class="btn btn-primary shop-item-button" type="button">Añadir al carro</button>
+              </div>
+            </article>
+        </section>
     
         <% } %>
     <% } %>

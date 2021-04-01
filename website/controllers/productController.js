@@ -1,7 +1,8 @@
-let db = require("../database/models")
+let db = require("../database/models");
+const product_size = require("../database/models/product_size");
 let Products=db.Product;
 let Sizes=db.Size;
-let Images=db.Image;
+let Product_sizes=db.Product_size;
 
 //METODO PARA CAPITALIZAR LA PRIMERA LETRA DE UN STRING
 function capitalize(string) {
@@ -45,32 +46,39 @@ const productosController = {
 	},
 
 	//METODO QUE RENDERIZA LA VISTA DEL FORMULARIO DE CREACION DE PRODUCTOS
-    create: (req,res)=>{
-		return res.render("./products/create");
+    create:async (req,res)=>{
+		try{
+			let talles = await Sizes.findAll();
+			//return res.json(talles);
+			return res.render("./products/create",{talles} );
+
+		}catch (err){
+
+		}
     },
 
 	//METODO QUE ALMACENA EN LA BD EL PRODUCTO CREADO EN EL FORMULARIO, LOS DATOS SE RECIBEN A TRAVES DEL REQ.BODY
     storage: async function (req,res){
-		try{                             
-			let size =  await Sizes.findOne({  
+		try{     
+			
+			/* let size =  await Sizes.findOne({  
 				where: { 
 						size_name: req.body.size
 					}
-				});
-			/* 	let newarray= req.files.map((file)=>file.filename)
-				console.log(req.files)           
-				console.log(newarray)*/
-				/* for (var i = 0; i < newarray.length; i++) {
-					Images.create({
-						image_url : req.files.filename
-					});
-				} */          
-			Products.create({
+				}); */
+
+			let newarray= req.files.map((file)=>new Object({image_url:file.filename}))
+
+			let newproduct = await Products.create({
 				...req.body,
-				images: [{image_url:req.file.filename}]
-			 },{
+				images: newarray
+			},{
 				include: ["images"]
-			 });
+			});
+
+			await Product_sizes.bulkCreate(req.body.size.map((size)=>new Object({size_id:size,product_id:newproduct.id})));
+
+
 			return res.redirect("/");
 		}catch (error){
 			console.log(error);
@@ -81,9 +89,16 @@ const productosController = {
 	//METODO QUE BUSCA UN PRODUCTO EN LA BD POR SU ID, EL CUAL SE RECIBE EN LA QUERY A TRAVES DE LA RUTA PARAMETRIZADA CON LA VARIBLE REQ.PARAMS.ID
     detail: async function (req, res){ 
 		try{
-			let productFound = await Products.findByPk(req.params.id,{include:"images"});
+			let sizes = await Product_sizes.findAll({
+				where:{
+					product_id:req.params.id
+				}
+			})
+			let productFound = await Products.findByPk(req.params.id,{include:["images","sizes"]});
 			let products= await Products.findAll({include:"images"});
-			return res.render("./products/detail", {productFound:productFound, products:products});
+			productFound.sizes = productFound.sizes.map(talle => new Object({talle_id:talle.id, talle_name:talle.size_name, talle_quantity:sizes.find(size=> size.size_id==talle.product_sizes.size_id).quantity}))
+			//return res.json(productFound.sizes);
+			return res.render("./products/detail", {productFound:productFound, products:products, talles:productFound.sizes});
 		}catch (error){
 			console.log(error);
 			return res.send("404 error");

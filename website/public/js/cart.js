@@ -5,10 +5,10 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
-    for (var i = 0; i < removeCartItemButtons.length; i++) {
-        var button = removeCartItemButtons[i]
-        button.addEventListener('click', removeCartItem)
+    var deleteCartItemButtons = document.getElementsByClassName('btn-danger')
+    for (var i = 0; i < deleteCartItemButtons.length; i++) {
+        var button = deleteCartItemButtons[i]
+        button.addEventListener('click', deleteCartItem)
     }
 
     var quantityInputs = document.getElementsByClassName('cart-quantity-input')
@@ -35,9 +35,9 @@ function purchaseClicked() {
     updateCartTotal()
 }
 
-function removeCartItem(event) {
-    var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.remove()
+function deleteCartItem(event) {
+    var clickedButton = event.target
+    clickedButton.parentElement.parentElement.remove()
     updateCartTotal()
 }
 
@@ -63,14 +63,14 @@ function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
-    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
-    for (var i = 0; i < cartItemNames.length; i++) {
-        if (cartItemNames[i].innerText == title) {
+    var cartItemTitle = cartItems.getElementsByClassName('cart-item-title')
+    for (var i = 0; i < cartItemTitle.length; i++) {
+        if (cartItemTitle[i].innerText == title) {
             alert('Este producto ya se encuentra agregado en el carro')
             return
         }
     }
-    var cartRowContents = `
+    var cartContents = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <div class="cart-item-title">${title}</div>
@@ -80,9 +80,9 @@ function addItemToCart(title, price, imageSrc) {
             <input class="cart-quantity-input" type="number" value="1">
             <button class="btn btn-danger" type="button">x</button>
         </div>`
-    cartRow.innerHTML = cartRowContents
+    cartRow.innerHTML = cartContents
     cartItems.append(cartRow)
-    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', deleteCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 

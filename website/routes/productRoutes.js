@@ -12,7 +12,7 @@ router.get("/cart", productsController.shoppingCart);
 
 router.get("/create", /* adminMiddleware, */ productsController.create);
 
-router.post("/create", productImageUpload.single("image_url"), productsController.storage);
+router.post("/create", productImageUpload.any("image_url"), productsController.storage);
 
 router.get("/:id", productsController.detail);
 

@@ -31,9 +31,11 @@
             </div>
 
             <div class="input">
-                <select name="size" id="">
-                    <option value="xs">xs</option>
-                    <input id="quantity" type="number" name="quantity" placeholder="Cantidad">
+                <select name="size" id="" multiple>
+                    <% talles.forEach(talle => { %>
+                        <option value="<%=talle.id %> "><%=talle.size_name %> </option>
+                       <!-- // <input id="quantity" type="number" name="quantity" placeholder="Cantidad"> -->
+                    <% }) %>
                 </select>
             </div>
             

@@ -42,12 +42,16 @@
                   <% } %> 
               
                 <p class="text-center"><%=products[index].description%></p>
+                </a>
+                <div class="btn-container d-flex justify-content-center">
+                  <button class="btn btn-primary shop-item-button" type="button">Añadir al carro</button>
+                </div>
               </article>
-            </a>
           </section>
     <% } %>
   </div>
 </div>
+<script src="/js/cart.js" type="text/javascript">    </script>
 <!-- BANNERINFO -->
 
   <%- include('../partials/bannerInfo'); %>
