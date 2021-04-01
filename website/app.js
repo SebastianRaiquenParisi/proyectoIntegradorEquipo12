@@ -13,10 +13,6 @@ app.use(cookies());
 app.use(loggedUserMiddleware);
 app.use(methodOverride('_method'));
 
-app.use((req, res, next)=> { //Error 404, se muestra cuando no se encuentra un recurso que se solicita
-    res.status(404).render("./products/error404");
-})
-
 app.listen (3000, () =>
 console.log ("Servidor corriendo en puerto 3000")
 );
@@ -34,6 +30,10 @@ const userRouter = require("./routes/userRoutes")
 app.use("/", indexRouter);
 app.use("/products", productsRouter);
 app.use("/users", userRouter);
+
+app.use("/products", function(req, res, next) { //Error 404, se muestra cuando no se encuentra un recurso que se solicita
+    res.status(404).render("error404");
+})
 
 
 

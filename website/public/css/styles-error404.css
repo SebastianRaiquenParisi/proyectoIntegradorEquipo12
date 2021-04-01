@@ -1,0 +1,40 @@
+* { /*SELECTOR UNIVERSAL, SE APLICA A TODOS LOS ELEMENTOS*/
+    box-sizing: border-box; /*AYUDA A QUE NADA AUMENTE SU ANCHO PREVIAMENTE DEFINIDO*/
+    scrollbar-width: none;
+}
+
+a { 
+    color: inherit; /*le saco el color a los links*/
+    background-color: transparent;
+    text-decoration: none;
+}
+
+body {
+    font-family: Raleway;
+
+}
+    /*font-size: 1vw;
+    font-family: Raleway;
+    font-weight: 400;*/
+   
+
+.firstMsg h1 {
+    font-size: 25vw;
+    text-align: center;
+    font-weight: 800;
+    line-height: 0.7;
+}
+
+.secondMsg h2 {
+    text-align: center;
+    font-size: 7vw;
+}
+
+.thirdMsg h4 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.fourthMsg h6 {
+    font-family: Raleway;
+}
