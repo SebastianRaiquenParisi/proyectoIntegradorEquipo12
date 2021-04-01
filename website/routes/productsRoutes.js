@@ -11,6 +11,8 @@ router.get("/", productosController.index);
 
 router.get("/search", productosController.search);
 
+router.get("/error404", productosController.error404);
+
 router.get("/ShoppingCart", productosController.shoppingCart);
 
 router.get("/create", productosController.create);

@@ -8,6 +8,11 @@ const productosController = {
         let products=Products.findAll();
         return res.render("./products/productsList", {products:products, stylesheet: "/css/styles-index.css"})
     },
+
+	error404: (req,res)=>{ 
+        
+        return res.render("./products/error404")
+    },
     
     shoppingCart: (req,res)=>{
 		let products=Products.findAll();

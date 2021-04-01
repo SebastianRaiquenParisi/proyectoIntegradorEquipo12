@@ -10,7 +10,7 @@ const userController ={
     },
 
     processLogin:(req,res) =>{
-        //validaciones para el proceso de login
+        //validaciones para el proceso de login (comentar esta porción de código si es necesario loguearse)
         let errors = validationResult(req);
 
         if(!errors.isEmpty()){
@@ -54,7 +54,7 @@ const userController ={
     },
     
     processRegister:(req,res) =>{ //cuando un usuario se registra de manera erronea la imagen se sube igual
-        //validaciones para el proceso de login
+        //validaciones para el proceso de register
         let errors = validationResult(req);
 
         if(!errors.isEmpty()){
