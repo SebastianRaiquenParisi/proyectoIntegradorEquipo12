@@ -14,6 +14,16 @@ const userController ={
     //METODO QUE PROCESA EL FORMULARIO DE LOGIN
     //TERMINAR DE IMPLEMENTAR ERRORES EN EL CATCH !!-CHECKEAR-
     processLogin:  async function (req,res) {
+
+         //VALIDACIONES PARA EL PROCESO DE LOGIN
+         let errors = validationResult(req);
+
+         if(!errors.isEmpty()){                 //VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
+             return res.render("./user/login", {
+                 errors: errors.mapped(),
+                 oldData: req.body
+             });
+         }
         
         let userToLogin =  await User.findOne({  //BUSCA EN BD SI EL EMAIL ENVIADO EN EL FORMULARIO DE LOGIN EXISTE EN LA BD
             where: { 
@@ -62,6 +72,8 @@ const userController ={
     //cuando cuando un usuario se registra de manera erronea la imagen se sube igual -CHECKEAR-
     processRegister:async function(req,res) {        
         try{
+
+            //VALIDACIONES PARA EL PROCESO DE LOGIN
             let errors = validationResult(req);
            
            if(!errors.isEmpty()){                         //VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS

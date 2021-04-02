@@ -8,6 +8,7 @@ const userFileUpload = require("../middlewares/avatarMiddleware");
 const validation = require("../middlewares/validateMiddleware");
 
 
+
 router.get("/login", guestMiddleware ,userController.login);
 
 router.post("/login", validation, userController.processLogin);
@@ -16,7 +17,7 @@ router.post("/login", validation, userController.processLogin);
 
 router.get("/register",guestMiddleware ,userController.register);
 
-router.post("/register", userFileUpload.single("image"), validation, userController.processRegister); 
+router.post("/register", validation, userFileUpload.single("image"), userController.processRegister); 
 
 router.get("/profile", invitedMiddleware ,userController.profile);
 

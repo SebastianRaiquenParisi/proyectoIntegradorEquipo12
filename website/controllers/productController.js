@@ -3,6 +3,7 @@ const product_size = require("../database/models/product_size");
 let Products=db.Product;
 let Sizes=db.Size;
 let Product_sizes=db.Product_size;
+const {validationResult} = require ("express-validator");
 
 //METODO PARA CAPITALIZAR LA PRIMERA LETRA DE UN STRING
 function capitalize(string) {
@@ -18,7 +19,7 @@ const productosController = {
 			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
 		}catch (error){
 			console.log(error);
-			return res.send("404 error");
+			return res.render("error404");
 		}
     },
 
@@ -29,7 +30,7 @@ const productosController = {
 			return res.render("./products/cart", {products:products})
 		}catch (error){
 			console.log(error);
-			return res.send("404 error");
+			return res.render("error404");
 		}
     },
 
@@ -41,7 +42,7 @@ const productosController = {
 			return res.render("./products/search", {searchResults, keywords:req.query.keywords})  //UTILIZA EL METODO FILTER PARA GUARDAR EN LA VARIABLE
 		}catch (error){																					//"searchResults" LOS PRODUCTOS QUE EN SU CAMPO NOMBRE
 			console.log(error);																			//INCLUYAN LO QUE FUE ENVIADO EN LA QUERY
-			return res.send("404 error");
+			return res.render("error404");
 		}		
 	},
 
@@ -52,14 +53,23 @@ const productosController = {
 			//return res.json(talles);
 			return res.render("./products/create",{talles} );
 
-		}catch (err){
+		}catch (err){ //??
 
 		}
     },
 
 	//METODO QUE ALMACENA EN LA BD EL PRODUCTO CREADO EN EL FORMULARIO, LOS DATOS SE RECIBEN A TRAVES DEL REQ.BODY
     storage: async function (req,res){
-		try{     
+		try{  
+			//VALIDACIONES DEL FORMULARIO AL CREAR UN PRODUCTO
+			let errors = validationResult(req);		
+
+        	if(!errors.isEmpty()){		//VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
+            	return res.render("./products/productCreateForm", {
+                	errors: errors.mapped(),
+                	oldData: req.body //revisar si el formulario devuelve los datos
+            	});
+			}
 			
 			/* let size =  await Sizes.findOne({  
 				where: { 
@@ -82,13 +92,24 @@ const productosController = {
 			return res.redirect("/");
 		}catch (error){
 			console.log(error);
-			return res.send("404 error");
+			return res.render("error404");
 		}
     },
 
 	//METODO QUE BUSCA UN PRODUCTO EN LA BD POR SU ID, EL CUAL SE RECIBE EN LA QUERY A TRAVES DE LA RUTA PARAMETRIZADA CON LA VARIBLE REQ.PARAMS.ID
     detail: async function (req, res){ 
 		try{
+
+			//VALIDACIONES DEL FORMULARIO AL EDITAR UN PRODUCTO
+			let errors = validationResult(req);		
+
+        	if(!errors.isEmpty()){		//VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
+            	return res.render("./products/productEditForm", {
+                	errors: errors.mapped(),
+                	oldData: req.body //revisar si el formulario devuelve los datos
+            	});
+			}
+
 			let sizes = await Product_sizes.findAll({
 				where:{
 					product_id:req.params.id
@@ -101,7 +122,7 @@ const productosController = {
 			return res.render("./products/detail", {productFound:productFound, products:products, talles:productFound.sizes});
 		}catch (error){
 			console.log(error);
-			return res.send("404 error");
+			return res.render("error404");
 		}	
 	},
 
@@ -112,7 +133,7 @@ const productosController = {
 			return res.render("./products/edit", {productToEdit:productToEdit});
 		}catch(error){
 			console.log(error);
-			return res.send("404 error");
+			return res.render("error404");
 		}
 	},
 
@@ -125,7 +146,7 @@ const productosController = {
 			return res.redirect("/");
 		}catch(error){
 			console.log(error);
-			return res.send("404 error");
+			return res.render("error404");
 		}
 	},
 
@@ -140,9 +161,16 @@ const productosController = {
 			return res.redirect("/");
 		}catch (error){
 			console.log(error);
-			return res.send("404 error");
+			return res.render("error404");
 		}
-	}
+	},
+
+	//METODOQUE MUESTRA EL MENSAJE DE ERROR 404 SI SE PRODUCE UN ERROR INESPERADO
+
+	error404: (req,res)=>{ 
+        
+        return res.render("./products/error404")
+    }
 }
 
 module.exports=productosController;
