@@ -1,6 +1,6 @@
 ## Madly Artsy
 
-![logo](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/website/public/images/logo-1.jpeg)
+![logo](https://raw.githubusercontent.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/main/website/public/images/design/logo-1.jpeg)
 
 -------------------
 
