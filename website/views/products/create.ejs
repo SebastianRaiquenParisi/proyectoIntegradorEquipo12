@@ -13,16 +13,24 @@
             <div class="input">
                 <input type="file" name="image_url" class="form-control m-auto" id="image_url" multiple>
             </div>
+            <% if (locals.errors && errors.image_url) {%> 
+                <div class="text-danger"><%=errors.image_url.msg %> </div>
+            <% } %>
             
             <div class="input">
-                <input type="text" name="name" placeholder="Título">
-            </div>
+                <input type="text" id="name" name="name" placeholder="Título" value="<%=locals.oldData && oldData.name %>">
+            </div>         
+            <% if (locals.errors && errors.name) {%> 
+                <div class="text-danger"><%=errors.name.msg %> </div>
+            <% } %>
 
             <div class="input">
-                <input type="text" name="price" placeholder="Precio">
+                <input type="text" name="price" placeholder="Precio" value="<%=locals.oldData && oldData.price %>">
             </div>
+            <% if (locals.errors && errors.price) {%> 
+                <div class="text-danger"><%=errors.price.msg %> </div>
+            <% } %>
             
-            <!-- en proceso enviar el id de la categoria en el req.files ya que el producto contiene category_id -->
             <div class="input">
                 <select id="category" name="category_id">
                     <option value="1">Remeras</option>
@@ -44,16 +52,22 @@
             </div>
             
             <div class="input">
-                <textarea name="description" rows="2" cols="10" placeholder="Descripción breve"></textarea>
+                <textarea name="description" rows="2" cols="10" placeholder="Descripción breve"><%=locals.oldData && oldData.description %></textarea>
             </div>
+            <% if (locals.errors && errors.description) {%> 
+                <div class="text-danger"><%=errors.description.msg %> </div>
+            <% } %>
 
             <div class="input">
                 <textarea name="full_description" rows="5" cols="10" placeholder="Descripción detalla / caracteristicas"></textarea>
             </div>
 
             <div class="input">
-                <input type="number" id="discount" name="discount" placeholder="Ingrese % de descuento"><br>
+                <input type="number" id="discount" name="discount" placeholder="Ingrese % de descuento" value="<%=locals.oldData && oldData.discount %>"><br>
             </div>
+            <% if (locals.errors && errors.discount) {%> 
+                <div class="text-danger"><%=errors.discount.msg %> </div>
+            <% } %>
 
             <div class="input">
                 <select id="condition" name="condition_id">
