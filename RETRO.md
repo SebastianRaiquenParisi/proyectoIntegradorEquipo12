@@ -13,3 +13,6 @@
 
 [Retrospectiva Sprint 4](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/RETROsprint4.md)
 -----
+
+[Retrospectiva Sprint 5](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/RETROsprint5.md)
+-----
