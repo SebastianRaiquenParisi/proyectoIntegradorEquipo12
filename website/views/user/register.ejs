@@ -1,50 +1,50 @@
 <%- include('../partials/head'); %>
 
 <body>
-    <%- include('../partials/header'); %>
+  <%- include('../partials/header'); %>
+  <div class="center">
+    <form action="/users/register" method="POST" autocomplete="off" enctype="multipart/form-data" class="form-container">
+      
+      <h4>Unite a Madly Artsy!</h4>
+      
+      <div id="img-user">
+        <img src="/images/avatars/imagen-user-1.jpg" alt="login_user">
+      </div>
+      
+      <label for="first_name">Nombre de usuario</label>
+      <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Introduzca un nombre de usuario" value="<%=locals.oldData && oldData.first_name %>">
+      <% if (locals.errors && errors.first_name) {%> 
+        <div class="errorsStyles"><%=errors.first_name.msg %> </div>
+      <% } %>
+      <br/>               
 
-    <div class="center">
-              <form action="/users/register" method="POST" autocomplete="off" enctype="multipart/form-data" class="form-container">
-                    <h4>Unite a Madly Artsy!</h4>
-
-                    <div id="img-user">
-                      <img src="/images/avatars/imagen-user-1.jpg" alt="login_user">
-                    </div>
-            
-                        <label for="first_name">Nombre de usuario</label>
-                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Introduzca un nombre de usuario" value="<%=locals.oldData && oldData.first_name %>">
-                   
-                    <% if (locals.errors && errors.first_name) {%> 
-                      <div><%=errors.first_name.msg %> </div>
-                      <% } %>
-                    <br/>               
-
-                      <label for="email">Email</label>
-                      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduzca su e-mail" value="<%=locals.oldData && oldData.email %>">
-                   
-                    <% if (locals.errors && errors.email) {%> 
-                      <div class= "errorsStyles"><%=errors.email.msg %> </div>
-                      <% } %>
-
-                    <br/>
-                      <label for="">Contraseña</label>
-                      <input type="password" id="password" name="password" class="form-control">
-                    <br/>
-
-                      <label for="avatar">Imagen</label>
-                      <input type="file" name="avatar" class="form-control" id="avatar">
-                   
-                    <% if (locals.errors && errors.avatar) {%> 
-                      <div><%=errors.avatar.msg %> </div>
-                      <% } %>
-
-                    <br/>
-                    <button type="submit" class="btn btn-primary btn-block">Registrarme</button>
-                    <h6><a href="/users/login">Ya tengo una cuenta</a></h6>
-              </form>
-            </div>
-
-    <%- include('../partials/footer'); %>
+      <label for="email">Email</label>
+      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduzca su e-mail" value="<%=locals.oldData && oldData.email %>">
+      <% if (locals.errors && errors.email) {%> 
+        <div class="errorsStyles"><%=errors.email.msg %> </div>
+      <% } %>
+      <br/>
+      
+      <label for="">Contraseña</label>
+      <input type="password" id="password" name="password" class="form-control">
+      <% if (locals.errors && errors.password) {%> 
+          <div class="errorsStyles"><%=errors.password.msg %> </div>
+      <% } %>
+      <br/>
+      
+      <label for="avatar">Imagen</label>
+      <input type="file" name="avatar" class="form-control" id="avatar">
+      <% if (locals.errors && errors.avatar) {%> 
+        <div class="errorsStyles"><%=errors.avatar.msg %> </div>
+      <% } %>
+      <br/>
+      
+      <button type="submit" class="btn btn-primary btn-block">Registrarme</button>
+      <h6><a href="/users/login">Ya tengo una cuenta</a></h6>
+    
+    </form>
+  </div>
+  <%- include('../partials/footer'); %>
     
 </body>
 </html>

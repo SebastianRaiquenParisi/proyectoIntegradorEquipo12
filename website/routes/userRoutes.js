@@ -4,17 +4,18 @@ const userController = require("../controllers/userController");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const invitedMiddleware = require("../middlewares/invitedMiddleware");
 const userFileUpload = require("../middlewares/avatarMiddleware");
-const userFormValidation = require("../middlewares/userFormMiddleware");
+const registerValidation = require("../middlewares/registerValidateMiddleware");
+const loginValidation = require("../middlewares/loginValidateMiddleware");
 
 router.get("/login", guestMiddleware ,userController.login);
 
-router.post("/login", userFormValidation, userController.processLogin);
+router.post("/login", loginValidation, userController.processLogin);
 
-//rutas para el recoverLogin recuperación de contraseña
+router.get("/recovery", userController.recovery);
 
 router.get("/register",guestMiddleware ,userController.register);
 
-router.post("/register", userFileUpload.single("image"), userFormValidation, userController.processRegister); 
+router.post("/register", userFileUpload.single("avatar"), registerValidation, userController.processRegister); 
 
 router.get("/profile", invitedMiddleware ,userController.profile);
 

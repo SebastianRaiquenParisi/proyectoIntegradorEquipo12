@@ -7,60 +7,57 @@ const userController ={
 
     //METODO QUE MUESTRA EL FORMULARIO DE LOGIN
     login: (req,res)=>{
-
         return res.render("./user/login")
     },
 
     //METODO QUE PROCESA EL FORMULARIO DE LOGIN
     //TERMINAR DE IMPLEMENTAR ERRORES EN EL CATCH !!-CHECKEAR-
     processLogin:  async function (req,res) {
+        try{
+            let errors = validationResult(req);
+             if(!errors.isEmpty()){             //VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
+               return res.render("./user/login", {
+                    errors: errors.mapped(),
+                    oldData: req.body
+                });
+            } 
 
-         //VALIDACIONES PARA EL PROCESO DE LOGIN
-         let errors = validationResult(req);
+           let userToLogin =  await User.findOne({  //BUSCA EN BD SI EL EMAIL ENVIADO EN EL FORMULARIO DE LOGIN EXISTE EN LA BD
+               where: { 
+                       email: req.body.email
+                   }
+               });
+   
+           if(userToLogin){                                                        
+               let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);      //CHECKEA CON EL COMPARESYNC SI LA CONTRASEÑA ES CORRECTA
+              
+               if(passwordCheck){
+                   delete userToLogin.password;                        //SI ES CORRECTA SE LLAMA AL METODO DELETE PARA NO GUARDAR DATOS SENSIBLES EN SESSION
+                   req.session.userLogged= userToLogin;                //SE GUARDA EN SESSION EL USUARIO LOGEADO
+                   if(req.body.user_remember){                       
+                       res.cookie("userEmail", req.body.email, {maxAge: (1000* 60)*2})
+                   }
+                   return res.redirect("/users/profile");
+               }
+               return res.render("./user/login", {
+                   errors:{
+                       password: {
+                           msg: "la contraseña ingresada es incorrecta"
+                       }
+                   }
+               })
+           }
+   
+           return res.render("./user/login", {
+               errors:{
+                   email: {
+                        msg: "Usuario no registrado"
+                   }
+               }
+           })
+        }catch(error){
 
-         //VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
-          /* if(!errors.isEmpty()){             
-            //return res.json(errors) 
-            return res.render("./user/login", {
-                 errors: errors.mapped(),
-                 oldData: req.body
-             });
-         }  */
-        
-        let userToLogin =  await User.findOne({  //BUSCA EN BD SI EL EMAIL ENVIADO EN EL FORMULARIO DE LOGIN EXISTE EN LA BD
-            where: { 
-                    email: req.body.email
-                }
-            });
-
-        if(userToLogin){                                                        
-            let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);      //CHECKEA CON EL COMPARESYNC SI LA CONTRASEÑA ES CORRECTA
-           
-            if(passwordCheck){
-                delete userToLogin.password;                        //SI ES CORRECTA SE LLAMA AL METODO DELETE PARA NO GUARDAR DATOS SENSIBLES EN SESSION
-                req.session.userLogged= userToLogin;                //SE GUARDA EN SESSION EL USUARIO LOGEADO
-                if(req.body.user_remember){                       
-                    res.cookie("userEmail", req.body.email, {maxAge: (1000* 60)*2})
-                }
-                return res.redirect("/users/profile");
-            }
-            
-            return res.render("./user/login", {
-                errors:{
-                    password: {
-                        msg: "la contraseña ingresada es incorrecta"
-                    }
-                }
-            })
         }
-
-        return res.render("./user/login", {
-            errors:{
-                email: {
-                     msg: "Usuario no registrado"
-                }
-            }
-        })
     },
 
     //METODO QUE MUESTRA EL FORMULARIO DE REGISTRO
@@ -74,11 +71,9 @@ const userController ={
     //cuando cuando un usuario se registra de manera erronea la imagen se sube igual -CHECKEAR-
     processRegister:async function(req,res) {        
         try{
-
-            //VALIDACIONES PARA EL PROCESO DE LOGIN
             let errors = validationResult(req);
-           
-           if(!errors.isEmpty()){                         //VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
+            console.log(errors)
+            if(!errors.isEmpty()){                         //VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
                return res.render("./user/register", {
                    errors: errors.mapped(),
                    oldData: req.body
@@ -128,7 +123,11 @@ const userController ={
         res.clearCookie("userEmail")
         req.session.destroy();              //DESTRUYE LOS DATOS EN SESSION
         return res.redirect("/")
-    }
+    },
+
+    recovery:  function (req,res){
+           return res.render("./user/recovery",);   
+   },
 }
 
 module.exports=userController;

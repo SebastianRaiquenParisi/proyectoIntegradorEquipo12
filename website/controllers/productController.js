@@ -70,15 +70,18 @@ const productosController = {
                 	oldData: req.body 		//funcionando correcto, terminar
             	});
 			}
-
+			
 			let newarray= req.files.map((file)=>new Object({image_url:file.filename}))
 			let newproduct = await Products.create({
 				...req.body,
+				name: capitalize(req.body.name),
 				images: newarray
 			},{
 				include: ["images"]
 			});
-			await Product_sizes.bulkCreate(req.body.size.map((size,index)=>new Object({size_id:size,product_id:newproduct.id, quantity:req.body.quantity[index]})));
+			await Product_sizes.bulkCreate(req.body.size.map(
+				(size,index)=>new Object({size_id:size,product_id:newproduct.id, quantity:req.body.quantity[index]})
+				));
 			return res.redirect("/");
 		}catch (error){
 			console.log(error);
