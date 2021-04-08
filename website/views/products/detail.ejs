@@ -14,9 +14,9 @@
     <section class="centroA">
         <div class="imgProductoPrincipal"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
         <div class="bloqueImgAlternativas">
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
-            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
+            <% for( let i = 0; i < productFound.images.length; i++ ) { %>
+            <div id="imgAlt"><img src="/images/productsImg/<%=productFound.images[i].image_url%>" alt=""></div>
+            <% } %>
         </div>
         <div class="Columna">
             <div>
@@ -44,13 +44,12 @@
             </div>
             <div>
                 <form id="talles" action="#talle">
+                    <% console.log(productFound.sizes) %>
                     <select id="talles" name="talles">
-                        <option value="null">Elegí tu talle</option>
-                        <option value="XS">XS Extra Small</option>
-                        <option value="S ">S Small</option>
-                        <option value="M">M Medium</option>
-                        <option value="L">L Large</option>
-                        <option value="XL">XL Extra Large</option>
+                    <%productFound.sizes.forEach(talle => { %> 
+                        <option value="<%=talle.talle_id %>"><%=talle.talle_name %></option>
+                        <% }) %> 
+                        <input type="number" name="" id="" min="1" max="3"><!-- establecer el maximo segun talle seleccionado -->
                     </select>
                 </form>
             </div>

@@ -18,12 +18,14 @@ const userController ={
          //VALIDACIONES PARA EL PROCESO DE LOGIN
          let errors = validationResult(req);
 
-         if(!errors.isEmpty()){                 //VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
-             return res.render("./user/login", {
+         //VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
+          /* if(!errors.isEmpty()){             
+            //return res.json(errors) 
+            return res.render("./user/login", {
                  errors: errors.mapped(),
                  oldData: req.body
              });
-         }
+         }  */
         
         let userToLogin =  await User.findOne({  //BUSCA EN BD SI EL EMAIL ENVIADO EN EL FORMULARIO DE LOGIN EXISTE EN LA BD
             where: { 

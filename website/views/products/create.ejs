@@ -21,25 +21,28 @@
             <div class="input">
                 <input type="text" name="price" placeholder="Precio">
             </div>
-
+            
+            <!-- en proceso enviar el id de la categoria en el req.files ya que el producto contiene category_id -->
             <div class="input">
-                <select id="category" name="category">
-                    <option value="t-shirt">Remeras</option>
-                    <option value="hoodie">Buzos</option>
-                    <option value="accessory">Accesorios</option>
+                <select id="category" name="category_id">
+                    <option value="1">Remeras</option>
+                    <option value="2">Buzos</option>
+                    <option value="3">Accesorios</option>
                 </select>
             </div>
 
-            <div class="input">
-                <select name="size" id="" multiple>
-                    <% talles.forEach(talle => { %>
-                        <option value="<%=talle.id %> "><%=talle.size_name %> </option>
-                       <!-- // <input id="quantity" type="number" name="quantity" placeholder="Cantidad"> -->
+            <div class="container">
+                <div class="row justify-content-around" >
+                    <%talles.forEach(talle => { %>
+                        <div class="col-4 text-center" >
+                            <label> <%=talle.size_name %> </label>
+                            <input class= "col-6" type="checkbox" id="size" name="size" value="<%=talle.id %>" multiple>
+                            <input class= "w-50" for="size" type="number" name="quantity[]" value="0">
+                            </div>
                     <% }) %>
-                </select>
+                </div>
             </div>
             
-
             <div class="input">
                 <textarea name="description" rows="2" cols="10" placeholder="Descripción breve"></textarea>
             </div>
@@ -53,17 +56,17 @@
             </div>
 
             <div class="input">
-                <select id="condition" name="condition">
-                    <option value="sale">Sale</option>
-                    <option value="new in">Nuevo lanzamiento</option>
-                    <option value="available" selected >Disponible</option>
+                <select id="condition" name="condition_id">
+                    <option value="1">Sale</option>
+                    <option value="2">Nuevo lanzamiento</option>
+                    <option value="3" selected >Disponible</option>
                 </select>
             </div>
 
             <div class="input">
                 <select id="status" name="status">
-                    <option value="active" selected>Activo</option>
-                    <option value="inactive">Inactivo</option>
+                    <option value="1" selected>Activo</option>
+                    <option value="0">Inactivo</option>
                 </select>
             </div>
             

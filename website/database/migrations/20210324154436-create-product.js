@@ -17,9 +17,6 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER
       },
-      category: {
-        type: Sequelize.STRING
-      },
       description: {
         type: Sequelize.STRING
       },
@@ -27,10 +24,27 @@ module.exports = {
         type: Sequelize.TEXT
       },
       status: {
-        type: Sequelize.STRING
+        type: Sequelize.BOOLEAN
       },
-      condition: {
-        type: Sequelize.STRING
+      category_id:{
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: {
+            tableName: 'Categories'
+          },
+          key: 'id'
+        }
+      },
+      condition_id:{
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: {
+            tableName: 'Conditions'
+          },
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

@@ -62,20 +62,20 @@
     </script>
 
   <!-- Mostrar las categorías destacadas -->
-<!--   <div class="category-wrapper">
+   <div class="category-wrapper">
 <% for( let index = 0; index <= 2; index++ ) { %>
     <section class="randomCategory">
         <img src="/images/productsImg/<%=products[index].images[0].image_url%>" alt="imagen de producto">
     </section>
     <% } %>
-  </div> -->
+  </div> 
 
     <h2 class="products-title">Nuevos Productos</h2>
     <div class="products-wrapper">
       
           <!-- Show the "visited" products -->
 			<% for( let index = 0; index < products.length; index++ ) { %>
-			<% if (products[index].condition=="new in") { %>
+			<% if (products[index].condition_id=="1") { %>
         
         <section class="product-card">
           <a href="/products/<%=products[index].id%>">
@@ -83,19 +83,9 @@
               <img src="/images/productsImg/<%=products[index].images[0].image_url%> " alt="imagen de producto">
             </figure>
             <article class="product-card-content">
-              <% switch (products[index].category) { 
-                case 't-shirt':%> 
-                  <h4>Remera</h4> 
-                  <% break;
-                case 'hoodie':%> 
-                  <h4>Buzo</h4>
-                  <% break;
-                case 'accessory':%> 
-                  <h4>Accesorio</h4>
-                  <% break;
-                  default:%> 
-                <h4>producto madly</h4>
-                <% } %> 
+              <!-- en proceso mostrar categoria del producto -->
+              <h4> <%=products[index].category_id %> </h4>
+                
               <h2 class="text-center"><%=products[index].name%></h2>
               
                 <h3 id="price">$<%=products[index].price%></h3>
@@ -118,6 +108,7 @@
 <!-- BANNERINFO -->
 
   <%- include('../partials/bannerInfo'); %>
+  <script src="/js/cart.js" type="text/javascript">    </script>
 
 <!-- Mostrar las categorías en oferta -->
 

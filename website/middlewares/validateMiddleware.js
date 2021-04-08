@@ -2,6 +2,7 @@ const {check} = require("express-validator");
 const path = require("path");
 
 module.exports=[
+    //cambiar middlewares => uno para cada form
     //cada check va por separado para que se muestra la info correcta para cada tipo de error
     check("name").notEmpty().withMessage("Tienes que completar el nombre"),
     check("name").isAlpha().withMessage("El nombre sólo puede contener caracteres válidos"),

@@ -11,8 +11,6 @@
 
   <h2 class="products-title">Todos los productos</h2>
     <div class="products-wrapper">
-      
-          <!-- Show the "visited" products -->
 			<% for( let index = 0; index < products.length; index++ ) { %>
 			        
           <section class="product-card">
@@ -21,24 +19,14 @@
                 <img src="/images/productsImg/<%=products[index].images[0].image_url%> " alt="imagen de producto">
               </figure>
               <article class="product-card-content">
-                <% switch (products[index].category) { 
-                  case 't-shirt':%> 
-                    <h4>Remera</h4> 
-                    <% break;
-                  case 'hoodie':%> 
-                    <h4>Buzo</h4>
-                    <% break;
-                  case 'accessory':%> 
-                    <h4>Accesorio</h4>
-                    <% break;
-                    default:%> 
-                  <h4>producto madly</h4>
-                  <% } %> 
+                <!-- en proceso mostrar categoria del producto -->
+                <h4> <%=products[index].category_id %> </h4>
+
                 <h2 class="text-center"><%=products[index].name%></h2>
                 
-                  <h3 id="price">$<%=products[index].price%></h3>
+                <h3 id="price">$<%=products[index].price%></h3>
                   <% if(products[index].discount>0){ %> 
-                  <h3 id="discount"><%=products[index].discount%>% OFF</h3>
+                    <h3 id="discount"><%=products[index].discount%>% OFF</h3>
                   <% } %> 
               
                 <p class="text-center"><%=products[index].description%></p>
@@ -55,6 +43,7 @@
 <!-- BANNERINFO -->
 
   <%- include('../partials/bannerInfo'); %>
+  <script src="/js/cart.js" type="text/javascript">    </script>
 
 <!-- FOOTER -->
 
