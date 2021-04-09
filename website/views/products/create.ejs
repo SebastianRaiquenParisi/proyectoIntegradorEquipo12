@@ -14,21 +14,21 @@
                 <input type="file" name="image_url" class="form-control m-auto" id="image_url" multiple>
             </div>
             <% if (locals.errors && errors.image_url) {%> 
-                <div class="text-danger"><%=errors.image_url.msg %> </div>
+                <div class= "errorsStyles"><%=errors.image_url.msg %> </div>
             <% } %>
             
             <div class="input">
                 <input type="text" id="name" name="name" placeholder="Título" value="<%=locals.oldData && oldData.name %>">
             </div>         
             <% if (locals.errors && errors.name) {%> 
-                <div class="text-danger"><%=errors.name.msg %> </div>
+                <div class= "errorsStyles"><%=errors.name.msg %> </div>
             <% } %>
 
             <div class="input">
                 <input type="text" name="price" placeholder="Precio" value="<%=locals.oldData && oldData.price %>">
             </div>
             <% if (locals.errors && errors.price) {%> 
-                <div class="text-danger"><%=errors.price.msg %> </div>
+                <div class= "errorsStyles"><%=errors.price.msg %> </div>
             <% } %>
             
             <div class="input">
@@ -55,7 +55,7 @@
                 <textarea name="description" rows="2" cols="10" placeholder="Descripción breve"><%=locals.oldData && oldData.description %></textarea>
             </div>
             <% if (locals.errors && errors.description) {%> 
-                <div class="text-danger"><%=errors.description.msg %> </div>
+                <div class= "errorsStyles"><%=errors.description.msg %> </div>
             <% } %>
 
             <div class="input">
@@ -66,7 +66,7 @@
                 <input type="number" id="discount" name="discount" placeholder="Ingrese % de descuento" value="<%=locals.oldData && oldData.discount %>"><br>
             </div>
             <% if (locals.errors && errors.discount) {%> 
-                <div class="text-danger"><%=errors.discount.msg %> </div>
+                <div class= "errorsStyles"><%=errors.discount.msg %> </div>
             <% } %>
 
             <div class="input">

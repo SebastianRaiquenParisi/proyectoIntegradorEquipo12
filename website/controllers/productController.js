@@ -26,7 +26,7 @@ const productosController = {
     //METODO PARA MOSTRAR EL CARRO DE PRODUCTOS SELECCIONADOS
     shoppingCart: async function (req,res){
 		try {
-			let products= await Products.findAll();
+			let products= await Products.findAll({include:"images"});
 			return res.render("./products/cart", {products:products})
 		}catch (error){
 			console.log(error);

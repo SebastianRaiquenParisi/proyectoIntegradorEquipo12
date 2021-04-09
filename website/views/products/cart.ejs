@@ -3,44 +3,7 @@
 <body>
   <%- include('../partials/header'); %>
 
-    <section class="product-card">
-        <a href="#">
-          <figure class="product-card-img">
-            <img class="shop-item-image" src="/images/productsImg/imagen_muestra_5.jpg" alt="imagen de producto">
-          </figure>
-          <article class="product-card-content">
-            <h4>categoria</h4>
-            <h2 class="shop-item-title">nombre de prueba</h2>
-            
-            <h3 class="shop-item-price" id="price">$99,99</h3>
-            <h3 id="discount">20% OFF</h3>
-          
-            <p>descripcion de prueba</p>
-          </article>
-          <button class="btn btn-primary shop-item-button" type="button">Añadir al carro</button>
-        </a>
-      </section>
-
-    <section class="product-card">
-        <a href="#">
-          <figure class="product-card-img">
-            <img class="shop-item-image" src="/images/productsImg/imagen_muestra_2.jpg" alt="imagen de producto">
-          </figure>
-          <article class="product-card-content">
-            <h4>accesorio</h4>
-            <h2 class="shop-item-title">nombre del producto 2</h2>
-            
-            <h3 class="shop-item-price" id="price">$27,99</h3>
-            <h3 id="discount">5% OFF</h3>
-          
-            <p>descripcion de prueba caracteristicas random producto</p>
-          </article>
-          <button class="btn btn-primary shop-item-button" type="button">Añadir al carro</button>
-        </a>
-      </section>
-
-<!-- CARRO DE COMPRAS -->
-
+  <!-- CARRO DE COMPRAS -->
   <section class="container content-section">
     <h2 class="section-header">Carro de compras</h2>
       <div class="cart-row">
@@ -68,32 +31,35 @@
 
   <h2 class="products-title">Otros productos que podrían interesarte</h2>
   <div class="products-wrapper">
-      
-        <!-- Show the "visited" products -->
-          <% for( let index = 0; index < products.length; index++ ) { %>
-          <% if (products[index].status=="available") { %>
-      
+    <% for( let i = 0; i < products.length; i++ ) { %>
+      <% if (products[i].status=="1") { %>
+
         <section class="product-card">
-          <a href="/products/<%=products[index].id%>">
+          <a href="/products/<%=products[i].id%>">
             <figure class="product-card-img">
-              <img src="/images/productsImg/<%=products[index].image%> " alt="imagen de producto">
+              <img class="shop-item-image" src="/images/productsImg/<%=products[i].images[0].image_url%> " alt="imagen de producto">
             </figure>
             <article class="product-card-content">
-              <h4><%=products[index].category%></h4>
-              <h2><%=products[index].name%></h2>
+                  <!-- en proceso mostrar categoria del producto -->
+              <h4> <%=products[i].category_id %> </h4>
               
-                <h3 id="price">$<%=products[index].price%></h3>
-                <h3 id="discount">%<%=products[index].discount%> OFF</h3>
-            
-              <p><%=products[index].subTitle%></p>
+              <h2 class="shop-item-title"><%=products[i].name%></h2>
+                  
+              <h3 class="shop-item-price" id="price">$<%=products[i].price%></h3>
+              <% if(products[i].discount>0){ %> 
+                <h3 id="discount"><%=products[i].discount%>% OFF</h3>
+              <% } %> 
+              <p class="text-center"><%=products[i].description%></p>
             </article>
           </a>
+          <div class="btn-container d-flex justify-content-center">
+            <button class="btn btn-primary shop-item-button" type="button">Añadir al carro</button>
+          </div>
         </section>
-     
-  
+        
       <% } %>
-  <% } %>
-</div>
+    <% } %>
+  </div>
     
 <!-- FOOTER -->
 
