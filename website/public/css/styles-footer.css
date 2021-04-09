@@ -26,8 +26,7 @@ a {
 }
 
 .logo-secundario img {
-    width: 95%;
-    background-color: white;
+    width: 100%;
     text-align: center;
 }
 
@@ -127,8 +126,6 @@ a {
         display: inline-block;
         width: 10%;
         height: 20%;
-        padding: 16px;
-        background-color: white;
         border-radius: 5px;
         margin: auto;
     }
