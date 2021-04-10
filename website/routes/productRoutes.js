@@ -7,6 +7,16 @@ const productFormValidation = require("../middlewares/productFormMiddleware");
 
 router.get("/", productsController.list);
 
+router.get("/customerService", productsController.customerService); //ATENCIÓN AL CLIENTE
+
+router.get("/questions", productsController.questions); //PREGUNTAS FRECUENTES
+
+router.get("/returns", productsController.returns); //RECLAMOS Y DEVOLUCIONES
+
+router.get("/eShipping", productsController.eShipping); //ENVÍOS Y ENTREGAS
+
+router.get("/pymMethod", productsController.pymMethod); //FORMAS DE PAGO
+
 router.get("/search", productsController.search);
 
 router.get("/cart", productsController.shoppingCart);
@@ -24,5 +34,6 @@ router.put("/edit/:id", productFormValidation, productsController.update);
 router.delete("/:id", productsController.destroy);
 
 router.get("/error404", productsController.error404);
+
 
 module.exports = router;
