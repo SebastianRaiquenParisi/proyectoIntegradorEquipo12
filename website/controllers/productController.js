@@ -19,7 +19,7 @@ const productosController = {
 			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
 		}catch (error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
     },
 
@@ -30,7 +30,7 @@ const productosController = {
 			return res.render("./products/cart", {products:products})
 		}catch (error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
     },
 
@@ -42,7 +42,7 @@ const productosController = {
 			return res.render("./products/search", {searchResults, keywords:req.query.keywords}) 		 //UTILIZA EL METODO FILTER PARA GUARDAR EN LA VARIABLE
 		}catch (error){																					//"searchResults" LOS PRODUCTOS QUE EN SU CAMPO NOMBRE
 			console.log(error);																			//INCLUYAN LO QUE FUE ENVIADO EN LA QUERY
-			return res.render("error404");
+			return res.render("./products/error404");
 		}		
 	},
 
@@ -53,7 +53,7 @@ const productosController = {
 			return res.render("./products/create",{talles} );
 		}catch (error){
 			console.log(error);																			//INCLUYAN LO QUE FUE ENVIADO EN LA QUERY
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
     },
 
@@ -106,7 +106,7 @@ const productosController = {
 			return res.render("./products/detail", {productFound:productFound, products:products, talles:productFound.sizes});
 		}catch (error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}	
 	},
 
@@ -117,7 +117,7 @@ const productosController = {
 			return res.render("./products/edit", {productToEdit:productToEdit});
 		}catch(error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
 	},
 
@@ -138,7 +138,7 @@ const productosController = {
 			return res.redirect("/");
 		}catch(error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
 	},
 
@@ -153,14 +153,64 @@ const productosController = {
 			return res.redirect("/");
 		}catch (error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
 	},
 
-	//METODOQUE MUESTRA EL MENSAJE DE ERROR 404 SI SE PRODUCE UN ERROR INESPERADO
+	//METODO QUE MUESTRA EL MENSAJE DE ERROR 404 SI SE PRODUCE UN ERROR INESPERADO
 	error404: (req,res)=>{ 
         return res.render("./products/error404")
+    },
+
+	//NUEVOS MÉTODOS
+
+	customerService: async function (req,res){ //ATENCIÓN AL CLIENTE
+		try {
+			return res.render("./products/customerService")
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+		}
+    },
+	
+	questions: async function (req,res){ //PREGUNTAS FRECUENTES
+		try {
+			return res.render("./products/questions")
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+		}
+    },
+		
+	returns: async function (req,res){ //RECLAMOS Y DEVOLUCIONES
+		try {
+			return res.render("./products/returns")
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+		}
+    },
+		
+	eShipping: async function (req,res){ //ENVÍOS Y ENTREGAS
+		try {
+			return res.render("./products/eShipping")
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+		}
+    },
+
+	pymMethod: async function (req,res){ //FORMAS DE PAGO
+		try {
+			return res.render("./products/eShipping")
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+		}
     }
 }
+		
+	 
+
 
 module.exports=productosController;
