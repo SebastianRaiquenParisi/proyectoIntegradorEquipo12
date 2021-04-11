@@ -10,7 +10,7 @@ const mainController = {
 
         }catch(error){
             console.log(error);
-			return res.send("error");
+			return res.render("./products/error404");
         }
     }
 }
