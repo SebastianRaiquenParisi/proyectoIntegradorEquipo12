@@ -1,6 +1,8 @@
 let db = require("../database/models");
 const product_size = require("../database/models/product_size");
 let Products=db.Product;
+let Categories=db.Category;
+let Conditions=db.Condition;
 let Sizes=db.Size;
 let Product_sizes=db.Product_size;
 const {validationResult} = require ("express-validator");
@@ -15,11 +17,11 @@ const productosController = {
 	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS
     list: async function (req,res){
 		try {
-			let products= await Products.findAll({include:"images"}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
+			let products= await Products.findAll({include:["images","category"]}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
 			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
 		}catch (error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
     },
 
@@ -30,7 +32,7 @@ const productosController = {
 			return res.render("./products/cart", {products:products})
 		}catch (error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
     },
 
@@ -42,7 +44,7 @@ const productosController = {
 			return res.render("./products/search", {searchResults, keywords:req.query.keywords}) 		 //UTILIZA EL METODO FILTER PARA GUARDAR EN LA VARIABLE
 		}catch (error){																					//"searchResults" LOS PRODUCTOS QUE EN SU CAMPO NOMBRE
 			console.log(error);																			//INCLUYAN LO QUE FUE ENVIADO EN LA QUERY
-			return res.render("error404");
+			return res.render("./products/error404");
 		}		
 	},
 
@@ -50,10 +52,12 @@ const productosController = {
     create:async (req,res)=>{
 		try{
 			let talles = await Sizes.findAll();
-			return res.render("./products/create",{talles} );
+			let categorias= await Categories.findAll();
+			let condiciones= await Conditions.findAll();
+			return res.render("./products/create",{talles,categorias,condiciones} );
 		}catch (error){
 			console.log(error);																			//INCLUYAN LO QUE FUE ENVIADO EN LA QUERY
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
     },
 
@@ -63,9 +67,13 @@ const productosController = {
 			let errors = validationResult(req);				 //VALIDACIONES DEL FORMULARIO AL CREAR UN PRODUCTO
           	if(!errors.isEmpty()){							//VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
 				let talles = await Sizes.findAll();
+				let categorias= await Categories.findAll();
+				let condiciones= await Conditions.findAll();
             	console.log(errors)
 				return res.render("./products/create", {
 					talles,
+					categorias,
+					condiciones,
                 	errors: errors.mapped(),
                 	oldData: req.body 		//funcionando correcto, terminar
             	});
@@ -75,11 +83,13 @@ const productosController = {
 			let newproduct = await Products.create({
 				...req.body,
 				name: capitalize(req.body.name),
+				description: capitalize(req.body.description),
 				images: newarray
 			},{
 				include: ["images"]
 			});
-			await Product_sizes.bulkCreate(req.body.size.map(
+			await Product_sizes.bulkCreate(
+				Array.from(req.body.size).map(
 				(size,index)=>new Object({size_id:size,product_id:newproduct.id, quantity:req.body.quantity[index]})
 				));
 			return res.redirect("/");
@@ -106,18 +116,21 @@ const productosController = {
 			return res.render("./products/detail", {productFound:productFound, products:products, talles:productFound.sizes});
 		}catch (error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}	
 	},
 
 	//METODO QUE MUESTA EL FORMULARIO DE EDICION DE PRODUCTO, CON EL PRODUCTO CORRESPONDIENTE A LA QUERY, LA CUAL RE RECIBE POR REQ.PARAMS.ID
 	edit: async function (req, res){
 		try{
-			let productToEdit=await Products.findByPk(req.params.id);
-			return res.render("./products/edit", {productToEdit:productToEdit});
+			let talles = await Sizes.findAll();
+			let categorias= await Categories.findAll();
+			let condiciones= await Conditions.findAll();
+			let productToEdit=await Products.findByPk(req.params.id,{include:["images","sizes","category"]});
+			return res.render("./products/edit", {productToEdit,categorias,condiciones,talles});
 		}catch(error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
 	},
 
@@ -125,20 +138,22 @@ const productosController = {
 	update: async function(req, res){ 
 		try{	
 		 	let errors = validationResult(req);			 //VALIDACIONES DEL FORMULARIO AL EDITAR UN PRODUCTO
-
-         	if(!errors.isEmpty()){						//VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
+			let productToEdit=await Products.findByPk(req.params.id,{include:["images","sizes"]});
+			console.log(errors)
+         	/* if(!errors.isEmpty()){						//VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
             	return res.render("./products/edit", {
                 	errors: errors.mapped(),
-                	oldData: req.body 
+                	oldData: req.body,
+					productToEdit
             	});
-			} 
+			}  */
 			await Products.update(req.body,{ //SE RECIBEN LOS DATOS A ACTUALIZAR POR EL FORMULARIO A TRAVES DEL REQ.BODY
 				where: {id: req.params.id}  //INDICAMOS EN QUE PRODUCTO SE VA A ACUALIZAR DICHA INFORMACION, SELECCIONANDOLO POR SU ID
 			});							   //EL CUAL SE RECIBE POR UNA RUTA PARAMETRIZADA A TRAVES DEL REQ.PARAMS.ID
 			return res.redirect("/");
 		}catch(error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
 	},
 
@@ -153,7 +168,7 @@ const productosController = {
 			return res.redirect("/");
 		}catch (error){
 			console.log(error);
-			return res.render("error404");
+			return res.render("./products/error404");
 		}
 	},
 

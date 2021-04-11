@@ -5,75 +5,83 @@
 
     <form action="/products/edit/<%=productToEdit.id%>?_method=PUT" method="POST">
         <section class="productForm">
+
             <div class="input">
                 <h4 id="NuevoArticulo">Editando producto: <%=productToEdit.name%></h4>
                 <h6 id="ModElimArticulo">Modificar un artículo</h6>
                 <h6 id="ModElimArticulo">Eliminar un artículo</h6>
             </div>
+
             <div class="container2">
-                <img>
-                <img>
-                <img>
-                <img>
+                <% productToEdit.images.forEach(element => { %>
+                    <div id="imgAlt"><img src="/images/productsImg/<%=element.image_url%>" alt=""></div>
+                <% }) %>
             </div> 
-    
         
             <div class="input">
                 <label for="name" class="form-label">Nombre: </label>
-                <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" value=" <%=productToEdit.name%> ">
+                <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" value="<%=productToEdit.name%>">
             </div>
+            
             <div class="input">
                 <label for="price" class="form-label">Precio:</label>
-                <input type="text" id="price" name="price" class="form-input" value="<%=productToEdit.price%> ">
+                <input type="text" id="price" name="price" class="form-input" value="<%=productToEdit.price%>">
             </div>
+
             <div class="input">
-                    <select id="categorias" name="categorias">
-                        <option value="null">Categoría</option>
-                        <option value="Remeras">Remeras</option>
-                        <option value="Buzos">Buzos</option>
-                        <option value="Accesorios">Accesorios</option>
-                    </select>
+                <select id="category" name="category_id">
+                    <option value="" disabled>Seleccionar categoria</option>
+                    <%categorias.forEach(categoria => { %>
+                    <option value="<%=categoria.id%>" <%=(categoria.id == productToEdit.category_id)? "selected" : null %>><%=categoria.category_name%> </option>
+                    <% }) %> 
+                </select>
             </div>
-            <div class="input">
-                    <label id="talle" for="XS">XS</label>
-                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
-                    <label id="talle" for="S">S</label>
-                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
-                    <label id="talle" for="M">M</label>
-                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
-                    <label id="talle" for="L">L</label>
-                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
-                    <label id="talle" for="XL">XL</label>
-                    <input id="seleccionTalle" type="number" id="cantidad" name="cantidad" placeholder="Cantidad"><br>
+
+            <div class="container">
+                <div class="row justify-content-around" >
+                    <%talles.forEach(talle => { %>
+                        <div class="col-4 text-center" >
+                            <div>
+                                <label> <%=talle.size_name %> </label>
+                                <input class= "col-6" type="checkbox" id="size" name="size" value="<%=talle.id %>"
+                                <%=(talle.id == productToEdit.sizes.id)? "selected" : null %> multiple >
+                            </div>
+                            <input class= "w-50" for="size" type="number" name="quantity[]" value="0">
+                            </div>
+                    <% }) %>
+                </div>
             </div>
+
             <div class="input">
                 <label for="description" class="form-label">Descripción:</label>
 				<textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
             </div>
-            <div class="choiseDisponible"></div>
+
             <div class="input">
-                    <select id="Valoracion" name="Valoracion">
-                        <option value="0">Valoración del Producto</option>
-                        <option value="1">1 Estrella</option>
-                        <option value="2">2 Estrellas</option>
-                        <option value="3">3 Estrellas</option>
-                        <option value="4">4 Estrellas</option>
-                        <option value="5">5 Estrellas</option>
-                    </select>
+                <textarea name="full_description" rows="5" cols="10" placeholder="Descripción detalla / caracteristicas"><%= productToEdit.full_description %></textarea>
             </div>
+
             <div class="input">
                 <label for="discount" class="form-label">Descuento:</label>
                 <input type="text" id="discount" name="discount" class="form-input" value="<%=productToEdit.discount%>"><br>
             </div>
-            <div class="choisePromo">
-                    <input type="checkbox" id="category" name="category" value="sale" <%=productToEdit.category == "sale" ? "checked" : null %>>
-                    <label for="SALE"> Sale</label>
-                    <input type="checkbox" id="category" name="category" value="new-in" <%=productToEdit.category == "new-in" ? "checked" : null %>>
-                    <label for="novedad"> Nuevo Lanzamiento</label>
-                    <input type="checkbox" id="category" name="category" value="important"<%=productToEdit.category == "important" ? "checked" : null %>>
-                    <label for="promocionado"> Destacado</label>
-                    
+
+            <div class="input">
+                <select id="condition" name="condition_id">
+                    <option value="" disabled>Seleccionar Condicion</option>
+                    <%condiciones.forEach(condicion => { %>
+                    <option value="<%=condicion.id%>" <%=(condicion.id == productToEdit.condition_id)? "selected" : null %>><%=condicion.condition_name%> </option>
+                    <% }) %> 
+                </select>
             </div>
+
+            <div class="input">
+                <select id="status" name="status">
+                    <option value="1" selected>Activo</option>
+                    <option value="0">Inactivo</option>
+                </select>
+            </div>
+
         </section>
 
         <section class="productFormPie">

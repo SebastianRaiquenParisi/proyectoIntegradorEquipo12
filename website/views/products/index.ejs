@@ -73,9 +73,10 @@
     <h2 class="products-title">Nuevos Productos</h2>
     <div class="products-wrapper">
       
-          <!-- Show the "visited" products -->
+          <!-- Mostrar los productos nuevos -->
 			<% for( let index = 0; index < products.length; index++ ) { %>
-			<% if (products[index].condition_id=="1") { %>
+
+			<% if (products[index].condition.condition_name=="new-in") { %> 
         
         <section class="product-card">
           <a href="/products/<%=products[index].id%>">
@@ -83,8 +84,8 @@
               <img src="/images/productsImg/<%=products[index].images[0].image_url%> " alt="imagen de producto">
             </figure>
             <article class="product-card-content">
-              <!-- en proceso mostrar categoria del producto -->
-              <h4> <%=products[index].category_id %> </h4>
+              
+              <h4> <%=products[index].category.category_name %> </h4>
                 
               <h2 class="text-center"><%=products[index].name%></h2>
               

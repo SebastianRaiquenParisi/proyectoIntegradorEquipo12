@@ -17,7 +17,7 @@ router.post("/create", productImageUpload.any("image_url"), productFormValidatio
 
 router.get("/:id", productsController.detail);
 
-router.get("/edit/:id", adminMiddleware, productsController.edit);
+router.get("/edit/:id", /* adminMiddleware, */ productsController.edit);
 
 router.put("/edit/:id", productFormValidation, productsController.update);
 

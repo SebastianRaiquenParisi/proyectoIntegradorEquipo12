@@ -11,7 +11,7 @@
             </div>
 
             <div class="input">
-                <input type="file" name="image_url" class="form-control m-auto" id="image_url" multiple>
+                <input type="file" name="image_url" id="image_url" class="form-control m-auto" multiple>
             </div>
             <% if (locals.errors && errors.image_url) {%> 
                 <div class= "errorsStyles"><%=errors.image_url.msg %> </div>
@@ -33,23 +33,32 @@
             
             <div class="input">
                 <select id="category" name="category_id">
-                    <option value="1">Remeras</option>
-                    <option value="2">Buzos</option>
-                    <option value="3">Accesorios</option>
+                    <option value="" selected disabled>Seleccionar categoria</option>
+                    <%categorias.forEach(categoria => { %>
+                    <option value="<%=categoria.id%>" <%=(locals.oldData && categoria.id == oldData.category_id)? "selected" : null %>><%=categoria.category_name%> </option>
+                    <% }) %> 
                 </select>
             </div>
+            <% if (locals.errors && errors.category_id) {%> 
+                <div class= "errorsStyles"><%=errors.category_id.msg %> </div>
+            <% } %>
 
             <div class="container">
                 <div class="row justify-content-around" >
                     <%talles.forEach(talle => { %>
                         <div class="col-4 text-center" >
-                            <label> <%=talle.size_name %> </label>
-                            <input class= "col-6" type="checkbox" id="size" name="size" value="<%=talle.id %>" multiple>
+                            <div>
+                                <label> <%=talle.size_name %> </label>
+                                <input class= "col-6" type="checkbox" id="size" name="size" value="<%=talle.id %>" multiple>
+                            </div>
                             <input class= "w-50" for="size" type="number" name="quantity[]" value="0">
                             </div>
                     <% }) %>
                 </div>
             </div>
+            <% if (locals.errors && errors.size) {%> 
+                <div class= "errorsStyles"><%=errors.size.msg %> </div>
+            <% } %>
             
             <div class="input">
                 <textarea name="description" rows="2" cols="10" placeholder="Descripción breve"><%=locals.oldData && oldData.description %></textarea>
@@ -71,11 +80,15 @@
 
             <div class="input">
                 <select id="condition" name="condition_id">
-                    <option value="1">Sale</option>
-                    <option value="2">Nuevo lanzamiento</option>
-                    <option value="3" selected >Disponible</option>
+                    <option value="" selected disabled>Seleccionar condición</option>
+                    <%condiciones.forEach(condicion => { %>
+                        <option value="<%=condicion.id%>" <%=(locals.oldData && condicion.id == oldData.condition_id)? "selected" : null %>><%=condicion.condition_name%></option>
+                    <% }) %> 
                 </select>
             </div>
+            <% if (locals.errors && errors.condition_id) {%> 
+                <div class= "errorsStyles"><%=errors.condition_id.msg %> </div>
+            <% } %>
 
             <div class="input">
                 <select id="status" name="status">
