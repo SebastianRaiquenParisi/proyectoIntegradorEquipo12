@@ -38,19 +38,32 @@
                     <option value="3">Accesorios</option>
                 </select>
             </div>
-
-            <div class="container">
-                <div class="row justify-content-around" >
-                    <%talles.forEach(talle => { %>
-                        <div class="col-4 text-center" >
-                            <label> <%=talle.size_name %> </label>
-                            <input class= "col-6" type="checkbox" id="size" name="size" value="<%=talle.id %>" multiple>
-                            <input class= "w-50" for="size" type="number" name="quantity[]" value="0">
-                            </div>
-                    <% }) %>
-                </div>
-            </div>
             
+            <div class="dropdown">
+                
+                    <div class="dropbtn">
+                        <div class="input">
+                        <h4 id="NuevoArticulo">Seleccioná Talle y Cantidad</h4>
+                    </div>
+                    </div>
+                
+                    
+                <div class="dropdown-content">
+                    
+                    
+                
+                    <%talles.forEach(talle => { %>
+                       <div id="eachSize">
+                            <label><h4 id="idSizeText">Talle <%=talle.size_name %></h4></label>
+                            <input type="checkbox" id="size" name="size" value="<%=talle.id %>" multiple>
+                            <input id= "idSize" for="size" type="number" name="quantity[]" value="0">
+                        </div>
+                    <% }) %>
+                
+            </div>
+            </div>
+
+
             <div class="input">
                 <textarea name="description" rows="2" cols="10" placeholder="Descripción breve"><%=locals.oldData && oldData.description %></textarea>
             </div>
@@ -63,7 +76,7 @@
             </div>
 
             <div class="input">
-                <input type="number" id="discount" name="discount" placeholder="Ingrese % de descuento" value="<%=locals.oldData && oldData.discount %>"><br>
+                <input type="number"  min="0" max="100" name="discount" placeholder="Ingrese % de descuento" value="<%=locals.oldData && oldData.discount %>"><br>
             </div>
             <% if (locals.errors && errors.discount) {%> 
                 <div class= "errorsStyles"><%=errors.discount.msg %> </div>
