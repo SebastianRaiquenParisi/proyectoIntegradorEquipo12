@@ -9,17 +9,203 @@ a {
     text-decoration: none; 
 }
 
+.background {
+    display: block;
+    padding: 5vh 0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(82, 101, 140);
+}
 
-    /*font-family: Raleway;
-    font-weight: 800;*/
-    
+.mainContainer1{
+    margin: auto;
+    width:80%;
+    height:auto;
+    background:white;
+    padding: 2vw 4vw 4vw 4vw;
+    border-radius:10px;
+    box-shadow: 0px 0px 10px 0px #000;
+    opacity: 0.8;
+}
 
-@media screen and (min-width: 767px) {
+.imgForm {
+    display: block;
+    width: 100%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#idImg {
+    display: block;
+    width: 20vw;
+    height: 20vw;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 0px rgb(68, 68, 68);
+}
+
+.profile h4 {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-size: 4.5vw;
+    font-family: Raleway;
+    font-weight: 800;
+    text-align: center;
+    color: rgb(104, 104, 104);
+}
+
+.profile h6 {
+    display: block;
+    width: 100%;
+    margin: auto;
+    font-size: 2vw;
+    font-family: Raleway;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(82, 101, 140);
+}
+
+#idButton {
+    position:relative;
+    left: 80%;    
+    width: 15vw;
+    height: 7vw;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px #000;
+    border-color: transparent;
+    font-size: 3vw;
+    font-family: Raleway;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(59, 59, 59);
+}
+
+#buttonsCreateEdit {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#idButtonCreate, #idButtonEdit {
+    display: inline-block;
+    width: 45%;
+    padding: 0.5vw;
+    margin: 1.5vw;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px #000;
+    border-color: transparent;
+    font-size: 3vw;
+    font-family: Raleway;
+    font-weight: 600;
+    color: rgb(59, 59, 59);
+}
+
+#userInfo {
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid rgb(179, 179, 179);
+    margin: 1vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
     
 }
 
-@media screen and (min-width:1024px) {
+#datosDeUsuario {
+    font-size: 3.5vw;
+    font-family: Raleway;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1vw;
+}
+
+#userInfo article {
+    font-size: 3vw;
+    font-family: Raleway;
+    font-weight: 600;
+    text-align: left;
+}
+
+/*--------MEDIA QUERIES----------*/
+
+@media screen and (min-width: 767px) {
+    #idButton {
+        width: 10vw;
+        height: 5vw;
+        font-size: 2vw;
+        left: 87%;  
+    }
+
+    #idButtonCreate, #idButtonEdit {
+        width: 40%;
+        font-size: 2.5vw;
+    }
+    #datosDeUsuario {
+        font-size: 2.8vw;
+    }
     
+    #userInfo article {
+        font-size: 2.4vw;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .mainContainer1{
+        width:50%;  
+    }
+
+    #idImg {
+        width: 8vw;
+        height: 8vw;
+    }
+    
+    .profile h4 {
+        font-size: 2vw;
+    }
+    
+    .profile h6 {
+        font-size: 1vw;
+    }
+    
+    #idButton {
+        position:relative;
+        left: 93%;    
+        width: 5vw;
+        height: 3vw;
+        border-radius: 10px;
+        font-size: 1vw;
+    }
+    
+    #buttonsCreateEdit {
+        width: 100%;
+    }
+    
+    #idButtonCreate, #idButtonEdit {
+        width: 35%;
+        padding: 0.5vw;
+        margin: 1.5vw;
+        font-size: 1vw;
+    }
+    
+    #userInfo {
+        width: 100%;
+        margin: 1vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        
+    }
+    
+    #datosDeUsuario {
+        font-size: 1.2vw;
+        margin-bottom: 1vw;
+    }
+    
+    #userInfo article {
+        font-size: 1vw;
+    }
 }
 
     
