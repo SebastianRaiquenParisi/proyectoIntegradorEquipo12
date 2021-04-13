@@ -3,18 +3,38 @@
 <body>
     <%- include('../partials/header'); %>
 
-    <section class="container-fluid">
-        <section class="row justify-content-center">
-            <section class="col-12 col-sm-6 col-md-4">
-                    <h4>Bienvenid@ <%=user.first_name %>  </h4>
-                    <br/>
-                    <br/>
-                    <img src="/images/avatars/<%=userLogged.avatar %>"  alt="Imagen de perfil">
-                    <article><%=userLogged.email %> </article>
-                    <a href="/users/logout">Logout</a>
-            </section>
-        </section>
-    </section>
+    <div class="background">
+        <div class="mainContainer1">
+            <section class="profile">
+                <a href="/users/logout"><button id="idButton">Logout</button></a>
+                <h4>Bienvenid@ <%=user.first_name %></h4>
+                <h6>PORTAL DE ADMINISTRADOR</h4>
+                    <div class="imgForm">
+                    <img id="idImg" src="/images/avatars/<%=userLogged.avatar %>"  alt="Imagen de perfil">
+                        </div>
+                            <seccion id="buttonsCreateEdit">
+                                <a href="/products/create"><button id="idButtonCreate">Cargar un producto</button></a>
+                                <a href="/products/edit"><button id="idButtonEdit">Editar un producto</button></a>
+                            </seccion>
+                            
+                                
+                                <div id="userInfo"> 
+
+                                    <h6 id="datosDeUsuario">Datos de Usuario</h6>
+                                
+                                    <article id="idArticle">Email: <%=userLogged.email %> </article>
+                                    <article id="idArticle">Nombre: <%=userLogged.first_name %> </article>
+                                    <article id="idArticle">Apellido: <%=userLogged.last_name %> </article>
+                                    <article id="idArticle">Dirección: </article>
+                                    <article id="idArticle">Miembro desde: </article>
+                                    <article id="idArticle">Último ingreso: </article>
+        
+                                </div>
+
+                    </section>
+                
+        </div>
+    </div>
     
     <%- include('../partials/footer'); %>
 </body>
