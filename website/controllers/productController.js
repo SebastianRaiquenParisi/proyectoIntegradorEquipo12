@@ -92,7 +92,7 @@ const productosController = {
 				Array.from(req.body.size).map(
 				(size,index)=>new Object({size_id:size,product_id:newproduct.id, quantity:req.body.quantity[index]})
 				));
-			return res.redirect("/");
+			return res.redirect("/"); //REDIRIGIR AL PRODUCTO CREADO RECIENTEMENTE
 		}catch (error){
 			console.log(error);
 			return res.render("./products/error404");
