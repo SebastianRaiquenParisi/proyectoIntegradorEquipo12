@@ -3,14 +3,7 @@
 <body>
     <%- include('../partials/header'); %>
     
-
-    <section class="barraBusqueda">        
-        <form action="/products/search" method="GET">
-            <input id="searchInput" type="text" name="keywords" placeholder="Buscar" size="40">
-            <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
-        </form>
-    </section>
-
+    <%- include('../partials/searchField'); %>
     <section class="centroA">
         <div class="imgProductoPrincipal"><img src="/images/productsImg/<%=productFound.images[0].image_url%>" alt=""></div>
         <div class="bloqueImgAlternativas">
@@ -106,6 +99,8 @@
       <% } %>
   <% } %>
 </div>
+
+    <%- include('../partials/categoryBanner'); %>
 
     <%- include('../partials/footer'); %>
 </body>
