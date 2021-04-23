@@ -1,0 +1,35 @@
+.barraBusqueda {
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 8px;
+    margin-top: 5px;
+    text-align: center;
+    background-color: white;
+    width: auto;
+    border-bottom: gainsboro 1px solid;
+}
+
+#searchInput {
+    padding: 10px 0px 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Open Sans";
+}
+
+.search-form_button {
+    text-decoration: none;
+    background-color: white;
+    text-align: center;
+    font-size: 1.5vw;
+    border: none;
+    color: #1985A1;
+    opacity: 0.6;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+       
+}
+
+.search-form_button:hover {
+    opacity: 1
+}
