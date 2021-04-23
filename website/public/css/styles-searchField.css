@@ -14,9 +14,11 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: "Open Sans";
+    font-size: 3.5vw;
 }
 
 .search-form_button {
+    display: none;
     text-decoration: none;
     background-color: white;
     text-align: center;
@@ -26,10 +28,73 @@
     opacity: 0.6;
     transition: 0.3s;
     text-decoration: none;
-    cursor: pointer;
-       
+    cursor: pointer;  
 }
 
 .search-form_button:hover {
     opacity: 1
+}
+
+/*-------HEADER---------------*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-searchField {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    right: -40px;
+    top: -55px;
+}
+
+.dropdown:hover .dropdown-searchField {
+    display: block;
+  }
+
+  .dropdown:hover .search-form_button {
+      display: none;
+  }
+
+  .dropdown:hover .barraBusqueda {
+      border: none;
+      background-color: transparent;
+  }
+
+  .dropdown:hover #searchInput {
+      font-size: 2.5vw;
+  }
+
+  /*MEDIA QUERIES*/
+
+  /*OCULTAR EL BOTON DE BUSQUEDA*/
+
+  @media screen and (min-width: 766px) {
+    .search-form_button {
+        display: inline-block;          
+    }
+
+    #searchInput {
+        font-size: 2vw;
+    }
+
+    .dropdown:hover #searchInput {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .search-form_button {
+        display: inline-block;          
+    }
+
+    #searchInput {
+        font-size: 1.2vw;
+    }
+
+    .dropdown:hover #searchInput {
+        font-size: 1.2vw;
+    }
 }
