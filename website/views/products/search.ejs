@@ -3,7 +3,14 @@
 <body>
   <%- include('../partials/header'); %>
 
-  <h2 class="products-title">Resultados de la búsqueda: <%=keywords%></h2>
+  <%- include('../partials/searchField'); %>
+
+  <% if (!productFound==0) { %>
+    <h2 class="products-title">Resultados de la búsqueda: <%=keywords%></h2>
+      <% } else { %>
+      <h2 class="products-title">No encontramos resultados para "<%=keywords%>" pero podría interesarte:</h2>
+  <% } %>
+  
     <div class="products-wrapper">
       
           <!-- Show the search results -->
