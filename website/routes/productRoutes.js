@@ -21,13 +21,13 @@ router.get("/search", productsController.search);
 
 router.get("/cart", productsController.shoppingCart);
 
-router.get("/create", /* adminMiddleware, */ productsController.create);
+router.get("/create",  adminMiddleware,  productsController.create);
 
 router.post("/create", productImageUpload.any("image_url"), productFormValidation, productsController.storage);
 
 router.get("/:id", productsController.detail);
 
-router.get("/edit/:id", /* adminMiddleware, */ productsController.edit);
+router.get("/edit/:id",  adminMiddleware,  productsController.edit);
 
 router.put("/edit/:id", productFormValidation, productsController.update);
 

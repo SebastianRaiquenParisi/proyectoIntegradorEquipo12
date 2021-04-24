@@ -41,18 +41,13 @@
             </div>
             
             <div class="dropdown">
-                
-                    <div class="dropbtn">
-                        <div class="input">
+                <div class="dropbtn">
+                    <div class="input">
                         <h4 id="NuevoArticulo">Seleccioná Talle y Cantidad</h4>
                     </div>
-                    </div>
+                </div>
                 
-                    
-                <div class="dropdown-content">
-                    
-                    
-                
+                <div class="dropdown-content">                
                     <%talles.forEach(talle => { %>
                        <div id="eachSize">
                             <label><h4 id="idSizeText">Talle <%=talle.size_name %></h4></label>
@@ -60,8 +55,7 @@
                             <input id= "idSize" for="size" type="number" name="quantity[]" value="0">
                         </div>
                     <% }) %>
-                
-            </div>
+                </div>
             </div>
 
 

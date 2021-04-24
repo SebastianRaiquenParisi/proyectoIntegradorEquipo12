@@ -41,9 +41,10 @@ const productosController = {
 		try{
 			let products= await Products.findAll({include:"images"}); 
 			let searchResults = products.filter(product=>product.name.toLowerCase().includes(req.query.keywords.toLowerCase()));
+			(searchResults.length==0)?searchResults=products : "null"
 			return res.render("./products/search", {searchResults, keywords:req.query.keywords}) 		 //UTILIZA EL METODO FILTER PARA GUARDAR EN LA VARIABLE
 		}catch (error){																					//"searchResults" LOS PRODUCTOS QUE EN SU CAMPO NOMBRE
-			console.log(error);																			//INCLUYAN LO QUE FUE ENVIADO EN LA QUERY
+			console.log(error);																		   //INCLUYAN LO QUE FUE ENVIADO EN LA QUERY
 			return res.render("./products/error404");
 		}		
 	},
@@ -54,7 +55,7 @@ const productosController = {
 			let talles = await Sizes.findAll();
 			let categorias= await Categories.findAll();
 			let condiciones= await Conditions.findAll();
-			return res.render("./products/create",{talles,categorias,condiciones} );
+			return res.render("./products/create",{talles,categorias,condiciones});
 		}catch (error){
 			console.log(error);																			//INCLUYAN LO QUE FUE ENVIADO EN LA QUERY
 			return res.render("./products/error404");
@@ -69,13 +70,12 @@ const productosController = {
 				let talles = await Sizes.findAll();
 				let categorias= await Categories.findAll();
 				let condiciones= await Conditions.findAll();
-            	console.log(errors)
 				return res.render("./products/create", {
 					talles,
 					categorias,
 					condiciones,
                 	errors: errors.mapped(),
-                	oldData: req.body 		//funcionando correcto, terminar
+                	oldData: req.body 		
             	});
 			}
 			
@@ -139,7 +139,7 @@ const productosController = {
 		try{	
 		 	let errors = validationResult(req);			 //VALIDACIONES DEL FORMULARIO AL EDITAR UN PRODUCTO
 			let productToEdit=await Products.findByPk(req.params.id,{include:["images","sizes"]});
-			console.log(errors)
+			//console.log(errors)
          	/* if(!errors.isEmpty()){						//VERIFICO SI HAY ERRORES A TRAVES DEL MIDDLEWARE DE VALIDACIONES PERSISTIENDO DATOS
             	return res.render("./products/edit", {
                 	errors: errors.mapped(),
@@ -224,8 +224,5 @@ const productosController = {
 		}
     }
 }
-		
-	 
-
 
 module.exports=productosController;
