@@ -10,21 +10,6 @@ a {
     text-decoration: none;
   }
 
-.barraBusqueda {
-    display: block;
-    padding-top: 8px;
-    margin-top: 5px;
-    text-align: center;
-    background-color: white;
-    width: auto;
-}
-
-#searchInput {
-    padding: 5px 0px 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
 span {
     position: absolute;
     top: 7.5vw;

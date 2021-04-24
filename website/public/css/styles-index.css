@@ -93,24 +93,3 @@ img {
   background-color: rgba(124, 124, 124, 0.8);
 }
 
-.category-wrapper {
-  margin-top: 2vw;
-  margin-bottom: 2vw;
-  margin: auto;
-  width: 96%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row; 
-}
-
-.randomCategory {
-    display: flex;
-    width: 30%;
-    height: auto;
-    margin: 3.5vw auto;
-}
-
-.randomCategory img {
-  width: 100%;
-}

@@ -2,12 +2,8 @@
 
 <body>
   <%- include('../partials/header'); %>
-      <section class="barraBusqueda">        
-        <form action="/products/search" method="GET">
-            <input id="searchInput" type="text" name="keywords" placeholder="Buscar" size="40">
-            <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
-        </form>
-    </section>
+      
+  <%- include('../partials/searchField'); %>
 
   <h2 class="products-title">Todos los productos</h2>
     <div class="products-wrapper">
@@ -20,11 +16,11 @@
             </figure>
             <article class="product-card-content">
                   <!-- en proceso mostrar categoria del producto -->
-                  <h4> <%=products[i].category.category_name %> </h4>
+                  <h4 class="product-card-content h4"> <%=products[i].category.category_name %> </h4>
               
-              <h2 class="shop-item-title"><%=products[i].name%></h2>
+              <h2 class="product-card-content h2"><%=products[i].name%></h2>
                   
-              <h3 class="shop-item-price" id="price">$<%=products[i].price%></h3>
+              <h3 class="product-card-content h3" id="price">$<%=products[i].price%></h3>
               <% if(products[i].discount>0){ %> 
                 <h3 id="discount"><%=products[i].discount%>% OFF</h3>
               <% } %> 

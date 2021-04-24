@@ -41,8 +41,10 @@ const productosController = {
 		try{
 			let products= await Products.findAll({include:"images"}); 
 			let searchResults = products.filter(product=>product.name.toLowerCase().includes(req.query.keywords.toLowerCase()));
-			(searchResults.length==0)?searchResults=products : "null"
-			return res.render("./products/search", {searchResults, keywords:req.query.keywords}) 		 //UTILIZA EL METODO FILTER PARA GUARDAR EN LA VARIABLE
+			let productFound = searchResults.length;
+			(searchResults.length==0)?searchResults=products: "null" //SI SEARCHRESULTS NO ENCUENTRA RESULTADOS SE LE ASIGNA A SEARCHRESULTS PRODUCTS
+			
+			return res.render("./products/search", {searchResults, productFound, keywords:req.query.keywords})		//UTILIZA EL METODO FILTER PARA GUARDAR EN LA VARIABLE
 		}catch (error){																					//"searchResults" LOS PRODUCTOS QUE EN SU CAMPO NOMBRE
 			console.log(error);																		   //INCLUYAN LO QUE FUE ENVIADO EN LA QUERY
 			return res.render("./products/error404");
@@ -92,7 +94,7 @@ const productosController = {
 				Array.from(req.body.size).map(
 				(size,index)=>new Object({size_id:size,product_id:newproduct.id, quantity:req.body.quantity[index]})
 				));
-			return res.redirect("/");
+			return res.redirect("/"); //REDIRIGIR AL PRODUCTO CREADO RECIENTEMENTE
 		}catch (error){
 			console.log(error);
 			return res.render("./products/error404");

@@ -28,12 +28,12 @@
         </div>
 
         <a href="/products/cart"><button id="iconosNav" class="fas fa-shopping-cart"></button></a>
-        <div class="dropdown">
-        <a href=#buscar><button id="iconosNav" class="fas fa-search"></button></a>
-        </div>
-        <div class="dropdown-content">
-        <p>Qué estás buscando?</p>
-        </div>
+            <div class="dropdown">
+                <a href=#buscar><button id="iconosNav" class="fas fa-search"></button></a>
+                    <div class="dropdown-searchField">
+                        <%- include('../partials/searchField'); %>
+                    </div>
+            </div>
         <a href="/users/login"><button id="iconosNav" class="fas fa-user"></button></a>
     </div>
 </header>
