@@ -24,16 +24,6 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
       },
-      address_id: {
-        type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: {
-            tableName: 'Addresses'
-          },
-          key: 'id'
-        }
-      },
       avatar: {
         type: Sequelize.STRING
       },

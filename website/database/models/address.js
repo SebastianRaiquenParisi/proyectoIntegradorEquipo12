@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Address.belongsTo(models.User, {
-        foreignKey:"address_id"
+        foreignKey:"user_id",
+        as:"user"
       })
     }
   };
@@ -22,6 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     province: DataTypes.STRING,
     country: DataTypes.STRING,
     postal_code: DataTypes.INTEGER,
+    user_id: DataTypes.INTEGER,
+
   }, {
     sequelize,
     modelName: 'Address',
