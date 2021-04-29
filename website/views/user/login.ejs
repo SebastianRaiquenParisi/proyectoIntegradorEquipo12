@@ -14,9 +14,11 @@
       
       <label for="email">Email</label>
       <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su e-mail">
-        <ul id="errorFrontEmail">
-
-        </ul>
+        <div class= "errorsStyles">  
+          <ul id="errorFrontEmail">
+            
+          </ul>
+        </div>
       <% if (locals.errors && errors.email) {%>
         <div class= "errorsStyles"><%=errors.email.msg %> </div>
       <% } %>
@@ -24,9 +26,11 @@
 
       <label for="">Contraseña</label>
       <input type="password" class="form-control" id="password" name="password">
-        <ul id="errorFrontPassword">
+        <div class= "errorsStyles">  
+          <ul id="errorFrontPassword">
           
-        </ul>
+          </ul>
+        </div>
       <% if (locals.errors && errors.password) {%> 
         <div class= "errorsStyles"><%=errors.password.msg %> </div>
       <% } %>
@@ -44,7 +48,7 @@
   </div> 
   <%- include('../partials/footer'); %>
 
-  <script src="script.js"></script>
+  <script src="/js/validationLoginFront.js" type="text/javascript"></script>
 
 </body>
 </html>

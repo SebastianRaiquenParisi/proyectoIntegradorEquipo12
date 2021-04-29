@@ -24,6 +24,11 @@
                     
                       <label for="email">Email</label>
                       <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su e-mail" required>
+                        <div class= "errorsStyles">  
+                          <ul id="errorFrontEmail">
+            
+                          </ul>
+                        </div>
                       <% if (locals.errors && errors.email) {%> 
                         <div><%=errors.email.msg %> </div>
                         <% } %>
@@ -38,5 +43,6 @@
       </div> 
     
     <%- include('../partials/footer'); %>
+  <script src="/js/validationRecoveryFront.js" type="text/javascript"></script>
 </body>
 </html>
