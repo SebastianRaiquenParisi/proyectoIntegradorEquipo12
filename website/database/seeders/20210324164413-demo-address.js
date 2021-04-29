@@ -11,6 +11,7 @@ module.exports = {
        province: 'Ohio',
        country: 'Usa',
        postal_code: 1234,
+       user_id: 1,
        createdAt: new Date,
        updatedAt: new Date
       },
@@ -21,6 +22,7 @@ module.exports = {
        province: 'Buenos Aires',
        country: 'Argentina',
        postal_code: 5678,
+       user_id: 2,
        createdAt: new Date,
        updatedAt: new Date
       }
