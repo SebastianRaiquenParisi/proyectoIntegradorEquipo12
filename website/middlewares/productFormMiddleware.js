@@ -19,12 +19,13 @@ module.exports=[
     }),
     
     check("name").notEmpty().withMessage("Tienes que completar el nombre"),
-    check("name").isLength({ min: 4, max: 40}).withMessage("El nombre debe contener entre 4 y 40 caracteres"),
+    check("name").isLength({ min: 5, max: 40}).withMessage("El nombre debe contener entre 5 y 40 caracteres"),
 
     check("price").notEmpty().withMessage("Tienes que escribir una cifra"),
     check("price").isFloat().withMessage("Tienes que escribir una cifra numérica"),
     
     check("description").notEmpty().withMessage("Tienes que completar una descripcion breve"),
+    check("description").isLength({ min: 20}).withMessage("La descripcion debe tener al menos 20 caracteres"),
 
     check("category_id").notEmpty().withMessage("Tiene que seleccionar una categoria"),
 

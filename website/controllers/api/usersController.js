@@ -48,7 +48,7 @@ const productApiController = {
             let response ={
                     meta: {
                         satus:200,
-                        url: '/api/user/:id'
+                        url: 'api/user/:id'
                     },
                     data:user
                 }
