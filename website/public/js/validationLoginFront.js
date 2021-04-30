@@ -1,10 +1,32 @@
 window.addEventListener("load", function(){
 
-    let inputEmail= document.querySelector("input#email"); //CAPTURO EL INPUT EMAIL
-    let inputPassword= document.querySelector("input#password"); //CAPTURO EL INPUT PASSWORD
-    let buttonSubmit= document.querySelector("button#btnSubmitUser"); //CAPTURO EL FORMULARIO COMPLETO
+    let form= document.querySelector("form.form-container"); //CAPTURO EL FORMULARIO COMPLETO
+    let errorsListEmail= document.querySelector("#errorsListEmail");
+    let errorsListPassword= document.querySelector("#errorsListPassword");
+    let buttonSubmit= document.querySelector("button#btnSubmitUser"); //CAPTURO EL BOTON DE SUBMIT
     
-    
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        let inputEmail= document.querySelector("input#email"); //CAPTURO EL INPUT EMAIL
+        let inputPassword= document.querySelector("input#password"); //CAPTURO EL INPUT PASSWORD
+
+        errorsListEmail.innerHTML="";
+        if (inputEmail.value=="") {
+            errorsListEmail.innerHTML += "<li> El campo de email no puede estar vacío </li>";
+        }
+        if (inputPassword.value=="") {
+            errorsListPassword.innerHTML += "<li> El campo de contraseña no puede estar vacío </li>";
+        }
+
+    })
+
+
+
+
+})
+    /*
 
     //PARA EL EMAIL
     inputEmail.addEventListener("blur", function(){ //LISTENER EN EL FORMULARIO CUANDO SALGO DEL INPUT (BLUR)
@@ -14,7 +36,7 @@ window.addEventListener("load", function(){
         buttonSubmit.addEventListener("click", function(e) { //PREVENGO EL SUBMIT SI HAY ERRORES EN EL FORMULARIO
             console.log(1)
                 //if (erroresEmail.length>0) { 
-                if (erroresEmail.length>0 & inputPassword.value=="" & inputEmail.value=="" ) {
+                if (erroresEmail.length>0) {
                     e.preventDefault();
                 }
         })
@@ -45,19 +67,8 @@ window.addEventListener("load", function(){
             
         });
 
-        
-
-        
-        
-
-
-        
-
-    
-   
-
     //PARA EL PASSWORD
-   /*inputPassword.addEventListener("blur", function(){ //LISTENER EN EL FORMULARIO CUANDO SALGO DEL INPUT (BLUR)
+   inputPassword.addEventListener("blur", function(){ //LISTENER EN EL FORMULARIO CUANDO SALGO DEL INPUT (BLUR)
 
         const erroresPassword = [];
         
@@ -69,27 +80,11 @@ window.addEventListener("load", function(){
 
         if (erroresPassword.length>0) {
            
-
             let errorFrontPassword = document.querySelector("#errorFrontPassword"); //CAPTURO EL ID DE ERROR
             //for (let i=0; i< length.erroresPassword; i++) {
             errorFrontPassword.innerHTML += "<li>" + erroresPassword + "</li>";
             //}
             }
     });
+})*/
 
-    //PREVENT DEFAULT PARA EL FORMULARIO COMPLETO
-    //formFull.addEventListener("submit", function(e){ //LISTENER EN EL FORMULARIO CUANDO SALGO DEL INPUT (BLUR)
-       // console.log(erroresPassword)
-        
-      //  if (erroresPassword.length>0) {
-     //      e.preventDefault("submit");
-      //  }
-            
-   // });*/
-
-   
-    
-
-
-
-})
