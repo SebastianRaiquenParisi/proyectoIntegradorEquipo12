@@ -1,90 +1,89 @@
 window.addEventListener("load", function(){
 
     let form= document.querySelector("form.form-container"); //CAPTURO EL FORMULARIO COMPLETO
+        
+    let inputEmail= document.querySelector("input#email"); //CAPTURO EL INPUT EMAIL
+    let inputPassword= document.querySelector("input#password"); //CAPTURO EL INPUT PASSWORD
+
     let errorsListEmail= document.querySelector("#errorsListEmail");
     let errorsListPassword= document.querySelector("#errorsListPassword");
-    let buttonSubmit= document.querySelector("button#btnSubmitUser"); //CAPTURO EL BOTON DE SUBMIT
     
-
     form.addEventListener("submit", function(e){
-        e.preventDefault();
 
-        let inputEmail= document.querySelector("input#email"); //CAPTURO EL INPUT EMAIL
-        let inputPassword= document.querySelector("input#password"); //CAPTURO EL INPUT PASSWORD
+        let hasErrors= false; //COMIENZA SIN ERRORES
+        e.preventDefault(); 
 
         errorsListEmail.innerHTML="";
+        errorsListPassword.innerHTML="";
+
         if (inputEmail.value=="") {
+            hasErrors= true;   
             errorsListEmail.innerHTML += "<li> El campo de email no puede estar vacío </li>";
-        }
+            }
+        if (inputEmail.value<8) {
+            hasErrors= true;
+            errorsListEmail.innerHTML += "<li> El email no es válido </li>";
+            }
+        if (!inputEmail.value.includes("@")) {
+            hasErrors= true;
+            errorsListEmail.innerHTML += "<li> El email debe contener @ </li>";
+            }
+        if (!inputEmail.value.includes(".")) {
+            hasErrors= true;
+            errorsListEmail.innerHTML += "<li> El email debe contener . </li>";
+            }
+        if (inputEmail.value.includes("!")) {
+            hasErrors= true;
+            errorsListEmail.innerHTML += "<li> El email debe contener caracteres válidos </li>";
+            }
         if (inputPassword.value=="") {
+            hasErrors= true;
             errorsListPassword.innerHTML += "<li> El campo de contraseña no puede estar vacío </li>";
-        }
-
-    })
-
-
-
-
-})
-    /*
-
-    //PARA EL EMAIL
-    inputEmail.addEventListener("blur", function(){ //LISTENER EN EL FORMULARIO CUANDO SALGO DEL INPUT (BLUR)
-
-        let erroresEmail = [];
-
-        buttonSubmit.addEventListener("click", function(e) { //PREVENGO EL SUBMIT SI HAY ERRORES EN EL FORMULARIO
-            console.log(1)
-                //if (erroresEmail.length>0) { 
-                if (erroresEmail.length>0) {
-                    e.preventDefault();
-                }
-        })
-        
-        if (inputEmail.value=="") {
-            erroresEmail.push ("El campo de email no puede estar vacío")
-        } else if (inputEmail.value<3) {
-            erroresEmail.push ("El campo de email debe contener más de 2 caracteres");
-        } else if (!inputEmail.value.includes("@")) {
-            erroresEmail.push ("El email debe contener @");
-        } else if (!inputEmail.value.includes(".")) {
-            erroresEmail.push ("El email debe contener .");
-        } else if (inputEmail.value.includes("!")
-        ) {
-            erroresEmail.push ("El email no admite caracteres especiales");
-        }
-            
-
-        if (erroresEmail.length>0) {
-           
-            
-            let errorFrontEmail = document.querySelector("#errorFrontEmail"); //CAPTURO EL ID DE ERROR
-            for (let i=0; i< erroresEmail.length; i++) {
-            errorFrontEmail.innerHTML += "<li>" + erroresEmail[i] + "</li>";
             }
+        if (inputPassword.value<5) {
+            hasErrors= true;
+            errorsListPassword.innerHTML += "<li> La contraseña debe tener como mínimo 5 caracteres </li>";
             }
 
-            
-        });
-
-    //PARA EL PASSWORD
-   inputPassword.addEventListener("blur", function(){ //LISTENER EN EL FORMULARIO CUANDO SALGO DEL INPUT (BLUR)
-
-        const erroresPassword = [];
-        
-        if (inputPassword.value=="") {
-            erroresPassword.push ("El campo de la contraseña no puede estar vacío")
-        } else if (inputPassword.value<5) {
-            erroresPassword.push ("La contraseña debe contener como mínimo 5 caracteres");
+        if(!hasErrors) { //SI NO HAY ERRORES SE EJECUTA EL SUBMIT
+            this.submit(); 
         }
-
-        if (erroresPassword.length>0) {
-           
-            let errorFrontPassword = document.querySelector("#errorFrontPassword"); //CAPTURO EL ID DE ERROR
-            //for (let i=0; i< length.erroresPassword; i++) {
-            errorFrontPassword.innerHTML += "<li>" + erroresPassword + "</li>";
-            //}
-            }
     });
-})*/
 
+    form.addEventListener("keypress", function(){
+
+        errorsListEmail.innerHTML="";
+        errorsListPassword.innerHTML="";
+
+        if (inputEmail.value=="") {
+            hasErrors= true;   
+            errorsListEmail.innerHTML += "<li> El campo de email no puede estar vacío </li>";
+            }
+        if (inputEmail.value<8) {
+            hasErrors= true;
+            errorsListEmail.innerHTML += "<li> El email no es válido </li>";
+            }
+        if (!inputEmail.value.includes("@")) {
+            hasErrors= true;
+            errorsListEmail.innerHTML += "<li> El email debe contener @ </li>";
+            }
+        if (!inputEmail.value.includes(".")) {
+            hasErrors= true;
+            errorsListEmail.innerHTML += "<li> El email debe contener . </li>";
+            }
+        if (inputEmail.value.includes("!")) {
+            hasErrors= true;
+            errorsListEmail.innerHTML += "<li> El email debe contener caracteres válidos </li>";
+            }
+        if (inputPassword.value=="") {
+            hasErrors= true;
+            errorsListPassword.innerHTML += "<li> El campo de contraseña no puede estar vacío </li>";
+            }
+        if (inputPassword.value<5) {
+            hasErrors= true;
+            errorsListPassword.innerHTML += "<li> La contraseña debe tener como mínimo 5 caracteres </li>";
+            }
+    })
+})
+    
+    

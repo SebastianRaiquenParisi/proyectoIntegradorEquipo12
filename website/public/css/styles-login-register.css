@@ -10,6 +10,7 @@ a {
 }
 
 .errorsStyles {
+    padding-top: 1vw; 
     font-size: 1vw;
     font-family: Raleway;
     font-weight: 400;
