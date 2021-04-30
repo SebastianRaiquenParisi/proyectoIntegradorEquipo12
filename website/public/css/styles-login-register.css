@@ -83,13 +83,16 @@ a {
     font-weight: 600
 }
 
-.form-container button {
+#btnSubmitUser {
     display: inline-block;
     font-size: 3.5vw;
     font-family: Raleway;
     font-weight: 800;
     background-color: #1985A1;
     border-radius: 0.5vw;
+    text-decoration: none;
+    color: white;
+    padding: 0.5vw 1vw;
 }
 
 @media screen and (min-width: 767px) {
@@ -101,7 +104,7 @@ a {
         font-size: 1.5vw;
     }
 
-    .form-container button {
+    #btnSubmitUser {
         font-size: 1.5vw;
     }
 
@@ -133,7 +136,7 @@ a {
         font-size: 1vw;
     }
 
-    .form-container button {
+    #btnSubmitUser {
         font-size: 1vw;
     }
 
