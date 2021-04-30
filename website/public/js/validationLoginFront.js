@@ -8,10 +8,10 @@ window.addEventListener("load", function(){
     let errorsListEmail= document.querySelector("#errorsListEmail");
     let errorsListPassword= document.querySelector("#errorsListPassword");
     
-    form.addEventListener("submit", function(e){
-
-        let hasErrors= false; //COMIENZA SIN ERRORES
-        e.preventDefault(); 
+    let errorCounter="";
+    
+    form.addEventListener("keypress", function(){
+        var hasErrors= false; //COMIENZA SIN ERRORES
 
         errorsListEmail.innerHTML="";
         errorsListPassword.innerHTML="";
@@ -20,70 +20,47 @@ window.addEventListener("load", function(){
             hasErrors= true;   
             errorsListEmail.innerHTML += "<li> El campo de email no puede estar vacío </li>";
             }
-        if (inputEmail.value<8) {
+        else if (inputEmail.value.length<8) {
             hasErrors= true;
             errorsListEmail.innerHTML += "<li> El email no es válido </li>";
             }
-        if (!inputEmail.value.includes("@")) {
+        else if (!inputEmail.value.includes("@")) {
             hasErrors= true;
             errorsListEmail.innerHTML += "<li> El email debe contener @ </li>";
             }
-        if (!inputEmail.value.includes(".")) {
+        else if (!inputEmail.value.includes(".")) {
             hasErrors= true;
             errorsListEmail.innerHTML += "<li> El email debe contener . </li>";
             }
-        if (inputEmail.value.includes("!")) {
+        else if (inputEmail.value.includes("!")) {
             hasErrors= true;
             errorsListEmail.innerHTML += "<li> El email debe contener caracteres válidos </li>";
-            }
+        }
         if (inputPassword.value=="") {
             hasErrors= true;
             errorsListPassword.innerHTML += "<li> El campo de contraseña no puede estar vacío </li>";
             }
-        if (inputPassword.value<5) {
+        else if (inputPassword.value.length<3) {
             hasErrors= true;
-            errorsListPassword.innerHTML += "<li> La contraseña debe tener como mínimo 5 caracteres </li>";
+            errorsListPassword.innerHTML += "<li> La contraseña debe tener como mínimo 6 caracteres </li>";
             }
+        
+        if(hasErrors==false) {
+            errorCounter="sin errores";
+        }
+    })
 
-        if(!hasErrors) { //SI NO HAY ERRORES SE EJECUTA EL SUBMIT
+    form.addEventListener("submit", function(e){
+
+        if(errorCounter=="sin errores") { //SI NO HAY ERRORES SE EJECUTA EL SUBMIT
             this.submit(); 
+        } else {
+            e.preventDefault();
         }
     });
 
-    form.addEventListener("keypress", function(){
-
-        errorsListEmail.innerHTML="";
-        errorsListPassword.innerHTML="";
-
-        if (inputEmail.value=="") {
-            hasErrors= true;   
-            errorsListEmail.innerHTML += "<li> El campo de email no puede estar vacío </li>";
-            }
-        if (inputEmail.value<8) {
-            hasErrors= true;
-            errorsListEmail.innerHTML += "<li> El email no es válido </li>";
-            }
-        if (!inputEmail.value.includes("@")) {
-            hasErrors= true;
-            errorsListEmail.innerHTML += "<li> El email debe contener @ </li>";
-            }
-        if (!inputEmail.value.includes(".")) {
-            hasErrors= true;
-            errorsListEmail.innerHTML += "<li> El email debe contener . </li>";
-            }
-        if (inputEmail.value.includes("!")) {
-            hasErrors= true;
-            errorsListEmail.innerHTML += "<li> El email debe contener caracteres válidos </li>";
-            }
-        if (inputPassword.value=="") {
-            hasErrors= true;
-            errorsListPassword.innerHTML += "<li> El campo de contraseña no puede estar vacío </li>";
-            }
-        if (inputPassword.value<5) {
-            hasErrors= true;
-            errorsListPassword.innerHTML += "<li> La contraseña debe tener como mínimo 5 caracteres </li>";
-            }
-    })
 })
+
+
     
     
