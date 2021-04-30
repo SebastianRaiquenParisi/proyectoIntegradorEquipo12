@@ -3,7 +3,7 @@
 <body>
     <%- include('../partials/header'); %>
 
-    <form action="/products/create" method="POST" autocomplete="off" enctype="multipart/form-data" class="m-auto col-md-7">
+    <form action="/products/create" method="POST" autocomplete="off" enctype="multipart/form-data" class="formCreate">
         <section class="productForm">
 
             <div class="input">
@@ -14,7 +14,7 @@
                 <input type="file" name="image_url" id="image_url" class="form-control m-auto" multiple>
             </div>
                 <div class= "errorsStyles">
-                    <ul id="errorFrontImage">
+                    <ul id="errorsListImage">
           
                     </ul>
                 </div>
@@ -26,7 +26,7 @@
                 <input type="text" id="name" name="name" placeholder="Título" value="<%=locals.oldData && oldData.name %>">
             </div> 
                 <div class= "errorsStyles">
-                    <ul id="errorFrontName">
+                    <ul id="errorsListName">
           
                     </ul> 
                 </div>      
@@ -71,10 +71,10 @@
 
 
             <div class="input">
-                <textarea name="description" rows="2" cols="10" placeholder="Descripción breve"><%=locals.oldData && oldData.description %></textarea>
+                <textarea name="description" id="description" rows="2" cols="10" placeholder="Descripción breve"><%=locals.oldData && oldData.description %></textarea>
             </div>
                 <div class= "errorsStyles">
-                    <ul id="errorFrontDescription">
+                    <ul id="errorsListDescription">
           
                     </ul>
                 </div>
@@ -83,10 +83,10 @@
             <% } %>
 
             <div class="input">
-                <textarea name="full_description" rows="5" cols="10" placeholder="Descripción detalla / caracteristicas"></textarea>
+                <textarea name="full_description" id="fullDescription" rows="5" cols="10" placeholder="Descripción detalla / caracteristicas"></textarea>
             </div>
                 <div class= "errorsStyles">
-                    <ul id="errorFrontFullDescription">
+                    <ul id="errorsListFullDescription">
           
                     </ul>
                 </div>
