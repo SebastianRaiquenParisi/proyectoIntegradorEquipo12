@@ -9,13 +9,14 @@ a {
   text-decoration: none;
 }
 
-
-
 .errorsStyles {
-  font-size: 1vw;
+  font-size: 3vw;
   font-family: Raleway;
   font-weight: 400;
   color: rgb(255, 0, 0);
+  display: block;
+  width: 100%;
+  margin: auto;
 }
 
 .productForm {
@@ -27,11 +28,11 @@ a {
 }
 
 #NuevoArticulo {
-    width: 70%;
+    width: 100%;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #1985A1;
-    padding: 12px 20px 12px 40px;
+    padding: 16px 20px 16px 40px;
     margin:auto;
     color: white;
     font-family: "Open Sans";
@@ -39,19 +40,50 @@ a {
 
 .input {
   display: block;
-  margin: 5px;
+  margin: 5px 0px;
   text-align: center;
   font-family: "Open Sans";
 }
 
 .input input, .input input, .input select, .input textarea {
-  width: 70%;
+  width: 100%;
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
   background-color: white;
   padding: 12px 20px 12px 40px;
   font-family: "Open Sans";
+}
+
+#selectImage {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #1985A1;
+    padding: 16px 20px 16px 40px;
+    color: white;
+    font-family: "Open Sans";
+    margin: auto;
+    margin-bottom: 5px;
+    opacity: 0.6;
+}
+
+.inputImage {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+}
+
+#image_url {
+  width: 24%;
+  height: 100%;
+  font-size: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 100px 0px 0px 0px;
 }
 
 #eachSize {
@@ -98,45 +130,41 @@ a {
   font-family: "Open Sans";
 }
 
-.botonesPie {
-  display: block;
-  width: 70%;
+.productFormPie {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: auto;
-  font-family: "Open Sans";
+  width: 100%;
+  padding: 20px 0px;
 }
 
 .buttonCargar, .buttonBorrar, .buttonEditar {
   border-radius: 4px;
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 16px 1px;
   text-align: center;
   opacity: 0.6;
   transition: 0.3s;
   text-decoration: none;
   cursor: pointer;
+  margin: auto;
 }
 
 .buttonCargar, .buttonEditar {
   background-color: #1985A1;
-  width: 80%;
+  width: 70%;
 }
 
 .buttonBorrar {
   background-color: #46494C;
-  width: 19%;
+  width: 29%;
 }
   
 .buttonCargar:hover {opacity: 1}
 
 .buttonBorrar:hover {opacity: 1}
-
-.productFormPie {
-  display: block;
-  width: 100%;
-  height: auto;
-  padding: 0px 20px 20px 20px;
-}
 
 /*SOLO PARA EDIT*/
 
@@ -155,7 +183,6 @@ justify-content: space-between;
 width: 70%;
 margin: auto;
 padding: 5px;
-border: red solid 1px;
 }
 
 .container2 img {
@@ -167,39 +194,119 @@ border-radius: 4px;
 
 /*-----------------------------*/
 
-.dropbtn {
+.dropbtnSelect {
   opacity: 0.6;
   cursor:pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #1985A1;
+  padding: 12px 20px 12px 40px;
+  color: white;
+  font-family: "Open Sans";
+  
 }
 
-.dropdown {
+.dropdownSelect {
   position: relative;
-  display: block;  
-}
+  display: block;
+  width: 100%;
+  margin: auto;
+  }
 
-.dropdown-content {
+.dropdownContentSelect {
   display: none;
   position: absolute;
   z-index: 1;
-  width: 70%;
+  width: 75%;
 }
 
-.dropdown-content a {
+.dropdownContentSelect a {
   text-decoration: none;
   display: block;
 }
 
-/*.dropdown-content a:hover {
-  background-color: #6d0909;
-}*/
-
-.dropdown:hover .dropdown-content {
+.dropdownSelect:hover .dropdownContentSelect {
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  opacity: 0.3;
+.dropdownSelect:hover .dropbtnSelect {
+  opacity: 0.8;
 }
 
+
+/* --------------MEDIA QUERIEWS-------------- */
+
+@media screen and (min-width: 767px) {
+
+  .errorsStyles {
+  font-size: 2vw;
+  }
+
+  #NuevoArticulo {
+    width: 70%;
+  }
+
+  .input input, .input input, .input select, .input textarea {
+    width: 70%;
+  }
   
+  .dropdownSelect {
+    width: 70%;
+  }
+
+  .productFormPie {
+    width: 70%;
+  }
+
+  .errorsStyles {
+    font-size: 1.5vw;
+    width: 70%;
+  }
+
+  .inputImage {
+    width: 70%;
+  }
+
+  #selectImage {
+    width: 70%;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .errorsStyles {
+    font-size: 1vw;
+  }
+
+  #NuevoArticulo {
+    width: 50%;
+  }
+
+  .input input, .input input, .input select, .input textarea {
+    width: 50%;
+  }
+
+  .dropdownSelect {
+    width: 50%; 
+  }
+
+  .productFormPie {
+    width: 50%;
+  }
+
+  .errorsStyles {
+    font-size: 0.8vw;
+    width: 50%;
+  }
+
+  .inputImage {
+    width: 50%;
+  }
+
+  #selectImage {
+    width: 50%;
+  }
+
+}
 

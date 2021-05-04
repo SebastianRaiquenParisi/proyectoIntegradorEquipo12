@@ -5,22 +5,10 @@
 
     <form action="/products/create" method="POST" autocomplete="off" enctype="multipart/form-data" class="formCreate">
         <section class="productForm">
-
+        
             <div class="input">
                 <h4 id="NuevoArticulo">Nuevo Artículo</h4>
             </div>
-
-            <div class="input">
-                <input type="file" name="image_url" id="image_url" class="form-control m-auto" multiple>
-            </div>
-                <div class= "errorsStyles">
-                    <ul id="errorsListImage">
-          
-                    </ul>
-                </div>
-            <% if (locals.errors && errors.image_url) {%> 
-                <div class= "errorsStyles"><%=errors.image_url.msg %> </div>
-            <% } %>
             
             <div class="input">
                 <input type="text" id="name" name="name" placeholder="Título" value="<%=locals.oldData && oldData.name %>">
@@ -32,6 +20,24 @@
                 </div>      
             <% if (locals.errors && errors.name) {%> 
                 <div class= "errorsStyles"><%=errors.name.msg %> </div>
+            <% } %>
+
+            <h4 id="selectImage">Seleccioná las imágenes</h4>
+
+            <div class="inputImage">
+                
+                <input type="file" name="image_url" id="image_url" class="form-control m-auto" multiple>
+                <input type="file" name="image_url" id="image_url" class="form-control m-auto" multiple>
+                <input type="file" name="image_url" id="image_url" class="form-control m-auto" multiple>
+                <input type="file" name="image_url" id="image_url" class="form-control m-auto" multiple>
+            </div>
+                <div class= "errorsStyles">
+                    <ul id="errorsListImage">
+          
+                    </ul>
+                </div>
+            <% if (locals.errors && errors.image_url) {%> 
+                <div class= "errorsStyles"><%=errors.image_url.msg %> </div>
             <% } %>
 
             <div class="input">
@@ -51,14 +57,14 @@
                 </select>
             </div>
             
-            <div class="dropdown">
-                <div class="dropbtn">
+            <div class="dropdownSelect">
+                <div class="dropbtnSelect">
                     <div class="input">
-                        <h4 id="NuevoArticulo">Seleccioná Talle y Cantidad</h4>
+                        Seleccioná Talle y Cantidad
                     </div>
                 </div>
                 
-                <div class="dropdown-content">                
+                <div class="dropdownContentSelect">                
                     <%talles.forEach(talle => { %>
                        <div id="eachSize">
                             <label><h4 id="idSizeText">Talle <%=talle.size_name %></h4></label>
@@ -116,15 +122,16 @@
                 </select>
             </div>
             
-        </section>
-    
-        <section class="productFormPie">
-            <div class="botonesPie">
+            <div class="productFormPie">
                 <button class="buttonCargar" type="submit">Cargar</button>
                 <button class="buttonBorrar" type="reset">Borrar</button>
             </div>
+
         </section>
+        
     </form>
+
+</br>
 
         <%- include('../partials/footer'); %>
     <script src="/js/validationCreateFront.js" type="text/javascript"></script>
