@@ -6,7 +6,38 @@ const productApiController = {
     'list' : async (req,res) =>{
         try{
             let products = await Product.findAll({
-                include:["images","category"]
+            /* include: ["images","category", "sizes", "condition"] */
+               include:[{
+                    model: db.Category,
+                    as: 'category',
+                    attributes: {
+                       exclude: ["createdAt","updatedAt"]
+                    }
+                },
+                {
+                    model: db.Condition,
+                    as: 'condition',
+                    attributes: {
+                    exclude: ["createdAt","updatedAt"]
+                    }
+                },
+                {
+                    model: db.Image,
+                    as: 'images',
+                    attributes: {
+                    exclude: ["createdAt","updatedAt"]
+                    }
+                },
+                {
+                    model: db.Size,
+                    as: 'sizes',
+                    attributes: {
+                    exclude: ["createdAt","updatedAt"]
+                    }
+                }],
+                attributes: {
+                    exclude: ["category_id","condition_id","createdAt","updatedAt"]
+                }
             })
             let response ={
                     meta: {
@@ -25,7 +56,7 @@ const productApiController = {
     'detail': async (req,res)=>{
         try{
             let product = await Product.findByPk(req.params.id,{
-                include: ["category", "sizes", "images"]
+                include: ["images","category", "sizes", "condition"]
             })
             console.log(product)
             let response ={
