@@ -12,23 +12,27 @@
                 <h6 id="ModElimArticulo">Eliminar un artículo</h6>
             </div>
 
+            <div class="input">
+                <label for="name" class="form-label">Título </label>
+                    </br>
+                <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" value="<%=productToEdit.name%>">
+            </div>
+
             <div class="container2">
                 <% productToEdit.images.forEach(element => { %>
                     <div id="imgAlt"><img src="/images/productsImg/<%=element.image_url%>" alt=""></div>
                 <% }) %>
             </div> 
-        
+                  
             <div class="input">
-                <label for="name" class="form-label">Nombre: </label>
-                <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" value="<%=productToEdit.name%>">
-            </div>
-            
-            <div class="input">
-                <label for="price" class="form-label">Precio:</label>
+                <label for="price" class="form-label">Precio</label>
+                    </br>
                 <input type="text" id="price" name="price" class="form-input" value="<%=productToEdit.price%>">
             </div>
 
             <div class="input">
+                <label for="category" class="form-label">Categoría</label>
+                    </br>
                 <select id="category" name="category_id">
                     <option value="" disabled>Seleccionar categoria</option>
                     <%categorias.forEach(categoria => { %>
@@ -38,11 +42,14 @@
             </div>
 
             <div class="container">
+                <label for="size" class="form-label">Talle y Cantidad</label>
+                    </br>
                 <div class="row justify-content-around" >
                     <%talles.forEach(talle => { %>
                         <div class="col-4 text-center" >
                             <div>
                                 <label> <%=talle.size_name %> </label>
+                                    </br>
                                 <input class= "col-6" type="checkbox" id="size" name="size" value="<%=talle.id %>"
                                 <%=(talle.id == productToEdit.sizes.id)? "selected" : null %> multiple >
                             </div>
@@ -53,20 +60,26 @@
             </div>
 
             <div class="input">
-                <label for="description" class="form-label">Descripción:</label>
+                <label for="description" class="form-label">Descripción</label>
+                    </br>
 				<textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
             </div>
 
             <div class="input">
+                <label for="full_description" class="form-label">Descripción completa</label>
+                    </br>
                 <textarea name="full_description" rows="5" cols="10" placeholder="Descripción detalla / caracteristicas"><%= productToEdit.full_description %></textarea>
             </div>
 
             <div class="input">
-                <label for="discount" class="form-label">Descuento:</label>
+                <label for="discount" class="form-label">Descuento</label>
+                    </br>
                 <input type="text" id="discount" name="discount" class="form-input" value="<%=productToEdit.discount%>"><br>
             </div>
 
             <div class="input">
+                <label for="condition" class="form-label">Condición</label>
+                    </br>
                 <select id="condition" name="condition_id">
                     <option value="" disabled>Seleccionar Condicion</option>
                     <%condiciones.forEach(condicion => { %>
@@ -76,6 +89,8 @@
             </div>
 
             <div class="input">
+                <label for="status" class="form-label">Estado</label>
+                    </br>
                 <select id="status" name="status">
                     <option value="1" selected>Activo</option>
                     <option value="0">Inactivo</option>
