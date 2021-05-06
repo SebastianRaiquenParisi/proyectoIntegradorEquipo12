@@ -60,7 +60,11 @@ window.addEventListener("load", function(){
         if (inputImage.value=="") { //CHANGE PARA EL IMAGE
             hasErrors= true;
             errorsListImage.innerHTML += "<li> Debes ingresar una imagen </li>";
-            }   
+            }
+        /*else if(inputImage.value){
+            hasErrors=true;
+
+        }   */
     })
 
     form.addEventListener("submit", function(e){
