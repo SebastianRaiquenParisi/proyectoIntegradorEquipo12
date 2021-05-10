@@ -19,3 +19,6 @@
 
 [Retrospectiva Sprint 6](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/RETROsprint6.md)
 -----
+
+[Retrospectiva Sprint 7](https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/RETROsprint7.md)
+-----
