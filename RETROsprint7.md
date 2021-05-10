@@ -1,4 +1,4 @@
-## Retrospectiva *Sprint 6*
+## Retrospectiva *Sprint 7*
 -----
 La retrospectiva se centra en mejorar como equipo
 
