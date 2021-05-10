@@ -24,6 +24,16 @@ const productosController = {
 			return res.render("./products/error404");
 		}
     },
+	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS DE CIERTA CATEGORIA
+    listCategory: async function (req,res){
+		try {
+			let products= await Products.findAll({include:["images","category"], where: {category: {[Op.eq] : req.query.categoria}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
+			return res.render("./products/listCategory", {products:products, stylesheet: "/css/styles-index.css"})
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+		}
+    },
 
     //METODO PARA MOSTRAR EL CARRO DE PRODUCTOS SELECCIONADOS
     shoppingCart: async function (req,res){

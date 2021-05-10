@@ -7,6 +7,14 @@ const productFormValidation = require("../middlewares/productFormMiddleware");
 
 router.get("/", productsController.list);
 
+router.get("/products?categoria=remeras", productsController.listCategory);
+
+router.get("/products?categoria=buzos", productsController.listCategory);
+
+router.get("/products?categoria=diseño", productsController.listCategory);
+
+router.get("/products?categoria=accesorios", productsController.listCategory);
+
 router.get("/customerService", productsController.customerService); //ATENCIÓN AL CLIENTE
 
 router.get("/questions", productsController.questions); //PREGUNTAS FRECUENTES
