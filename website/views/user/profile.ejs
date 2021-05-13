@@ -2,45 +2,41 @@
 
 <body>
     <%- include('../partials/header'); %>
-
     <div class="background">
         <div class="mainContainer1">
             <section class="profile">
                 <a href="/users/logout"><button id="idButton">Logout</button></a>
                 <h4>Bienvenid@ <%=user.first_name %></h4>
-                <h6>PORTAL DE ADMINISTRADOR</h4>
-                    <div class="imgForm">
+                <div class="imgForm">
                     <img id="idImg" src="/images/avatars/<%=userLogged.avatar %>"  alt="Imagen de perfil">
-                        </div>
-                            <seccion id="buttonsCreateEdit">
-                                <a href="/products/create"><button id="idButtonCreate">Cargar un producto</button></a>
-                                <a href="/products/edit"><button id="idButtonEdit">Editar un producto</button></a>
-                            </seccion>
-                            
-                                
-                                <div id="userInfo"> 
+                </div>
 
-                                    <h6 id="datosDeUsuario">Datos de Usuario</h6>
-                                
-                                    <article id="idArticle">Email: <%=userLogged.email %> </article>
-                                    <article id="idArticle">Nombre: <%=userLogged.first_name %> </article>
-                                    <article id="idArticle">Apellido: <%=userLogged.last_name %> </article>
-                                    <article id="idArticle">Calle:<%=userLogged.street %> </article>
-                                    <article id="idArticle">Número:<%=userLogged.number %> </article>
-                                    <article id="idArticle">Ciudad:<%=userLogged.city %> </article>
-                                    <article id="idArticle">Provincia:<%=userLogged.province %> </article>
-                                    <article id="idArticle">País:<%=userLogged.country %> </article>
-                                    <article id="idArticle">Código Postal:<%=userLogged.postal_code %> </article>
-                                    <article id="idArticle">Miembro desde: </article>
-                                    <article id="idArticle">Último ingreso: </article>
-        
-                                </div>
+                <% if (locals.userLogged && userLogged.is_admin) { %>
+                    <seccion id="buttonsCreateEdit">
+                        <a href="/products/create"><button id="idButtonCreate">Cargar un producto</button></a>
+                    </seccion>
+                <% } %> 
 
-                    </section>
-                
+                <div id="userInfo">
+                    <h6 id="datosDeUsuario">Datos de Usuario</h6>
+                                
+                    <article id="idArticle">Email: <%=userLogged.email %> </article>
+                    <article id="idArticle">Nombre: <%=userLogged.first_name %> </article>
+                    <article id="idArticle">Apellido: <%=userLogged.last_name %> </article>
+                    <article id="idArticle">Calle:<%=userLogged.street %> </article>
+                    <article id="idArticle">Número:<%=userLogged.number %> </article>
+                    <article id="idArticle">Ciudad:<%=userLogged.city %> </article>
+                    <article id="idArticle">Provincia:<%=userLogged.province %> </article>
+                    <article id="idArticle">País:<%=userLogged.country %> </article>
+                    <article id="idArticle">Código Postal:<%=userLogged.postal_code %> </article>
+                    <article id="idArticle">Miembro desde: </article>
+                    <article id="idArticle">Último ingreso: </article>
+
+                </div>
+
+            </section>      
         </div>
     </div>
-    
     <%- include('../partials/footer'); %>
 </body>
 </html>

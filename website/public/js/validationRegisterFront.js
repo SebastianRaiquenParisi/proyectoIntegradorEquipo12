@@ -1,4 +1,4 @@
-window.addEventListener("load", function(){
+/*window.addEventListener("load", function(){
 
     let form= document.querySelector("form.form-container"); //CAPTURO EL FORMULARIO COMPLETO
      
@@ -61,10 +61,10 @@ window.addEventListener("load", function(){
             hasErrors= true;
             errorsListImage.innerHTML += "<li> Debes ingresar una imagen </li>";
             }
-        /*else if(inputImage.value){
+        else if(inputImage.value){
             hasErrors=true;
 
-        }   */
+        }   
     })
 
     form.addEventListener("submit", function(e){
@@ -75,4 +75,4 @@ window.addEventListener("load", function(){
             e.preventDefault();
         }
     });
-})
+})*/
