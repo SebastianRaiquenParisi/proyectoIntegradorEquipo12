@@ -25,7 +25,15 @@ const productosController = {
 		}
     },
 	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS DE CIERTA CATEGORIA
-    listCategory: async function (req,res){
+	listCategory: async function (req,res){
+		try {
+			let products= await Products.findAll({include:["images","category"], where: {category: {[Op.eq] : req.query.categoria}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
+			return res.render("./products/listCategory", {products:products, stylesheet: "/css/styles-index.css"})
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+
+    /*listCategory: async function (req,res){
 		try {
 			let products= await Products.findAll({include:["images","category"], where: {category_name: req.query.categoria}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
 			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
@@ -51,7 +59,7 @@ const productosController = {
 			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
 		}catch (error){
 			console.log(error);
-			return res.render("./products/error404");
+			return res.render("./products/error404");*/
 		}
     },
 
@@ -250,6 +258,15 @@ const productosController = {
 	pymMethod: async function (req,res){ //FORMAS DE PAGO
 		try {
 			return res.render("./products/eShipping")
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+		}
+    },
+
+	reactCustomize: async function (req,res){ //CUSTOMIZÁ TU DISEÑO
+		try {
+			return res.render("./products/reactCustomize")
 		}catch (error){
 			console.log(error);
 			return res.render("./products/error404");
