@@ -1,0 +1,164 @@
+.App {
+    text-align: center;
+  }
+  
+  .frame {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 120vh;
+  }
+  
+  .frameLeft {
+    display: block;
+    width: 60%;
+  }
+  
+  .frameRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+    width: 35%;
+    margin: 2vw;
+  }
+  
+  img.positionFixed {
+    position: absolute;
+    left: 7.5vw;
+    max-width: 45vw;
+    max-height: auto;
+  }
+  
+  .productDetails {
+    width: 95%;
+    height: 7vw;
+    margin: auto;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+  }
+  
+  .productDetails h4 {
+    font-size: 14px;
+  }
+  
+  .labelContainer {
+    width: 100%;
+    height: 2vw;
+    margin: auto;
+    /*background-color: rgb(168, 168, 168);*/
+    padding: auto;
+    border-radius: 2px;
+    color: rgb(39, 39, 39);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .logoContainer {
+    border: 1px rgb(190, 190, 190) solid;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  /*---------------------------*/
+  
+  .checkmarkBlack input, .checkmarkBlue input, .checkmarkGrey input, .checkmarkMagenta input, .checkmarkPink input, .checkmarkYellow input {
+    opacity: 0;
+    width: 3vw;
+    height: 3vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+  }
+  
+  .checkmarkBlack, .checkmarkBlue, .checkmarkGrey, 
+  .checkmarkMagenta, .checkmarkPink, .checkmarkYellow {
+    text-align: center;
+    width: 3vw;
+    height: 3vw;
+    display: inline-block;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    border-radius: 10px;
+    opacity: 0.5;
+  }
+  
+  div:hover.checkmarkBlack, div:hover.checkmarkBlue, 
+  div:hover.checkmarkGrey, div:hover.checkmarkMagenta, 
+  div:hover.checkmarkPink, div:hover.checkmarkYellow,
+  div:hover.checkmarkLogo {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+    opacity: 1;
+  }
+  
+  .checkmarkLogo input {
+    opacity: 0.5;
+    width: 2vw;
+    height: 2vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+  }
+  
+  .checkmarkLogo {
+    text-align: center;
+    width: 5vw;
+    height: 3vw;
+    display: inline-block;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+    border-radius: 10px;
+    border: 1px rgb(199, 199, 199) solid; 
+  }
+  
+  .checkmarkLogo h4 {
+    font-size: 10px;
+  }
+  
+  .checkmarkBlack {
+    background-color: rgb(2, 2, 2);
+  }
+  
+  .checkmarkBlue {
+    background-color: blue;
+  }
+  
+  .checkmarkGrey {
+    background-color: Grey;
+  }
+  
+  .checkmarkMagenta {
+    background-color: Magenta;
+  }
+  
+  .checkmarkPink {
+    background-color: Pink;
+  }
+  
+  .checkmarkYellow {
+    background-color: Yellow;
+  }
+  /*-------------------------*/
+  
+  
+  
+  
+  .resetSubmitButtons button {
+    border: 1px red solid;
+    background-color: none;
+  }
