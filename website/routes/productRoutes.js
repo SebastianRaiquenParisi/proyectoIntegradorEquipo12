@@ -7,16 +7,16 @@ const productFormValidation = require("../middlewares/productFormMiddleware");
 
  router.get("/", productsController.list);
  
-router.get("/category/shirts", productsController.listCategory);
+router.get("/category/shirts", productsController.listCategoryShirts); //REMERAS
 
-/* router.get("/products?categoria=buzos", productsController.listCategory);
- */
-//router.get("/products?categoria=diseño", productsController.listCategory);
+router.get("/category/hoodies", productsController.listCategoryHoodies); //BUZOS
+
+router.get("/category/accesories", productsController.listCategoryAccesories); //ACCESORIOS
+
+//router.get("/category/news", productsController.listCategoryNews); //ULTIMOS LANZAMIENTOS
 
 router.get("/reactCustomize", productsController.reactCustomize);
 
-/* router.get("/products?categoria=accesorios", productsController.listCategory);
- */
 router.get("/customerService", productsController.customerService); //ATENCIÓN AL CLIENTE
 
 router.get("/questions", productsController.questions); //PREGUNTAS FRECUENTES
