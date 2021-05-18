@@ -6,6 +6,7 @@ let Conditions=db.Condition;
 let Sizes=db.Size;
 let Product_sizes=db.Product_size;
 const {validationResult} = require ("express-validator");
+const {Op} = require("sequelize")
 
 //METODO PARA CAPITALIZAR LA PRIMERA LETRA DE UN STRING
 function capitalize(string) {
@@ -27,8 +28,9 @@ const productosController = {
 	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS DE CIERTA CATEGORIA
 	listCategory: async function (req,res){
 		try {
-			let products= await Products.findAll({include:["images","category"], where: {category: {[Op.eq] : req.query.categoria}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
-			return res.render("./products/listCategory", {products:products, stylesheet: "/css/styles-index.css"})
+			let products= await Products.findAll({include:["images","category"], where: {category_id: {[Op.eq] : 1}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
+			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
+			
 		}catch (error){
 			console.log(error);
 			return res.render("./products/error404");
