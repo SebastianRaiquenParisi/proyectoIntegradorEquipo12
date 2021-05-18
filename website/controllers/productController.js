@@ -7,6 +7,8 @@ let Sizes=db.Size;
 let Product_sizes=db.Product_size;
 const {validationResult} = require ("express-validator");
 
+const { Op } = require("sequelize"); //AGREGO
+
 //METODO PARA CAPITALIZAR LA PRIMERA LETRA DE UN STRING
 function capitalize(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1);
@@ -15,7 +17,7 @@ function capitalize(string) {
 const productosController = {
 
 	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS
-    list: async function (req,res){
+    /*list: async function (req,res){			
 		try {
 			let products= await Products.findAll({include:["images","category"]}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
 			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
@@ -23,16 +25,31 @@ const productosController = {
 			console.log(error);
 			return res.render("./products/error404");
 		}
-    },
-	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS DE CIERTA CATEGORIA
-	listCategory: async function (req,res){
+    },*/
+
+	
+	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS DE CIERTA CATEGORIA !!!!! ESTE ES CORRECTO!!!!!!!!!!!!!!!!!
+	/*listCategory: async function (req,res){
 		try {
-			let products= await Products.findAll({include:["images","category"], where: {category: {[Op.eq] : req.query.categoria}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
+			let products= await Products.findAll({include:["images","category"], where: {category_name: {[Op.eq] : req.query.categoria}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
 			return res.render("./products/listCategory", {products:products, stylesheet: "/css/styles-index.css"})
 		}catch (error){
 			console.log(error);
 			return res.render("./products/error404");
+		}
+	},*/
 
+	listCategory: async function (req,res){
+		try {
+			let products= await Products.findAll({include:["images","category"], where: {category_id: {[Op.eq]: 1}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
+			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
+		}catch (error){
+			res.send("error");
+			//return res.render("./products/error404");
+		}
+	},
+
+	
     /*listCategory: async function (req,res){
 		try {
 			let products= await Products.findAll({include:["images","category"], where: {category_name: req.query.categoria}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
@@ -59,9 +76,9 @@ const productosController = {
 			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
 		}catch (error){
 			console.log(error);
-			return res.render("./products/error404");*/
+			return res.render("./products/error404");
 		}
-    },
+    },*/
 
     //METODO PARA MOSTRAR EL CARRO DE PRODUCTOS SELECCIONADOS
     shoppingCart: async function (req,res){
