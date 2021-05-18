@@ -34,16 +34,9 @@ const productosController = {
 		}catch (error){
 			console.log(error);
 			return res.render("./products/error404");
-
-    /*listCategory: async function (req,res){
-		try {
-			let products= await Products.findAll({include:["images","category"], where: {category_name: req.query.categoria}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
-			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
-		}catch (error){
-			console.log(error);
-			return res.render("./products/error404");
 		}
-    },
+	},
+    /*
 
 	listDescuentos: async function (req,res){
 		try {
@@ -62,8 +55,7 @@ const productosController = {
 		}catch (error){
 			console.log(error);
 			return res.render("./products/error404");*/
-		}
-    },
+	
 
     //METODO PARA MOSTRAR EL CARRO DE PRODUCTOS SELECCIONADOS
     shoppingCart: async function (req,res){
