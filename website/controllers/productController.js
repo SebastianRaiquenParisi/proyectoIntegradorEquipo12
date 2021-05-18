@@ -6,7 +6,7 @@ let Conditions=db.Condition;
 let Sizes=db.Size;
 let Product_sizes=db.Product_size;
 const {validationResult} = require ("express-validator");
-const {Op} = require("sequelize")
+const { Op } = require("sequelize");
 
 //METODO PARA CAPITALIZAR LA PRIMERA LETRA DE UN STRING
 function capitalize(string) {
@@ -25,16 +25,49 @@ const productosController = {
 			return res.render("./products/error404");
 		}
     },
-	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS DE CIERTA CATEGORIA
-	listCategory: async function (req,res){
+	//METODO PARA LISTAR TODOS LOS PRODUCTOS DE LA BASE DE DATOS DE CIERTA CATEGORIA !!!!! ESTE ES CORRECTO!!!!!!!!!!!!!!!!!
+	
+	listCategoryShirts: async function (req,res){
 		try {
 			let products= await Products.findAll({include:["images","category"], where: {category_id: {[Op.eq] : 1}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
 			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
-			
 		}catch (error){
 			console.log(error);
 			return res.render("./products/error404");
+		}
+	},
 
+	listCategoryHoodies: async function (req,res){
+		try {
+			let products= await Products.findAll({include:["images","category"], where: {category_id: {[Op.eq] : 2}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
+			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+		}
+	},
+
+	listCategoryAccesories: async function (req,res){
+		try {
+			let products= await Products.findAll({include:["images","category"], where: {category_id: {[Op.eq] : 3}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
+			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+		}
+	},
+
+	/*listCategoryNews: async function (req,res){
+		try {
+			let products= await Products.findAll({include:["images","category"], where: {category_id: {[Op.eq] : 4}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
+			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
+		}catch (error){
+			console.log(error);
+			return res.render("./products/error404");
+		}
+	},*/
+
+	
     /*listCategory: async function (req,res){
 		try {
 			let products= await Products.findAll({include:["images","category"], where: {category_name: req.query.categoria}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
@@ -61,9 +94,9 @@ const productosController = {
 			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
 		}catch (error){
 			console.log(error);
-			return res.render("./products/error404");*/
+			return res.render("./products/error404");
 		}
-    },
+    },*/
 
     //METODO PARA MOSTRAR EL CARRO DE PRODUCTOS SELECCIONADOS
     shoppingCart: async function (req,res){
