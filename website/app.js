@@ -35,10 +35,10 @@ app.use("/products", productsRouter);
 app.use("/api/products", apiProductsRouter);
 app.use("/api/users", apiUsersRouter);
 
-/* app.use("/products", function(req, res, next) { //Error 404, se muestra cuando no se encuentra un recurso que se solicita
+app.use("/products", function(req, res, next) { //Error 404, se muestra cuando no se encuentra un recurso que se solicita
     res.status(404).render("./products/error404");
 })
- */
+ 
 
 
 
