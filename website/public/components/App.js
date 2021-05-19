@@ -6,7 +6,7 @@ class CustomizeItem extends React.Component {  //EL COMPONENTE RECIBE PROPS
             inicialImage: props.inicialImage,
             resetImage: props.resetImage,
             value: '' , //para el form
-    
+
             changeImageVisor: props.changeImageVisor,
             changeImagePanel: props.changeImagePanel,
             changeImageLogo: props.changeImageLogo,
@@ -274,9 +274,9 @@ class CustomizeItem extends React.Component {  //EL COMPONENTE RECIBE PROPS
                         </div>
                         
                         <div className= "resetSubmitButtons">
-                        <button value={this.state.value} onClick= { () => this.resetImage() }>Reset</button>
+                        <button class="customizeReset" value={this.state.value} onClick= { () => this.resetImage() }>Reset</button>
                                             
-                        <button><input type="submit" value="Submit" /></button>
+                        <button class="customizeSubmit" type="submit" value={this.state.value}>Añadir al Carrito</button>
                         </div>
                     </div>
                 </form>
@@ -338,3 +338,5 @@ return (
 
 const domContainer = document.querySelector('#reactApp');
 ReactDOM.render(App(), domContainer);
+
+console.log (this.state.value);
