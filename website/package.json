@@ -13,10 +13,8 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/issues"
-  },
-  "homepage": "https://github.com/SebastianRaiquenParisi/proyectoIntegradorEquipo12/blob/main/README.MD",
+  "bugs": "",
+  "homepage": "",
   "dependencies": {
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
