@@ -1,0 +1,18 @@
+<section class="product-card-customize">
+    <figure class="product-card-img-customize">
+        <img class="shop-item-image" src="/images/productsImg/<%=products[0].images[0].image_url%> " alt="imagen de producto">
+            </figure>
+                <article class="product-card-content-customize">
+                  <h4 class="product-card-content-h4-customize"> <%=products[0].category.category_name %> </h4>
+                    <h2 class="product-card-content-h2-customize"><%=products[0].name%></h2>
+                <h3 class="product-card-content-h3-customize" id="price">$<%=products[0].price%></h3>
+              <% if(products[0].discount>0){ %> 
+            <h3 id="discount"><%=products[0].discount%>% OFF</h3>
+            <% } %> 
+        <p class="text-center-customize"><%=products[0].description%></p>
+    </article>          
+</section>
+
+
+    
+        
