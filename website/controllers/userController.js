@@ -126,7 +126,8 @@ const userController ={
     },
 
     recovery:  function (req,res){
-           return res.render("./user/recovery",);   
+        
+        return res.render("./user/recovery",);   
    },
 }
 
