@@ -57,7 +57,7 @@ const productosController = {
 		}
 	},
 
-	/*listCategoryNews: async function (req,res){
+	/*listCategoryNews: async function (req,res){  //VER SI ES condition_id ????
 		try {
 			let products= await Products.findAll({include:["images","category"], where: {category_id: {[Op.eq] : 4}}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
 			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
@@ -66,37 +66,6 @@ const productosController = {
 			return res.render("./products/error404");
 		}
 	},*/
-
-	
-    /*listCategory: async function (req,res){
-		try {
-			let products= await Products.findAll({include:["images","category"], where: {category_name: req.query.categoria}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
-			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
-		}catch (error){
-			console.log(error);
-			return res.render("./products/error404");
-		}
-    },
-
-	listDescuentos: async function (req,res){
-		try {
-			let products= await Products.findAll({include:["images","category", ""]}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
-			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
-		}catch (error){
-			console.log(error);
-			return res.render("./products/error404");
-		}
-    },
-
-	listUltimos: async function (req,res){
-		try {
-			let products= await Products.findAll({include:["images","category"]}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
-			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
-		}catch (error){
-			console.log(error);
-			return res.render("./products/error404");
-		}
-    },*/
 
     //METODO PARA MOSTRAR EL CARRO DE PRODUCTOS SELECCIONADOS
     shoppingCart: async function (req,res){
@@ -301,7 +270,8 @@ const productosController = {
 
 	reactCustomize: async function (req,res){ //CUSTOMIZÁ TU DISEÑO
 		try {
-			return res.render("./products/reactCustomize")
+			let products= await Products.findAll({include:["images","category"], where: {category_id: {[Op.eq] : 3}}});//agrego linea completa
+			return res.render("./products/reactCustomize", {products:products}) //agrego products:products
 		}catch (error){
 			console.log(error);
 			return res.render("./products/error404");
