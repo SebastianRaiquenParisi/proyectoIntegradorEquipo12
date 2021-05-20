@@ -152,10 +152,8 @@ class CustomizeItem extends React.Component {  //EL COMPONENTE RECIBE PROPS
               </div>
     
               <div className= "frameRight">
-                  <div className = "productDetails">
-                    <h4 className = "productDetailTitle">Título</h4>
-                    <h4 className = "productDetailPrice">Precio</h4>
-                    <h4 className = "productDetailSubtitle">Subtítulo</h4>
+                  <div className= "productDetails">
+                      
                   </div>
                 <form onSubmit={this.handleSubmit}>
                     <div className= "container">
