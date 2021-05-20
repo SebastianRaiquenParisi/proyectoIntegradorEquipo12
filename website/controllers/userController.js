@@ -44,7 +44,8 @@ const userController ={
                        password: {
                            msg: "la contraseña ingresada es incorrecta"
                        }
-                   }
+                   },
+                   oldData: req.body
                })
            }
    
@@ -53,7 +54,8 @@ const userController ={
                    email: {
                         msg: "Usuario no registrado"
                    }
-               }
+               },
+               oldData: req.body
            })
         }catch(error){
 

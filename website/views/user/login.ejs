@@ -13,7 +13,7 @@
       <h6>No estás registrado? <a href="/users/register">Hacelo ahora!</a></h6>
       
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su e-mail">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su e-mail" value="<%=locals.oldData && oldData.email %>">
         <div class= "errorsStyles">  
           <ul id="errorsListEmail">
             
