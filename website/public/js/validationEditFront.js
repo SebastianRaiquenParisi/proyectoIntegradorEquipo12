@@ -23,10 +23,10 @@ window.addEventListener("load", function(){
         errorsListDescription.innerHTML="";
         errorsListFullDescription.innerHTML="";
     
-        if (inputImage.value=="") {
+        /*if (inputImage.value=="") {
             hasErrors= true;
             errorsListImage.innerHTML += "<li> Debes ingresar una imagen </li>";
-            }
+            }*/
         if (inputName.value=="") {
             hasErrors= true;   
             errorsListName.innerHTML += "<li> El campo Título no puede estar vacío </li>";
