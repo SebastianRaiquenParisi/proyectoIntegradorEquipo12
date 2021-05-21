@@ -12,45 +12,50 @@
 
       <h6>Completá el siguiente formulario para realizar tu reclamo o devolución</h3>
       
-      <select class="form-control" id="reclamoDevolucion name="reclamoDevolucion">
+      <select class="form-control" id="returns" name="returns">
 
         <option value="null" disabled selected>Elige una opción</option>
         <option value="reclamo">Reclamo</option>
         <option value="devolucion">Devolución</option>
       </select>
-      <% if (locals.errors && errors.email) {%> 
-        <div class= "errorsStyles"><%=errors.email.msg %> </div>
-      <% } %>
+      
       <br/>
-
-      <label for="numPedido">N° de Pedido</label>
-      <input type="number" class="form-control" id="numPedido" name="numPedido" placeholder="Sólo números, sin espacios ni guiones">
-      <% if (locals.errors && errors.password) {%> 
-        <div class= "errorsStyles"><%=errors.password.msg %> </div>
-      <% } %>
+      
+      <input type="number" class="form-control" id="numPedido" name="numPedido" placeholder="N° de Pedido. Ingresá números, sin espacios ni guiones">
+      
       <br/>
 
       <label for="motivo">Describe el motivo</label>
-      <textarea class="form-control" rows="4" cols="50" name="descripcion">Describe el motivo de tu reclamo / devolución.
-      Detallá el nombre y la cantidad de los artículos que estás devolviendo
+      <textarea rows="4" cols="50" placeholder="Describe el motivo de tu reclamo / devolución.
+      Detallá el nombre y la cantidad de los artículos que estás devolviendo" class="form-control" name="descripcion" >
         
       </textarea>
-      <% if (locals.errors && errors.password) {%> 
-        <div class= "errorsStyles"><%=errors.password.msg %> </div>
-      <% } %>
+      
       <br/>
       
       
       <h6>Al enviar el formulario podrás imprimir la etiqueta de devolución.</h6>
       <h6>Al enviar el formulario recibirás en breve una respuesta en tu email de contacto.</h6>
-      <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+      <button type="submit" class="btn btn-primary btn-block" disabled>Enviar</button>
     
-      <button type="submit" class="btn btn-primary btn-block">Imprimí la etiqueta de devolución</button>
+      <button type="button" class="btn btn-primary btn-block" disabled>Imprimí la etiqueta de devolución</button>
       <h6>Revisá tu casilla de email para ver las instrucciones completas para poder devolver tu pedido efectivamente</h6>
       <h6><a href="/products/customerService">Atención al cliente</a></h6>
     
     </form>
   </div> 
+
+<!-- BANNERINFO -->
+
+<%- include('../partials/bannerInfo'); %>
+  
+
+<!-- Mostrar las categorías en oferta -->
+
+<!-- FOOTER -->
+
   <%- include('../partials/footer'); %>
+
+
 </body>
 </html>
