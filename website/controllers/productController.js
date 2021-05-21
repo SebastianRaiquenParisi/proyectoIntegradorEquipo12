@@ -67,38 +67,6 @@ const productosController = {
 		}
 	},*/
 
-	
-    /*listCategory: async function (req,res){
-		try {
-			let products= await Products.findAll({include:["images","category"], where: {category_name: req.query.categoria}}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
-			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
-		}catch (error){
-			console.log(error);
-			return res.render("./products/error404");
-		}
-	},
-    /*
-
-	listDescuentos: async function (req,res){
-		try {
-			let products= await Products.findAll({include:["images","category", ""]}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
-			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
-		}catch (error){
-			console.log(error);
-			return res.render("./products/error404");
-		}
-    },
-
-	listUltimos: async function (req,res){
-		try {
-			let products= await Products.findAll({include:["images","category"]}); //FUNCION QUE PERMITE BUSCAR TODOS LOS PRODUCTOS CON EL METODO DE SEQUELIZE
-			return res.render("./products/list", {products:products, stylesheet: "/css/styles-index.css"})
-		}catch (error){
-			console.log(error);
-			return res.render("./products/error404");
-		}
-    },*/
-
     //METODO PARA MOSTRAR EL CARRO DE PRODUCTOS SELECCIONADOS
     shoppingCart: async function (req,res){
 		try {
@@ -293,7 +261,7 @@ const productosController = {
 
 	pymMethod: async function (req,res){ //FORMAS DE PAGO
 		try {
-			return res.render("./products/eShipping")
+			return res.render("./products/pymMethod")
 		}catch (error){
 			console.log(error);
 			return res.render("./products/error404");
