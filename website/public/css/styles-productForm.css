@@ -81,7 +81,6 @@ a {
   width: 24%;
   border: 2px solid #ccc;
   border-radius: 4px;
-  border: solid 1px red;
 }
 
 #eachSize {
@@ -165,6 +164,16 @@ a {
 .buttonBorrar:hover {opacity: 1}
 
 /*SOLO PARA EDIT*/
+
+h4.placeholderActive {
+  font-size: 1vw;
+  font-weight: 600;
+  text-align: left; 
+  width: 50%;
+  margin: auto;
+  padding: 5px;
+  font-family: "Open Sans";
+}
 
 #ModElimArticulo {
   display: inline-block;

@@ -11,6 +11,7 @@
             </div>
             
             <div class="input">
+                <h4 class="placeholderActive">Título</h4>
                 <input type="text" id="name" name="name" placeholder="Título" value="<%=productToEdit.name%>">
             </div> 
                 <div class= "errorsStyles">
@@ -39,6 +40,7 @@
             <% } %>
 
             <div class="input">
+                <h4 class="placeholderActive">Precio</h4>
                 <input type="text" name="price" placeholder="Precio" value="<%=productToEdit.price%>">
             </div>
             
@@ -75,6 +77,7 @@
 
 
             <div class="input">
+                <h4 class="placeholderActive">Descripción breve</h4>
                 <textarea name="description" id="description" rows="2" cols="10" placeholder="Descripción breve"><%= productToEdit.description %></textarea>
             </div>
                 <div class= "errorsStyles">
@@ -87,6 +90,7 @@
             <% } %>
 
             <div class="input">
+                <h4 class="placeholderActive">Descripción detallada</h4>
                 <textarea name="full_description" id="fullDescription" rows="5" cols="10" placeholder="Descripción detallada / caracteristicas"><%= productToEdit.full_description %></textarea>
             </div>
                 <div class= "errorsStyles">
@@ -95,6 +99,7 @@
                     </ul>
                 </div>
             <div class="input">
+                <h4 class="placeholderActive">% de descuento</h4>
                 <input type="number"  min="0" max="100" name="discount" placeholder="Ingrese % de descuento" value="<%=productToEdit.discount%>"><br>
             </div>
             <% if (locals.errors && errors.discount) {%> 
@@ -102,6 +107,7 @@
             <% } %>
 
             <div class="input">
+                <h4 class="placeholderActive">Condición</h4>
                 <select id="condition" name="condition_id">
                     <option value="" selected disabled>Seleccionar condición</option>
                     <%condiciones.forEach(condicion => { %>
