@@ -3,12 +3,56 @@
 <body>
     <%- include('../partials/header'); %>
 
+    <div class="center">
+      <form class="form-container" autocomplete="false" action="/products/customerService method="POST">
+        
+        <h4>Atención al Cliente</h4>
+        <div id="img-user">
+          <img src="/images/avatars/imagen-user-1.jpg" alt="login_user">
+        </div>
+  
+        <h6>Completá el siguiente formulario para realizar tu reclamo o devolución</h3>
+
+          <br>
+        
+        <label for="first_name">Nombre / Nombre de usuario</label>
+          <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Introduzca un nombre de usuario" value="<%=locals.oldData && oldData.first_name %>">
+            
+           
+          
+          <br/>               
+    
+          <label for="email">Email</label>
+          <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduzca su e-mail" value="<%=locals.oldData && oldData.email %>">
+           
+          
+          <br/>
+  
+          
+        <label for="motivo">Mensaje</label>
+        <textarea class="form-control" rows="4" cols="50" name="descripcion">
+          
+        </textarea>
+        
+        <br/>
+        
+        <h6>Al enviar el formulario recibirás en breve una respuesta en tu email de contacto.</h6>
+        <button type="clean" class="btn btn-primary btn-block" disabled>Borrar</button>
+      
+        <button type="submit" class="btn btn-primary btn-block" disabled>Enviar</button>
+        <h6>Contactate con nosotros</h6>
+        
+        <h6><a href="/products/returns">Reclamos o devoluciones</a></h6>
+      
+      </form>
+    </div> 
+
 
 
 <!-- BANNERINFO -->
 
   <%- include('../partials/bannerInfo'); %>
-  <script src="/js/cart.js" type="text/javascript">    </script>
+  
 
 <!-- Mostrar las categorías en oferta -->
 
@@ -16,6 +60,8 @@
 <!-- FOOTER -->
     
   <%- include('../partials/footer'); %>
+
+ 
     
 </body>
 </html>
