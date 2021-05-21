@@ -24,9 +24,9 @@
 
             <h4 id="selectImage">Seleccioná las imágenes</h4>
 
-            <div class="container2">
+            <div class="inputImage">
                 <% productToEdit.images.forEach(element => { %>
-                    <div id="imgAlt"><img src="/images/productsImg/<%=element.image_url%>" alt=""></div>
+                    <div id="image_url"><img src="/images/productsImg/<%=element.image_url%>" alt=""></div>
                 <% }) %>
             </div>
                 <div class= "errorsStyles">

@@ -79,11 +79,9 @@ a {
 
 #image_url {
   width: 24%;
-  height: 100%;
-  font-size: 8px;
   border: 2px solid #ccc;
   border-radius: 4px;
-  padding: 100px 0px 0px 0px;
+  border: solid 1px red;
 }
 
 #eachSize {
