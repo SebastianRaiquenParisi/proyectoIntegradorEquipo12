@@ -7,7 +7,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 120vh;
+    height: auto;
   }
   
   .frameLeft {
@@ -34,12 +34,7 @@
   
   .productDetails {
     width: 95%;
-    height: 7vw;
-    margin: auto;
-    margin-top: 3vw;
-    margin-bottom: 1vw;
-    background-color: rgb(255, 255, 255);
-    padding-bottom: 10px;
+    height: 12vw;
   }
 
   .labelContainer {
@@ -168,6 +163,7 @@
     background-color: white;
     width: 25%;
     height: 3.5vw;
+    font-size: 1vw;
   }
 
   button.customizeSubmit {
@@ -177,6 +173,7 @@
     color: white;
     width: 70%;
     height: 3.5vw;
+    font-size: 1vw;
   }
 
   button.customizeSubmit:hover, button.customizeReset:hover {
@@ -194,7 +191,7 @@
     top: 119px;
     right: 27px;
     width: 35%;
-    height: 140px;
+    height: auto;
     background-color: rgb(180, 20, 87);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
   }
@@ -234,3 +231,259 @@
     font-size: 1vw;
     color: white;
   }
+
+/*-----------MEDIA QUERIES------------*/
+
+@media screen and (max-width: 768px) {
+
+  .frame {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .frameLeft {
+    display: block;
+  width: 100%;
+  }
+  
+  .frameRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .productDetails {
+    display: none;
+  }
+
+  .labelContainer {
+    height: 6vw;
+    font-size: 3vw;
+    }
+  
+  .logoContainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .checkmarkBlack input, .checkmarkBlue input, .checkmarkGrey input, .checkmarkMagenta input, .checkmarkPink input, .checkmarkYellow input {
+    width: 5vw;
+    height: 5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 2vw;
+   
+  }
+  
+  .checkmarkBlack, .checkmarkBlue, .checkmarkGrey, 
+  .checkmarkMagenta, .checkmarkPink, .checkmarkYellow {
+    width: 5vw;
+    height: 5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 2vw;
+  }
+  
+  .checkmarkLogo input {
+    width: 5vw;
+    height: 5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 2vw;
+  }
+  
+  .checkmarkLogo {
+    width: 14.5vw;
+    height: 10vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 2vw;
+    border-radius: 5px;
+  }
+  
+  button.customizeReset {
+    width: 25%;
+    height: 8vw;
+    font-size: 14px;
+  }
+
+  button.customizeSubmit {
+    width: 70%;
+    height: 8vw;
+    font-size: 14px;
+  }
+
+  .product-card-customize {
+    top: 119px;
+    right: 27px;
+    width: 35%;
+    height: auto;
+  }
+
+  .product-card-img-customize {
+    display: none;
+  }
+
+  .product-card-img-customize img {
+    display: none;
+  }
+
+  .product-card-content-customize {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-card-content-h4-customize {
+    font-size: 2vw;
+  }
+
+  .product-card-content-h3-customize {
+    font-size: 2.4vw;
+  }
+
+  .product-card-content-h2-customize {
+    font-size: 3.6vw;
+  }
+
+  .text-center-customize {
+    font-size: 2vw;
+  }
+
+  }
+/*--------------------*/
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .frame {
+      display:flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 100%;
+    }
+  
+    .frameLeft {
+      display: block;
+    width: 100%;
+    }
+    
+    .frameRight {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 75%;
+      margin-top: 50vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .productDetails {
+      display: none;
+    }
+  
+    .labelContainer {
+      height: 6vw;
+      font-size: 3vw;
+      }
+    
+    .logoContainer {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    
+    .checkmarkBlack input, .checkmarkBlue input, .checkmarkGrey input, .checkmarkMagenta input, .checkmarkPink input, .checkmarkYellow input {
+      width: 5vw;
+      height: 5vw;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      margin-top: 2vw;
+     
+    }
+    
+    .checkmarkBlack, .checkmarkBlue, .checkmarkGrey, 
+    .checkmarkMagenta, .checkmarkPink, .checkmarkYellow {
+      width: 5vw;
+      height: 5vw;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      margin-top: 2vw;
+    }
+    
+    .checkmarkLogo input {
+      width: 5vw;
+      height: 5vw;
+      margin-left: 0.5vw;
+      margin-right: 0.5vw;
+      margin-top: 2vw;
+    }
+    
+    .checkmarkLogo {
+      width: 10vw;
+      height: 8vw;
+      margin-left: 0.5vw;
+      margin-right: 0.5vw;
+      margin-top: 2vw;
+      border-radius: 5px;
+    }
+    
+    button.customizeReset {
+      width: 25%;
+      height: 8vw;
+      font-size: 14px;
+    }
+  
+    button.customizeSubmit {
+      width: 70%;
+      height: 8vw;
+      font-size: 14px;
+    }
+  
+    .product-card-customize {
+      top: 119px;
+      right: 27px;
+      width: 35%;
+      height: auto;
+    }
+  
+    .product-card-img-customize {
+      display: none;
+    }
+  
+    .product-card-img-customize img {
+      display: none;
+    }
+  
+    .product-card-content-customize {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .product-card-content-h4-customize {
+      font-size: 2vw;
+    }
+  
+    .product-card-content-h3-customize {
+      font-size: 2.4vw;
+    }
+  
+    .product-card-content-h2-customize {
+      font-size: 3.6vw;
+    }
+  
+    .text-center-customize {
+      font-size: 2vw;
+    }
+  
+    }
