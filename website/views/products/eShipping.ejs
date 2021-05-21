@@ -3,6 +3,39 @@
 <body>
     <%- include('../partials/header'); %>
 
+    <div class="center">
+      <form class="form-container" autocomplete="false" action="/products/returns" method="POST">
+        
+        <h4>Envíos y Entregas</h4>
+        <div id="img-user">
+          <img src="/images/avatars/imagen-user-1.jpg" alt="login_user">
+        </div>
+  
+        <h6>Selecciona un tipo de envío</h3>
+        
+        <select class="form-control" id="eShipping" name="eShipping">
+  
+          <option value="null" disabled selected>Elige una opción</option>
+          <option value="reclamo">Correo 48hs</option>
+          <option value="devolucion">Correo 3 a 5 días</option>
+        </select>
+        
+        <br/>
+        
+        <input type="number" min="4" max="4" class="form-control" id="numPedido" name="numPedido" placeholder="Ingresa tu código postal">
+        
+        <br/>
+  
+        <button type="submit" class="btn btn-primary btn-block" disabled>Cotizar</button>
+      
+        <button type="button" class="btn btn-primary btn-block" disabled>Agregar a mis preferencias de compra</button>
+        <h6></h6>
+        <h6><a href="/products/cart">Ir al carrito de compra</a></h6>
+      
+      </form>
+    </div> 
+  
+
 
 
 <!-- BANNERINFO -->
